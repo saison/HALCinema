@@ -17,13 +17,11 @@ DB名 halcinema
 ##保存場所に関して  
 以下のファイルは記述通りに保存すること  
 css  
-style.css(統一CSS)  
+style.cssは統一スタイル  
 >HALCinema/module/css/style.css  
-画面ごとに設定するCSS  
 >HALCinema/module/css/[画面名].css  
-  
+
 js  
-script.js(統一JS)  
->HALCinema/module/js/script.js 
-画面ごとに設定するJS  
+script.jsは統一スクリプト  
+>HALCinema/module/js/script.js  
 >HALCinema/module/js/[画面名].js  
