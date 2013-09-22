@@ -1,5 +1,5 @@
 <?PHP
-	$pageTitle = "ひゃっはー";
+	$pageTitle = "";
 	require_once("../module/header.php");
 ?>
 
