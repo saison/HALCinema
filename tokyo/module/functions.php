@@ -12,7 +12,7 @@
 			DBroot = localhost
 			DBname = halcinema
 		**************************/
-		$con = mysqli_connect('localhost','root','root');
+		$con = mysqli_connect('localhost','halcinema','halcinema');
 		mysqli_set_charset($con,'utf8');
 		mysqli_select_db($con,'halcinema');
 		return $con;
