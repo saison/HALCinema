@@ -15,6 +15,8 @@
 		if(file_exists("../module/js/script.js")){
 			echo "<script src='../module/js/script.js'></script>\n";
 		}
+
+		$pageTitle="";
 	?>
 	<title><?PHP if($pageTitle != ""){ echo $pageTitle." | "; } ?>HALCinema</title>
 </head>
