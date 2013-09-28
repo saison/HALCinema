@@ -6,14 +6,25 @@
 <head>
 	<meta charset="UTF-8" />
 	<?PHP
+		//各ファイル名の取得
+		$filename = basename($_SERVER["PHP_SELF"],".php");
+
 		//スタイルシートのファイルパス
 		if(file_exists("../module/css/style.css")){
 			echo "<link rel='stylesheet' href='../module/css/style.css' />\n";
+		}
+		//個別CSSの設定
+		if(file_exists("../module/css/".$filename.".css")){
+			echo "<link rel='stylesheet' href='../module/css/".$filename.".css' />\n";
 		}
 
 		//jsのファイルパス
 		if(file_exists("../module/js/script.js")){
 			echo "<script src='../module/js/script.js'></script>\n";
+		}
+		//個別JSの設定
+		if(file_exists("../module/js/".$filename.".js")){
+			echo "<script src='../module/js/".$filename.".js'></script>\n";
 		}
 
 		$pageTitle="";
