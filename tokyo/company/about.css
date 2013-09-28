@@ -1,0 +1,136 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*----------------共通項目-------------------*/
+.aboutH3Title{
+	width:70%;
+	height:100%;
+	margin: 0 auto;
+	border:1px solid #AAA;
+	background:#CAFFFF;
+}
+
+.aboutContents{
+	border:1px solid #AAA;
+	width:68%;
+	height:100%;
+	margin: 0 auto;
+	margin-bottom:2%;
+	padding: 1% 0 1% 2%;
+}
+
+h3{
+	margin:1% 0 1% 2%;
+}
+
+h4{
+	border-bottom:1px solid #CCC;
+}
+
+/*------------------------------------------*/
+
+
+
+/*----------------会社概要------------------*/
+.aboutContents{
+	font-size:80%;
+	margin-bottom:2%;
+}
+
+.company{
+	font-size:100%;
+	border-spacing:0;
+}
+
+.company_item{
+	width:30%;
+	border-spacing:0;
+}
+
+.company_text{
+	width:70%;
+}
+
+.company_text th,.company_text td{
+	border:1px solid white;
+	font-size:90%;
+	margin:1% auto;
+}
+
+
+.aboutContents td{
+	border-bottom:1px dashed #CCCCCC;
+	padding:2% 0 2% 0;
+}
+
+/*------------------------------------------*/
+
+
+
+
+/*---------------プライバシー---------------*/
+.privacyContents{
+	width:70%;
+	height:100%;
+	margin: 0 auto;
+	margin-bottom:2%;
+	font-size:80%;
+	border:1px solid #CCC;
+}
+
+.lead_privacy{
+	margin:1%;
+	padding:1%;
+}
+
+.title{
+	background:#CCC;
+	margin:1%;
+	padding:1%;
+}
+
+.detail{
+	margin:1%;
+	padding:1%;
+}
+/*------------------------------------------*/
+
+
+
+
+/*---------特定商取引法に基づく表示---------*/
+.tokuteiContents{
+	width:70%;
+	height:100%;
+	margin: 0 auto;
+	margin-bottom:2%;
+	font-size:80%;
+	border:1px solid #CCC;
+}
+
+.tokuteiTitle{
+	background:#666;
+	color:white;
+}
+
+.tokuteiContents th{
+	width:30%;
+	padding:1%;
+}
+
+.tokuteiContents td{
+	width:70%;
+	padding:1%;
+}
+
+
+/*------------------------------------------*/
+
+
+
+
+/*--------サイトのご利用に関して------------*/
+
+/*プライパシーと同じような形だったので、同じクラス使ってます。*/
+
+/*------------------------------------------*/

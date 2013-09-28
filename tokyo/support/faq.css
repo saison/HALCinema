@@ -1,0 +1,46 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*----------------共通項目-------------------*/
+.faqH3Title{
+	width:70%;
+	height:100%;
+	margin: 0 auto;
+	border:1px solid #AAA;
+	background:#CAFFFF;
+}
+
+.faqContents{
+	border:1px solid #AAA;
+	width:68%;
+	height:100%;
+	margin: 0 auto;
+	margin-bottom:2%;
+	padding: 0 0 1% 2%;
+}
+
+h3{
+	margin:1% 0 1% 2%;
+}
+
+h4{
+	border-bottom:1px solid #CCC;
+}
+
+p{
+	font-size:90%;
+}
+
+li{
+	list-style-type:none;
+}
+
+li a{
+	color:#000000;
+	text-decoration:none;
+}
+
+li a:hover{
+	border-bottom:1px solid black;
+}
+/*------------------------------------------*/

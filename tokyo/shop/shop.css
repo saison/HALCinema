@@ -1,0 +1,112 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*----------------共通項目-------------------*/
+.shopH3Title{
+	width:70%;
+	height:100%;
+	margin: 0 auto;
+	border:1px solid #AAA;
+	background:#CAFFFF;
+}
+
+.shopContents{
+	border:1px solid #AAA;
+	width:68%;
+	height:100%;
+	margin: 0 auto;
+	margin-bottom:2%;
+	padding: 0 0 1% 2%;
+}
+
+h3{
+	margin:1% 0 1% 2%;
+}
+
+h4{
+	border-bottom:1px solid #CCC;
+}
+
+p{
+	font-size:90%;
+}
+/*------------------------------------------*/
+
+
+
+
+/*-----------------劇場案内-----------------*/
+.movieInfoTable{
+	font-size:100%;
+	border-spacing:0;
+}
+
+.movieInfoTable th,.movieInfoTable td{
+	text-align:center;
+	border:1px solid white;
+}
+
+.movieInfoTable th{
+	background:#BBB8AE;
+}
+
+.movieInfoTable td{
+	background:#CCCCCC;
+}
+/*------------------------------------------*/
+
+
+
+
+
+
+
+/*------------チケット購入方法--------------*/
+/*------------------------------------------*/
+
+
+
+
+
+/*-----------ハルシネマポイント-------------*/
+/*------------------------------------------*/
+
+
+
+
+
+/*------------ハルシネマメルマガ------------*/
+/*------------------------------------------*/
+
+
+
+
+
+
+/*---------------サービスデー---------------*/
+.pricelist{
+	width:30%;
+	border-spacing:0;
+}
+
+.pricelist th,.pricelist td{
+	border:1px solid white;
+	font-size:90%;
+}
+
+.pricelist th{
+}
+
+.pricelist td{
+	border-bottom:1px solid #CCCCCC;	
+}
+
+.right{
+	width:5%;
+}
+
+.caution{
+	font-size:70%;
+	color:red;
+}
+/*------------------------------------------*/
