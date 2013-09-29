@@ -99,5 +99,5 @@
 </div>
 -->
 <?php
-	require_once("../module/footer.php");
+	require_once("../module/reserveFooter.php");
 ?>
