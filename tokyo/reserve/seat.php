@@ -90,7 +90,10 @@
 
 ?>
 
-<table>
+
+
+
+<table id="ABlockSeat">
 	<tr>
 		<td id="a-1" class="seat"></td>
 		<td id="a-2" class="seat"></td>
@@ -140,6 +143,164 @@
 		<td id="d-10" class="seat"></td>
 	</tr>
 </table>
+
+
+<table id="BBlockSeat">
+	<tr>
+		<td id="a-1" class="seat"></td>
+		<td id="a-2" class="seat"></td>
+		<td id="a-3" class="seat"></td>
+		<td id="a-4" class="seat"></td>
+		<td id="a-5" class="seat"></td>
+		<td id="a-6" class="seat"></td>
+		<td id="a-7" class="seat"></td>
+		<td id="a-8" class="seat"></td>
+		<td id="a-9" class="seat"></td>
+		<td id="a-10" class="seat"></td>
+	</tr>
+	<tr>
+		<td id="b-1" class="seat"></td>
+		<td id="b-2" class="seat"></td>
+		<td id="b-3" class="seat"></td>
+		<td id="b-4" class="seat"></td>
+		<td id="b-5" class="seat"></td>
+		<td id="b-6" class="seat"></td>
+		<td id="b-7" class="seat"></td>
+		<td id="b-8" class="seat"></td>
+		<td id="b-9" class="seat"></td>
+		<td id="b-10" class="seat"></td>
+	</tr>
+	<tr>
+		<td id="c-1" class="seat"></td>
+		<td id="c-2" class="seat"></td>
+		<td id="c-3" class="seat"></td>
+		<td id="c-4" class="seat"></td>
+		<td id="c-5" class="seat"></td>
+		<td id="c-6" class="seat"></td>
+		<td id="c-7" class="seat"></td>
+		<td id="c-8" class="seat"></td>
+		<td id="c-9" class="seat"></td>
+		<td id="c-10" class="seat"></td>
+	</tr>
+	<tr>
+		<td id="d-1" class="seat"></td>
+		<td id="d-2" class="seat"></td>
+		<td id="d-3" class="seat"></td>
+		<td id="d-4" class="seat"></td>
+		<td id="d-5" class="seat"></td>
+		<td id="d-6" class="seat"></td>
+		<td id="d-7" class="seat"></td>
+		<td id="d-8" class="seat"></td>
+		<td id="d-9" class="seat"></td>
+		<td id="d-10" class="seat"></td>
+	</tr>
+</table>
+
+<table id="CBlockSeat">
+	<tr>
+		<td id="a-1" class="seat"></td>
+		<td id="a-2" class="seat"></td>
+		<td id="a-3" class="seat"></td>
+		<td id="a-4" class="seat"></td>
+		<td id="a-5" class="seat"></td>
+		<td id="a-6" class="seat"></td>
+		<td id="a-7" class="seat"></td>
+		<td id="a-8" class="seat"></td>
+		<td id="a-9" class="seat"></td>
+		<td id="a-10" class="seat"></td>
+	</tr>
+	<tr>
+		<td id="b-1" class="seat"></td>
+		<td id="b-2" class="seat"></td>
+		<td id="b-3" class="seat"></td>
+		<td id="b-4" class="seat"></td>
+		<td id="b-5" class="seat"></td>
+		<td id="b-6" class="seat"></td>
+		<td id="b-7" class="seat"></td>
+		<td id="b-8" class="seat"></td>
+		<td id="b-9" class="seat"></td>
+		<td id="b-10" class="seat"></td>
+	</tr>
+	<tr>
+		<td id="c-1" class="seat"></td>
+		<td id="c-2" class="seat"></td>
+		<td id="c-3" class="seat"></td>
+		<td id="c-4" class="seat"></td>
+		<td id="c-5" class="seat"></td>
+		<td id="c-6" class="seat"></td>
+		<td id="c-7" class="seat"></td>
+		<td id="c-8" class="seat"></td>
+		<td id="c-9" class="seat"></td>
+		<td id="c-10" class="seat"></td>
+	</tr>
+	<tr>
+		<td id="d-1" class="seat"></td>
+		<td id="d-2" class="seat"></td>
+		<td id="d-3" class="seat"></td>
+		<td id="d-4" class="seat"></td>
+		<td id="d-5" class="seat"></td>
+		<td id="d-6" class="seat"></td>
+		<td id="d-7" class="seat"></td>
+		<td id="d-8" class="seat"></td>
+		<td id="d-9" class="seat"></td>
+		<td id="d-10" class="seat"></td>
+	</tr>
+</table>
+
+<table id="DBlockSeat">
+	<tr>
+		<td id="a-1" class="seat"></td>
+		<td id="a-2" class="seat"></td>
+		<td id="a-3" class="seat"></td>
+		<td id="a-4" class="seat"></td>
+		<td id="a-5" class="seat"></td>
+		<td id="a-6" class="seat"></td>
+		<td id="a-7" class="seat"></td>
+		<td id="a-8" class="seat"></td>
+		<td id="a-9" class="seat"></td>
+		<td id="a-10" class="seat"></td>
+	</tr>
+	<tr>
+		<td id="b-1" class="seat"></td>
+		<td id="b-2" class="seat"></td>
+		<td id="b-3" class="seat"></td>
+		<td id="b-4" class="seat"></td>
+		<td id="b-5" class="seat"></td>
+		<td id="b-6" class="seat"></td>
+		<td id="b-7" class="seat"></td>
+		<td id="b-8" class="seat"></td>
+		<td id="b-9" class="seat"></td>
+		<td id="b-10" class="seat"></td>
+	</tr>
+	<tr>
+		<td id="c-1" class="seat"></td>
+		<td id="c-2" class="seat"></td>
+		<td id="c-3" class="seat"></td>
+		<td id="c-4" class="seat"></td>
+		<td id="c-5" class="seat"></td>
+		<td id="c-6" class="seat"></td>
+		<td id="c-7" class="seat"></td>
+		<td id="c-8" class="seat"></td>
+		<td id="c-9" class="seat"></td>
+		<td id="c-10" class="seat"></td>
+	</tr>
+	<tr>
+		<td id="d-1" class="seat"></td>
+		<td id="d-2" class="seat"></td>
+		<td id="d-3" class="seat"></td>
+		<td id="d-4" class="seat"></td>
+		<td id="d-5" class="seat"></td>
+		<td id="d-6" class="seat"></td>
+		<td id="d-7" class="seat"></td>
+		<td id="d-8" class="seat"></td>
+		<td id="d-9" class="seat"></td>
+		<td id="d-10" class="seat"></td>
+	</tr>
+</table>
+
+
+
+
 <form action="pay.php" method="post" id="postData">
 </form>
 
