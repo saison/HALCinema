@@ -51,7 +51,33 @@
 </table>
 </div>
 
+<div class="confirmTable">
+<h4>お客様情報</h4>
+<table>
+<tr>
+<th>名前</th>
+<td><?php print "名前"; ?></td>
+</tr>
+<tr>
+<th>生年月日</th>
+<td><?php print "生年月日"; ?></td>
+</tr>
+<tr>
+<th>電話番号</th>
+<td><?php print "電話番号"; ?></td>
+</tr>
+<tr>
+<th>メールアドレス</th>
+<td><?php print "メールアドレス"; ?></td>
+</tr>
+</table>
+</div>
 
+<div id="yoyakuBack"><form><input type="image" src="images/yoyakuBack.png" alt="送信する"></form></div>
+<div id="yoyakuSelect"><form><input type="image" src="images/yoyakuSelect.png" alt="送信する"></form></div>
+<div class="clear"></div>
+
+</div>
 
 <?php
 	require_once("../module/reserveFooter.php");

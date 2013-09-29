@@ -21,3 +21,13 @@ h4{
 .confirmTable td{
 	padding:10px;
 }
+#yoyakuBack{
+	width:400px;
+	float:left;
+	margin:15px 45px;
+}
+#yoyakuSelect{
+	width:400px;
+	float:left;
+	margin:15px 45px;
+}
