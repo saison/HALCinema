@@ -21,7 +21,7 @@ header{
 #progressBar{
 	width:700px;
 	margin:0 0 0 30px;
-	float:;eft;
+	float:left;
 }
 #content{
 	width:980px;
@@ -33,4 +33,20 @@ header{
 	font-size:125%;
 	font-weight:600;
 	margin:10px 0;
+}
+footer{
+	background-color:#efefef;
+	padding:10px 0;
+	display:block;
+	width:100%;
+}
+#footerIn{
+	width:980px;
+	margin:0 auto;
+}
+#copyright{
+	font-size:70%;
+	color:#555555;
+	text-shadow:0 0 2px #ccc;
+	text-align:right;
 }
