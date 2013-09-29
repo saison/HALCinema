@@ -18,7 +18,11 @@
 		if(file_exists("../module/css/".$filename.".css")){
 			echo "<link rel='stylesheet' href='../module/css/".$filename.".css' />\n";
 		}
+	?>
 
+	<script src="../module/js/jquery-1.9.1.js"></script>
+	<script src="../module/js/jquery-ui-1.10.3.custom.min.js"></script>
+	<?PHP
 		//jsのファイルパス
 		if(file_exists("../module/js/script.js")){
 			echo "<script src='../module/js/script.js'></script>\n";

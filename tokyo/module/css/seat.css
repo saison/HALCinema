@@ -1,7 +1,7 @@
 @charset "utf-8";
 /* CSS Document */
 #movieInfo table{
-	width:100%;	
+	width:100%;
 }
 
 #sertChoice{
@@ -18,12 +18,12 @@
 	height:50px;
 }
 .blockTyui{
-	font-size:70%;	
+	font-size:70%;
 	text-shadow:0 0 2px #aaa;
 	text-align:center;
 }
 #sertEachChoice{
-	margin:10px 0;	
+	margin:10px 0;
 }
 .sertEachChoiceTitle{
 	background-color:#333333;
@@ -34,14 +34,15 @@
 	padding:5px;
 	border-top:1px solid #aaaaaa;
 	border-left:1px solid #aaaaaa;
-	border-right:1px solid #aaaaaa;	
+	border-right:1px solid #aaaaaa;
 }
 .setEachChoiceContent{
 	border-bottom:1px solid #aaaaaa;
 	border-left:1px solid #aaaaaa;
-	border-right:1px solid #aaaaaa;	
+	border-right:1px solid #aaaaaa;
 	background-color:#ffffff;
-	paddding:5px;
+	padding:5px;
+	display: inline-block;
 	font-size:80%;
 }
 #sertArrange{
@@ -53,15 +54,45 @@
 	font-weight:bold;
 	font-size:135%;
 	padding:5px;
-	background-color:#efefef;	
+	background-color:#efefef;
 }
 .sertDecideButton{
 	width:400px;
 	margin:15px auto;
 }
 .sertDecideButton:hover{
-	background-color:#eeeeee;	
+	background-color:#eeeeee;
 }
+
+
+#adult,#student,#senior{
+	margin-left: -8px;
+	display: inline-block;
+}
+#adult li,#student li,#senior li{
+	margin-left: 8px;
+	float: left;
+}
+/*ここからテーブルの設定　あとで調整よろしく*/
+table{
+	display: inline-block;
+}
+tr{
+	margin: 10px;
+	display: block;
+}
+.seat{
+	width: 40px;
+	height: 50px;
+	background: #ffffff;
+	border-radius: 6px;
+	display: inline-block;
+}
+
+/*ここまで*/
+
+
+
 #kiyaku{
 	width:800px;
 	margin:0 auto;

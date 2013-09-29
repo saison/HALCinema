@@ -41,16 +41,40 @@
     <div class="sertEachChoiceTitle">
       <p>大人</p>
     </div>
-    <div class="setEachChoiceContent"> <img src="images/adultImage.png"> </div>
+    <div class="setEachChoiceContent">
+    	<ul id="adult">
+       		<li><img class="dragIcon" src="images/adultImage.png"></li>
+     		<li><img class="dragIcon" src="images/adultImage.png"></li>
+    		<li><img class="dragIcon" src="images/adultImage.png"></li>
+    		<li><img class="dragIcon" src="images/adultImage.png"></li>
+       		<li><img class="dragIcon" src="images/adultImage.png"></li>
+    	</ul>
+    </div>
     <div class="sertEachChoiceTitle">
       <p>学生</p>
     </div>
-    <div class="setEachChoiceContent"> <img src="images/studentImage.png"> </div>
+    <div class="setEachChoiceContent">
+	    <ul id="student">
+			<li><img class="dragIcon" src="images/studentImage.png"></li>
+			<li><img class="dragIcon" src="images/studentImage.png"></li>
+			<li><img class="dragIcon" src="images/studentImage.png"></li>
+			<li><img class="dragIcon" src="images/studentImage.png"></li>
+			<li><img class="dragIcon" src="images/studentImage.png"></li>
+	    </ul>
+    </div>
     <!--  シニアは映画日時を取得して表示（DB接続） -->
     <div class="sertEachChoiceTitle">
       <p>シニア</p>
     </div>
-    <div class="setEachChoiceContent"> <img src="images/seniorImage.png"> </div>
+	<div class="setEachChoiceContent">
+		<ul id="senior">
+			<li><img class="dragIcon" src="images/seniorImage.png"></li>
+			<li><img class="dragIcon" src="images/seniorImage.png"></li>
+			<li><img class="dragIcon" src="images/seniorImage.png"></li>
+			<li><img class="dragIcon" src="images/seniorImage.png"></li>
+			<li><img class="dragIcon" src="images/seniorImage.png"></li>
+		</ul>
+	</div>
   </div>
   <p class="blockTyui">各料金タイプ内の人形を選択したい座席にドラック&ドロップしてください</p>
 </div>
@@ -65,7 +89,62 @@
 	echo "<p id='sertTableTitle'>Ablock</p>\n";
 
 ?>
-  ここシート </div>
+
+<table>
+	<tr>
+		<td id="a-1" class="seat"></td>
+		<td id="a-2" class="seat"></td>
+		<td id="a-3" class="seat"></td>
+		<td id="a-4" class="seat"></td>
+		<td id="a-5" class="seat"></td>
+		<td id="a-6" class="seat"></td>
+		<td id="a-7" class="seat"></td>
+		<td id="a-8" class="seat"></td>
+		<td id="a-9" class="seat"></td>
+		<td id="a-10" class="seat"></td>
+	</tr>
+	<tr>
+		<td id="b-1" class="seat"></td>
+		<td id="b-2" class="seat"></td>
+		<td id="b-3" class="seat"></td>
+		<td id="b-4" class="seat"></td>
+		<td id="b-5" class="seat"></td>
+		<td id="b-6" class="seat"></td>
+		<td id="b-7" class="seat"></td>
+		<td id="b-8" class="seat"></td>
+		<td id="b-9" class="seat"></td>
+		<td id="b-10" class="seat"></td>
+	</tr>
+	<tr>
+		<td id="c-1" class="seat"></td>
+		<td id="c-2" class="seat"></td>
+		<td id="c-3" class="seat"></td>
+		<td id="c-4" class="seat"></td>
+		<td id="c-5" class="seat"></td>
+		<td id="c-6" class="seat"></td>
+		<td id="c-7" class="seat"></td>
+		<td id="c-8" class="seat"></td>
+		<td id="c-9" class="seat"></td>
+		<td id="c-10" class="seat"></td>
+	</tr>
+	<tr>
+		<td id="d-1" class="seat"></td>
+		<td id="d-2" class="seat"></td>
+		<td id="d-3" class="seat"></td>
+		<td id="d-4" class="seat"></td>
+		<td id="d-5" class="seat"></td>
+		<td id="d-6" class="seat"></td>
+		<td id="d-7" class="seat"></td>
+		<td id="d-8" class="seat"></td>
+		<td id="d-9" class="seat"></td>
+		<td id="d-10" class="seat"></td>
+	</tr>
+</table>
+<form action="pay.php" method="post" id="postData">
+</form>
+
+
+</div>
 <div class="clear"></div>
 <div class="reserveTitle">
   <h3>利用規約</h3>
@@ -77,24 +156,24 @@
     <input type="image" src="images/setButton.png" alt="送信する">
   </form>
 </div>
-<!-- 映画選択完了ボタン--> 
+<!-- 映画選択完了ボタン-->
 
-<!--この先飲食物選択。プロトタイプでは未実装 --> 
+<!--この先飲食物選択。プロトタイプでは未実装 -->
 <!--
 <div class="reserveTitle">
   <h3>飲み物･食べ物</h3>
 </div>
 
-<div id="sertDrink"></div>--> 
-<!-- 飲み物 470px m-r 40px --> 
+<div id="sertDrink"></div>-->
+<!-- 飲み物 470px m-r 40px -->
 <!--
 <div id="sertFood"></div>
---> 
-<!-- 飲み物 470px --> 
+-->
+<!-- 飲み物 470px -->
 <!--
 <div class="clear"></div>
-<div class="sertDecideButton"></div>--> 
-<!-- 映画選択完了ボタン（上のボタンと一緒）--> 
+<div class="sertDecideButton"></div>-->
+<!-- 映画選択完了ボタン（上のボタンと一緒）-->
 <!--
 </div>
 -->
