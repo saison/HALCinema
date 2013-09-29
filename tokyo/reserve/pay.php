@@ -1,5 +1,5 @@
 <?php
-	$pageTitle="座席選択&amp;フード･ドリンク選択";
+	$pageTitle="支払方法選択";
 	require_once("../module/reserveHeader.php");
 ?>
 
@@ -61,7 +61,11 @@
 </div>
 <div class="clear"></div>
 </div>
-
+<div id="payBack">
+<form>
+<input type="image" src="images/payBack.png" alt="戻る">
+</form>
+</div>
 </div>
 
 
