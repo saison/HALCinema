@@ -1,0 +1,70 @@
+@charset "utf-8";
+/* CSS Document */
+#movieInfo table{
+	width:100%;	
+}
+
+#sertChoice{
+	width:200px;
+	float:left;
+}
+#sertBlock{
+	width:200px;
+	height:100px;
+}
+#sertBlock li{
+	float:left;
+	width:100px;
+	height:50px;
+}
+.blockTyui{
+	font-size:70%;	
+	text-shadow:0 0 2px #aaa;
+	text-align:center;
+}
+#sertEachChoice{
+	margin:10px 0;	
+}
+.sertEachChoiceTitle{
+	background-color:#333333;
+	color:#ffffff;
+	font-size:80%;
+	margin:10px 0 0 0;
+	font-weight:bold;
+	padding:5px;
+	border-top:1px solid #aaaaaa;
+	border-left:1px solid #aaaaaa;
+	border-right:1px solid #aaaaaa;	
+}
+.setEachChoiceContent{
+	border-bottom:1px solid #aaaaaa;
+	border-left:1px solid #aaaaaa;
+	border-right:1px solid #aaaaaa;	
+	background-color:#ffffff;
+	paddding:5px;
+	font-size:80%;
+}
+#sertArrange{
+	width:780px;
+	float:left;
+	background-color:#00aaff;
+}
+#sertTableTitle{
+	font-weight:bold;
+	font-size:135%;
+	padding:5px;
+	background-color:#efefef;	
+}
+.sertDecideButton{
+	width:400px;
+	margin:15px auto;
+}
+.sertDecideButton:hover{
+	background-color:#eeeeee;	
+}
+#kiyaku{
+	width:800px;
+	margin:0 auto;
+	height:200px;
+	border:3px solid #aaaaaa;
+}
