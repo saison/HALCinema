@@ -1,6 +1,9 @@
 <?php
 	$pageTitle="予約を完了しました";
 	require_once("../module/reserveHeader.php");
+	$finishSql = "UPDATE seat_reserve_list SET reserve_flag='1' WHERE user_id=".$_SESSION["userid"]."AND show_id=".$_SESSION["showid"];
+	$finishResult = mysqli_query($con,$finishSql);
+	$finishRow = mysqli_fetch_array($finishResult);
 ?>
 
 <!-- ここ中身 -->

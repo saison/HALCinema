@@ -118,19 +118,19 @@
 <table>
 <tr>
 <th>名前</th>
-<td><?php echo $userResult["family_name"].$userResult["first_name"]; ?></td>
+<td><?php echo $userRow["family_name"].$userRow["first_name"]; ?></td>
 </tr>
 <tr>
 <th>生年月日</th>
-<td><?php echo $userResult["birthday"]; ?></td>
+<td><?php echo $userRow["birthday"]; ?></td>
 </tr>
 <tr>
 <th>電話番号</th>
-<td><?php echo $userResult["user_tel"]; ?></td>
+<td><?php echo $userRow["user_tel"]; ?></td>
 </tr>
 <tr>
 <th>メールアドレス</th>
-<td><?php echo $userResult["user_mail"]; ?></td>
+<td><?php echo $userRow["user_mail"]; ?></td>
 </tr>
 </table>
 </div>

@@ -5,13 +5,13 @@
 		header("Location:../movie/movie.php");
 		break;
 	}
+	$pageTitle="座席選択&amp;フード･ドリンク選択";
+	require_once("../module/reserveHeader.php");
+
 	if(!(isset($_SESSION["userid"]))){
 		header("Location:../mypage/login.php");
 		break;
 	}
-	$pageTitle="座席選択&amp;フード･ドリンク選択";
-	require_once("../module/reserveHeader.php");
-
 	$_SESSION["showid"] = $showID;
 
 ?>
