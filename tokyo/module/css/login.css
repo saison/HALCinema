@@ -33,3 +33,13 @@ h4{
 .login td{
 	padding:10px;
 }
+.error_p{
+	border:1px solid #ff5555;
+	padding:10px;
+	margin:10px 0;
+	font-size:85%;
+	font-weight:600;
+	text-shadow: 0 0 1px #fff;
+	color:#ff0000;	
+	background-color:#FFBBBC;
+}
