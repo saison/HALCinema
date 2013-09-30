@@ -39,7 +39,7 @@
 <header>
 <div id="headerIn">
 <h1><img src="../module/images/reserveLogo.png" alt="HALCinema"></h1>
-<div id="progressBar">ここにBar</div>
+<div id="progressBar"><!--ここにBar--></div>
 <div class="clear"></div>
 </div>
 </header>
