@@ -9,7 +9,7 @@
 	$selectResult = mysqli_query($con,$selectSql);
 	$movieRow = mysqli_fetch_array($selectResult);
 
-	$reservSql = "SELECT  seat_number, movie_price_id FROM seat_reserve_list WHERE show_id = '{$showid}' AND user_id = '".$_SESSION["userid"]."' AND reserve_flag = '0'";
+	$reservSql = "SELECT  seat_number, movie_price_id FROM seat_reserve_list WHERE show_id = '".$showid."' AND user_id = '".$_SESSION["userid"]."' AND reserve_flag = '0'";
 	$reserveResult = mysqli_query($con,$reservSql);
 
 ?>

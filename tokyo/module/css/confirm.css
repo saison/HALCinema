@@ -1,0 +1,33 @@
+@charset "utf-8";
+/* CSS Document */
+h4{
+	border-left:5px solid #EDFF9F;
+	font-size:100%;
+	padding:0 0 0 10px;
+	margin:0 0 0 10px;
+}
+.confirmTable table{
+	width:100%;
+	margin:15px 0 15px 10px;
+}
+.confirmTable table,.confirmTable th,.confirmTable td,.confirmTable tr{
+	border:1px solid #cccccc;
+}
+.confirmTable th{
+	width:300px;
+	padding:10px;
+	background-color:#efefef;
+}
+.confirmTable td{
+	padding:10px;
+}
+#yoyakuBack{
+	width:400px;
+	float:left;
+	margin:15px 45px;
+}
+#yoyakuSelect{
+	width:400px;
+	float:left;
+	margin:15px 45px;
+}
