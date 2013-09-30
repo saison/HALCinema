@@ -33,7 +33,11 @@ $(function(){
 			var seatId = $(this).attr("id");
 			var dragClass = ui.draggable.parent().parent().attr("id");
 			ui.draggable.attr("id",seatId+"_"+dragClass);
-			$("#postData").append("<input type='hidden' id='"+ seatId +"_"+ dragClass +"' value='"+ seatId +"_"+ dragClass +"' />");
+			var dragIconId = ui.draggable.attr("id");
+			var formId = $("#postData #"+dragIconId).attr("id");
+			if(dragIconId != formId){
+				$("#postData").append("<input type='hidden' id='"+ seatId +"_"+ dragClass +"' value='"+ seatId +"_"+ dragClass +"' />");
+			}
 		},
 		out:function(event, ui){
 			var dragId = ui.draggable.attr("id");
