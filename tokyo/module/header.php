@@ -13,6 +13,8 @@
 		if(file_exists("../module/css/style.css")){
 			echo "<link rel='stylesheet' href='../module/css/style.css' />\n";
 		}
+		echo '<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.12.0/build/cssreset/cssreset-min.css">'."\n";
+		echo '<link href="../module/css/juicyslider-min.css" rel="stylesheet" type="text/css">'."\n";
 		//個別CSSの設定
 		if(file_exists("../module/css/".$filename.".css")){
 			echo "<link rel='stylesheet' href='../module/css/".$filename.".css' />\n";
@@ -35,3 +37,21 @@
 	<title><?PHP if($pageTitle != ""){ echo $pageTitle." | "; } ?>HALCinema</title>
 </head>
 <body>
+<header>
+<div id="headerIn">
+<h1><a href="../top/index.php"><img src="../module/images/reserveLogo.png"></a></h1>
+<div id="login">
+<a href="login.php"><img src="../module/images/login.png" alt="ログイン&新規会員登録"></a>
+</div>
+<div class="clear"></div>
+</div>
+<nav>
+<ul>
+<li><a href="../shop/"><img src="../module/images/menu/theaters.png"></a></li>
+<li><a href="../movie/movie.php"><img src="../module/images/menu/workinfo.png"></a></li>
+<li><a href="../service/"><img src="../module/images/menu/service.png"></a></li>
+<li><a href="../company/"><img src="../module/images/menu/companyinfo.png"></a></li>
+<div class="clear"></div>
+</ul>
+</nav>
+</header>
