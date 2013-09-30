@@ -1,6 +1,19 @@
 <?php
+	$showID = $_GET["id"];
+
+	if(!(isset($showID))){
+		header("Location:../movie/movie.php");
+		break;
+	}
+	if(!(isset($_SESSION["userid"]))){
+		header("Location:../mypage/login.php");
+		break;
+	}
 	$pageTitle="座席選択&amp;フード･ドリンク選択";
 	require_once("../module/reserveHeader.php");
+
+	$_SESSION["showid"] = $showID;
+
 ?>
 
 <div id="nav"></div>
@@ -301,8 +314,6 @@
 
 
 
-<form action="pay.php" method="post" id="postData">
-</form>
 
 
 </div>
@@ -313,9 +324,10 @@
 <div id="kiyaku"> ここに利用規約 </div>
 <!-- 利用規約 -テキストエリア表示 -->
 <div class="sertDecideButton">
-  <form>
-    <input type="image" src="images/setButton.png" alt="送信する">
-  </form>
+	<form action="proposedReserve.php" method="post" id="postData">
+	    <input name="send" id="sendButton" type="submit" value="送信する">
+	</form>
+</div>
 </div>
 <!-- 映画選択完了ボタン-->
 

@@ -60,10 +60,6 @@
 	width:400px;
 	margin:15px auto;
 }
-.sertDecideButton:hover{
-	background-color:#eeeeee;
-}
-
 
 #adult,#student,#senior{
 	margin-left: -8px;
@@ -73,6 +69,7 @@
 	margin-left: 8px;
 	float: left;
 }
+
 /*ここからテーブルの設定　あとで調整よろしく*/
 table{
 	display: inline-block;
@@ -91,7 +88,17 @@ tr{
 
 /*ここまで*/
 
-
+#sendButton{
+	margin: 20px 0;
+	width: 100%;
+	border:none;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border-radius: 6px;
+}
+#sendButton:hover{
+	background: #e1e1e1;
+}
 
 #kiyaku{
 	width:800px;
