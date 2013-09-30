@@ -41,7 +41,13 @@
 <div id="headerIn">
 <h1><a href="../top/index.php"><img src="../module/images/reserveLogo.png"></a></h1>
 <div id="login">
-<a href="../mypage/login.php"><img src="../module/images/login.png" alt="ログイン&新規会員登録"></a>
+<?php
+if(isset($_SESSION["userid"])){
+	echo "<strong>ようこそ".$_SESSION["userid"]."さん！</strong>";
+}else{
+	echo '<a href="../mypage/login.php"><img src="../module/images/login.png" alt="ログイン&新規会員登録"></a>'."\n";
+}
+?>
 </div>
 <div class="clear"></div>
 </div>
