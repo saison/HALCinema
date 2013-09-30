@@ -1,10 +1,19 @@
 @charset "utf-8";
 /* CSS Document */
-h4{
-	border-left:5px solid #EDFF9F;
-	font-size:100%;
-	padding:0 0 0 10px;	
-	margin:0 0 0 10px;
+h2{
+	border-left:7px solid #dbffb7;
+	padding:2px 0 2px 10px;
+	font-size:125%;
+	font-weight:600;
+	margin:10px 0;
+}
+#comfirmUser{
+	border:1px solid #aaaaaa;
+	padding:10px;
+	margin:10px 0;
+	font-size:85%;
+	text-shadow: 0 0 1px #aaa;
+	color:#333333;	
 }
 .confirmTable table{
 	width:100%;
@@ -30,4 +39,8 @@ h4{
 	width:400px;
 	float:left;
 	margin:15px 45px;
+}
+#sendButton{
+	text-align:center;
+	margin:20px 0;
 }

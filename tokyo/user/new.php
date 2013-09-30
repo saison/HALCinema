@@ -1,12 +1,33 @@
 <?PHP
 	$pageTitle = "会員登録";
 	require_once("../module/reserveheader.php");
+	$errFlag=0;
+	if(isset($_GET["err"])){
+		$err=$_GET["err"];
+		if($err==111){
+			$errFlag=1;
+			$errWord="追加できませんでした。";
+		}
+		else if($err==1){
+			$errFlag=1;
+			$errWord="入力されていない項目があります。";
+		}
+		else if($err==2){
+			$errFlag=1;
+			$errWord="仕様できないＩＤです。";
+		}
+	}
 ?>
 <div id="content">
 <h2>新規会員登録</h2>
 <p id="newUser">HALCinemaでは映画座席予約を利用するためには会員登録が必要となっています。以下のすべての項目を埋めてください。</p>
+<?PHP
+	if($errFlag==1){
+		echo "<p id='newError'>".$errWord."</p>";
+	}
+?>
 <!--  エラー表示時は#newErrorをpタグなどに指定するとCSSが適応されます-->
-<form action="comfirm.php" method="post">
+<form action="checkUser.php" method="post">
 <div class="newTable">
 <table>
 <tr>
@@ -26,12 +47,16 @@
 <td><input type="email" name="mail" /></td>
 </tr>
 <tr>
-<th>性</th>
+<th>姓</th>
 <td><input type="text" name="family" /></td>
 </tr>
 <tr>
 <th>名</th>
 <td><input type="text" name="first" /></td>
+</tr>
+<tr>
+<th>生年月日</th>
+<td><input type="text" name="year"  size="4"/>年<input type="text" name="month"  size="2" />月<input type="text" name="day"  size="2"/>日</td>
 </tr>
 <tr>
 <th>都道府県</th>
@@ -109,7 +134,7 @@
 	</label></p>
 	<p><label>電話番号: </label></p>
     -->
-	<p id="sendButton"><button type="button" name="" value="" class="css3button">確認画面に進む</button></p>
+	<p id="sendButton"><input type="submit" name="send" value="確認画面に進む" class="css3button"></p>
 </form>
 </div>
 <?PHP
