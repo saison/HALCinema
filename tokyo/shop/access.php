@@ -1,36 +1,7 @@
-<!doctype html>
-<html>
-        <head>
-        <meta charset="utf-8">
-        <title>HALcinema</title>
-        <link href="css/reset.css" rel="stylesheet" type="text/css">
-        <link href="css/style.css" rel="stylesheet" type="text/css">
-        <link href="shop.css" rel="stylesheet" type="text/css">
-        <link href="css/juicyslider-min.css" rel="stylesheet" type="text/css">
-        <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
-        <script type="text/javascript" src="http://code.jquery.com/ui/1.10.3/jquery-ui.min.js"></script>
-        <script type="text/javascript" src="js/juicyslider.js"></script>
-        <script type="text/javascript">
-            // start to run when document ready
-             $(function() {
-                $('#myslider0').juicyslider({
-                    width: '100%',
-                    height: 350,
-                    mask : 'none',
-                    autoplay: 10000,
-                    shuffle: false,
-                });
-				var footer = $("#footerBox");  
-    			var offset = footer.offset().top + footer.height();  
-    			var win_h = $(window).height();  
-    			if( offset < win_h){  
-        			footer.css({"position":"absolute", "bottom":"0"});  
-    			} 
-            });
-        </script>
-        </head>
-
-        <body>
+<?PHP
+	$pageTitle = "access";
+	require_once("../module/header.php");
+?>
         <div id="wrapper"><!--メインコンテンツが先、ナビ部分は後-->
           <div id="main">
             <div id="mainContent"><!--メインコンテンツ-->
@@ -45,7 +16,7 @@
                 <h3 id="movieInfo">劇場案内</h3>
             </div>
             <div class="shopContents">
-            <p>お好きな映画が選べる8スクリーン。約1,600席のシネマコンプレックス！無料駐車場4,000台。大型のショッピングモールも併設してますので、ショッピングからエンターテインメントまで1日中お楽しみいただけます。</p>
+            <p>お好きな映画が選べる8スクリーン。約1,600席のシネマコンプレックス！無料駐車場4,000台。大型のショッピングモールも併設してますので、ショッピングからエンターテインメントまで1日中お楽しみいただけます。</p><br />
             <h4>スクリーン</h4>
             <table class="movieInfoTable" style="margin-bottom:25px;">
                 <tr>
@@ -116,7 +87,6 @@
                 <h3 id="serviceDay">料金一覧</h3>
             </div>
             <div class="shopContents">
-                <h4>通常料金</h4>
                	<table class="pricelist">
                   <tr class="none">
                     <td>一般</td>
@@ -127,21 +97,15 @@
                     <td class="right">&yen;1,800</td>
                   </tr>
                   <tr>
-                    <td>学生</td>
+                    <td>学生(小・中・高・大生)<p class="caution">＊要学生証</p></td>
                     <td class="right">&yen;1,500</td>
                   </tr>
-                  <tr class="none">
-                    <td colspan="2"><p class="caution">＊要学生証</p></td>
-                  </tr>
                   <tr>
-                    <td>シニア（60歳以上）</td>
+                    <td>シニア（60歳以上）<p class="caution">＊要年齢証明</p></td>
                     <td class="right">&yen;1,000</td>
                   </tr>
-                  <tr class="none">
-                    <td colspan="2"><p class="caution">＊要年齢証明</p></td>
-                  </tr>
                 </table>
-                <p>
+                <p id="priceListP">
 				＊前売り券ご利用のお客様は座席指定券との引き換えが必要でございます。<br />
 				＊他劇場発行のCINEMA TICKET、招待券等はご利用いただけませんので、ご注意下さい。<br />
 				＊先売券（さきうりけん）は、ご覧いただく日の2日前からご購入いただけます。
@@ -199,34 +163,13 @@
 				　i-mode,EZWeb,Yahoo!ケータイからご覧いただけます。                
                 </p>
                 
+                
                 <h4>2.URLをケータイに送る</h4>
                 <p>以下のボタンをクリックし、宛先にご自分の携帯電話のメールアドレスを入力して送信してください。</p>
                 <button>URLを送信する</button>
             </div>
-            
-            
-            
-              
-              
-              <!--  content終わり -->
-              
-              
-              <footer id="footerBox">ここフッター</footer>
-            </div>
-          </div>
-          <div id="sub"><!--ナビゲーション-->
-            <h1><a href="index.php"><img src="images/logo.png" alt="HALcinemaTOPページ"></a></h1>
-            <nav id="meinMenu">
-              <ul>
-                <li><a href="theatreInfo.php">劇場案内</a></li>
-                <li><a href="">作品案内</a></li>
-                <li><a href="">イベント&キャンペーン</a></li>
-                <li><a href="">サービス</a></li>
-                <li><a href="">企業情報</a></li>
-              </ul>
-            </nav>
-            <p id="copyright">CopyRight (C) 2013 HALCinema All Rights Reserved.</p>
-          </div>
-        </div>
-</body>
-</html>
+        
+          </div><!-- / #mainContent -->
+<?PHP
+	require_once("../module/footer.php");
+?>

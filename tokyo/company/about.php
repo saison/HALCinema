@@ -1,36 +1,8 @@
-<!doctype html>
-<html>
-        <head>
-        <meta charset="utf-8">
-        <title>HALcinema</title>
-        <link href="css/reset.css" rel="stylesheet" type="text/css">
-        <link href="css/style.css" rel="stylesheet" type="text/css">
-        <link href="about.css" rel="stylesheet" type="text/css">
-        <link href="css/juicyslider-min.css" rel="stylesheet" type="text/css">
-        <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
-        <script type="text/javascript" src="http://code.jquery.com/ui/1.10.3/jquery-ui.min.js"></script>
-        <script type="text/javascript" src="js/juicyslider.js"></script>
-        <script type="text/javascript">
-            // start to run when document ready
-             $(function() {
-                $('#myslider0').juicyslider({
-                    width: '100%',
-                    height: 350,
-                    mask : 'none',
-                    autoplay: 10000,
-                    shuffle: false,
-                });
-				var footer = $("#footerBox");  
-    			var offset = footer.offset().top + footer.height();  
-    			var win_h = $(window).height();  
-    			if( offset < win_h){  
-        			footer.css({"position":"absolute", "bottom":"0"});  
-    			} 
-            });
-        </script>
-        </head>
+<?PHP
+	$pageTitle = "";
+	require_once("../module/header.php");
+?>
 
-        <body>
         <div id="wrapper"><!--メインコンテンツが先、ナビ部分は後-->
           <div id="main">
             <div id="mainContent"><!--メインコンテンツ-->
@@ -123,11 +95,11 @@
                 <h3 id="privacy">プライバシーポリシー</h3>
             </div>
             <div class="privacyContents">
-				<div class="lead_privacy">このウェブサイトおよびホームページ（以下併せて「ウェブサイト」とする）をお客様がご利用する場合、以下の使用条件に同意されたものとみなします。当社は、東宝グループの一員として東宝株式会社のプライバシーポリシーに準拠しています。</div>
+				<div class="lead_privacy">このウェブサイトおよびホームページ（以下併せて「ウェブサイト」とする）をお客様がご利用する場合、以下の使用条件に同意されたものとみなします。当社は、HALグループの一員として東宝株式会社のプライバシーポリシーに準拠しています。</div>
 				
 				<div id="privacy_area">
 				<div class="title">
-				東宝株式会社のプライバシーポリシー
+				HALシネマのプライバシーポリシー
 				</div>
 				<div class="detail">
 				当社は、「個人情報の保護に関する法律」の基本理念「個人情報は、個人の人格尊重の理念のもとに慎重に取り扱われるべきものである」のもと、お客様の個人情報（以下「個人情報」といいます）の適正な保護を企業の社会的責任と認識し、この責務を果たすために、次の方針のもとで個人情報を取り扱います。</div>
@@ -211,7 +183,9 @@
                 <h3 id="tokutei">特定商取引法に基づく表示</h3>
             </div>
             <div class="tokuteiContents">
+              	<br />
             	<p>「特定商取引法に関する法律」第11条（通信販売についての広告）に基づき、商品の提供条件を次のとおり明示します。</p>
+                <br />
                 <table class="table_5">
 				<tr>
 				<th class="tokuteiTitle" colspan="2">事業者</th>
@@ -280,6 +254,7 @@
 				</tr>
 				</table>
 				
+                <div class="pageTop"><a href="#top">▲TOPに戻る</a></div>
             </div><!-- / .tokuteiContents -->
             
             
@@ -373,32 +348,10 @@ TOHOシネマズのウェブサイトを対応ブラウザで訪問すると、�
 ※「EV SSL証明書」非対応のブラウザをご利用の場合、緑色に変化しません。
 				</div>
 				</div>
-				
+				<div class="pageTop"><a href="#top">▲TOPに戻る</a></div>
 			</div><!-- / .privacyContents -->
             
-           
-           
-           
-              
-              <!--  content終わり -->
-              
-              
-              <footer id="footerBox">ここフッター</footer>
-            </div>
-          </div>
-          <div id="sub"><!--ナビゲーション-->
-            <h1><a href="index.php"><img src="images/logo.png" alt="HALcinemaTOPページ"></a></h1>
-            <nav id="meinMenu">
-              <ul>
-                <li><a href="theatreInfo.php">劇場案内</a></li>
-                <li><a href="">作品案内</a></li>
-                <li><a href="">イベント&キャンペーン</a></li>
-                <li><a href="">サービス</a></li>
-                <li><a href="">企業情報</a></li>
-              </ul>
-            </nav>
-            <p id="copyright">CopyRight (C) 2013 HALCinema All Rights Reserved.</p>
-          </div>
-        </div>
-</body>
-</html>
+           </div><!-- / #mainContent -->
+<?PHP
+	require_once("../module/footer.php");
+?>             
