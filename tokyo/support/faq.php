@@ -1,36 +1,8 @@
-<!doctype html>
-<html>
-        <head>
-        <meta charset="utf-8">
-        <title>HALcinema</title>
-        <link href="css/reset.css" rel="stylesheet" type="text/css">
-        <link href="css/style.css" rel="stylesheet" type="text/css">
-        <link href="faq.css" rel="stylesheet" type="text/css">
-        <link href="css/juicyslider-min.css" rel="stylesheet" type="text/css">
-        <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
-        <script type="text/javascript" src="http://code.jquery.com/ui/1.10.3/jquery-ui.min.js"></script>
-        <script type="text/javascript" src="js/juicyslider.js"></script>
-        <script type="text/javascript">
-            // start to run when document ready
-             $(function() {
-                $('#myslider0').juicyslider({
-                    width: '100%',
-                    height: 350,
-                    mask : 'none',
-                    autoplay: 10000,
-                    shuffle: false,
-                });
-				var footer = $("#footerBox");  
-    			var offset = footer.offset().top + footer.height();  
-    			var win_h = $(window).height();  
-    			if( offset < win_h){  
-        			footer.css({"position":"absolute", "bottom":"0"});  
-    			} 
-            });
-        </script>
-        </head>
+<?PHP
+	$pageTitle = "";
+	require_once("../module/header.php");
+?>
 
-        <body>
         <div id="wrapper"><!--メインコンテンツが先、ナビ部分は後-->
           <div id="main">
             <div id="mainContent"><!--メインコンテンツ-->
@@ -68,31 +40,9 @@
 		        <li><a href="faq03.html">決済受付メールが届かない場合はどうすればよいですか？</a></li>
 		        <li><a href="faq03.html">窓口での支払いでモバイルSuicaは利用できますか？</a></li>
 		    </ul>
-            
-          
-       
-            </div>
-
-              
-              <!--  content終わり -->
-              
-              
-              <footer id="footerBox">ここフッター</footer>
-            </div>
-          </div>
-          <div id="sub"><!--ナビゲーション-->
-            <h1><a href="index.php"><img src="images/logo.png" alt="HALcinemaTOPページ"></a></h1>
-            <nav id="meinMenu">
-              <ul>
-                <li><a href="theatreInfo.php">劇場案内</a></li>
-                <li><a href="">作品案内</a></li>
-                <li><a href="">イベント&キャンペーン</a></li>
-                <li><a href="">サービス</a></li>
-                <li><a href="">企業情報</a></li>
-              </ul>
-            </nav>
-            <p id="copyright">CopyRight (C) 2013 HALCinema All Rights Reserved.</p>
-          </div>
-        </div>
-</body>
-</html>
+                 
+            </div><!-- / .faqContents -->
+            </div><!-- / #mainContent -->
+<?PHP
+	require_once("../module/footer.php");
+?>
