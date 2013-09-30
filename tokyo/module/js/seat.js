@@ -36,7 +36,7 @@ $(function(){
 			var dragIconId = ui.draggable.attr("id");
 			var formId = $("#postData #"+dragIconId).attr("id");
 			if(dragIconId != formId){
-				$("#postData").append("<input type='hidden' id='"+ seatId +"_"+ dragClass +"' value='"+ seatId +"_"+ dragClass +"' />");
+				$("#postData").append("<input type='hidden' name='seat[]' id='"+ seatId +"_"+ dragClass +"' value='"+ seatId +"_"+ dragClass +"' />");
 			}
 		},
 		out:function(event, ui){

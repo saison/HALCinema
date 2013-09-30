@@ -16,8 +16,8 @@
 <p>Master、VISA、JCB、AMEX、DINERSのクレジットカードが利用可能です。</p>
 </div>
 <div class="payEachRight">
-<form>
-<input type="image" src="images/paySelect.png" alt="送信する">
+<form action="confirm.php" method="post">
+<input type="image" name="sendConfirm" src="images/paySelect.png" alt="送信する">
 </form>
 </div>
 <div class="clear"></div>
@@ -29,8 +29,8 @@
 <p>お支払い金額を月々のdocomoケータイ料金と合算してお支払いいただけます。<br />※ご利用にはSPモードの契約が必要です。</p>
 </div>
 <div class="payEachRight">
-<form>
-<input type="image" src="images/paySelect.png" alt="送信する">
+<form action="confirm.php" method="post">
+<input type="image" name="sendConfirm" src="images/paySelect.png" alt="送信する">
 </form>
 </div>
 <div class="clear"></div>
@@ -42,8 +42,8 @@
 <p>お支払い金額を月々のauケータイ料金と合算してお支払いいただけます。<br />※au IDのご登録が必要になります。</p>
 </div>
 <div class="payEachRight">
-<form>
-<input type="image" src="images/paySelect.png" alt="送信する">
+<form action="confirm.php" method="post">
+<input type="image" name="sendConfirm" src="images/paySelect.png" alt="送信する">
 </form>
 </div>
 <div class="clear"></div>
@@ -55,15 +55,15 @@
 <p>お支払い金額を月々のSoftBankケータイ料金と合算してお支払いいただけます。<br />※My SoftBankのご登録が必要になります。</p>
 </div>
 <div class="payEachRight">
-<form>
-<input type="image" src="images/paySelect.png" alt="送信する">
+<form action="confirm.php" method="post">
+<input type="image" name="sendConfirm" src="images/paySelect.png" alt="送信する">
 </form>
 </div>
 <div class="clear"></div>
 </div>
 <div id="payBack">
-<form>
-<input type="image" src="images/payBack.png" alt="戻る">
+<form action="confirm.php" method="post">
+<!-- <input type="image" name="sendConfirm" src="images/payBack.png" alt="戻る"> -->
 </form>
 </div>
 </div>
