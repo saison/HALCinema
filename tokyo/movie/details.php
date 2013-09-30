@@ -71,8 +71,9 @@
 									while(($rowSchedule = mysqli_fetch_array($resultSchedule)) != false){
 										$scN=mb_substr($rowSchedule[2],5,1);
 									}
-											
-									echo "<td class='tableScreen'>SCREEN".$scN."</td>\n";
+									if(!$scN==""){
+										echo "<td class='tableScreen'>SCREEN".$scN."</td>\n";
+									}
 									//////
 									
 									
@@ -85,7 +86,14 @@
 									$resultSchedule =mysqli_query($con,"SELECT * FROM show_schedule  WHERE show_day='$todayDate' AND cinema_id = '$row[0]' ORDER BY  start_time ASC");
 									while(($rowSchedule = mysqli_fetch_array($resultSchedule)) != false){
 										//スケジュール表示
-										echo"<td class='tableEachMovie'>\n<a href ='../reserve/seat.php?id=".$rowSchedule[0]."'>\n<span class='tableEachMovieStart'>".date("H:i",strtotime($rowSchedule[3]))." </span><br />～ ";
+										echo"<td class='tableEachMovie'>\n";
+										$nowTime=date("H:i");
+										if(date("H:i",strtotime($rowSchedule[3]))>=date('H:i', strtotime('+1 hour ' . $nowTime))){
+											echo "<a href ='../reserve/seat.php?id=".$rowSchedule[0]."'>\n";
+										}else{
+											echo "<a href =''>\n";
+										}
+										echo "<span class='tableEachMovieStart'>".date("H:i",strtotime($rowSchedule[3]))." </span><br />～ ";
 										$showTimeJp=$showTime." minute";//上映終了時間計算
 										echo date("H:i",strtotime($showTimeJp,strtotime($rowSchedule[3])));//上映終了時間
 											$nowTime=date("H:i");
@@ -111,7 +119,9 @@
 												$scN=mb_substr($rowSchedule[2],5,1);
 											}
 											//スクリーン番号
-											echo "<td class='tableScreen'>SCREEN".$scN."</td>";
+											if(!$scN==""){
+												echo "<td class='tableScreen'>SCREEN".$scN."</td>";
+											}
 											
 											//上映時間の計算　　　例)終了時間の割り出しの際に　135分の映画は140分として計算する。
 											$showTime=ceil($row[4]/10)*10;
