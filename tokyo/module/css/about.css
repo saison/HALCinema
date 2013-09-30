@@ -3,28 +3,32 @@
 
 /*----------------共通項目-------------------*/
 .aboutH3Title{
-	width:70%;
+	width:900px;
 	height:100%;
 	margin: 0 auto;
 	border:1px solid #AAA;
-	background:#CAFFFF;
+	background:#cefaff;
 }
 
 .aboutContents{
 	border:1px solid #AAA;
-	width:68%;
+	width:880px;
 	height:100%;
 	margin: 0 auto;
-	margin-bottom:2%;
-	padding: 1% 0 1% 2%;
+	margin-bottom:20px;
+	padding: 10px 10px;
 }
 
 h3{
-	margin:1% 0 1% 2%;
+	margin:10px 10px;
 }
 
 h4{
 	border-bottom:1px solid #CCC;
+}
+
+.pageTop{
+	float:right;
 }
 
 /*------------------------------------------*/
@@ -33,34 +37,34 @@ h4{
 
 /*----------------会社概要------------------*/
 .aboutContents{
-	font-size:80%;
-	margin-bottom:2%;
+	font-size:12px;
+	margin-bottom:20px;
 }
 
 .company{
-	font-size:100%;
+	font-size:14px;
 	border-spacing:0;
 }
 
 .company_item{
-	width:30%;
+	width:250px;
 	border-spacing:0;
 }
 
 .company_text{
-	width:70%;
+	width:650px;
 }
 
 .company_text th,.company_text td{
 	border:1px solid white;
 	font-size:90%;
-	margin:1% auto;
+	margin:10px auto;
 }
 
 
 .aboutContents td{
 	border-bottom:1px dashed #CCCCCC;
-	padding:2% 0 2% 0;
+	padding:10px 10px;
 }
 
 /*------------------------------------------*/
@@ -70,28 +74,28 @@ h4{
 
 /*---------------プライバシー---------------*/
 .privacyContents{
-	width:70%;
+	width:900px;
 	height:100%;
 	margin: 0 auto;
-	margin-bottom:2%;
-	font-size:80%;
+	margin-bottom:20px;
+	font-size:12px;
 	border:1px solid #CCC;
 }
 
 .lead_privacy{
-	margin:1%;
-	padding:1%;
+	margin:10px;
+	padding:10px;
 }
 
 .title{
 	background:#CCC;
-	margin:1%;
-	padding:1%;
+	margin:10px;
+	padding:10px;
 }
 
 .detail{
-	margin:1%;
-	padding:1%;
+	margin:10px;
+	padding:10px;
 }
 /*------------------------------------------*/
 
@@ -100,11 +104,11 @@ h4{
 
 /*---------特定商取引法に基づく表示---------*/
 .tokuteiContents{
-	width:70%;
+	width:900px;
 	height:100%;
 	margin: 0 auto;
-	margin-bottom:2%;
-	font-size:80%;
+	margin-bottom:20px;
+	font-size:12px;
 	border:1px solid #CCC;
 }
 
@@ -114,13 +118,13 @@ h4{
 }
 
 .tokuteiContents th{
-	width:30%;
-	padding:1%;
+	width:250px;
+	padding:10px;
 }
 
 .tokuteiContents td{
-	width:70%;
-	padding:1%;
+	width:650px;
+	padding:10px;
 }
 
 
