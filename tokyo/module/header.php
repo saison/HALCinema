@@ -41,7 +41,7 @@
 <div id="headerIn">
 <h1><a href="../top/index.php"><img src="../module/images/reserveLogo.png"></a></h1>
 <div id="login">
-<a href="login.php"><img src="../module/images/login.png" alt="ログイン&新規会員登録"></a>
+<a href="../mypage/login.php"><img src="../module/images/login.png" alt="ログイン&新規会員登録"></a>
 </div>
 <div class="clear"></div>
 </div>
