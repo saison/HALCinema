@@ -1,16 +1,41 @@
 <?PHP
 	$pageTitle = "会員登録";
-	require_once("../module/header.php");
+	require_once("../module/reserveheader.php");
 ?>
+<div id="content">
+<h2>新規会員登録</h2>
+<p id="newUser">HALCinemaでは映画座席予約を利用するためには会員登録が必要となっています。以下のすべての項目を埋めてください。</p>
+<!--  エラー表示時は#newErrorをpタグなどに指定するとCSSが適応されます-->
 <form action="comfirm.php" method="post">
-	<p><label>ユーザID:<input type="text" name="userId" /></label></p>
-	<p><label>パスワード:<input type="password" name="pass" /></label></p>
-	<p><label>メールアドレス:<input type="email" name="mail" /></label></p>
-	<p><label>姓:<input type="text" name="family" /></label></p>
-	<p><label>名:<input type="text" name="first" /></label></p>
-	<p><label>
-	お住まい:
-	<select name="prefectures">
+<div class="newTable">
+<table>
+<tr>
+<th>お好きなユーザID</th>
+<td><input type="text" name="userId" /></td>
+</tr>
+<tr>
+<th>パスワード</th>
+<td><input type="password" name="pass" /></td>
+</tr>
+<tr>
+<th>パスワード再入力</th>
+<td><input type="password" name="passAgain" /></td>
+</tr>
+<tr>
+<th>メールアドレス</th>
+<td><input type="email" name="mail" /></td>
+</tr>
+<tr>
+<th>性</th>
+<td><input type="text" name="family" /></td>
+</tr>
+<tr>
+<th>名</th>
+<td><input type="text" name="first" /></td>
+</tr>
+<tr>
+<th>都道府県</th>
+<td><select name="prefectures">
 		<option value="" selected>都道府県</option>
 		<option value="北海道">北海道</option>
 		<option value="青森県">青森県</option>
@@ -59,11 +84,34 @@
 		<option value="宮崎県">宮崎県</option>
 		<option value="鹿児島県">鹿児島県</option>
 		<option value="沖縄県">沖縄県</option>
-	</select>
+	</select></td>
+</tr>
+<tr>
+<th>住所（都道府県よりあと）</th>
+<td><input type="text" name="address" /></td>
+</tr>
+<tr>
+<th>電話番号</th>
+<td><input type="tel" name="tel" /></td>
+</tr>
+</table>
+</div>
+
+<!--
+	<p><label>ユーザID:</label></p>
+	<p><label>パスワード:</label></p>
+	<p><label>メールアドレス:</label></p>
+	<p><label>姓:</label></p>
+	<p><label>名:</label></p>
+	<p><label>
+	お住まい:
+	
 	</label></p>
-	<p><label>電話番号: <input type="tel" name="tel" /></label></p>
-	<p><input type="submit" value="確認画面へ" name="send" /></p>
+	<p><label>電話番号: </label></p>
+    -->
+	<p id="sendButton"><button type="button" name="" value="" class="css3button">確認画面に進む</button></p>
 </form>
+</div>
 <?PHP
-	require_once("../module/footer.php");
+	require_once("../module/reservefooter.php");
 ?>
