@@ -1,43 +1,22 @@
 @charset "utf-8";
-html{
-	font-family:"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+/* CSS Document */
+div#main {
+    width: 980px;
 }
-.clear{
-	clear:both;	
+.topTitle h2{
+	font-size:125%;
+	font-weight:600;	
+	line-height:1;
 }
-header{
-	border-top:7px solid #bcffff;
-	background-color:#efefef;
-	box-shadow:0 0 3px #aaa;	
+.topTitleSmall{
+	font-size:80%;	
 }
-#headerIn{
-	width:980px;
-	margin:0 auto;
+.titleBar{
+	position:relative;
+	width:100%;
+	height:5px;
+	background-image:url(../images/titleBer.png);
 }
-h1{
-	width:730px;	
-	float:left;
-}
-#login{
-	width:250px;
-	float:left;	
-}
-header nav{
-	width:980px;
-	margin:0 auto;	
-	padding:10px 0;
-}
-header li{
-	width:245px;
-	float:left;	
-}
-
-/*メインコンテンツ*/
-#mainContent {
-	width:980px;
-	margin:0 auto;
-}
-
 .contentTitle h2 {
   position: relative;
   color: #111;
@@ -91,20 +70,79 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eafffc', end
 	line-height:0;
 	font-family:Century Gothic,"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic";
 }
+#meinMenu{
+	width:250px;
+	border-top:3px solid #eeeeee;
+}
+#meinMenu li{
+	border-bottom:3px solid #eeeeee;
+}
+
+#meinMenu li a{
+	display:block;
+	padding:15px 20px;
+	color:#333333;
+	text-decoration:none;
+}
+#meinMenu li a:hover{
+	background-color:rgba(0,200,255,0.2);	
+	color:#555555;
+}
 
 
-footer{
-	background-color:#efefef;
-	height:200px;
-	box-shadow:0 0 2px #aaa;
-}
-#footerIn{
-	width:980px;
-	margin:0 auto;	
-}
 #copyright{
 	font-size:70%;
+	margin:15px 0 0 0;
+	text-align:center;	
 	color:#555555;
-	text-shadow:0 0 2px #ccc;
-	text-align:right;
+	text-shadow:0 0 2px #ffffff;
+}
+
+
+/*メインコンテンツ*/
+#mainContent {
+    margin-left: 255px;
+	height: 100%;
+	min-height: 100%;  
+}
+#nowScheduleScroll{
+	margin:0px 20px 40px 20px;
+	padding:5px;
+	background-color:#555555;	
+}
+#todaySchedule{ /*今日の上映スケジュール*/
+	margin:20px 40px;
+	padding:5px;
+	height:300px;
+	background-color:#ffffff;	
+	box-shadow:0px 0px 10px #dddddd;
+}
+#meinContentLeft{
+	width:70%;
+	float:left;
+}
+#comingsoonMovie{
+	margin:20px 20px 40px 40px;
+	padding:5px;
+	height:300px;
+	background-color:#ffffff;	
+	box-shadow:0px 0px 10px #dddddd;
+}
+#whatsnew{
+	margin:20px 20px 40px 40px;
+	padding:5px;
+	height:300px;
+	background-color:#ffffff;	
+	box-shadow:0px 0px 10px #dddddd;
+}
+#meinContentRight{
+	width:30%;
+	float:left;
+}
+#rankingMovie{
+	margin:20px 40px 40px 20px;
+	padding:5px;
+	height:600px;
+	background-color:#ffffff;	
+	box-shadow:0px 0px 10px #dddddd;
 }
