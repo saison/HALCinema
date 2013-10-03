@@ -13,7 +13,17 @@
 		break;
 	}
 	$_SESSION["showid"] = $showID;
-
+	
+	$con = getConnection();
+	$reserveSelectSql = "SELECT show_schedule.show_id AS showID , show_schedule.screen_id AS SID , show_schedule.show_day AS showDay , show_schedule.start_time AS startTime , cinema_master.cinema_name AS movieName FROM show_schedule INNER JOIN cinema_master ON show_schedule.cinema_id=cinema_master.cinema_id WHERE show_schedule.show_id='".$showID."'";
+	$reserveSelectResult = mysqli_query($con,$reserveSelectSql);
+	$reserveSelectRow = mysqli_fetch_array($reserveSelectResult);
+	$dateAndTime=$reserveSelectRow["showDay"]." ".$reserveSelectRow["startTime"];
+	$screenDay=date_parse($dateAndTime);
+	$screenID=$reserveSelectRow["SID"];
+	$screenSelectSql = "SELECT * FROM screen_master WHERE screen_id='".$screenID."'";
+	$screenSelectResult = mysqli_query($con,$screenSelectSql);
+	$screenSelect = mysqli_fetch_array($screenSelectResult);
 ?>
 
 <div id="nav"></div>
@@ -26,9 +36,9 @@
       <td><img src="images/selectTheatre.png" alt="劇場"></td>
       <td>HALCinema TOKYO</td>
       <td><img src="images/selectDay.png" alt="劇場"></td>
-      <td>2013年9月26日(木) 19:10~21:00</td>
+      <td><?php echo $screenDay["year"]."年".$screenDay["month"]."月".$screenDay["day"]."日 ".$screenDay["hour"]."：".$screenDay["minute"]."~"; ?></td>
       <td><img src="images/selectWork.png" alt="劇場"></td>
-      <td>エリジウム</td>
+      <td><?php echo $reserveSelectRow["movieName"]; ?></td>
     </tr>
   </table>
 </div>
@@ -89,7 +99,7 @@
 		</ul>
 	</div>
   </div>
-  <p class="blockTyui">各料金タイプ内の人形を選択したい座席にドラック&ドロップしてください</p>
+  <p class="blockTyui">各料金タイプ内の人形を選択したい座席にドラック&amp;ドロップしてください</p>
 </div>
 <div id="sertArrange"><!-- シート配置 floatでレフト 780px -->
   <?php
@@ -99,14 +109,19 @@
 //ペアシートの時はtdを結合で対応。
 //<td class="空席チェック(空席と予約されているところで変える）" id="座席番号(A-5 etc.)" >
 //
-	echo "<p id='sertTableTitle'>Ablock</p>\n";
-
+	echo "<p id='sertTableTitle'>Screen".$screenSelect["screen_number"]."</p>\n";
+	$seatSelectSql = "SELECT * FROM seat_list WHERE screen_id='".$screenSelect["screen_number"]."' ORDER BY sheet_number ASC";
+	$seatSelectResult = mysqli_query($con,$seatSelectSql);
+	while(($seatSelectRow = mysqli_fetch_array($seatSelectResult))  != false ){
+		print $seatSelectRow["sheet_number"]."<br />";	
+	}
 ?>
 
 
 
 
 <table id="ABlockSeat">
+<caption><span class="captionBig">A</span>Block</caption>
 	<tr>
 		<td id="a-1" class="seat"></td>
 		<td id="a-2" class="seat"></td>
@@ -159,6 +174,7 @@
 
 
 <table id="BBlockSeat">
+<caption>BBlock</caption>
 	<tr>
 		<td id="a-1" class="seat"></td>
 		<td id="a-2" class="seat"></td>
@@ -210,6 +226,7 @@
 </table>
 
 <table id="CBlockSeat">
+<caption>CBlock</caption>
 	<tr>
 		<td id="a-1" class="seat"></td>
 		<td id="a-2" class="seat"></td>
@@ -261,6 +278,7 @@
 </table>
 
 <table id="DBlockSeat">
+<caption>DBlock</caption>
 	<tr>
 		<td id="a-1" class="seat"></td>
 		<td id="a-2" class="seat"></td>

@@ -13,7 +13,7 @@
 		if(file_exists("../module/css/style.css")){
 			echo "<link rel='stylesheet' href='../module/css/reserveStyle.css' />\n";
 		}
-		echo '<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.12.0/build/cssreset/cssreset-min.css">'."\n";
+		echo '<link rel="stylesheet" type="text/css" href="../module/css/reset.css">'."\n";
 		//個別CSSの設定
 		if(file_exists("../module/css/".$filename.".css")){
 			echo "<link rel='stylesheet' href='../module/css/".$filename.".css' />\n";
