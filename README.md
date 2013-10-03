@@ -23,6 +23,12 @@ DB名 halcinema
 西村氏回答待ち
 
 
+##ページタイトルの指定
+ページタイトルは以下のように指定してください 
+>$pageTitle="［ページタイトル名］";  
+>例）$pageTitle="座席予約"; →座席予約 ｜HALCinema
+
+
 ##header･footerファイルに関して
 ディレクトリにより、利用ファイルが異なります。
 * mypage、reserve、user･･･reserveHeader.php、reserveFooter.php 
