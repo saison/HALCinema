@@ -48,7 +48,7 @@
 #sertArrange{
 	width:780px;
 	float:left;
-	background-color:#00aaff;
+	/*background-color:#00aaff;*/
 }
 #sertTableTitle{
 	font-weight:bold;
@@ -73,6 +73,7 @@
 /*ここからテーブルの設定　あとで調整よろしく*/
 table{
 	display: inline-block;
+	width:100%;
 }
 tr{
 	margin: 10px;
@@ -84,6 +85,20 @@ tr{
 	background: #ffffff;
 	border-radius: 6px;
 	display: inline-block;
+}
+caption{
+	margin:0 0 0 10px;
+	padding:5px;
+	display:block;
+	font-size:150%;
+	background-color:#333333;
+	color:#ffffff;
+	text-shadow:0 0 2px #0af;
+	font-family:Century Gothic,"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic";
+}
+.captionBig{
+	font-size:150%;	
+	font-weight:600;
 }
 
 /*ここまで*/
