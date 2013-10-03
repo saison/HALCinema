@@ -2,8 +2,12 @@
 ここはHAL東京3年の年間制作が作られている場所です。
 
 ##DBに関して
-テストデータは言ってくれれば渡します。  
-DB名 halcinema
+テストデータはDropbox内にあります   
+ファイル名 halcinema_1503.sql  
+DB名 halcinema  
+ユーザ名 halcinema  
+ホスト localhost  
+パスワード halcinema   
 
 
 ##日程に関して
@@ -21,8 +25,8 @@ DB名 halcinema
 
 ##header･footerファイルに関して
 ディレクトリにより、利用ファイルが異なります。
-mypage、reserve、user･･･reserveHeader.php、reserveFooter.php
-その他･･･header.php、footer.php
+* mypage、reserve、user･･･reserveHeader.php、reserveFooter.php 
+* その他･･･header.php、footer.php
 
 
 ##スタイルに関して
@@ -38,7 +42,7 @@ mypage、reserve、user･･･reserveHeader.php、reserveFooter.php
 
 css  
 style.css･reserveStyle.cssは統一スタイル  
->HALCinema/module/css/style.css(reserveStyle.css) 
+>HALCinema/module/css/style.css(reserveStyle.css)  
 >HALCinema/module/css/[画面名].css  
 
 js  
