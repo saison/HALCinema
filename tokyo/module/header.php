@@ -11,13 +11,16 @@
 
 		//スタイルシートのファイルパス
 		if(file_exists("../module/css/style.css")){
-			echo "<link rel='stylesheet' href='../module/css/style.css' />\n";
+			echo "<link rel='stylesheet' type='text/css' href='../module/css/style.css' />\n";
 		}
-		echo '<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.12.0/build/cssreset/cssreset-min.css">'."\n";
+		echo '<link rel="stylesheet" type="text/css" href="../module/css/reset.css">'."\n";
 		echo '<link href="../module/css/juicyslider-min.css" rel="stylesheet" type="text/css">'."\n";
 		//個別CSSの設定
 		if(file_exists("../module/css/".$filename.".css")){
 			echo "<link rel='stylesheet' href='../module/css/".$filename.".css' />\n";
+		}
+		if($filename=="index"){
+			echo "<link rel='stylesheet' href='../module/css/access.css' />\n";
 		}
 	?>
 
@@ -43,7 +46,7 @@
 <div id="login">
 <?php
 if(isset($_SESSION["userid"])){
-	echo "<strong>ようこそ".$_SESSION["userid"]."さん！</strong>";
+	echo "<p><strong><a href='../mypage/reserveView.php'>ようこそ".$_SESSION["userid"]."さん！</a></strong></p><p id='logout'><a href='../top/logout.php'>ログアウト</a></p>";
 }else{
 	echo '<a href="../mypage/login.php"><img src="../module/images/login.png" alt="ログイン&新規会員登録"></a>'."\n";
 }
@@ -56,7 +59,7 @@ if(isset($_SESSION["userid"])){
 <li><a href="../shop/"><img src="../module/images/menu/theaters.png"></a></li>
 <li><a href="../movie/movie.php"><img src="../module/images/menu/workinfo.png"></a></li>
 <li><a href="../service/"><img src="../module/images/menu/service.png"></a></li>
-<li><a href="../company/"><img src="../module/images/menu/companyinfo.png"></a></li>
+<li><a href="../company/about.php"><img src="../module/images/menu/companyinfo.png"></a></li>
 <div class="clear"></div>
 </ul>
 </nav>
