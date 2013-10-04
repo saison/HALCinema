@@ -17,19 +17,19 @@ $count=0;
 		$isSuccess =mysqli_select_db($con, 'halcinema');	
 		if($isSuccess){
 			if(isset($_SESSION["userid"])){
-			$result =mysqli_query($con,"SELECT * FROM reserve_master WHERE = '".$_SESSION["userid"] ."'ORDER BY reserve_time DESC");
-			while(($row = mysqli_fetch_array($result)) != false){
-				$count++;
-						echo "<div class='reserveEachBox'><div class='reserveBoxLeft'>$count</div>";
-						echo "<div class='reserveBoxRight'><p class='reserveDate'>予約日時：".$row["reserve_time"]."</p>";//予約日時
-						echo  "<p class='reserveNumber'>予約番号：".$row["reserve_number"]."</p>";//予約番号
-						echo "</div><div class='clear'></div></div>";
-			}
-			if($count==0){
-					
-			}
+				$result =mysqli_query($con,"SELECT * FROM reserve_master WHERE = '".$_SESSION["userid"] ."'ORDER BY reserve_time DESC");
+				while(($row = mysqli_fetch_array($result)) != false){
+					$count++;
+					echo "<div class='reserveEachBox'><div class='reserveBoxLeft'>$count</div>";
+					echo "<div class='reserveBoxRight'><p class='reserveDate'>予約日時：".$row["reserve_time"]."</p>";//予約日時
+					echo  "<p class='reserveNumber'>予約番号：".$row["reserve_number"]."</p>";//予約番号
+					echo "</div><div class='clear'></div></div>";
+				}
+				if($count==0){
+						
+				}
 			}else{
-				//header('Location: login.php');//ログイン処理無効化
+				header('Location: login.php');//ログイン処理無効化
 			}
 		}		
 		//サーバー切断				

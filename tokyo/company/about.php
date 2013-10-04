@@ -1,5 +1,5 @@
 <?PHP
-	$pageTitle = "";
+	$pageTitle = "企業情報";
 	require_once("../module/header.php");
 ?>
 
@@ -7,7 +7,7 @@
           <div id="main">
             <div id="mainContent"><!--メインコンテンツ-->
             <div class="contentTitle">
-            <h2>劇場案内<br /><span class="h2En">Theater Info.</span></h2>
+            <h2>企業情報<br /><span class="h2En">Company Info.</span></h2>
             </div>
               <!-- ここからcontent -->
               <!-- ここh2タイトル -->
@@ -26,10 +26,9 @@
 					<tr>
 					<td class="arrow"><img src="../images/arrow_s.gif" alt="" width="13" height="9" /></td>
 					<td class="company_item">事業内容</td>
-					<td class="company_text">(1) 映画館の運営<br />
-					(2) パンフレット、キャラクター商品の販売（個性的な名称や特徴を有している人物、<br />
-					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;動物の画像を付したもの）<br />
-					(3) 軽飲食物の販売
+					<td class="company_text"><ul><li>映画館の運営</li>
+					<li>パンフレット、キャラクター商品の販売（個性的な名称や特徴を有している人物動物の画像を付したもの）</li>
+					<li>軽飲食物の販売</li></ul>
                     </td>
 					</tr>
 					<tr>

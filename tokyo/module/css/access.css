@@ -2,21 +2,50 @@
 /* CSS Document */
 
 /*----------------共通項目-------------------*/
-.shopH3Title{
-	width:900px;
-	height:100%;
-	margin: 0 auto;
-	border:1px solid #AAA;
-	background:#cefaff;
+
+#subnav{
+	width:200px;
+	float:left;
+}
+#subnav ul{
+	margin:15px 0;	
+}
+#subnav li{
+	
+}
+#subnav li a{
+	border-bottom:1px solid #ccc;
+	color:#333333;
+	padding:10px 5px;
+	display:block;
+	font-size:80%;
+	text-decoration:none;
+}
+#subnav li a:hover{
+	background-color:#eeeeee;
+	text-decoration:underline;
+}
+
+#rightMeinContent{
+	width:750px;
+	margin:0 0 0 30px;
+	float:left;
+}
+
+.shopH3Title{ /*各タイトル*/
+	border-bottom:3px solid #ccc;
+	font-size:150%;
+	padding:0 5px;
+	margin:0 0 5px 0;
+	font-weight:600;
+	line-height:1;
 }
 
 .shopContents{
 	border:1px solid #AAA;
-	width:880px;
-	height:100%;
-	margin: 0 auto;
-	margin-bottom:2%;
-	padding: 10px 10px;
+	width:650px;
+	margin: 0 auto 5px auto;
+	padding:10px;
 }
 
 h3{
@@ -29,7 +58,7 @@ h4{
 
 p{
 	font-size:90%;
-	margin-bottom:2%;
+	margin-bottom:5px;
 }
 /*------------------------------------------*/
 
@@ -38,14 +67,15 @@ p{
 
 /*-----------------劇場案内-----------------*/
 .movieInfoTable{
-	font-size:14px;
+	font-size:80%;
 	border-spacing:0;
-	width:880px;
+	width:650px;
 }
 
 .movieInfoTable th,.movieInfoTable td{
 	text-align:center;
 	border:1px solid white;
+	padding:5px;
 }
 
 .movieInfoTable th{
