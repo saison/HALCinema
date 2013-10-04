@@ -10,7 +10,7 @@
 
 	if(!(isset($_SESSION["userid"]))){
 		header("Location:../mypage/login.php");
-		break;
+		exit;
 	}
 	$_SESSION["showid"] = $showID;
 	
@@ -109,12 +109,24 @@
 //ペアシートの時はtdを結合で対応。
 //<td class="空席チェック(空席と予約されているところで変える）" id="座席番号(A-5 etc.)" >
 //
+	$seatMax=array();
+	$seatA=0;
 	echo "<p id='sertTableTitle'>Screen".$screenSelect["screen_number"]."</p>\n";
 	$seatSelectSql = "SELECT * FROM seat_list WHERE screen_id='".$screenSelect["screen_number"]."' ORDER BY sheet_number ASC";
 	$seatSelectResult = mysqli_query($con,$seatSelectSql);
 	while(($seatSelectRow = mysqli_fetch_array($seatSelectResult))  != false ){
-		print $seatSelectRow["sheet_number"]."<br />";	
+		$seatDivision=trim($seatSelectRow["sheet_number"]);
+		$seatDivision=explode("-",$seatDivision)."<br />";
+		//print $seatDivision[0]."-".$seatDivision[1]."<br />";
+		switch($seatDivision[0]){
+			case "A":
+				if($seatA<$seatDivision[1]){
+					$seatA=$seatDivision[1];
+				}
+				break;
+		}
 	}
+	print $seatA;
 ?>
 
 
@@ -174,7 +186,7 @@
 
 
 <table id="BBlockSeat">
-<caption>BBlock</caption>
+<caption><span class="captionBig">B</span>Block</caption>
 	<tr>
 		<td id="a-1" class="seat"></td>
 		<td id="a-2" class="seat"></td>
@@ -226,7 +238,7 @@
 </table>
 
 <table id="CBlockSeat">
-<caption>CBlock</caption>
+<caption><span class="captionBig">C</span>Block</caption>
 	<tr>
 		<td id="a-1" class="seat"></td>
 		<td id="a-2" class="seat"></td>
@@ -278,7 +290,7 @@
 </table>
 
 <table id="DBlockSeat">
-<caption>DBlock</caption>
+<caption><span class="captionBig">D</span>Block</caption>
 	<tr>
 		<td id="a-1" class="seat"></td>
 		<td id="a-2" class="seat"></td>
