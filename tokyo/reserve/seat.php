@@ -3,17 +3,17 @@
 
 	if(!(isset($showID))){
 		header("Location:../movie/movie.php");
-		break;
+		return;
 	}
 	$pageTitle="座席選択&amp;フード･ドリンク選択";
 	require_once("../module/reserveHeader.php");
 
 	if(!(isset($_SESSION["userid"]))){
 		header("Location:../mypage/login.php");
-		exit;
+		return;
 	}
 	$_SESSION["showid"] = $showID;
-	
+
 	$con = getConnection();
 	$reserveSelectSql = "SELECT show_schedule.show_id AS showID , show_schedule.screen_id AS SID , show_schedule.show_day AS showDay , show_schedule.start_time AS startTime , cinema_master.cinema_name AS movieName FROM show_schedule INNER JOIN cinema_master ON show_schedule.cinema_id=cinema_master.cinema_id WHERE show_schedule.show_id='".$showID."'";
 	$reserveSelectResult = mysqli_query($con,$reserveSelectSql);
