@@ -2,21 +2,6 @@
 	$pageTitle = "";
 	require_once("../module/header.php");
 ?>
-<script type="text/javascript" src="http://code.jquery.com/ui/1.10.3/jquery-ui.min.js"></script>
-        <script type="text/javascript" src="../module/js/juicyslider.js"></script>
-<script type="text/javascript">
-            // start to run when document ready
-             $(function() {
-                $('#myslider0').juicyslider({
-                    width: '100%',
-                    height: 350,
-                    mask : 'none',
-                    autoplay: 10000,
-                    shuffle: false,
-                });
-            });
-        </script>
-
 <div id="mainContent"><!--メインコンテンツ-->
   <div class="row-fluid"><!--スライダー（プロトでは未実装）-->
     <div class="pagination-centered">
