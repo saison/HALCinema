@@ -1,4 +1,5 @@
 <?php
+
 	$showID = $_GET["id"];
 
 	if(!(isset($showID))){
