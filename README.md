@@ -2,7 +2,8 @@
 ここはHAL東京3年の年間制作が作られている場所です。
 
 ##DBに関して
-テストデータはDropbox内にあります   
+テストデータはDropbox内にあります。  
+ファイル名の修正、自動読み込みなど今後改善します。  
 ファイル名 halcinema_1503.sql  
 DB名 halcinema  
 ユーザ名 halcinema  
