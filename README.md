@@ -1,17 +1,22 @@
 #HALCinema
 ここはHAL東京3年の年間制作が作られている場所です。
 
+##進捗管理に関して　
+FE･BEの進捗管理はGoogleDocsで行われています。   
+<a href="https://docs.google.com/spreadsheet/ccc?key=0AgvRmkGL_iUQdE0yb25GZzUtSGhjQTNzWEYyWU1xaFE&usp=sharing">https://docs.google.com/spreadsheet/ccc?key=0AgvRmkGL_iUQdE0yb25GZzUtSGhjQTNzWEYyWU1xaFE&usp=sharing</a>　
+  
+  
 ##DBに関して
+DBの使用方法などはGoogleDocsを確認して下さい。  
+<a href="https://docs.google.com/spreadsheet/ccc?key=0AgvRmkGL_iUQdFota3I3MmFfUFdpdmU4Y3NFbTR2VUE&usp=sharing">https://docs.google.com/spreadsheet/ccc?key=0AgvRmkGL_iUQdFota3I3MmFfUFdpdmU4Y3NFbTR2VUE&usp=sharing</a>　
+
 テストデータはDropbox内にあります。  
 ファイル名の修正、自動読み込みなど今後改善します。  
 ファイル名 halcinema_1503.sql  
-DB名 halcinema  
-ユーザ名 halcinema  
-ホスト localhost  
-パスワード halcinema   
 
 
 ##日程に関して
+今後修正します。詳しくは進捗管理表を確認して下さい。  
 * 9月 => プロトタイプ完成/提出(フロント完成/テスト)  
 * 10月 => インターンシップ(作業はできたらやっといて)  
 * 11月 => バックエンド制作  
@@ -21,7 +26,8 @@ DB名 halcinema
 
 
 ##同じファイル名が存在する問題について
-西村氏回答待ち
+西村氏回答待ちですが、FEに関しては進捗管理表の通り進めてください。  
+BEに関しては改善をします。（<a href="http://pickles.pxt.jp/">Pickles Framework</a>をBEで導入するかもしれません）
 
 
 ##ページタイトルの指定
