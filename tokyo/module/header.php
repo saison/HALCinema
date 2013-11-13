@@ -57,7 +57,7 @@ if(isset($_SESSION["userid"])){
 </div>
 <nav>
 <ul>
-<li><a href="../shop/"><img src="../module/images/menu/theaters.png"></a></li>
+<li><a href="../shop/shop.php"><img src="../module/images/menu/theaters.png"></a></li>
 <li><a href="../movie/movie.php"><img src="../module/images/menu/workinfo.png"></a></li>
 <li><a href="../service/"><img src="../module/images/menu/service.png"></a></li>
 <li><a href="../company/about.php"><img src="../module/images/menu/companyinfo.png"></a></li>

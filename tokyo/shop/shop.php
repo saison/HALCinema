@@ -9,10 +9,10 @@
     <h2>劇場案内<br />
       <span class="h2En">Theater Info.</span></h2>
   </div>
-  <!-- ここからcontent --> 
+  <!-- ここからcontent -->
   <!-- ここh2タイトル -->
   <div class="clearfix">
-    <div id="subnav"><!-- w200px --> 
+    <div id="subnav"><!-- w200px -->
     	<ul>
         	<li><a href="#movieInfo">劇場案内</a></li>
             <li><a href="#serviceDay">料金&amp;サービスデー</a></li>
@@ -21,11 +21,9 @@
             <li><a href="#merumaga">ハルシネマメールマガジン</a></li>
         </ul>
     </div>
-    <div id="rightMeinContent"><!-- w950px m-l30px --> 
+    <div id="rightMeinContent"><!-- w950px m-l30px -->
       <!-- 劇場案内 -->
-      <div class="shopH3Title">
         <h3 id="movieInfo">劇場案内</h3>
-      </div>
       <div class="shopContents">
         <p>お好きな映画が選べる8スクリーン。約1,600席のシネマコンプレックス！無料駐車場4,000台。大型のショッピングモールも併設してますので、ショッピングからエンターテインメントまで1日中お楽しみいただけます。</p>
         <br />
@@ -83,7 +81,7 @@
           </tr>
         </table>
       </div>
-      
+
       <!-- サービスデー -->
       <div class="shopH3Title">
         <h3 id="serviceDay">料金一覧</h3>
@@ -100,7 +98,7 @@
           </tr>
           <tr>
             <td>学生(小・中・高・大生)
-              <p class="caution">＊要学生証</p></td>
+              <span class="caution">＊要学生証</span></td>
             <td class="right">&yen;1,500</td>
           </tr>
         </table>
@@ -108,23 +106,20 @@
           ＊他劇場発行のCINEMA TICKET、招待券等はご利用いただけませんので、ご注意下さい。<br />
           ＊当映画館では当サイトのみ7日前からチケットを購入することができます。 </p>
       </div>
-      
+
       <!-- チケット購入方法 -->
       <div class="shopH3Title">
         <h3 id="ticket">チケット購入方法</h3>
       </div>
       <div class="shopContents">
         <h4>1.オンラインでチケット購入</h4>
-        <p>HALCinemaなら、映画チケットはパソコン・携帯電話から事前に購入できます。クレジットカード、docomo･au･SoftBankのキャリア決済も利用可能です。（現金での決済は取り扱いしておりません）<br />
-          <br />
-          <button>チケット購入はこちら</button>
-        </p>
+        <p>HALCinemaなら、映画チケットはパソコン・携帯電話から事前に購入できます。クレジットカード、docomo･au･SoftBankのキャリア決済も利用可能です。（現金での決済は取り扱いしておりません）</p>
         <h4>2.ペアシートを完備</h4>
         <p>一部のスクリーンにはペアシートを完備しています。ペアシートはペア･お一人様どちらでも利用可能です。 </p>
         <h4>3.あなただけのシートをキープ</h4>
         <p>当館のすべての上映は定員入れ替え制です。立ち見なしでゆったりと作品をご鑑賞ください。 </p>
       </div>
-      
+
       <!-- ハルシネマポイント -->
       <div class="shopH3Title">
         <h3 id="point">ハルシネマポイント</h3>
@@ -132,7 +127,7 @@
       <div class="shopContents">
         <p>当サイトから予約するとハルシネマポイントが105円(税込み)に付き1ポイント付きます。1ポイント1円として次回からの予約時に利用することができます。</p>
       </div>
-      
+
       <!-- ハルシネマメルマガ -->
       <div class="shopH3Title">
         <h3 id="merumaga">ハルシネマメルマガ</h3>
