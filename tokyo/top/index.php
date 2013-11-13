@@ -3,22 +3,16 @@
 	require_once("../module/header.php");
 ?>
 <div id="mainContent"><!--メインコンテンツ-->
-  <div class="row-fluid"><!--スライダー（プロトでは未実装）-->
-    <div class="pagination-centered">
-      <div id="myslider0" class="juicyslider">
-        <ul>
-          <li><a href=""><img src="../module/data/0.jpg" alt=""></a></li>
-          <li><img src="../module/data/2.jpg" alt=""></li>
-          <li><img src="../module/data/4.jpg" alt=""></li>
-        </ul>
-        <div class="nav next"></div>
-        <div class="nav prev"></div>
-        <div class="mask"></div>
-      </div>
-    </div>
-  </div>
-  <!--スライダー終わり-->
-  <div id="nowScheduleScroll">現在上映中映画Scroll</div>
+	<div id="nowScheduleScroll">現在上映中映画Scroll</div>
+	<div id="yuumaDiv">
+		<ul id="topSlider" class="bxslider">
+			<li><img src="../module/data/0.jpg" alt="0" /></li>
+			<li><img src="../module/data/1.jpg" alt="1" /></li>
+			<li><img src="../module/data/2.jpg" alt="2" /></li>
+			<li><img src="../module/data/3.jpg" alt="3" /></li>
+			<li><img src="../module/data/4.jpg" alt="4" /></li>
+		</ul><!-- /.bxslider -->
+	</div>
   <div id="todaySchedule">
     <div class="topTitle">
       <h2><img src="images/nowshowingTitle.png" alt="今日の上映スケジュール"></h2>
@@ -38,11 +32,11 @@
       </div>
       <div class="titleBar"></div>
       <ul>
-      <li>09月20日･･･テストテストテストテスト</li>
-      <li>09月20日･･･テストテストテストテスト</li>
-      <li>09月20日･･･テストテストテストテスト</li>
-      <li>09月20日･･･テストテストテストテスト</li>
-      <li>09月20日･･･テストテストテストテスト</li>
+	      <li>09月20日･･･テストテストテストテスト</li>
+	      <li>09月20日･･･テストテストテストテスト</li>
+	      <li>09月20日･･･テストテストテストテスト</li>
+	      <li>09月20日･･･テストテストテストテスト</li>
+	      <li>09月20日･･･テストテストテストテスト</li>
       </ul>
     </div>
   </div>

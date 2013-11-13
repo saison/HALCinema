@@ -5,6 +5,7 @@
 <html lang="ja">
 <head>
 	<meta charset="UTF-8" />
+	<link rel="stylesheet" type="text/css" href="../module/css/reset.css">
 	<?PHP
 		//各ファイル名の取得
 		$filename = basename($_SERVER["PHP_SELF"],".php");
@@ -13,8 +14,6 @@
 		if(file_exists("../module/css/style.css")){
 			echo "<link rel='stylesheet' type='text/css' href='../module/css/style.css' />\n";
 		}
-		echo '<link rel="stylesheet" type="text/css" href="../module/css/reset.css">'."\n";
-		echo '<link href="../module/css/juicyslider-min.css" rel="stylesheet" type="text/css">'."\n";
 		//個別CSSの設定
 		if(file_exists("../module/css/".$filename.".css")){
 			echo "<link rel='stylesheet' href='../module/css/".$filename.".css' />\n";
@@ -24,6 +23,7 @@
 		}
 	?>
 
+	<link href="../module/css/jquery.bxslider.css" rel="stylesheet" type="text/css">
 	<script src="../module/js/jquery-1.9.1.js"></script>
 	<script src="../module/js/jquery-ui-1.10.3.custom.min.js"></script>
 	<?PHP
@@ -37,6 +37,7 @@
 		}
 
 	?>
+	<script src="../module/js/jquery.bxslider.min.js"></script>
 	<title><?PHP if($pageTitle != ""){ echo $pageTitle." | "; } ?>HALCinema</title>
 </head>
 <body>
