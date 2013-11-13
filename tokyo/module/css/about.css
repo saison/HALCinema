@@ -1,140 +1,111 @@
-@charset "utf-8";
+@charset "UTF-8";
 /* CSS Document */
-
 /*----------------共通項目-------------------*/
-.aboutH3Title{
-	width:900px;
-	height:100%;
-	margin: 0 auto;
-	border:1px solid #AAA;
-	background:#cefaff;
+.aboutContents {
+  width: 880px;
+  height: 100%;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  padding: 70px 10px 20px 10px;
+  background: #efefef;
 }
 
-.aboutContents{
-	border:1px solid #AAA;
-	width:880px;
-	height:100%;
-	margin: 0 auto;
-	margin-bottom:20px;
-	padding: 10px 10px;
+h3 {
+  width: 895px;
+  margin: 0 auto;
+  margin-bottom: -60px;
+  margin-top: 50px;
 }
 
-h3{
-	margin:10px 10px;
-}
-
-h4{
-	border-bottom:1px solid #CCC;
-}
-
-.pageTop{
-	float:right;
+.pageTop {
+  float: right;
 }
 
 /*------------------------------------------*/
-
-
-
 /*----------------会社概要------------------*/
-.aboutContents{
-	font-size:12px;
-	margin-bottom:20px;
+.aboutContents {
+  font-size: 12px;
+  margin-bottom: 20px;
 }
 
-.company{
-	font-size:14px;
-	border-spacing:0;
+.company {
+  font-size: 14px;
+  border-spacing: 0;
 }
 
-.company_item{
-	width:250px;
-	border-spacing:0;
+.company_item {
+  width: 250px;
+  border-spacing: 0;
 }
 
-.company_text{
-	width:650px;
+.company_text {
+  width: 650px;
 }
 
-.company_text th,.company_text td{
-	border:1px solid white;
-	font-size:90%;
-	margin:10px auto;
+.company_text th, .company_text td {
+  font-size: 90%;
+  margin: 10px auto;
 }
 
-
-.aboutContents td{
-	border-bottom:1px dashed #CCCCCC;
-	padding:10px 10px;
+.aboutContents td {
+  border-bottom: 1px dashed #CCCCCC;
+  padding: 10px 10px;
 }
 
 /*------------------------------------------*/
-
-
-
-
 /*---------------プライバシー---------------*/
-.privacyContents{
-	width:900px;
-	height:100%;
-	margin: 0 auto;
-	margin-bottom:20px;
-	font-size:12px;
-	border:1px solid #CCC;
+.privacyContents {
+  width: 880px;
+  height: 100%;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  padding: 70px 10px 20px 10px;
+  background: #efefef;
 }
 
-.lead_privacy{
-	margin:10px;
-	padding:10px;
+.lead_privacy {
+  margin: 10px;
+  padding: 10px;
 }
 
-.title{
-	background:#CCC;
-	margin:10px;
-	padding:10px;
+.title {
+  background: #CCC;
+  margin: 10px;
+  padding: 10px;
 }
 
-.detail{
-	margin:10px;
-	padding:10px;
+.detail {
+  margin: 10px;
+  padding: 10px;
 }
+
 /*------------------------------------------*/
-
-
-
-
 /*---------特定商取引法に基づく表示---------*/
-.tokuteiContents{
-	width:900px;
-	height:100%;
-	margin: 0 auto;
-	margin-bottom:20px;
-	font-size:12px;
-	border:1px solid #CCC;
+.tokuteiContents {
+  width: 880px;
+  height: 100%;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  padding: 70px 10px 20px 10px;
+  background: #efefef;
 }
 
-.tokuteiTitle{
-	background:#666;
-	color:white;
+.tokuteiTitle {
+  background: #666;
+  color: white;
 }
 
-.tokuteiContents th{
-	width:250px;
-	padding:10px;
+.tokuteiContents th {
+  width: 250px;
+  padding: 10px;
 }
 
-.tokuteiContents td{
-	width:650px;
-	padding:10px;
+.tokuteiContents td {
+  width: 650px;
+  padding: 10px;
 }
-
 
 /*------------------------------------------*/
-
-
-
-
 /*--------サイトのご利用に関して------------*/
-
 /*プライパシーと同じような形だったので、同じクラス使ってます。*/
-
 /*------------------------------------------*/
