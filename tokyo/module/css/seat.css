@@ -5,8 +5,14 @@
 }
 
 #sertChoice{
-	width:200px;
-	float:left;
+	width:300px;
+	right:15px;
+	margin-top:50px;
+	position:absolute;
+	z-index:100;
+	height:600px;
+	background-color:rgba(0,0,0,0.6);
+	padding:20px;
 }
 #sertBlock{
 	width:200px;
@@ -21,6 +27,7 @@
 	font-size:70%;
 	text-shadow:0 0 2px #aaa;
 	text-align:center;
+  color:#ffffff;
 }
 #sertEachChoice{
 	margin:10px 0;
@@ -37,18 +44,41 @@
 	border-right:1px solid #aaaaaa;
 }
 .setEachChoiceContent{
-	border-bottom:1px solid #aaaaaa;
-	border-left:1px solid #aaaaaa;
-	border-right:1px solid #aaaaaa;
-	background-color:#ffffff;
-	padding:5px;
-	display: inline-block;
-	font-size:80%;
+  box-shadow:0 0 3px #0af;
+  background-color:rgba(255,255,255,0.7);
+  border-radius:5px;
+  padding:10px;
+  margin:15px 0;
 }
-#sertArrange{
-	width:780px;
-	float:left;
-	/*background-color:#00aaff;*/
+.setEachChoiceContent p{
+  color:#222222;
+  text-shadow:0 0 2px #aaa;
+  padding:0 5px;
+  margin-bottom:0.5em;
+  border-left:3px solid #aaa;
+}
+.setEachChoiceContent ul{
+  display:table;
+  width:100%;
+}
+.setEachChoiceContent li{
+  display:table-cell;
+  width:17%;
+  text-align:center;
+}
+.sertArrange{
+	width:100%;
+	background: rgb(255,255,255); /* Old browsers */
+/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlNWU1ZTUiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(229,229,229,1) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(100%,rgba(229,229,229,1))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(229,229,229,1) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(229,229,229,1) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(229,229,229,1) 100%); /* IE10+ */
+background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(229,229,229,1) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e5e5e5',GradientType=0 ); /* IE6-8 */
+
 }
 #sertTableTitle{
 	font-weight:bold;
@@ -71,34 +101,115 @@
 }
 
 /*ここからテーブルの設定　あとで調整よろしく*/
-table{
-	display: inline-block;
+.sertArrange table{
+	/*display: inline-block;*/
 	width:100%;
 }
-tr{
-	margin: 10px;
+.sertArrange tbody{
+	width:100%;	
+}
+.sertArrange tr{
+	width:100%;
+	margin: 10px 0;
 	display: block;
 }
-.seat{
-	width: 40px;
-	height: 50px;
+.sertArrange th{
+	width: 4.4%;
+	height: 40px;
+	text-align:center;
+	border-radius:6px;
+	display: inline-block;
+	font-family:Century Gothic,"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic";
+	font-size:125%;
+	padding:10px 0px;
+	color:#888888;
+	text-shadow:0 0 2px #888888;
+}
+.sertArrange td{
+	width: 4.4%;
+	height: 60px;
 	background: #ffffff;
 	border-radius: 6px;
 	display: inline-block;
+	box-shadow:0 0 3px #aaaaaa;
+	font-family:Century Gothic,"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic";
+	font-size:70%;
+	text-align:center;
+	vertical-align:bottom;
+	color:#aaaaaa;
+	text-shadow:0 0 2px #dddddd;
 }
-caption{
-	margin:0 0 0 10px;
-	padding:5px;
+td.notSeat{
+	background:none;
+	box-shadow:none;
+}
+.lMargin30{
+	margin-left:30px;
+}
+tr.tMargin40{
+	margin-top:40px;	
+}
+.screenTop{
+	text-align:center;
+	padding:0;	
+}
+td.wheelChair{
+	background:#FAFF4B;
+}
+.sertScreenTitle{
+	margin:0px;
+	padding:0 5px;
 	display:block;
 	font-size:150%;
-	background-color:#333333;
+	background: rgb(125,126,125); /* Old browsers */
+/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzdkN2U3ZCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwZTBlMGUiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+background: -moz-linear-gradient(top,  rgba(125,126,125,1) 0%, rgba(14,14,14,1) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(125,126,125,1)), color-stop(100%,rgba(14,14,14,1))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  rgba(125,126,125,1) 0%,rgba(14,14,14,1) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  rgba(125,126,125,1) 0%,rgba(14,14,14,1) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  rgba(125,126,125,1) 0%,rgba(14,14,14,1) 100%); /* IE10+ */
+background: linear-gradient(to bottom,  rgba(125,126,125,1) 0%,rgba(14,14,14,1) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7d7e7d', endColorstr='#0e0e0e',GradientType=0 ); /* IE6-8 */
 	color:#ffffff;
 	text-shadow:0 0 2px #0af;
 	font-family:Century Gothic,"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic";
+	text-align:center;
+	height:50px;
+}
+.sertTitleCenter{
+	width:70%;
+	float:left;
+}
+.sertChangeRight{
+	width:30%;
+	float:left;
+	font-size:80%;
+	display:block;
+	text-align:right;
+	cursor:default;
+}
+.sertChangeLeft{
+	width:30%;
+	float:left;
+	font-size:80%;
+	display:block;
+	text-align:left;
+	cursor:default;
 }
 .captionBig{
 	font-size:150%;	
 	font-weight:600;
+	margin-left:5px;
+}
+#movieInfo td{
+	color:#ffffff;	
+	text-shadow:0 0 2px #333;
+}
+.movieInfoTitle{
+	color:#ffffff;
+	text-shadow:0 0 2px #0af;
+	font-size:110%;
 }
 
 /*ここまで*/
