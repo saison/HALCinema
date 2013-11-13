@@ -3,6 +3,20 @@
 html{
 	font-family:"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
 }
+/* clearfix(base.css(移行予定) */
+.clearfix:after {  
+  content: ".";   
+  display: block;   
+  height: 0; 
+  clear: both;   
+  visibility: hidden;  
+}  
+.clearfix { display: inline-table; }  
+/* Hides from IE-mac \*/  
+* html .clearfix { height: 1%; }  
+.clearfix { display: block; }  
+/* End hide from IE-mac */ 
+
 .clear{
 	clear:both;
 }
@@ -27,12 +41,31 @@ header{
 	width:980px;
 	margin:0 auto;
 }
+#content100{ /*コンテンツ領域100%表示(座席選択時のみ使用)*/
+	width:100%;
+	padding:0 15px;
+	box-sizing:border-box;
+	-webkit-box-sizing:border-box;	
+}
 .reserveTitle h3{
 	border-left:7px solid #dbffb7;
 	padding:2px 0 2px 10px;
 	font-size:125%;
 	font-weight:600;
 	margin:10px 0;
+}
+h4{
+  border-left:3px solid #00aaff;
+  color:#ffffff;
+  margin:10px 0;
+  padding:10px;
+}
+h5{
+  color:#222222;
+  text-shadow:0 0 2px #aaa;
+  padding:0 10px;
+  margin-bottom:0.5em;
+  border-left:3px solid #aaa; 
 }
 footer{
 	background-color:#efefef;

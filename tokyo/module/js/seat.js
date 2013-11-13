@@ -2,24 +2,16 @@ $(function(){
 
 	//Block切り替え
 	//最初はABlockを表示
-	$("#ABlockSeat").show();
-	$("#BBlockSeat,#CBlockSeat,#DBlockSeat").hide();
+	$(".Ablock").show();
+	$(".Bblock").hide();
 
-	$("#ablock").click(function(){
-		$("#ABlockSeat").delay(250).fadeIn(200);
-		$("#BBlockSeat,#CBlockSeat,#DBlockSeat").fadeOut(200);
+	$(".sertChangeLeft").click(function(){
+		$(".Ablock").delay(250).fadeIn(200);
+		$(".Bblock").fadeOut(200);
 	});
-	$("#bblock").click(function(){
-		$("#BBlockSeat").delay(250).fadeIn(200);
-		$("#ABlockSeat,#CBlockSeat,#DBlockSeat").fadeOut(200);
-	});
-	$("#cblock").click(function(){
-		$("#CBlockSeat").delay(250).fadeIn(200);
-		$("#BBlockSeat,#ABlockSeat,#DBlockSeat").fadeOut(200);
-	});
-	$("#dblock").click(function(){
-		$("#DBlockSeat").delay(250).fadeIn(200);
-		$("#BBlockSeat,#CBlockSeat,#ABlockSeat").fadeOut(200);
+	$(".sertChangeRight").click(function(){
+		$(".Bblock").delay(250).fadeIn(200);
+		$(".Ablock").fadeOut(200);
 	});
 
 
