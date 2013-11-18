@@ -27,6 +27,13 @@ session_start();
 session_regenerate_id();
 $_SESSION["userid"]=$_POST["userid"];
 mysqli_close($link);
+if(!empty($_POST["sid"])){
+	$loginsql="location:../reserve/seat.php?id=".$_POST["sid"];
+header($loginsql);
+	break;
+}else{
 header("location:../top/index.php");
+	break;
+}
 print $sql;
 ?>

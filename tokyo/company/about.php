@@ -11,8 +11,17 @@
             </div>
               <!-- ここからcontent -->
               <!-- ここh2タイトル -->
-
+													<div class="clearfix">
+<div id="subnav"><!-- w200px -->
+    	<ul>
+        	<li><a href="#about">会社概要</a></li>
+            <li><a href="#privacy">プライバシーポリシー</a></li>
+            <li><a href="#tokutei">特定商取引法に基づく表示</a></li>
+            <li><a href="#site">サイトのご利用に関して</a></li>
+        </ul>
+    </div>
 			<!-- 会社概要 -->
+													<div id="rightMeinContent">
             <div class="aboutH3Title">
                 <h3 class="ribbon" id="about">会社概要</h3>
             </div>
@@ -349,7 +358,8 @@ TOHOシネマズのウェブサイトを対応ブラウザで訪問すると、�
 				</div>
 
 			</div><!-- / .privacyContents -->
-
+</div>
+														</div>
            </div><!-- / #mainContent -->
 <?PHP
 	require_once("../module/footer.php");
