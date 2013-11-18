@@ -13,8 +13,7 @@
 h3 {
   width: 895px;
   margin: 0 auto;
-  margin-bottom: -60px;
-  margin-top: 50px;
+  margin: 50px -10px -60px 30px !important;
 }
 
 .pageTop {

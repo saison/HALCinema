@@ -192,18 +192,18 @@ footer {
   padding: 10px 5px;
 }
 
-h3 {
+.ribbon {
   position: relative;
   color: #fefefe;
   background: #3c3c3c;
   font-size: 16pt;
   line-height: 1;
-  margin: 20px -10px 20px -10px;
+  margin: 40px -10px -60px -10px;
   padding: 10px 5px 10px 20px;
   box-shadow: 1px 3px 7px 0px  #666666;
   border-top: 3px solid #00aaff;
 }
-h3:after, h3:before {
+.ribbon:after, .ribbon:before {
   content: "";
   position: absolute;
   top: 100%;
@@ -212,11 +212,11 @@ h3:after, h3:before {
   border: 5px solid transparent;
   border-top: 5px solid #777777;
 }
-h3:after {
+.ribbon:after {
   left: 0;
   border-right: 5px solid #777777;
 }
-h3:before {
+.ribbon:before {
   right: 0;
   border-left: 5px solid #777;
 }

@@ -23,7 +23,7 @@
     </div>
     <div id="rightMeinContent"><!-- w950px m-l30px -->
       <!-- 劇場案内 -->
-        <h3 id="movieInfo">劇場案内</h3>
+        <h3 class="ribbon" id="movieInfo">劇場案内</h3>
       <div class="shopContents">
         <p>お好きな映画が選べる8スクリーン。約1,600席のシネマコンプレックス！無料駐車場4,000台。大型のショッピングモールも併設してますので、ショッピングからエンターテインメントまで1日中お楽しみいただけます。</p>
         <br />
@@ -84,7 +84,7 @@
 
       <!-- サービスデー -->
       <div class="shopH3Title">
-        <h3 id="serviceDay">料金一覧</h3>
+        <h3 class="ribbon" id="serviceDay">料金一覧</h3>
       </div>
       <div class="shopContents">
         <table class="pricelist">
@@ -109,7 +109,7 @@
 
       <!-- チケット購入方法 -->
       <div class="shopH3Title">
-        <h3 id="ticket">チケット購入方法</h3>
+        <h3 class="ribbon" id="ticket">チケット購入方法</h3>
       </div>
       <div class="shopContents">
         <h4>1.オンラインでチケット購入</h4>
@@ -122,7 +122,7 @@
 
       <!-- ハルシネマポイント -->
       <div class="shopH3Title">
-        <h3 id="point">ハルシネマポイント</h3>
+        <h3 class="ribbon" id="point">ハルシネマポイント</h3>
       </div>
       <div class="shopContents">
         <p>当サイトから予約するとハルシネマポイントが105円(税込み)に付き1ポイント付きます。1ポイント1円として次回からの予約時に利用することができます。</p>
@@ -130,7 +130,7 @@
 
       <!-- ハルシネマメルマガ -->
       <div class="shopH3Title">
-        <h3 id="merumaga">ハルシネマメルマガ</h3>
+        <h3 class="ribbon" id="merumaga">ハルシネマメルマガ</h3>
       </div>
       <div class="shopContents">
         <p>ハルシネマでは会員向けサービスとしてメールマガジンを配信しています。お客様の予約された映画を元にお客様が見たい！と思われる映画を毎週金曜日にお届けします。<br />
