@@ -14,7 +14,7 @@
 
 			<!-- 会社概要 -->
             <div class="aboutH3Title">
-                <h3 id="about">会社概要</h3>
+                <h3 class="ribbon" id="about">会社概要</h3>
             </div>
             <div class="aboutContents">
             	<table id="company">
@@ -91,7 +91,7 @@
 
             <!-- プライバシーポリシー -->
             <div class="aboutH3Title">
-                <h3 id="privacy">プライバシーポリシー</h3>
+                <h3 class="ribbon" id="privacy">プライバシーポリシー</h3>
             </div>
             <div class="privacyContents">
 				<div class="lead_privacy">このウェブサイトおよびホームページ（以下併せて「ウェブサイト」とする）をお客様がご利用する場合、以下の使用条件に同意されたものとみなします。当社は、HALグループの一員として東宝株式会社のプライバシーポリシーに準拠しています。</div>
@@ -179,7 +179,7 @@
 
             <!-- 特定商取引法に基づく表示 -->
             <div class="aboutH3Title">
-                <h3 id="tokutei">特定商取引法に基づく表示</h3>
+                <h3 class="ribbon" id="tokutei">特定商取引法に基づく表示</h3>
             </div>
             <div class="tokuteiContents">
               	<br />
@@ -260,7 +260,7 @@
 
             <!-- サイトのご利用に関して -->
             <div class="aboutH3Title">
-                <h3 id="site">サイトのご利用に関して</h3>
+                <h3 class="ribbon" id="site">サイトのご利用に関して</h3>
             </div>
             <div class="privacyContents">
 				<div class="lead_privacy">このウェブサイトおよびホームページ（以下併せて「ウェブサイト」とする）をお客様がご利用する場合、
