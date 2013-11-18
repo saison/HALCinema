@@ -35,7 +35,7 @@
 								echo "<img src='images/". $row[4] ."'>";
 							echo "</div>";
 							echo "<div class='movieAbout'>";
-								echo "<h3 class='movieEachTitle'>".$row[1]."</h3>";//保留しまーす
+								echo "<h3>".$row[1]."</h3>";//保留しまーす
 								echo"<p>監督：".$row[2]."</p>";
 								echo"<p>出演者：".$row[3]."</p>";
 								//echo "<a href ='details.php?id=".$row[0]."'>詳細を見る</a>";

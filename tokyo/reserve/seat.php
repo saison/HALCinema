@@ -10,7 +10,8 @@
 	require_once("../module/reserveHeader.php");
 
 	if(!(isset($_SESSION["userid"]))){
-		header("Location:../mypage/login.php");
+		$loginGet="Location:../mypage/login.php?sid=".$showID;
+		header($loginGet);
 		return;
 	}
 	$_SESSION["showid"] = $showID;

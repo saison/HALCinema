@@ -34,6 +34,11 @@
 <table><tr><th>ID</th><td><input type="text" name="userid" /></td></tr>
 <tr><th>パスワード</th><td><input type="password" name="pass" /></td></tr>
 </table>
+	<?php
+            	if(!empty($_GET["sid"])){
+            				print "<input type='hidden' name='sid' value='".$_GET["sid"]."'>";
+            		}
+            ?>
 <p class="loginButton"><input type="image" src="images/login.png" alt="Login"></p>
 </form>
 </div>
