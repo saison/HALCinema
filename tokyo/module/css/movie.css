@@ -66,3 +66,12 @@
 	color:#FF8E00;	
 	font-weight:bold;
 }
+.movieEachTitle{
+	border:none !important;
+}
+.movieEachTitle:after{
+	background:none !important;
+}
+.movieEachTitle:before{
+	background:none !important;
+}

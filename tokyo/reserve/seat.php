@@ -34,7 +34,8 @@
   </div>
   
   <div id="sertChoice"><!-- シートブロック・種類選択 200px-->
-  
+  <div id="sertEachChoiceMenu"><img src="images/menuOpen.png" alt="Menuを表示する" /></div>
+			<div id="sertChoiceBox">
   <div id="movieInfo"><!-- 映画情報 -->
     <h4>選択映画情報</h4>
     <div class="setEachChoiceContent">
@@ -87,6 +88,7 @@
     </div>
     <p class="blockTyui">各料金タイプ内の人形を選択したい座席にドラック&amp;ドロップしてください</p>
   </div>
+			</div>
   
   
   <div class="sertArrange">

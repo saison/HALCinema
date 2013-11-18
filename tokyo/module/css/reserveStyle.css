@@ -43,6 +43,7 @@ header{
 }
 #content100{ /*コンテンツ領域100%表示(座席選択時のみ使用)*/
 	width:100%;
+	min-width:980px;
 	padding:0 15px;
 	box-sizing:border-box;
 	-webkit-box-sizing:border-box;	
