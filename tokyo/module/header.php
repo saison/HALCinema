@@ -6,21 +6,19 @@
 <head>
 	<meta charset="UTF-8" />
 	<link rel="stylesheet" type="text/css" href="../module/css/reset.css">
+	<link rel='stylesheet' type='text/css' href='../module/css/base.css' />
+	<link rel='stylesheet' type='text/css' href='../module/css/style.css' />
 	<?PHP
 		//各ファイル名の取得
 		$filename = basename($_SERVER["PHP_SELF"],".php");
 
-		//スタイルシートのファイルパス
-		if(file_exists("../module/css/style.css")){
-			echo "<link rel='stylesheet' type='text/css' href='../module/css/style.css' />\n";
-		}
 		//個別CSSの設定
 		if(file_exists("../module/css/".$filename.".css")){
 			echo "<link rel='stylesheet' href='../module/css/".$filename.".css' />\n";
 		}
-		if($filename=="index"){
+		/*if($filename=="index"){
 			echo "<link rel='stylesheet' href='../module/css/access.css' />\n";
-		}
+		}*/
 	?>
 
 	<link href="../module/css/jquery.bxslider.css" rel="stylesheet" type="text/css">
@@ -59,7 +57,8 @@ if(isset($_SESSION["userid"])){
 <ul>
 <li><a href="../shop/shop.php"><img src="../module/images/menu/theaters.png"></a></li>
 <li><a href="../movie/movie.php"><img src="../module/images/menu/workinfo.png"></a></li>
-<li><a href="../service/"><img src="../module/images/menu/service.png"></a></li>
+<!--<li><a href="../service/"><img src="../module/images/menu/service.png"></a></li>-->
+<li>サービスは消してます</li>
 <li><a href="../company/about.php"><img src="../module/images/menu/companyinfo.png"></a></li>
 <div class="clear"></div>
 </ul>
