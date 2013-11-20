@@ -1,5 +1,4 @@
 $(function(){
-
 	//Block切り替え
 	//最初はABlockを表示
 	$(".Ablock").show();
@@ -37,6 +36,9 @@ $(function(){
 			ui.draggable.attr("id",seatId+"_"+dragClass);
 			var dragIconId = ui.draggable.attr("id");
 			var formId = $("#postData #"+dragIconId).attr("id");
+
+			$("#"+seatId).append("<br /><img class='dragIcon' src='images/" + dragClass + "Image.png'>");
+
 			if(dragIconId != formId){
 				$("#postData").append("<input type='hidden' name='seat[]' id='"+ seatId +"_"+ dragClass +"' value='"+ seatId +"_"+ dragClass +"' />");
 			}
