@@ -1,35 +1,37 @@
-@charset "utf-8";
 /* CSS Document */
+#finishBox {
+  width: 780px;
+  margin: 30px auto;
+  box-shadow: 0 0 5px #aaa;
+  text-align: center;
+  padding: 15px 10px;
+}
 
-#finishBox{
-	width:780px;
-	margin:30px auto;
-	box-shadow:0 0 5px #aaa;
-	text-align:center;
-	padding:15px 10px;
+#finishBox h2 {
+  font-size: 150%;
+  color: #FFAE00;
+  font-weight: 600;
+  padding: 5px;
 }
-#finishBox h2{
-	font-size:150%;
-	color:#FFAE00;
-	font-weight:600;
-	padding:5px;	
+
+#yoyakuNumber {
+  font-size: 110%;
+  font-weight: 600;
+  color: #FFAE00;
 }
-#yoyakuNumber{
-	font-size:110%;
-	font-weight:600;
-	color:#FFAE00;	
+
+#yoyakuNumberText {
+  font-size: 110%;
 }
-#yoyakuNumberText{
-	font-size:110%;
+
+#finishBoxLink {
+  margin: 15px;
 }
-#finishBoxLink{
-	margin:15px;	
-}
-#finishBoxLink a{
-	font-size:110%;
-	color:#444444;
-	background-color:#efefef;
-	border:1px solid #aaaaaa;
-	padding:5px 15px;
-	
+
+#finishBoxLink a {
+  font-size: 110%;
+  color: #444444;
+  background-color: #efefef;
+  border: 1px solid #aaaaaa;
+  padding: 5px 15px;
 }

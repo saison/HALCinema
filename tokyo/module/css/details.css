@@ -1,102 +1,111 @@
-@charset "utf-8";
+@charset "UTF-8";
 /* CSS Document */
-
-.movieDetailBox{
-	width:900px;
-	margin:0 auto;
-
-}
-h3{
-	font-weight:600;
-	font-size:150%;	
-	padding:0 0 0 8px;
-	margin:0 0 10px 0;
-	border-left:7px solid #E9FF97;
-	border-bottom:2px solid #efefef;
-}
-.movieDetailImg{
-	float:left;
-	width:300px;
-	margin:10px;
-	box-shadow:0 0 3px #aaa;
-}
-.movieDetailImg img{
-	width:100%;
-}
-.movieDetailAbout{
-	float:left;
-	width:500px;
-	margin:15px;
-	font-size:90%;
-	text-shadow:0 0 1px #eee;
-}
-.movieDetailCap{
-	font-size:110%;
-	color:#FF8E00;	
-	font-weight:bold;
-}
-.moviePhotogallery{
-	width:900px;
-	margin:0 auto;
+.movieDetailBox {
+  width: 900px;
+  margin: 0 auto;
 }
 
-#movieDatailsSchedule{
-	width:900px;
-	margin:15px auto;
-}
-#movieDatailsSchedule table{
-	margin:15px 0;
-}
-
-.tableDate{
-	background-color:#efefef;
-	color:#555555;
-	font-family:Century Gothic,"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
-	padding:5px;
-	text-align:center;
-	font-size:150%;
-	width:100px;
-	height:100px;
-}
-.tableScreen{
-	background-color:#efefef;
-	color:#555555;
-	font-family:Century Gothic,"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
-	padding:5px;
-	text-align:center;
-	font-size:125%;
-	width:100px;
-	height:100px;
+h3 {
+  font-weight: 600;
+  font-size: 150%;
+  padding: 0 0 0 8px;
+  margin: 0 0 10px 0;
+  border-left: 7px solid #E9FF97;
+  border-bottom: 2px solid #efefef;
 }
 
-.tableEachMovie{
-	margin:0 10px;
-	box-shadow:0 0 3px #aaa;
-	font-family:Century Gothic,"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
-	text-align:center;
-}
-.tableEachMovie a{
-	display:block;
-	width:110px;
-	height:50px;
-	padding:30px 0;
-	
-	color:#333333;
-	text-decoration:none;
-}
-.tableEachMovie a:hover{
-	background-color:#efefef;
-	box-shadow:0 0 5px #bff;	
+.movieDetailImg {
+  float: left;
+  width: 300px;
+  margin: 10px;
+  box-shadow: 0 0 3px #aaa;
 }
 
-.tableEachMovieStart{
-	font-weight:bold;
-	font-size:150%;	
+.movieDetailImg img {
+  width: 100%;
 }
-#movieTyui{
-	font-size:70%;
-	text-shadow:0 0 2px #aaa;
-	color:#444444;
-	margin:15px 40px;	
+
+.movieDetailAbout {
+  float: left;
+  width: 500px;
+  margin: 15px;
+  font-size: 90%;
+  text-shadow: 0 0 1px #eee;
 }
+
+.movieDetailCap {
+  font-size: 110%;
+  color: #FF8E00;
+  font-weight: bold;
+}
+
+.moviePhotogallery {
+  width: 900px;
+  margin: 0 auto;
+}
+
+#movieDatailsSchedule {
+  width: 900px;
+  margin: 15px auto;
+}
+
+#movieDatailsSchedule table {
+  margin: 15px 0;
+}
+
+.tableDate {
+  background-color: #efefef;
+  color: #555555;
+  font-family: Century Gothic,"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  padding: 5px;
+  text-align: center;
+  font-size: 150%;
+  width: 100px;
+  height: 100px;
+}
+
+.tableScreen {
+  background-color: #efefef;
+  color: #555555;
+  font-family: Century Gothic,"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  padding: 5px;
+  text-align: center;
+  font-size: 125%;
+  width: 100px;
+  height: 100px;
+}
+
+.tableEachMovie {
+  margin: 0 10px;
+  box-shadow: 0 0 3px #aaa;
+  font-family: Century Gothic,"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  text-align: center;
+}
+
+.tableEachMovie a {
+  display: block;
+  width: 110px;
+  height: 50px;
+  padding: 30px 0;
+  color: #333333;
+  text-decoration: none;
+}
+
+.tableEachMovie a:hover {
+  background-color: #efefef;
+  box-shadow: 0 0 5px #bff;
+}
+
+.tableEachMovieStart {
+  font-weight: bold;
+  font-size: 150%;
+}
+
+#movieTyui {
+  font-size: 70%;
+  text-shadow: 0 0 2px #aaa;
+  color: #444444;
+  margin: 15px 40px;
+}
+
 /*上映スケジュール*/

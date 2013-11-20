@@ -1,0 +1,29 @@
+@charset "utf-8";
+/* CSS Document */
+.payEach{
+	border:1px solid #cccccc;
+	padding:5px;
+	margin:10px 0;
+}
+.payEachLeft{
+	width:800px;
+	float:left;
+}
+.payEachRight{
+	width:100px;
+	margin:0 30px;
+	float:left;
+	text-align:center;
+}
+.payEachLeft h4{
+	font-weight:600;
+	font-size:125%;
+}
+.payEachRight p{
+	font-size:90%;
+	color:#333333;
+}
+#payBack{
+	width:100px;
+	margin:15px auto;
+}

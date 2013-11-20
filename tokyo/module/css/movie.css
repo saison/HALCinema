@@ -1,77 +1,86 @@
-@charset "utf-8";
 /* CSS Document */
+.movieBox {
+  width: 900px;
+  margin: 25px 30px;
+  box-shadow: 0 0 3px #aaa;
+  padding: 10px;
+  color: #222222;
+  text-decoration: none;
+}
 
+.movieBox:hover {
+  background-color: #efefef;
+  box-shadow: 0 0 5px #bff;
+}
 
-.movieBox{
-	width:900px;
-	margin:25px 30px;
-	box-shadow:0 0 3px #aaa;
-	padding:10px;
-	color:#222222;
-	text-decoration:none;	
+.movieImg {
+  float: left;
+  width: 225px;
+  margin: 0px;
 }
-.movieBox:hover{
-	background-color:#efefef;
-	box-shadow:0 0 5px #bff;	
+
+.movieImg img {
+  width: 100%;
+  box-shadow: 0 0 2px #aaa;
 }
-.movieImg{
-	float:left;
-	width:225px;
-	margin:0px;
+
+.movieAbout {
+  float: left;
+  width: 500px;
+  margin: 0 0 0 15px;
 }
-.movieImg img{
-	width:100%;
-	box-shadow:0 0 2px #aaa;	
+
+.movieAbout h3 {
+  font-weight: 600;
+  font-size: 125%;
+  padding: 0 0 0 8px;
+  margin: 0 0 10px 0;
+  border-left: 7px solid #E9FF97;
 }
-.movieAbout{
-	float:left;
-	width:500px;
-	margin:0 0 0 15px;
+
+#todayTab {
+  width: 980px;
+  margin: 15px 0;
+  /*border-bottom:1px solid #aaaaaa;	*/
 }
-.movieAbout h3{
-	font-weight:600;
-	font-size:125%;	
-	padding:0 0 0 8px;
-	margin:0 0 10px 0;
-	border-left:7px solid #E9FF97;
+
+#nowMovie {
+  width: 200px;
+  font-size: 90%;
+  color: #333333;
+  background-color: #AEFFFB;
+  text-shadow: 0 0 2px #aaa;
+  float: left;
+  text-align: center;
+  padding: 15px 0;
 }
-#todayTab{
-	width:980px;
-	margin:15px 0;
-	/*border-bottom:1px solid #aaaaaa;	*/
+
+#comeMovie {
+  width: 200px;
+  font-size: 90%;
+  color: #333333;
+  background-color: #C8FF97;
+  text-shadow: 0 0 2px #aaa;
+  float: left;
+  margin-left: 20px;
+  text-align: center;
+  padding: 15px 0;
 }
-#nowMovie{
-	width:200px;
-	font-size:90%;
-	color:#333333;
-	background-color:#AEFFFB;
-	text-shadow:0 0 2px #aaa;	
-	float:left;
-	text-align:center;
-	padding:15px 0;
+
+.comeDate {
+  font-size: 110%;
+  color: #FF8E00;
+  font-weight: bold;
 }
-#comeMovie{
-	width:200px;
-	font-size:90%;
-	color:#333333;
-	background-color:#C8FF97;
-	text-shadow:0 0 2px #aaa;	
-	float:left;
-	margin-left:20px;
-	text-align:center;
-	padding:15px 0;
+
+.movieEachTitle {
+  border: none !important;
 }
-.comeDate{
-	font-size:110%;
-	color:#FF8E00;	
-	font-weight:bold;
+
+.movieEachTitle:after {
+  background: none !important;
 }
-.movieEachTitle{
-	border:none !important;
-}
-.movieEachTitle:after{
-	background:none !important;
-}
-.movieEachTitle:before{
-	background:none !important;
+
+.movieEachTitle:before {
+  background: none !important;
 }

@@ -1,0 +1,29 @@
+@charset "utf-8";
+/* CSS Document */
+.reserveEachBox{
+	box-shadow:0 0 5px #aaa;
+	margin:20px 0;
+	padding:10px;	
+}
+.reserveDate{
+	padding:5px 0;	
+	font-size:90%;
+}
+
+.reserveNumber{
+	padding:5px 0;
+	font-size:105%;
+	font-weight:600;
+}
+
+.reserveBoxLeft{
+	width:10%;
+	float:left;
+	font-size:200%;
+	font-weight:600;
+}
+
+.reserveBoxRight{
+	width:90%;
+	float:left;
+}

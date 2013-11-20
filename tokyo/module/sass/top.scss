@@ -1,0 +1,148 @@
+@charset "utf-8";
+/* CSS Document */
+div#main {
+    width: 980px;
+}
+.topTitle h2{
+	font-size:125%;
+	font-weight:600;	
+	line-height:1;
+}
+.topTitleSmall{
+	font-size:80%;	
+}
+.titleBar{
+	position:relative;
+	width:100%;
+	height:5px;
+	background-image:url(../images/titleBer.png);
+}
+.contentTitle h2 {
+  position: relative;
+  color: #111;
+  background: rgb(234,255,252); /* Old browsers */
+/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2VhZmZmYyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9Ijg1JSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjkwJSIgc3RvcC1jb2xvcj0iI2NlZmFmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNjZWZhZmYiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+background: -moz-linear-gradient(top,  rgba(234,255,252,1) 0%, rgba(255,255,255,1) 85%, rgba(206,250,255,1) 90%, rgba(206,250,255,1) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(234,255,252,1)), color-stop(85%,rgba(255,255,255,1)), color-stop(90%,rgba(206,250,255,1)), color-stop(100%,rgba(206,250,255,1))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  rgba(234,255,252,1) 0%,rgba(255,255,255,1) 85%,rgba(206,250,255,1) 90%,rgba(206,250,255,1) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  rgba(234,255,252,1) 0%,rgba(255,255,255,1) 85%,rgba(206,250,255,1) 90%,rgba(206,250,255,1) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  rgba(234,255,252,1) 0%,rgba(255,255,255,1) 85%,rgba(206,250,255,1) 90%,rgba(206,250,255,1) 100%); /* IE10+ */
+background: linear-gradient(to bottom,  rgba(234,255,252,1) 0%,rgba(255,255,255,1) 85%,rgba(206,250,255,1) 90%,rgba(206,250,255,1) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eafffc', endColorstr='#cefaff',GradientType=0 ); /* IE6-8 */
+
+  font-size: 180%;
+  font-weight:600;
+  line-height: 1;
+  margin: 30px 10px 15px 0;
+  padding: 20px 5px 16px 60px;
+  box-shadow: 0 1px 3px #777;
+  border-radius: 0 30px 30px 0;
+  line-height:0.8em;
+}
+.contentTitle h2:before {
+  content: "";
+  position: absolute;
+  background: #CEFAFF;
+  top: 15%;
+  left: -50px;
+  margin-top :-22px;
+  height: 100px;
+  width: 100px;
+  box-shadow: 0px 1px 2px #777;
+  border-radius: 50%;
+}
+.contentTitle h2:after {
+  content: "";
+  position: absolute;
+  background:#ffffff;
+  top: 31%;
+  left: -30px;
+  margin-top:-15px;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  box-shadow: 0px 0px 1px #aaa;
+}
+.h2En{
+	font-size:60%;
+	color:#777777;
+	line-height:0;
+	font-family:Century Gothic,"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic";
+}
+#meinMenu{
+	width:250px;
+	border-top:3px solid #eeeeee;
+}
+#meinMenu li{
+	border-bottom:3px solid #eeeeee;
+}
+
+#meinMenu li a{
+	display:block;
+	padding:15px 20px;
+	color:#333333;
+	text-decoration:none;
+}
+#meinMenu li a:hover{
+	background-color:rgba(0,200,255,0.2);	
+	color:#555555;
+}
+
+
+#copyright{
+	font-size:70%;
+	margin:15px 0 0 0;
+	text-align:center;	
+	color:#555555;
+	text-shadow:0 0 2px #ffffff;
+}
+
+
+/*メインコンテンツ*/
+#mainContent {
+    margin-left: 255px;
+	height: 100%;
+	min-height: 100%;  
+}
+#nowScheduleScroll{
+	margin:0px 20px 40px 20px;
+	padding:5px;
+	background-color:#555555;	
+}
+#todaySchedule{ /*今日の上映スケジュール*/
+	margin:20px 40px;
+	padding:5px;
+	height:300px;
+	background-color:#ffffff;	
+	box-shadow:0px 0px 10px #dddddd;
+}
+#meinContentLeft{
+	width:70%;
+	float:left;
+}
+#comingsoonMovie{
+	margin:20px 20px 40px 40px;
+	padding:5px;
+	height:300px;
+	background-color:#ffffff;	
+	box-shadow:0px 0px 10px #dddddd;
+}
+#whatsnew{
+	margin:20px 20px 40px 40px;
+	padding:5px;
+	height:300px;
+	background-color:#ffffff;	
+	box-shadow:0px 0px 10px #dddddd;
+}
+#meinContentRight{
+	width:30%;
+	float:left;
+}
+#rankingMovie{
+	margin:20px 40px 40px 20px;
+	padding:5px;
+	height:600px;
+	background-color:#ffffff;	
+	box-shadow:0px 0px 10px #dddddd;
+}
