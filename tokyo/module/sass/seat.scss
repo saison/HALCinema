@@ -74,6 +74,8 @@
   display:table-cell;
   width:17%;
   text-align:center;
+	 position:relative;
+	z-index:1000;
 }
 .sertArrange{
 	width:100%;
@@ -87,7 +89,7 @@ background: -o-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(229,229,229,1) 
 background: -ms-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(229,229,229,1) 100%); /* IE10+ */
 background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(229,229,229,1) 100%); /* W3C */
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e5e5e5',GradientType=0 ); /* IE6-8 */
-
+overflow:hidden;
 }
 #sertTableTitle{
 	font-weight:bold;
@@ -123,7 +125,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 	display: block;
 }
 .sertArrange th{
-	width: 4.4%;
+	width: 4.8%;
 	height: 40px;
 	text-align:center;
 	border-radius:6px;
@@ -135,7 +137,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 	text-shadow:0 0 2px #888888;
 }
 .sertArrange td{
-	width: 4.4%;
+	width: 4.8%;
 	height: 60px;
 	background: #ffffff;
 	border-radius: 6px;
