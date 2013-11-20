@@ -201,6 +201,7 @@ footer {
   margin: 40px -10px -60px -10px;
   padding: 10px 5px 10px 20px;
   box-shadow: 1px 3px 7px 0px  #666666;
+  border: none;
   border-top: 3px solid #00aaff;
 }
 .ribbon:after, .ribbon:before {
