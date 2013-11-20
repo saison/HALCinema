@@ -85,6 +85,8 @@
   display: table-cell;
   width: 17%;
   text-align: center;
+  position: relative;
+  z-index: 1000;
 }
 
 .sertArrange {
@@ -107,6 +109,7 @@
   /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#e5e5e5',GradientType=0 );
   /* IE6-8 */
+  overflow: hidden;
 }
 
 #sertTableTitle {
@@ -148,7 +151,7 @@
 }
 
 .sertArrange th {
-  width: 4.4%;
+  width: 4.8%;
   height: 40px;
   text-align: center;
   border-radius: 6px;
@@ -161,7 +164,7 @@
 }
 
 .sertArrange td {
-  width: 4.4%;
+  width: 4.8%;
   height: 60px;
   background: #ffffff;
   border-radius: 6px;

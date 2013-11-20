@@ -90,6 +90,17 @@
     <p class="blockTyui">各料金タイプ内の人形を選択したい座席にドラック&amp;ドロップしてください</p>
   </div>
 			</div>
+<<<<<<< HEAD
+	<?php
+		if(substr($screenID,-1,1) > "6"){
+			require_once("./screenTokyo/SC.php");
+		}elseif(substr($screenID,-1,1) > "3"){
+			require_once("./screenTokyo/SB.php");
+		}else{
+			require_once("./screenTokyo/SA.php");
+		}
+	?>
+=======
 
 
   <div class="sertArrange">
@@ -581,6 +592,7 @@
     </div><!-- BBlock 終わり-->
   </div>
   <div class="clear"></div>
+>>>>>>> master
   <div class="reserveTitle">
     <h3>利用規約</h3>
   </div>
