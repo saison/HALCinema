@@ -1,45 +1,52 @@
-@charset "utf-8";
 /* CSS Document */
-.login{
-	width:450px;
-	float:left;
-	margin:20px;
+.login {
+  width: 450px;
+  float: left;
+  margin: 20px;
 }
-#newUser{
-	width:450px;
-	float:left;
-	margin:20px;
+
+#newUser {
+  width: 450px;
+  float: left;
+  margin: 20px;
 }
-h4{
-	font-size:110%;
-	font-weight:600;	
+
+h4 {
+  font-size: 110%;
+  font-weight: 600;
 }
-.loginButton{
-	text-align:center;	
-	margin:15px 0;
+
+.loginButton {
+  text-align: center;
+  margin: 15px 0;
 }
-.login table{
-	width:100%;
-	margin:15px 0 15px 10px;
+
+.login table {
+  width: 100%;
+  margin: 15px 0 15px 10px;
 }
-.login table,.login th,.login td,.login tr{
-	border:1px solid #cccccc;
+
+.login table, .login th, .login td, .login tr {
+  border: 1px solid #cccccc;
 }
-.login th{
-	width:300px;	
-	padding:10px;
-	background-color:#efefef;
+
+.login th {
+  width: 300px;
+  padding: 10px;
+  background-color: #efefef;
 }
-.login td{
-	padding:10px;
+
+.login td {
+  padding: 10px;
 }
-.error_p{
-	border:1px solid #ff5555;
-	padding:10px;
-	margin:10px 0;
-	font-size:85%;
-	font-weight:600;
-	text-shadow: 0 0 1px #fff;
-	color:#ff0000;	
-	background-color:#FFBBBC;
+
+.error_p {
+  border: 1px solid #ff5555;
+  padding: 10px;
+  margin: 10px 0;
+  font-size: 85%;
+  font-weight: 600;
+  text-shadow: 0 0 1px #fff;
+  color: #ff0000;
+  background-color: #FFBBBC;
 }

@@ -104,7 +104,7 @@ header li {
   /* Opera 11.10+ */
   background: -ms-linear-gradient(top, #eafffc 0%, white 85%, #cefaff 90%, #cefaff 100%);
   /* IE10+ */
-  background: linear-gradient(to bottom, #eafffc 0%, white 85%, #cefaff 90%, #cefaff 100%);
+  background: linear-gradient(to bottom, #eafffc 0%, #ffffff 85%, #cefaff 90%, #cefaff 100%);
   /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#eafffc', endColorstr='#cefaff',GradientType=0 );
   /* IE6-8 */
