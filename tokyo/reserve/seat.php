@@ -33,17 +33,17 @@
   <div class="reserveTitle">
     <h3>座席を選択してください</h3>
   </div>
-  
+
   <div id="sertChoice"><!-- シートブロック・種類選択 200px-->
   <div id="sertEachChoiceMenu"><img src="images/menuOpen.png" alt="Menuを表示する" /></div>
 			<div id="sertChoiceBox">
   <div id="movieInfo"><!-- 映画情報 -->
     <h4>選択映画情報</h4>
     <div class="setEachChoiceContent">
-    <h5></h5>  
+    <h5></h5>
     </div>
-    
-    
+
+
     <table>
       <tr>
         <td class="movieInfoTitle">日時</td></tr><tr>
@@ -90,8 +90,8 @@
     <p class="blockTyui">各料金タイプ内の人形を選択したい座席にドラック&amp;ドロップしてください</p>
   </div>
 			</div>
-  
-  
+
+
   <div class="sertArrange">
   <div class="Ablock"><!-- Aブロック始まり -->
     <div class="sertScreenTitle clearfix">
@@ -335,12 +335,12 @@
       </tr>
     </table>
     </div><!-- ABlock 終わり-->
-    
+
     <div class="Bblock"><!-- Bブロック始まり -->
     <div class="sertScreenTitle clearfix">
     <p class="sertChangeLeft">◀ <span class='captionBig'>B</span>(Left)Block</p>
       <p class="sertTitleCenter"><?php echo "HALCinemaTOKYO Screen<span class='captionBig'>".substr($screenID,-1,1)."</span>"; ?><span class="captionBig">B</span>(Right)Block</p>
-      
+
     </div>
     <table id="ABlockSeat">
       <tr>
@@ -592,24 +592,24 @@
     </form>
   </div>
 </div>
-<!-- 映画選択完了ボタン--> 
+<!-- 映画選択完了ボタン-->
 
-<!--この先飲食物選択。プロトタイプでは未実装 --> 
+<!--この先飲食物選択。プロトタイプでは未実装 -->
 <!--
 <div class="reserveTitle">
   <h3>飲み物･食べ物</h3>
 </div>
 
-<div id="sertDrink"></div>--> 
-<!-- 飲み物 470px m-r 40px --> 
+<div id="sertDrink"></div>-->
+<!-- 飲み物 470px m-r 40px -->
 <!--
 <div id="sertFood"></div>
---> 
-<!-- 飲み物 470px --> 
+-->
+<!-- 飲み物 470px -->
 <!--
 <div class="clear"></div>
-<div class="sertDecideButton"></div>--> 
-<!-- 映画選択完了ボタン（上のボタンと一緒）--> 
+<div class="sertDecideButton"></div>-->
+<!-- 映画選択完了ボタン（上のボタンと一緒）-->
 <!--
 </div>
 -->
