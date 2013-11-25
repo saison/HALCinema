@@ -1,28 +1,30 @@
 <?PHP
 	$pageTitle = "会員登録";
 	require_once("../module/reserveheader.php");
-	$errFlag=0;
+	
+	//エラー
+	$errWord="";	
 	if(isset($_GET["err"])){
-		$err=$_GET["err"];
-		if($err==111){
-			$errFlag=1;
+		if($_GET["err"]==111){
 			$errWord="追加できませんでした。";
 		}
-		else if($err==1){
-			$errFlag=1;
-			$errWord="入力されていない項目があります。";
+		else if($_GET["err"]==1){
+			$errWord="入力に誤りがあります。";
 		}
-		else if($err==2){
-			$errFlag=1;
+		else if($_GET["err"]==2){
 			$errWord="仕様できないＩＤです。";
 		}
+		else if($_GET["err"]==3){
+			$errWord="パスワードが一致しません。";
+		}
+	
 	}
 ?>
 <div id="content">
 <h2>新規会員登録</h2>
 <p id="newUser">HALCinemaでは映画座席予約を利用するためには会員登録が必要となっています。以下のすべての項目を埋めてください。</p>
 <?PHP
-	if($errFlag==1){
+	if($errWord	!=""){
 		echo "<p id='newError'>".$errWord."</p>";
 	}
 ?>
@@ -32,11 +34,11 @@
 <table>
 <tr>
 <th>お好きなユーザID</th>
-<td><input type="text" name="userId" /></td>
+<td><input type="text" name="userId" placeholder="半角英数字20文字以内" /></td>
 </tr>
 <tr>
 <th>パスワード</th>
-<td><input type="password" name="pass" /></td>
+<td><input type="password" name="pass"  placeholder="半角英数字20文字以内" /></td>
 </tr>
 <tr>
 <th>パスワード再入力</th>
@@ -118,6 +120,10 @@
 <tr>
 <th>電話番号</th>
 <td><input type="tel" name="tel" /></td>
+</tr>
+<tr>
+<th>メールマガジン配信</th>
+<td><input type="radio" name="mailMaga" value="1"  id="r1"checked><label for="r1"> 希望する</label>　<input type="radio" name="mailMaga" value="0" id="r2"><label for="r2"> 希望しない</label></td>
 </tr>
 </table>
 </div>
