@@ -17,7 +17,7 @@ $count=0;
 		$isSuccess =mysqli_select_db($con, 'halcinema');	
 		if($isSuccess){
 			if(isset($_SESSION["userid"])){
-				$result =mysqli_query($con,"SELECT * FROM reserve_master WHERE  user_id = '".$_SESSION["userid"] ."'ORDER BY reserve_time DESC");
+				$result =mysqli_query($con,"SELECT * FROM reserve_master WHERE = '".$_SESSION["userid"] ."'ORDER BY reserve_time DESC");
 				while(($row = mysqli_fetch_array($result)) != false){
 					$count++;
 					echo "<div class='reserveEachBox'><div class='reserveBoxLeft'>$count</div>";
