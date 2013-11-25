@@ -121,20 +121,15 @@
 </tr>
 </table>
 </div>
-
-<!--
-	<p><label>ユーザID:</label></p>
-	<p><label>パスワード:</label></p>
-	<p><label>メールアドレス:</label></p>
-	<p><label>姓:</label></p>
-	<p><label>名:</label></p>
-	<p><label>
-	お住まい:
-	
-	</label></p>
-	<p><label>電話番号: </label></p>
-    -->
-	<p id="sendButton"><input type="submit" name="send" value="確認画面に進む" class="css3button"></p>
+	<div class="reserveTitle">
+    <h3>アカウント注意事項</h3>
+  </div>
+  <div id="kiyaku"> アカウント注意事項 </div>
+<div class="reserveTitle">
+    <h3>利用規約</h3>
+  </div>
+  <div id="kiyaku"> ここに利用規約 </div>
+	<p id="sendButton"><input type="submit" name="send" value="利用規約を同意の上、確認画面に進む" class="css3button"></p>
 </form>
 </div>
 <?PHP
