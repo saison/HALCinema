@@ -32,8 +32,8 @@ html {
 }
 
 header {
-  border-top: 7px solid  #bcffff;
-  border-bottom: 7px solid #bcffff;
+  box-shadow: 0 0 5px #aaa;
+  background-color: #fafafa;
 }
 
 #headerIn {
