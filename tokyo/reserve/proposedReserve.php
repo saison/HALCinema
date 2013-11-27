@@ -21,9 +21,11 @@
 					break;
 			}
 
-			$insertSql = "INSERT INTO `seat_reserve_list`(`show_id`, `user_id`, `seat_number`, `reserve_flag`, `movie_price_id`) VALUES ('{$showId}','".$_SESSION["userid"]."','{$reserveData[0]}','0','{$priceId}')";
+			$insertSql = "INSERT INTO `seat_reserve_list`(`show_id`, `user_id`, `seat_number`, `reserve_flag`, `movie_price_id`, `movie_price_id`) VALUES ('{$showId}','".$_SESSION["userid"]."','{$reserveData[0]}','0','{$priceId}')";
 			$insertResult = mysqli_query($con,$insertSql);
 			$row = mysqli_fetch_array($insertResult);
+			print $insertSql;
+			exit;
 
 
 		}
