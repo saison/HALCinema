@@ -13,17 +13,6 @@ $(function(){
 		$(".Ablock").fadeOut(200);
 	});
 
-	//メニューの表示
-	$("#sertChoice").animate({"right":"-340px"},0);
-	$("#sertChoice").hover(
-		function(){
-			$(this).stop().animate({"right":"0px"},800,"easeOutBounce");
-		},
-		function(){
-			$(this).stop().animate({"right":"-340px"},800,"easeOutBounce");
-		}
-	);
-
 
 	//ドラッグアンドドロップの設定
 	$(".setEachChoiceContent").droppable({

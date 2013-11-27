@@ -34,13 +34,9 @@
     <h3>座席を選択してください</h3>
   </div>
 
-  <div id="sertChoice"><!-- シートブロック・種類選択 200px-->
-  <div id="sertEachChoiceMenu"><img src="images/menuOpen.png" alt="Menuを表示する" /></div>
-			<div id="sertChoiceBox">
-  <div id="movieInfo"><!-- 映画情報 -->
+	<div id="movieInfo"><!-- 映画情報 -->
     <h4>選択映画情報</h4>
     <div class="setEachChoiceContent">
-    <h5></h5>
     </div>
 
 
@@ -53,42 +49,34 @@
       </tr>
     </table>
   </div>
-  <h4>座席選択</h4>
-    <div id="sertEachChoice"><!-- シート選択指定 --><!-- 人形は増やしてちょうだい！ -->
-      <div class="setEachChoiceContent">
-        <h5>大人</h5>
+	
+	
+	
+	
+  <div id="sertChoice"><!-- シートブロック・種類選択 200px-->
+    <div id="sertEachChoice" class="clearfix"><!-- シート選択指定 --><!-- 人形は増やしてちょうだい！ -->
+      <h5>大人</h5>
+					<div class="setEachChoiceContent">
         <ul id="adult">
-          <li><img class="dragIcon" src="images/adultImage.png"></li>
-          <li><img class="dragIcon" src="images/adultImage.png"></li>
-          <li><img class="dragIcon" src="images/adultImage.png"></li>
-          <li><img class="dragIcon" src="images/adultImage.png"></li>
           <li><img class="dragIcon" src="images/adultImage.png"></li>
         </ul>
       </div>
+					<h5>学生</h5>
       <div class="setEachChoiceContent">
-        <h5>学生</h5>
+        
         <ul id="student">
-          <li><img class="dragIcon" src="images/studentImage.png"></li>
-          <li><img class="dragIcon" src="images/studentImage.png"></li>
-          <li><img class="dragIcon" src="images/studentImage.png"></li>
-          <li><img class="dragIcon" src="images/studentImage.png"></li>
           <li><img class="dragIcon" src="images/studentImage.png"></li>
         </ul>
       </div>
       <!--  シニアは映画日時を取得して表示（DB接続） -->
+					<h5>シニア</h5>
       <div class="setEachChoiceContent">
-        <h5>シニア</h5>
         <ul id="senior">
-          <li><img class="dragIcon" src="images/seniorImage.png"></li>
-          <li><img class="dragIcon" src="images/seniorImage.png"></li>
-          <li><img class="dragIcon" src="images/seniorImage.png"></li>
-          <li><img class="dragIcon" src="images/seniorImage.png"></li>
           <li><img class="dragIcon" src="images/seniorImage.png"></li>
         </ul>
       </div>
     </div>
-    <p class="blockTyui">各料金タイプ内の人形を選択したい座席にドラック&amp;ドロップしてください</p>
-  </div>
+    <!--<p class="blockTyui">各料金タイプ内の人形を選択したい座席にドラック&amp;ドロップしてください</p>-->
 			</div>
 	<?php
 		if(substr($screenID,-1,1) > "6"){
