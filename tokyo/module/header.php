@@ -45,7 +45,7 @@
 <div id="login">
 <?php
 if(isset($_SESSION["userid"])){
-	echo "<p><strong><a href='../mypage/reserveView.php'>ようこそ".$_SESSION["userid"]."さん！</a></strong></p><p id='logout'><a href='../top/logout.php'>ログアウト</a></p>";
+	echo "<p><strong><a href='../mypage/reserveView.php'>ようこそ".$_SESSION["userid"]."さん！</a></strong></p><p id='logout'><a href='../mypage/mypage.php'>MyPage(仮)</a>　<a href='../top/logout.php'>ログアウト</a></p>";
 }else{
 	echo '<a href="../mypage/login.php"><img src="../module/images/login.png" alt="ログイン&新規会員登録"></a>'."\n";
 }
