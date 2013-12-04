@@ -1,6 +1,7 @@
 @charset "UTF-8";
 /* CSS Document */
 #subnav {
+  position: relative;
   width: 200px;
   float: left;
 }
