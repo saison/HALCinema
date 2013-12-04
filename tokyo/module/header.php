@@ -44,8 +44,7 @@
 <div id="headerLeft">
 <h1><a href="../top/index.php"><img src="../module/images/reserveLogo.png"></a></h1>
 </div>
-<div id="headerRight">
-<div id="login" class="clearfix">
+	<div id="login" class="clearfix">
 <?php
 if(isset($_SESSION["userid"])){
 	echo "<p>ようこそ".$_SESSION["userid"]."さん！</p><ul id='mypageLink'><li><a href='../mypage/mypage.php'>MyPage(仮)</a></li><li><a href='../top/logout.php'>ログアウト</a></li></ul>";
@@ -54,13 +53,13 @@ if(isset($_SESSION["userid"])){
 }
 ?>
 </div>
+<div id="headerRight">
 <nav>
 <ul class="clearfix">
-<li><a href="../shop/shop.php"><img src="../module/images/menu/theaters.png"></a></li>
-<li><a href="../movie/movie.php"><img src="../module/images/menu/workinfo.png"></a></li>
-<!--<li><a href="../service/"><img src="../module/images/menu/service.png"></a></li>-->
-<li>サービスは消してます</li>
-<li><a href="../company/about.php"><img src="../module/images/menu/companyinfo.png"></a></li>
+<li class="theatres"><a href="../shop/shop.php"><img src="../module/images/menu/theaters.png"></a></li>
+<li class="workinfo"><a href="../movie/movie.php"><img src="../module/images/menu/workinfo.png"></a></li>
+<li class="service"><a href="../service/"><img src="../module/images/menu/service.png"></a></li>
+<li class="companyinfo"><a href="../company/about.php"><img src="../module/images/menu/companyinfo.png"></a></li>
 </ul>
 </nav>
 </div>
