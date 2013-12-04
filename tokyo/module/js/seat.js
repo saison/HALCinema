@@ -39,7 +39,6 @@ $(function(){
 	});
 	$(".dragIcon").draggable({
 		opacity:"0.5",
-		revert:"invalid",
-		helper:"clone"
+		revert:"invalid"
 	});
 });
