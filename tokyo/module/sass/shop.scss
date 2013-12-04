@@ -38,11 +38,6 @@
 	padding-top: 80px;
 	background: #efefef;
 }
-p{
-	font-size:90%;
-	margin-bottom:5px;
-}
-
 .topTitle h2{
 	font-size:125%;
 	font-weight:600;
@@ -192,7 +187,9 @@ h3{
 #priceListP{
 	font-size:12px;
 }
-p{
+#rightMainContent p{
 	margin-top: 10px;
 	margin-bottom: 15px;
+	font-size:90%;
+	margin-bottom:5px;
 }

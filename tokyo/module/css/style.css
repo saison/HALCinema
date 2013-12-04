@@ -32,8 +32,8 @@ html {
 
 header {
   background-color: #ffffff;
-  border-top: 1px solid #555555;
-  border-bottom: 1px solid #555555;
+  box-shadow: 0 0 5px #eee;
+  padding: 0 0 5px 0;
 }
 
 #headerIn {
@@ -54,8 +54,7 @@ h1 {
 }
 
 #login {
-  position: static;
-  right: 0;
+  float: right;
   background: #555555;
   padding: 0px 5px 0 10px;
   background-image: url(../images/userBack.png);
@@ -105,17 +104,47 @@ h1 {
 }
 
 header nav {
-  margin: 0 auto;
-  padding: 10px 0;
+  margin: 10px auto 0 auto;
+  border-top: 1px solid #eee;
 }
 
 header nav li {
   width: 170px;
   float: left;
+  font-size: 70%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 5px;
+  border-left: 1px solid #eee;
+}
+
+header nav li:first-child {
+  border-left: 1px solid #fff;
 }
 
 header nav li img {
   width: 100%;
+}
+
+header nav li a {
+  display: block;
+}
+
+.theatres {
+  border-bottom: 5px solid #ffd6d6;
+}
+
+.workinfo {
+  border-bottom: 5px solid #ffffb7;
+}
+
+.service {
+  border-bottom: 5px solid #dbffb7;
+}
+
+.companyinfo {
+  border-bottom: 5px solid #e0ffff;
 }
 
 /*メインコンテンツ*/
