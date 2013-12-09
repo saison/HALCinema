@@ -4,11 +4,11 @@
 ?>
 
 <!--メインコンテンツが先、ナビ部分は後-->
-<div id="mainContent"><!--メインコンテンツ-->
-  <div class="contentTitle">
-    <h2>劇場案内<br />
-      <span class="h2En">Theater Info.</span></h2>
+<div class="contentTitle" id="theatesTitle">
+    <h2>劇場案内<span class="h2En">Theater Info.</span></h2>
   </div>
+<div id="mainContent"><!--メインコンテンツ-->
+  
   <!-- ここからcontent -->
   <!-- ここh2タイトル -->
   <div class="clearfix">

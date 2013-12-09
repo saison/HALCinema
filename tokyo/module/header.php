@@ -49,7 +49,7 @@
 if(isset($_SESSION["userid"])){
 	echo "<p>ようこそ".$_SESSION["userid"]."さん！</p><ul id='mypageLink'><li><a href='../mypage/mypage.php'>MyPage(仮)</a></li><li><a href='../top/logout.php'>ログアウト</a></li></ul>";
 }else{
-	echo '<a href="../mypage/login.php"><img src="../module/images/loginNew.png" alt="ログイン&新規会員登録"></a>'."\n";
+	echo '<a href="../mypage/login.php">ログイン&新規会員登録</a>'."\n";
 }
 ?>
 </div>

@@ -5,10 +5,10 @@
 
         <div id="wrapper"><!--メインコンテンツが先、ナビ部分は後-->
           <div id="main">
-            <div id="mainContent"><!--メインコンテンツ-->
-            <div class="contentTitle">
-            <h2>企業情報<br /><span class="h2En">Company Info.</span></h2>
+											<div class="contentTitle">
+            <h2>企業情報<span class="h2En">Company Info.</span></h2>
             </div>
+            <div id="mainContent"><!--メインコンテンツ-->
               <!-- ここからcontent -->
               <!-- ここh2タイトル -->
 													<div class="clearfix">
