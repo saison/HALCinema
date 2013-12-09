@@ -7,8 +7,8 @@
 </div>
 <div id="mainContent"><!--メインコンテンツ-->
 <div id="todayTab">
-<p id="nowMovie">公開中の作品</p>
-<p id="comeMovie">公開予定の作品</p>
+<p id="nowMovie"><img src="images/nowShowing.png" alt="公開中の作品"></p>
+<p id="comeMovie"><img src="images/comingSoon.png" alt="公開予定の作品"></p>
 <div class="clear"></div>
 
 </div>

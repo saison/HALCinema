@@ -3,10 +3,10 @@
 
 
 .movieBox{
-	width:900px;
-	margin:25px 30px;
-	box-shadow:0 0 3px #aaa;
+	width:958px;
 	padding:10px;
+	margin:0px 0px;
+	box-shadow:0 0 2px #000;
 	color:#222222;
 	text-decoration:none;	
 }
@@ -37,29 +37,16 @@
 }
 #todayTab{
 	width:980px;
-	margin:15px 0;
-	/*border-bottom:1px solid #aaaaaa;	*/
+	margin:15px 0 0 0;
 }
 #nowMovie{
-	width:200px;
-	font-size:90%;
-	color:#333333;
-	background-color:#AEFFFB;
-	text-shadow:0 0 2px #aaa;	
 	float:left;
-	text-align:center;
-	padding:15px 0;
+	padding:15px 0 0 0;
 }
 #comeMovie{
-	width:200px;
-	font-size:90%;
-	color:#333333;
-	background-color:#C8FF97;
-	text-shadow:0 0 2px #aaa;	
 	float:left;
 	margin-left:20px;
-	text-align:center;
-	padding:15px 0;
+	padding:15px 0 0 0;
 }
 .comeDate{
 	font-size:110%;
