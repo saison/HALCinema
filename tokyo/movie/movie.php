@@ -2,11 +2,10 @@
 	$pageTitle = "";
 	require_once("../module/header.php");
 ?>
-
-<div id="mainContent"><!--メインコンテンツ-->
 <div class="contentTitle">
-	<h2>作品案内<br /><span class="h2En">Work Info.</span></h2>
+	<h2>作品案内<span class="h2En">Work Info.</span></h2>
 </div>
+<div id="mainContent"><!--メインコンテンツ-->
 <div id="todayTab">
 <p id="nowMovie">公開中の作品</p>
 <p id="comeMovie">公開予定の作品</p>
