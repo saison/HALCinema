@@ -44,22 +44,22 @@
     <div id="sertEachChoice" class="clearfix"><!-- シート選択指定 --><!-- 人形は増やしてちょうだい！ -->
       <h5>大人</h5>
 					<div class="setEachChoiceContent">
-        <ul id="adult">
-          <li><img class="dragIcon" src="images/adultImage.png"></li>
+        <ul>
+          <li><img id="adult" class="dragIcon" src="images/adultImage.png"></li>
         </ul>
       </div>
 					<h5>学生</h5>
       <div class="setEachChoiceContent">
-        <ul id="student">
-          <li><img class="dragIcon" src="images/studentImage.png"></li>
+        <ul>
+          <li><img id="student" class="dragIcon" src="images/studentImage.png"></li>
         </ul>
       </div>
 					<?php //シニアのみ対応（本当はDBにつなげてやりたかった･･･
 						if($screenDay["day"]=="1"){
 						echo "<h5>シニア</h5>\r\n";
       echo'<div class="setEachChoiceContent">';
-      echo '<ul id="senior">';
-      echo '<li><img class="dragIcon" src="images/seniorImage.png"></li>';
+      echo '<ul>';
+      echo '<li><img id="senior" class="dragIcon" src="images/seniorImage.png"></li>';
       echo '</ul>';
       echo '</div>';
 							
