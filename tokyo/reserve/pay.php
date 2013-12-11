@@ -9,8 +9,36 @@
 <div class="reserveTitle">
   <h3>お支払い方法を選択してください</h3>
 </div>
-
-<div class="payEach">
+<h4>登録されている決済方法</h4>
+<!--ここから--->	
+<div class="payEach clearfix">
+<div class="payEachLeft">
+<h4>クレジットカード決済</h4>//クレジットカード決済表示の場合。キャリア決済の場合は以下の情報はいらないです。
+<p class="mini">番号：************3432<br>//番号の下4桁のみ表示
+名義人：aaaa aaaa<br>//名義人表示
+有効期限：12/15(M/Y)</p>
+</div>
+<div class="payEachRight">
+<form action="confirm.php" method="post">
+<input type="image" name="sendConfirm" src="images/paySelect.png" alt="送信する">
+</form>
+</div>
+</div>
+<!--ここまで-->
+	<!--ここから--->	
+<div class="payEach clearfix">
+<div class="payEachLeft">
+<h4>docomoケータイ決済</h4>
+</div>
+<div class="payEachRight">
+<form action="confirm.php" method="post">
+<input type="image" name="sendConfirm" src="images/paySelect.png" alt="送信する">
+</form>
+</div>
+</div>
+<!--ここまで-->
+<h4>その他の決済方法を選択する</h4>
+<div class="payEach clearfix">
 <div class="payEachLeft">
 <h4>クレジットカード決済</h4>
 <p>Master、VISA、JCB、AMEX、DINERSのクレジットカードが利用可能です。</p>
@@ -20,7 +48,6 @@
 <input type="image" name="sendConfirm" src="images/paySelect.png" alt="送信する">
 </form>
 </div>
-<div class="clear"></div>
 </div>
 
 <div class="payEach">
