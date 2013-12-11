@@ -26,8 +26,14 @@ $(function(){
 			ui.draggable.attr("id",seatId+"_"+dragClass);
 			var dragIconId = ui.draggable.attr("id");
 			var formId = $("#postData #"+dragIconId).attr("id");
+			ui.draggable.clone().appendTo(this);
 
 			//$("#"+seatId).append("<br /><img class='dragIcon' src='images/" + dragClass + "Image.png'>");
+
+			$(".dragIcon").draggable({
+				opacity:"0.5",
+				revert:"invalid"
+			});
 
 			if(dragIconId != formId){
 				$("#postData").append("<input type='hidden' name='seat[]' id='"+ seatId +"_"+ dragClass +"' value='"+ seatId +"_"+ dragClass +"' />");
