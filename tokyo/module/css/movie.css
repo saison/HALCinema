@@ -1,9 +1,16 @@
 /* CSS Document */
+h3 {
+  border-left: 4px solid #bff;
+  padding: 0 0 0 5px;
+  margin: 10px;
+  font-weight: 600;
+}
+
 .movieBox {
-  width: 958px;
+  width: 938px;
   padding: 10px;
-  margin: 0px 0px;
-  box-shadow: 0 0 2px #000;
+  margin: 0 5px 15px 5px;
+  box-shadow: 0 0 2px #aaa;
   color: #222222;
   text-decoration: none;
 }
@@ -40,7 +47,7 @@
 
 #todayTab {
   width: 980px;
-  margin: 15px 0 0 0;
+  margin: 15px 0 0 -3px;
 }
 
 #nowMovie {
@@ -70,4 +77,11 @@
 
 .movieEachTitle:before {
   background: none !important;
+}
+
+#movieTab {
+  width: 970px;
+  padding: 5px 5px 5px 5px;
+  border: 1px solid #aaa;
+  margin: -8px 0 50px 0;
 }
