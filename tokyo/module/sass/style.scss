@@ -80,7 +80,6 @@ h1{
 }
 header nav{
 	margin:10px auto 0 auto;
-	border-top:1px solid #eee;
 }
 header nav li{
 	width:170px;
@@ -88,10 +87,6 @@ header nav li{
 	font-size:70%;
 	@include box-sizing(border-box);
 	padding:5px;
-	border-left:1px solid #eee;
-}
-header nav li:first-child{
-	border-left:1px solid #fff;
 }
 header nav li img{
 	width:100%;

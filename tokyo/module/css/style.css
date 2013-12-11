@@ -107,7 +107,6 @@ h1 {
 
 header nav {
   margin: 10px auto 0 auto;
-  border-top: 1px solid #eee;
 }
 
 header nav li {
@@ -118,11 +117,6 @@ header nav li {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   padding: 5px;
-  border-left: 1px solid #eee;
-}
-
-header nav li:first-child {
-  border-left: 1px solid #fff;
 }
 
 header nav li img {
