@@ -63,6 +63,7 @@ h5{
   padding:0 5px;
   margin-bottom:0.5em;
   border-left:3px solid #aaa;
+	 vertical-align:text-bottom;
 }
 .setEachChoiceContent ul{
   display:table;
@@ -72,7 +73,13 @@ h5{
   display:table-cell;
   text-align:center;
 	 position:relative;
-	z-index:1000;
+	 z-index:1000;
+  line-height:0;
+	 vertical-align:text-bottom;
+}
+.setEachChoiceContent li img{
+	line-height:0;
+	vertical-align:text-bottom;
 }
 .sertArrange{
 	width:100%;
@@ -113,6 +120,7 @@ overflow:hidden;
 .sertArrange table{
 	/*display: inline-block;*/
 	width:100%;
+	margin:60px 0 0 0;
 }
 .sertArrange tbody{
 	width:100%;	
@@ -242,4 +250,28 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7d7e7d', end
 }
 .m10{
 	margin:10px;
+}
+
+.arrow_box {
+	position: relative;
+	background: #eff;
+	color:#333;
+	padding:7px;
+	font-size:90%;
+	font-weight:600;
+	text-shadow:0 0 3px #aaa;
+}
+.arrow_box:after {
+	top: 100%;
+	left: 50%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+	border-color: rgba(186, 213, 162, 0);
+	border-top-color: #eff;
+	border-width: 20px;
+	margin-left: -20px;
 }

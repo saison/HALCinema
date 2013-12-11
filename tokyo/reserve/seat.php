@@ -34,18 +34,9 @@
 		<div class="reserveTitle">
 			<h3>座席を選択してください</h3>
 		</div>
-		<div id="movieInfo"><!-- 映画情報 -->
-			<h4>選択映画情報</h4>
-			<table>
-				<tr>
-					<td class="movieInfoTitle">日時</td></tr><tr>
-					<td><?php echo $screenDay["year"]."年".$screenDay["month"]."月".$screenDay["day"]."日 ".$screenDay["hour"]."：".$screenDay["minute"]."~"; ?></td>
-				</tr>
-				<tr>
-					<td class="movieInfoTitle">映画</td></tr><tr>
-					<td><?php echo $reserveSelectRow["movieName"]; ?></td>
-				</tr>
-			</table>
+		<div class="arrow_box"><!-- 映画情報 -->
+			<p>日時･･･<?php echo $screenDay["year"]."年".$screenDay["month"]."月".$screenDay["day"]."日 ".$screenDay["hour"]."：".$screenDay["minute"]."~"; ?>　
+					映画･･･<?php echo $reserveSelectRow["movieName"]; ?>
 		</div>
 	</div>
 
@@ -59,18 +50,21 @@
       </div>
 					<h5>学生</h5>
       <div class="setEachChoiceContent">
-
         <ul id="student">
           <li><img class="dragIcon" src="images/studentImage.png"></li>
         </ul>
       </div>
-      <!--  シニアは映画日時を取得して表示（DB接続） -->
-					<h5>シニア</h5>
-      <div class="setEachChoiceContent">
-        <ul id="senior">
-          <li><img class="dragIcon" src="images/seniorImage.png"></li>
-        </ul>
-      </div>
+					<?php //シニアのみ対応（本当はDBにつなげてやりたかった･･･
+						if($screenDay["day"]=="1"){
+						echo "<h5>シニア</h5>\r\n";
+      echo'<div class="setEachChoiceContent">';
+      echo '<ul id="senior">';
+      echo '<li><img class="dragIcon" src="images/seniorImage.png"></li>';
+      echo '</ul>';
+      echo '</div>';
+							
+						}
+					?>
     </div>
     <!--<p class="blockTyui">各料金タイプ内の人形を選択したい座席にドラック&amp;ドロップしてください</p>-->
 			</div>
