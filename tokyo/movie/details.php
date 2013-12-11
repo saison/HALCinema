@@ -2,11 +2,10 @@
 	$pageTitle = "作品案内";//作品名が入ると望ましい
 	require_once("../module/header.php");
 ?>
-
-<div id="mainContent"><!--メインコンテンツ-->
 <div class="contentTitle">
-	<h2>作品案内<br /><span class="h2En">Work Info.</span></h2>
+	<h2>作品案内<span class="h2En">Work Info.</span></h2>
 </div>
+<div id="mainContent"><!--メインコンテンツ-->
 <?php
 if(!isset($_GET['id'])){ // issetですべてを囲むのではなくて、最初に無かったら飛ばそう
 	header("location:../top/error.php");
