@@ -12,7 +12,7 @@
 			$errWord="入力に誤りがあります。";
 		}
 		else if($_GET["err"]==2){
-			$errWord="仕様できないＩＤです。";
+			$errWord="	使用できないＩＤです。";
 		}
 		else if($_GET["err"]==3){
 			$errWord="パスワードが一致しません。";
