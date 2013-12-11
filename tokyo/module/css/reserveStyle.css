@@ -39,6 +39,7 @@ header {
 #headerIn {
   width: 980px;
   margin: 0 auto;
+  overflow: hidden;
 }
 
 #headerIn h1 {
@@ -75,10 +76,10 @@ header {
 }
 
 h4 {
-  border-left: 3px solid #00aaff;
-  color: #555555;
-  margin: 10px 0;
-  padding: 10px;
+  border-left: 5px solid #00aaff;
+  color: #333333;
+  margin: 10px 0 !important;
+  padding: 0px 0 0px 10px !important;
 }
 
 h5 {

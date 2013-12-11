@@ -6,9 +6,6 @@
     </div>
     <table id="ABlockSeat">
       <tr>
-        <th class="screenTop" colspan="11"><img src="./images/screenTop.png" alt="↑スクリーン方向↑" /></th>
-      </tr>
-      <tr>
         <th></th>
         <th>1</th>
         <th>2</th>
@@ -94,9 +91,6 @@
       <p class="sertTitleCenter"><?php echo "HALCinemaTOKYO Screen<span class='captionBig'>".substr($screenID,-1,1)."</span>"; ?><span class="captionBig">A</span>(Right)Block</p>
     </div>
     <table id="ABlockSeat">
-      <tr>
-        <th class="screenTop" colspan="11"><img src="./images/screenTop.png" alt="↑スクリーン方向↑" /></th>
-      </tr>
       <tr>
         <th></th>
         <th>11</th>

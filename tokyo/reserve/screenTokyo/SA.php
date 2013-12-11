@@ -6,9 +6,6 @@
     </div>
     <table id="ABlockSeat">
       <tr>
-        <th class="screenTop" colspan="18"><img src="./images/screenTop.png" alt="↑スクリーン方向↑" /></th>
-      </tr>
-      <tr>
         <th></th>
         <th>1</th>
         <th>2</th>
@@ -238,9 +235,6 @@
       
     </div>
     <table id="ABlockSeat">
-      <tr>
-        <th class="screenTop" colspan="19"><img src="./images/screenTop.png" alt="↑スクリーン方向↑" /></th>
-      </tr>
       <tr>
         <th></th>
         <th>18</th>
