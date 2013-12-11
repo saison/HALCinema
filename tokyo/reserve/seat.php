@@ -30,28 +30,24 @@
 
 <div id="nav"></div>
 <div id="content100">
-  <div class="reserveTitle">
-    <h3>座席を選択してください</h3>
-  </div>
-
-	<div id="movieInfo"><!-- 映画情報 -->
-    <h4>選択映画情報</h4>
-    <div class="setEachChoiceContent">
-    </div>
-
-
-    <table>
-      <tr>
-        <td class="movieInfoTitle">日時</td></tr><tr>
-        <td><?php echo $screenDay["year"]."年".$screenDay["month"]."月".$screenDay["day"]."日 ".$screenDay["hour"]."：".$screenDay["minute"]."~"; ?></td></tr><tr>
-        <td class="movieInfoTitle">映画</td></tr><tr>
-        <td><?php echo $reserveSelectRow["movieName"]; ?></td>
-      </tr>
-    </table>
-  </div>
-
-
-
+	<div class="m10">
+		<div class="reserveTitle">
+			<h3>座席を選択してください</h3>
+		</div>
+		<div id="movieInfo"><!-- 映画情報 -->
+			<h4>選択映画情報</h4>
+			<table>
+				<tr>
+					<td class="movieInfoTitle">日時</td></tr><tr>
+					<td><?php echo $screenDay["year"]."年".$screenDay["month"]."月".$screenDay["day"]."日 ".$screenDay["hour"]."：".$screenDay["minute"]."~"; ?></td>
+				</tr>
+				<tr>
+					<td class="movieInfoTitle">映画</td></tr><tr>
+					<td><?php echo $reserveSelectRow["movieName"]; ?></td>
+				</tr>
+			</table>
+		</div>
+	</div>
 
   <div id="sertChoice"><!-- シートブロック・種類選択 200px-->
     <div id="sertEachChoice" class="clearfix"><!-- シート選択指定 --><!-- 人形は増やしてちょうだい！ -->
