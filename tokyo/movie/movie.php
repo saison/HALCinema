@@ -6,13 +6,13 @@
 	<h2>作品案内<span class="h2En">Work Info.</span></h2>
 </div>
 <div id="mainContent"><!--メインコンテンツ-->
-<div id="todayTab">
+<div id="todayTab" class="clearfix">
 <p id="nowMovie"><img src="images/nowShowing.png" alt="公開中の作品"></p>
 <p id="comeMovie"><img src="images/comingSoon.png" alt="公開予定の作品"></p>
-<div class="clear"></div>
-
 </div>
+<div id="movieTab">
 <div id="now">
+	<h3>公開中作品</h3>
 <?php
 	///今日の日付を取得
 	$todayDate=date("Y-m-d");
@@ -49,6 +49,7 @@
 ?>
 </div>				
 <div id="coming">
+	<h3>公開予定作品</h3>
 			<?php
             
                 ///今日の日付を取得
@@ -83,6 +84,7 @@
             
             ?>
 </div>
+	</div>
 </div>
 <?PHP
 	require_once("../module/footer.php");
