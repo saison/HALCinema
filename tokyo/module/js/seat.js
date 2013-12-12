@@ -21,11 +21,27 @@ $(function(){
 	});
 	$(".seat").droppable({
 		drop:function(event, ui){
+		//	var seatId = $(this).attr("id");
+		//	var dragClass = ui.draggable.attr("id");
+		//	ui.draggable.attr("id",seatId+"_"+dragClass);
+		//	var dragIconId = ui.draggable.attr("id");
+					
+			//シートの番号を取得
 			var seatId = $(this).attr("id");
-			var dragClass = ui.draggable.parent().parent().attr("id");
-			ui.draggable.attr("id",seatId+"_"+dragClass);
-			var dragIconId = ui.draggable.attr("id");
-			var formId = $("#postData #"+dragIconId).attr("id");
+			//種別を取得
+			var assortId = ui.draggable.attr("id");
+
+			//formに渡す値を作成
+			//ex : a-1_adult
+			var formValue = seatId + "_" + assortId;
+			
+			//formに追加する値のID
+			var formId = $("#postData #" + formValue).attr("id");
+
+
+			//ドロップされた際にオブジェクトにカスタムデータを付与
+			ui.draggable.attr("data-seat",formValue);
+			
 			ui.draggable.clone().appendTo(this);
 
 			//$("#"+seatId).append("<br /><img class='dragIcon' src='images/" + dragClass + "Image.png'>");
@@ -34,9 +50,12 @@ $(function(){
 				opacity:"0.5",
 				revert:"invalid"
 			});
+			
+			//カスタムデータを取得
+			var custamData = $(this).data("seat");
 
-			if(dragIconId != formId){
-				$("#postData").append("<input type='hidden' name='seat[]' id='"+ seatId +"_"+ dragClass +"' value='"+ seatId +"_"+ dragClass +"' />");
+			if(custamData == formId){
+				$("#postData").append("<input type='hidden' name='seat[]' id='"+ formValue +"' value='"+ formValue +"' />");
 			}
 		},
 		out:function(event, ui){
