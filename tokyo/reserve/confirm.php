@@ -78,7 +78,7 @@
 <table>
 <tr>
 <th>決済方法</th>
-<td><?php print "クレジットカード"; ?></td>
+<td><?php print $_POST["sendConfirm"]; ?></td>
 </tr>
 <tr>
 <th>金額</th>
