@@ -223,6 +223,16 @@ footer {
   margin: 0 auto;
 }
 
+#footerLeft {
+  float: left;
+  width: 500px;
+}
+
+#footerRight {
+  float: left;
+  width: 480px;
+}
+
 #copyright {
   font-size: 70%;
   color: #777777;
@@ -265,4 +275,24 @@ h4 {
   border-left: 4px solid #3c3c3c;
   padding-left: 10px;
   margin-bottom: 15px;
+}
+
+#footerLeft li {
+  font-size: 80%;
+  margin: 10px 0px;
+  padding: 0 10px;
+  float: left;
+}
+
+#footerLeft li:first-child {
+  border-right: 1px solid #aaa;
+}
+
+#footerLeft li a {
+  color: #333333;
+  text-decoration: none;
+}
+
+#footerLeft li a:hover {
+  opacity: 0.8;
 }
