@@ -45,7 +45,7 @@
 </div>
 <div class="payEachRight">
 <form action="confirm.php" method="post">
-<input type="image" name="sendConfirm" src="images/paySelect.png" alt="送信する">
+<input type="image" name="sendConfirm"  value="クレジットカード決済" src="images/paySelect.png" alt="送信する">
 </form>
 </div>
 </div>
@@ -57,7 +57,7 @@
 </div>
 <div class="payEachRight">
 <form action="confirm.php" method="post">
-<input type="image" name="sendConfirm" src="images/paySelect.png" alt="送信する">
+<input type="image" name="sendConfirm"  value="docomoケータイ払い" src="images/paySelect.png" alt="送信する">
 </form>
 </div>
 <div class="clear"></div>
@@ -70,7 +70,7 @@
 </div>
 <div class="payEachRight">
 <form action="confirm.php" method="post">
-<input type="image" name="sendConfirm" src="images/paySelect.png" alt="送信する">
+<input type="image" name="sendConfirm"  value="auかんたん決済"  src="images/paySelect.png" alt="送信する">
 </form>
 </div>
 <div class="clear"></div>
@@ -83,7 +83,7 @@
 </div>
 <div class="payEachRight">
 <form action="confirm.php" method="post">
-<input type="image" name="sendConfirm" src="images/paySelect.png" alt="送信する">
+<input type="image" name="sendConfirm"  value="ソフトバンクまとめて支払い" src="images/paySelect.png" alt="送信する">
 </form>
 </div>
 <div class="clear"></div>

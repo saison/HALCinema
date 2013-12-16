@@ -19,6 +19,10 @@
 				case "senior":
 					$priceId = 2;
 					break;
+				//デバック用
+				default:
+					$priceId = 0;
+					
 			}
 			$insertSql = "INSERT INTO `seat_reserve_list`(`show_id`, `user_id`, `seat_number`, `reserve_flag`, `movie_price_id`) VALUES ('{$showId}','".$_SESSION["userid"]."','{$reserveData[0]}',0,{$priceId})";
 			$insertResult = mysqli_query($con,$insertSql);
