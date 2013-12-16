@@ -2,12 +2,11 @@
 	$pageTitle = "よくあるご質問";
 	require_once("../module/header.php");
 ?>
+<div class="contentTitle">
+    <h2>よくあるご質問<span class="h2En">questions</span></h2>
+  </div>
 <!--メインコンテンツが先、ナビ部分は後-->
 <div id="mainContent"><!--メインコンテンツ-->
-  <div class="contentTitle">
-    <h2>よくあるご質問<br />
-      <span class="h2En">questions</span></h2>
-  </div>
   <!-- ここからcontent -->
   <!-- ここh2タイトル -->
   <div class="clearfix">
