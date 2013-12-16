@@ -48,6 +48,7 @@ $(function(){
 
 			//$("#"+seatId).append("<br /><img class='dragIcon' src='images/" + dragClass + "Image.png'>");
 
+			
 			$(".dragIcon").draggable({
 				opacity:"0.5",
 				revert:"invalid"
