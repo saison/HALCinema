@@ -25,7 +25,7 @@
 </div>
 </div>
 <!--ここまで-->
-	<!--ここから--->	
+<!--ここから--->	
 <div class="payEach clearfix">
 <div class="payEachLeft">
 <h4>docomoケータイ決済</h4>
