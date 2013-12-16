@@ -26,6 +26,8 @@ $(function(){
 		//	ui.draggable.attr("id",seatId+"_"+dragClass);
 		//	var dragIconId = ui.draggable.attr("id");
 					
+
+
 			//シートの番号を取得
 			var seatId = $(this).attr("id");
 			//種別を取得
