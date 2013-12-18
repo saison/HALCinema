@@ -58,7 +58,7 @@ if(isset($_SESSION["userid"])){
 <ul class="clearfix">
 <li class="theatres"><a href="../shop/shop.php"><img src="../module/images/menu/theaters.png"></a></li>
 <li class="workinfo"><a href="../movie/movie.php"><img src="../module/images/menu/workinfo.png"></a></li>
-<li class="service"><a href="../service/"><img src="../module/images/menu/service.png"></a></li>
+<li class="service"><a href="../shop/serviceday.php"><img src="../module/images/menu/service.png"></a></li>
 <li class="companyinfo"><a href="../company/about.php"><img src="../module/images/menu/companyinfo.png"></a></li>
 </ul>
 </nav>
