@@ -26,6 +26,7 @@
 	$screenSelectSql = "SELECT * FROM screen_master WHERE screen_id='".$screenID."'";
 	$screenSelectResult = mysqli_query($con,$screenSelectSql);
 	$screenSelect = mysqli_fetch_array($screenSelectResult);
+	mysqli_close($con);	
 ?>
 
 <div id="nav"></div>
