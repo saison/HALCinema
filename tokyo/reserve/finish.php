@@ -2,24 +2,11 @@
 	$pageTitle="予約を完了しました";
 	require_once("../module/reserveHeader.php");
 	$con = getConnection();
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> c0073167d25d609e07379e9eec55e0f0ac100c58
-	//日付取得
-	$todayDate=date("Y-m-d");
-	//現在の時間
-	$nowTime=date("H:i");
-<<<<<<< HEAD
->>>>>>> c0073167d25d609e07379e9eec55e0f0ac100c58
-=======
->>>>>>> c0073167d25d609e07379e9eec55e0f0ac100c58
 
 	//DBかくのう
 	$reserveNumber = uniqid($_SESSION["showid"]);
-	$reserveSaveSql = "INSERT INTO reserve_master (reserve_id,user_id,reserve_time,reserve_number,settle_flag) VALUES ('','".$_SESSION["userid"]."','".$todayDate."  ". $nowTime ."','".$reserveNumber."',1);";
+	$reserveSaveSql = "INSERT INTO reserve_master (reserve_id,user_id,reserve_time,reserve_number,settle_flag) VALUES ('','".$_SESSION["userid"]."','','".$reserveNumber."',1);";
 	$reserveSaveResult = mysqli_query($con,$reserveSaveSql);
 
 	//ゆーまさんからいわれたやつ
@@ -33,20 +20,9 @@
 		$seatNumber = $reserveSelectRow["seat_number"];
 		var_dump($seatNumber);
 		$innerSQL = "INSERT INTO movie_reserve_content VALUE ('','".$reserveNumber."','".$_SESSION["showid"]."','".$seatNumber."','".$priceId."',".$price.")";
-		print $innerSQL;
 		$innerSQLResult = mysqli_query($con,$innerSQL);
 	}
-<<<<<<< HEAD
-<<<<<<< HEAD
 	//フラグ変更
-=======
-
-//フラグ変更
->>>>>>> c0073167d25d609e07379e9eec55e0f0ac100c58
-=======
-
-//フラグ変更
->>>>>>> c0073167d25d609e07379e9eec55e0f0ac100c58
 	$finishSql = "UPDATE seat_reserve_list SET reserve_flag=1 WHERE user_id='".$_SESSION["userid"]."' AND show_id='".$_SESSION["showid"]."'";
 	$finishResult = mysqli_query($con,$finishSql);
 ?>
