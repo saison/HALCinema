@@ -46,7 +46,6 @@ $(function(){
 			//ドロップされた際にオブジェクトにカスタムデータを付与
 			ui.draggable.attr("data-seat",formValue);
 			clone.attr("data-seat",formValue);
-			firstId = ui.draggable.data("seat");
 
 			var cloneFlg = clone.data("flg");
 			if (cloneFlg) {
@@ -64,35 +63,55 @@ $(function(){
 				opacity:"0.5",
 				revert:"invalid"
 			}).css({"top":"0","left":"0"});
+		
 			
-			//カスタムデータを取得
-			var custamData = clone.data("seat");
-			if(custamData != formId){
-				$("#postData").append("<input type='hidden' name='seat[]' id='"+ formValue +"' value='"+ formValue +"' />");
-			}
+			//form内にデータを挿入
+			var postDataId = $("#postData");
+			$(".cloneIcon").each(function(){
+				var seatValue = $(this).attr("data-seat");
+				var seatNum = seatValue.split("_");
+				postDataId.append("<input type='hidden' name='seat[]' id='"+ seatValue +"' value='"+ seatValue +"' />");
+			});
+			
+
+			//	//カスタムデータを取得
+			//	var custamData = clone.data("seat");
+			//	if(custamData != formId){
+			//		$("#postData").append("<input type='hidden' name='seat[]' id='"+ formValue +"' value='"+ formValue +"' />");
+			//	}
+			//
 		},
 		out:function(event, ui){
-			//data-seatを取得
-			var removeValue = ui.draggable.clone().data("seat");
-			var removeValueOrigin = firstId;
 			
-			//data-seatにnotsetを設定
-			ui.draggable.attr("data-seat","notset");
+			//form内全件取得
+			$("#postData input[type = hidden]").each(function(){
+				$("#"+$(this).attr("id")).remove();
+			});
+			
 
-			//削除するpostのIDを設定
-			//ex) #postData #a-5_adult
-			var formId = "#postData #" + removeValue;
-			var originId = "#postData #" + removeValueOrigin;
 
-			//remove
-			$(formId).remove();
-			$(originId).remove();
 
-			//debug用
-			console.log(firstId);
-			console.log(removeValueOrigin);
-			console.log(removeValue);
-			console.log(formId);
+			//	//data-seatを取得
+			//	var removeValue = ui.draggable.clone().data("seat");
+			//	var removeValueOrigin = firstId;
+			//	
+			//	//data-seatにnotsetを設定
+			//	ui.draggable.attr("data-seat","notset");
+
+			//	//削除するpostのIDを設定
+			//	//ex) #postData #a-5_adult
+			//	var formId = "#postData #" + removeValue;
+			//	var originId = "#postData #" + removeValueOrigin;
+
+			//	//remove
+			//	$(formId).remove();
+			//	$(originId).remove();
+			
+			//	//debug用
+			//	console.log(firstId);
+			//	console.log(removeValueOrigin);
+			//	console.log(removeValue);
+			//	console.log(formId);
 		}
 	});
 	$(".dragIcon").draggable({
