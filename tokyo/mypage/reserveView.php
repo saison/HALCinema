@@ -28,10 +28,11 @@ $count=0;
 					echo  "<p class='reserveDate'>予約映画･予約座席：";//予約番号
 					while(($row2 = mysqli_fetch_array($result)) != false){
 						$reserveSelectSql = "SELECT show_schedule.show_id AS showID , show_schedule.screen_id AS SID , show_schedule.show_day AS showDay , show_schedule.start_time AS startTime , cinema_master.cinema_name AS movieName FROM show_schedule INNER JOIN cinema_master ON show_schedule.cinema_id=cinema_master.cinema_id WHERE show_schedule.show_id='".$row2["show_id"]."'";
-	$reserveSelectResult = mysqli_query($con,$reserveSelectSql);
-	$reserveSelectRow = mysqli_fetch_array($reserveSelectResult);
-	$dateAndTime=$reserveSelectRow["showDay"]." ".$reserveSelectRow["startTime"];
-	$screenDay=date_parse($dateAndTime);
+						
+						$reserveSelectResult = mysqli_query($con,$reserveSelectSql);
+						$reserveSelectRow = mysqli_fetch_array($reserveSelectResult);
+						$dateAndTime=$reserveSelectRow["showDay"]." ".$reserveSelectRow["startTime"];
+						$screenDay=date_parse($dateAndTime);
 						echo "上映日時：".$screenDay["year"]."年".$screenDay["month"]."月".$screenDay["day"]."日 ".$screenDay["hour"]."：".$screenDay["minute"]."~";
 						echo "映画名：".$reserveSelectRow["movieName"];
 						echo "座席番号：<b>".$row2["seat_number"]."</b><br>";

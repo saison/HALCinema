@@ -2,6 +2,10 @@
 	$pageTitle="予約を完了しました";
 	require_once("../module/reserveHeader.php");
 	$con = getConnection();
+	//日付取得
+	$todayDate=date("Y-m-d");
+	//現在の時間
+	$nowTime=date("H:i");
 
 	//フラグ変更
 	$finishSql = "UPDATE seat_reserve_list SET reserve_flag=1 WHERE user_id='".$_SESSION["userid"]."' AND show_id='".$_SESSION["showid"]."'";
@@ -9,7 +13,7 @@
 
 	//DBかくのう
 	$reserveNumber = uniqid($_SESSION["showid"]);
-	$reserveSaveSql = "INSERT INTO reserve_master (reserve_id,user_id,reserve_time,reserve_number,settle_flag) VALUES ('','".$_SESSION["userid"]."','','".$reserveNumber."',1);";
+	$reserveSaveSql = "INSERT INTO reserve_master (reserve_id,user_id,reserve_time,reserve_number,settle_flag) VALUES ('','".$_SESSION["userid"]."','".$todayDate."  ". $nowTime ."','".$reserveNumber."',1);";
 	$reserveSaveResult = mysqli_query($con,$reserveSaveSql);
 
 	//ゆーまさんからいわれたやつ
