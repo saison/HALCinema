@@ -45,9 +45,6 @@
 	border-right:1px solid #aaaaaa;
 }
 .setEachChoiceContent{
-  box-shadow:0 0 3px #0af;
-  background-color:rgba(255,255,255,0.7);
-  border-radius:5px;
   padding:0px 10px;
   margin:0px 10px;
 	float:left;
@@ -274,4 +271,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7d7e7d', end
 	border-top-color: #eff;
 	border-width: 20px;
 	margin-left: -20px;
+}
+#seatCenter{
+	text-align:center;
+	width:100%;
 }
