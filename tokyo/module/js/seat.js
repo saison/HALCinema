@@ -19,6 +19,9 @@ $(function(){
 		tolerance:"fit",
 		hoverClass:"activeHover"
 	});
+	
+
+	
 
 	$(".seat").droppable({
 		drop:function(event, ui){
@@ -63,7 +66,16 @@ $(function(){
 				opacity:"0.5",
 				revert:"invalid"
 			}).css({"top":"0","left":"0"});
-		
+			
+					
+			//ダブルクリックすると消える
+			$(".cloneIcon").dblclick(function(){ 
+				$(this).fadeOut(200,function(){
+					$(this).remove();
+					$("#postData #"+$(this).attr("data-seat")).remove();
+
+				});
+			});
 			
 			//form内にデータを挿入
 			var postDataId = $("#postData");
@@ -73,6 +85,7 @@ $(function(){
 				postDataId.append("<input type='hidden' name='seat[]' id='"+ seatValue +"' value='"+ seatValue +"' />");
 			});
 			
+
 
 			//	//カスタムデータを取得
 			//	var custamData = clone.data("seat");
