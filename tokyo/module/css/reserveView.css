@@ -27,3 +27,15 @@
   width: 90%;
   float: left;
 }
+
+#mypageMein {
+  width: 640px;
+  margin-right: 40px;
+  float: left;
+}
+
+#mypageNav {
+  float: left;
+  width: 300px;
+  margin-top: 15px;
+}

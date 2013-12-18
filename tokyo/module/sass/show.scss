@@ -26,8 +26,8 @@ h2{
 	background-color:#FFBBBC;
 }
 .showTable table{
-	width:800px;
-	margin:15px 90px 15px 90px;
+	width:100%;
+	margin:15px auto 15px auto;
 }
 .showTable table,.showTable th,.showTable td,.showTable tr{
 	border:1px solid #cccccc;
@@ -76,4 +76,24 @@ button.css3button {
 #sendButton{
 	text-align:center;
 	margin:20px 0;
+}
+#mypageMein{
+	width:640px;
+	margin-right:40px;
+	float:left;
+}
+#mypageNav{
+	float:left;
+	width:300px;
+	margin-top:15px;
+}
+input{
+	border:1px solid #ccc;
+	padding:5px;
+	font-size:90%;
+}
+#submitBt{
+	padding:10px 50px;
+	border:2px solid #aaa;
+	font-size:90%;
 }
