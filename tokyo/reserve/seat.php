@@ -34,6 +34,7 @@
 		<div class="reserveTitle">
 			<h3>座席を選択してください</h3>
 		</div>
+		<p id="seatCenter"><img src="images/seatExplanation.png"></p>
 		<div class="arrow_box"><!-- 映画情報 -->
 			<p>日時･･･<?php echo $screenDay["year"]."年".$screenDay["month"]."月".$screenDay["day"]."日 ".$screenDay["hour"]."：".$screenDay["minute"]."~"; ?>　
 					映画･･･<?php echo $reserveSelectRow["movieName"]; ?>
@@ -65,6 +66,7 @@
 							
 						}
 					?>
+					<img src="images/screenTop.png" alt="▲スクリーン方向▲">
     </div>
     <!--<p class="blockTyui">各料金タイプ内の人形を選択したい座席にドラック&amp;ドロップしてください</p>-->
 			</div>
