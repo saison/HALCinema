@@ -1,6 +1,11 @@
 <?php
 	$pageTitle="支払方法選択";
 	require_once("../module/reserveHeader.php");
+	
+	if(!(isset($_SESSION["userid"]))){
+		header("Location:../mypage/login.php");
+		return;
+	}
 ?>
 
 <!-- ここ中身 -->

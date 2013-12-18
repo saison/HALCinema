@@ -1,6 +1,11 @@
 <?php
 	$pageTitle="確認";
 	require_once("../module/reserveHeader.php");
+	
+	if(!(isset($_SESSION["userid"]))){
+		header("Location:../mypage/login.php");
+		return;
+	}
 
 	$showid = $_SESSION["showid"];
 	$con = getConnection();
