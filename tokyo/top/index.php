@@ -64,7 +64,188 @@
       <h2><img src="images/nowshowingTitle.png" alt="今日の上映スケジュール"></h2>
     </div>
     <div class="titleBar"></div>
-    今日の上映スケジュール（ここに映画予約リンクを貼る） </div>
+			<table>
+			<tr>
+			<th class="screenName">Screen1</th>
+			<td class="movieName">
+			<?php
+			$con = getConnection();
+			$reserveSelectSql = "SELECT cinema_master.cinema_name AS cinemaName , cinema_master.cinema_id AS cinemaID FROM cinema_master INNER JOIN show_schedule ON cinema_master.cinema_id = show_schedule.cinema_id WHERE show_schedule.show_day='".date("Y-m-d")."' AND show_schedule.screen_id='sc0001' GROUP BY cinema_master.cinema_name";
+			$reserveSelectResult = mysqli_query($con,$reserveSelectSql);
+			$reserveSelectRow = mysqli_fetch_array($reserveSelectResult);
+		 echo "<a href='../movie/details.php?id=".$reserveSelectRow["cinemaID"]."'>";
+			echo $reserveSelectRow["cinemaName"];
+			echo "</a>";
+			?>
+			</td>
+			<?php
+			$con = getConnection();
+			$reserveSelectSql = "SELECT show_schedule.start_time AS showStart FROM cinema_master INNER JOIN show_schedule ON cinema_master.cinema_id = show_schedule.cinema_id WHERE show_schedule.show_day='".date("Y-m-d")."' AND show_schedule.screen_id='sc0001'";
+			$reserveSelectResult = mysqli_query($con,$reserveSelectSql);
+			while($reserveSelectRow = mysqli_fetch_array($reserveSelectResult)){
+				echo "<td>".substr($reserveSelectRow["showStart"],0,5)."</td>";
+			}
+			?>
+			</tr>
+			<tr>
+			<th class="screenName">Screen2</th>
+			<td class="movieName">
+			<?php
+			$con = getConnection();
+			$reserveSelectSql = "SELECT cinema_master.cinema_name AS cinemaName , cinema_master.cinema_id AS cinemaID FROM cinema_master INNER JOIN show_schedule ON cinema_master.cinema_id = show_schedule.cinema_id WHERE show_schedule.show_day='".date("Y-m-d")."' AND show_schedule.screen_id='sc0002' GROUP BY cinema_master.cinema_name";
+			$reserveSelectResult = mysqli_query($con,$reserveSelectSql);
+			$reserveSelectRow = mysqli_fetch_array($reserveSelectResult);
+		 echo "<a href='../movie/details.php?id=".$reserveSelectRow["cinemaID"]."'>";
+			echo $reserveSelectRow["cinemaName"];
+			echo "</a>";
+			?>
+			</td>
+			<?php
+			$con = getConnection();
+			$reserveSelectSql = "SELECT show_schedule.start_time AS showStart FROM cinema_master INNER JOIN show_schedule ON cinema_master.cinema_id = show_schedule.cinema_id WHERE show_schedule.show_day='".date("Y-m-d")."' AND show_schedule.screen_id='sc0002'";
+			$reserveSelectResult = mysqli_query($con,$reserveSelectSql);
+			while($reserveSelectRow = mysqli_fetch_array($reserveSelectResult)){
+				echo "<td>".substr($reserveSelectRow["showStart"],0,5)."</td>";
+			}
+			?>
+			</tr>
+			<tr>
+			<th class="screenName">Screen3</th>
+			<td class="movieName">
+			<?php
+			$con = getConnection();
+			$reserveSelectSql = "SELECT cinema_master.cinema_name AS cinemaName , cinema_master.cinema_id AS cinemaID FROM cinema_master INNER JOIN show_schedule ON cinema_master.cinema_id = show_schedule.cinema_id WHERE show_schedule.show_day='".date("Y-m-d")."' AND show_schedule.screen_id='sc0003' GROUP BY cinema_master.cinema_name";
+			$reserveSelectResult = mysqli_query($con,$reserveSelectSql);
+			$reserveSelectRow = mysqli_fetch_array($reserveSelectResult);
+		 echo "<a href='../movie/details.php?id=".$reserveSelectRow["cinemaID"]."'>";
+			echo $reserveSelectRow["cinemaName"];
+			echo "</a>";
+			?>
+			</td>
+			<?php
+			$con = getConnection();
+			$reserveSelectSql = "SELECT show_schedule.start_time AS showStart FROM cinema_master INNER JOIN show_schedule ON cinema_master.cinema_id = show_schedule.cinema_id WHERE show_schedule.show_day='".date("Y-m-d")."' AND show_schedule.screen_id='sc0003'";
+			$reserveSelectResult = mysqli_query($con,$reserveSelectSql);
+			while($reserveSelectRow = mysqli_fetch_array($reserveSelectResult)){
+				echo "<td>".substr($reserveSelectRow["showStart"],0,5)."</td>";
+			}
+			?>
+			</tr>
+			<tr>
+			<th class="screenName">Screen4</th>
+			<td class="movieName">
+			<?php
+			$con = getConnection();
+			$reserveSelectSql = "SELECT cinema_master.cinema_name AS cinemaName , cinema_master.cinema_id AS cinemaID FROM cinema_master INNER JOIN show_schedule ON cinema_master.cinema_id = show_schedule.cinema_id WHERE show_schedule.show_day='".date("Y-m-d")."' AND show_schedule.screen_id='sc0004' GROUP BY cinema_master.cinema_name";
+			$reserveSelectResult = mysqli_query($con,$reserveSelectSql);
+			$reserveSelectRow = mysqli_fetch_array($reserveSelectResult);
+		 echo "<a href='../movie/details.php?id=".$reserveSelectRow["cinemaID"]."'>";
+			echo $reserveSelectRow["cinemaName"];
+			echo "</a>";
+			?>
+			</td>
+			<?php
+			$con = getConnection();
+			$reserveSelectSql = "SELECT show_schedule.start_time AS showStart FROM cinema_master INNER JOIN show_schedule ON cinema_master.cinema_id = show_schedule.cinema_id WHERE show_schedule.show_day='".date("Y-m-d")."' AND show_schedule.screen_id='sc0004'";
+			$reserveSelectResult = mysqli_query($con,$reserveSelectSql);
+			while($reserveSelectRow = mysqli_fetch_array($reserveSelectResult)){
+				echo "<td>".substr($reserveSelectRow["showStart"],0,5)."</td>";
+			}
+			?>
+			</tr>
+			<tr>
+			<th class="screenName">Screen5</th>
+			<td class="movieName">
+			<?php
+			$con = getConnection();
+			$reserveSelectSql = "SELECT cinema_master.cinema_name AS cinemaName , cinema_master.cinema_id AS cinemaID FROM cinema_master INNER JOIN show_schedule ON cinema_master.cinema_id = show_schedule.cinema_id WHERE show_schedule.show_day='".date("Y-m-d")."' AND show_schedule.screen_id='sc0005' GROUP BY cinema_master.cinema_name";
+			$reserveSelectResult = mysqli_query($con,$reserveSelectSql);
+			$reserveSelectRow = mysqli_fetch_array($reserveSelectResult);
+		 echo "<a href='../movie/details.php?id=".$reserveSelectRow["cinemaID"]."'>";
+			echo $reserveSelectRow["cinemaName"];
+			echo "</a>";
+			?>
+			</td>
+			<?php
+			$con = getConnection();
+			$reserveSelectSql = "SELECT show_schedule.start_time AS showStart FROM cinema_master INNER JOIN show_schedule ON cinema_master.cinema_id = show_schedule.cinema_id WHERE show_schedule.show_day='".date("Y-m-d")."' AND show_schedule.screen_id='sc0005'";
+			$reserveSelectResult = mysqli_query($con,$reserveSelectSql);
+			while($reserveSelectRow = mysqli_fetch_array($reserveSelectResult)){
+				echo "<td>".substr($reserveSelectRow["showStart"],0,5)."</td>";
+			}
+			?>
+			</tr>
+			<tr>
+			<th class="screenName">Screen6</th>
+			<td class="movieName">
+			<?php
+			$con = getConnection();
+			$reserveSelectSql = "SELECT cinema_master.cinema_name AS cinemaName , cinema_master.cinema_id AS cinemaID FROM cinema_master INNER JOIN show_schedule ON cinema_master.cinema_id = show_schedule.cinema_id WHERE show_schedule.show_day='".date("Y-m-d")."' AND show_schedule.screen_id='sc0006' GROUP BY cinema_master.cinema_name";
+			$reserveSelectResult = mysqli_query($con,$reserveSelectSql);
+			$reserveSelectRow = mysqli_fetch_array($reserveSelectResult);
+		 echo "<a href='../movie/details.php?id=".$reserveSelectRow["cinemaID"]."'>";
+			echo $reserveSelectRow["cinemaName"];
+			echo "</a>";
+			?>
+			</td>
+			<?php
+			$con = getConnection();
+			$reserveSelectSql = "SELECT show_schedule.start_time AS showStart FROM cinema_master INNER JOIN show_schedule ON cinema_master.cinema_id = show_schedule.cinema_id WHERE show_schedule.show_day='".date("Y-m-d")."' AND show_schedule.screen_id='sc0006'";
+			$reserveSelectResult = mysqli_query($con,$reserveSelectSql);
+			while($reserveSelectRow = mysqli_fetch_array($reserveSelectResult)){
+				echo "<td>".substr($reserveSelectRow["showStart"],0,5)."</td>";
+			}
+			?>
+			</tr>
+				<tr>
+			<th class="screenName">Screen7</th>
+			<td class="movieName">
+			<?php
+			$con = getConnection();
+			$reserveSelectSql = "SELECT cinema_master.cinema_name AS cinemaName , cinema_master.cinema_id AS cinemaID FROM cinema_master INNER JOIN show_schedule ON cinema_master.cinema_id = show_schedule.cinema_id WHERE show_schedule.show_day='".date("Y-m-d")."' AND show_schedule.screen_id='sc0007' GROUP BY cinema_master.cinema_name";
+			$reserveSelectResult = mysqli_query($con,$reserveSelectSql);
+			$reserveSelectRow = mysqli_fetch_array($reserveSelectResult);
+		 echo "<a href='../movie/details.php?id=".$reserveSelectRow["cinemaID"]."'>";
+			echo $reserveSelectRow["cinemaName"];
+			echo "</a>";
+			?>
+			</td>
+			<?php
+			$con = getConnection();
+			$reserveSelectSql = "SELECT show_schedule.start_time AS showStart FROM cinema_master INNER JOIN show_schedule ON cinema_master.cinema_id = show_schedule.cinema_id WHERE show_schedule.show_day='".date("Y-m-d")."' AND show_schedule.screen_id='sc0007'";
+			$reserveSelectResult = mysqli_query($con,$reserveSelectSql);
+			while($reserveSelectRow = mysqli_fetch_array($reserveSelectResult)){
+				echo "<td>".substr($reserveSelectRow["showStart"],0,5)."</td>";
+			}
+			?>
+			</tr>
+			<tr>
+			<th class="screenName">Screen8</th>
+			<td class="movieName">
+			<?php
+			$con = getConnection();
+			$reserveSelectSql = "SELECT cinema_master.cinema_name AS cinemaName , cinema_master.cinema_id AS cinemaID FROM cinema_master INNER JOIN show_schedule ON cinema_master.cinema_id = show_schedule.cinema_id WHERE show_schedule.show_day='".date("Y-m-d")."' AND show_schedule.screen_id='sc0008' GROUP BY cinema_master.cinema_name";
+			$reserveSelectResult = mysqli_query($con,$reserveSelectSql);
+			$reserveSelectRow = mysqli_fetch_array($reserveSelectResult);
+		 echo "<a href='../movie/details.php?id=".$reserveSelectRow["cinemaID"]."'>";
+			echo $reserveSelectRow["cinemaName"];
+			echo "</a>";
+			?>
+			</td>
+			<?php
+			$con = getConnection();
+			$reserveSelectSql = "SELECT show_schedule.start_time AS showStart FROM cinema_master INNER JOIN show_schedule ON cinema_master.cinema_id = show_schedule.cinema_id WHERE show_schedule.show_day='".date("Y-m-d")."' AND show_schedule.screen_id='sc0008'";
+			$reserveSelectResult = mysqli_query($con,$reserveSelectSql);
+			while($reserveSelectRow = mysqli_fetch_array($reserveSelectResult)){
+				echo "<td>".substr($reserveSelectRow["showStart"],0,5)."</td>";
+			}
+			?>
+			</tr>
+			</table>
+	
+	
+	
+	</div>
   <div id="meinContentLeft">
     <div id="comingsoonMovie">
       <div class="topTitle">
