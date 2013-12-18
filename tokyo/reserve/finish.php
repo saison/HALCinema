@@ -3,12 +3,18 @@
 	require_once("../module/reserveHeader.php");
 	$con = getConnection();
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> c0073167d25d609e07379e9eec55e0f0ac100c58
 	//日付取得
 	$todayDate=date("Y-m-d");
 	//現在の時間
 	$nowTime=date("H:i");
+<<<<<<< HEAD
+>>>>>>> c0073167d25d609e07379e9eec55e0f0ac100c58
+=======
 >>>>>>> c0073167d25d609e07379e9eec55e0f0ac100c58
 
 	//DBかくのう
@@ -31,7 +37,12 @@
 		$innerSQLResult = mysqli_query($con,$innerSQL);
 	}
 <<<<<<< HEAD
+<<<<<<< HEAD
 	//フラグ変更
+=======
+
+//フラグ変更
+>>>>>>> c0073167d25d609e07379e9eec55e0f0ac100c58
 =======
 
 //フラグ変更
