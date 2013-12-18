@@ -54,6 +54,7 @@
 			<li><img src="../module/data/3.png" alt="3" /></li>
 			<li><img src="../module/data/4.png" alt="4" /></li>
             <li><img src="../module/data/5.png" alt="5" /></li>
+            <li><img src="../module/data/6.png" alt="5" /></li>
 		</ul><!-- /.bxslider -->
 	</div>
 	</div>
