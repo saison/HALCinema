@@ -18,17 +18,16 @@ $count=0;
 		$isSuccess =mysqli_select_db($con, 'halcinema');	
 		if($isSuccess){
 			if(isset($_SESSION["userid"])){
-				$result =mysqli_query($con,"SELECT * FROM reserve_master WHERE  user_id = '".$_SESSION["userid"] ."'ORDER BY reserve_time DESC");
-				while(($row = mysqli_fetch_array($result)) != false){
+				$result =mysqli_query($con,"SELECT * FROM reserve_master WHERE user_id = '".$_SESSION["userid"] ."' ORDER BY reserve_time DESC");
+				while($row = mysqli_fetch_array($result)){
 					$count++;
 					echo "<div class='reserveEachBox clearfix'><div class='reserveBoxLeft'>$count</div>";
 					echo "<div class='reserveBoxRight'><p class='reserveDate'>予約日時：".$row["reserve_time"]."</p>";//予約日時
 					echo  "<p class='reserveNumber'>予約番号：".$row["reserve_number"]."</p>";//予約番号
-					$result =mysqli_query($con,"SELECT * FROM movie_reserve_content WHERE reserve_number = '".$row["reserve_number"] ."'");
+					$result2 =mysqli_query($con,"SELECT * FROM movie_reserve_content WHERE reserve_number = '".$row["reserve_number"] ."'");
 					echo  "<p class='reserveDate'>予約映画･予約座席：<br /><br />";//予約番号
-					while(($row2 = mysqli_fetch_array($result)) != false){
+					while(($row2 = mysqli_fetch_array($result2)) != false){
 						$reserveSelectSql = "SELECT show_schedule.show_id AS showID , show_schedule.screen_id AS SID , show_schedule.show_day AS showDay , show_schedule.start_time AS startTime , cinema_master.cinema_name AS movieName FROM show_schedule INNER JOIN cinema_master ON show_schedule.cinema_id=cinema_master.cinema_id WHERE show_schedule.show_id='".$row2["show_id"]."'";
-						
 						$reserveSelectResult = mysqli_query($con,$reserveSelectSql);
 						$reserveSelectRow = mysqli_fetch_array($reserveSelectResult);
 						$dateAndTime=$reserveSelectRow["showDay"]." ".$reserveSelectRow["startTime"];
@@ -40,7 +39,7 @@ $count=0;
 					echo "</p></div></div>";
 				}
 				if($count==0){
-						
+						echo "予約された映画はありません";
 				}
 			}else{
 				header('Location: login.php');//ログイン処理無効化
