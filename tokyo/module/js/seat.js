@@ -17,7 +17,6 @@ $(function(){
 	//ドラッグアンドドロップの設定
 	$(".setEachChoiceContent").droppable({
 		tolerance:"fit",
-		hoverClass:"activeHover"
 	});
 	
 
@@ -30,7 +29,7 @@ $(function(){
 		//	ui.draggable.attr("id",seatId+"_"+dragClass);
 		//	var dragIconId = ui.draggable.attr("id");
 					
-
+			
 
 			//シートの番号を取得
 			var seatId = $(this).attr("id");
@@ -67,15 +66,8 @@ $(function(){
 				revert:"invalid"
 			}).css({"top":"0","left":"0"});
 			
-					
-			//ダブルクリックすると消える
-			$(".cloneIcon").dblclick(function(){ 
-				$(this).fadeOut(200,function(){
-					$(this).remove();
-					$("#postData #"+$(this).attr("data-seat")).remove();
-
-				});
-			});
+				
+			var dropCount = 0;
 			
 			//form内にデータを挿入
 			var postDataId = $("#postData");
@@ -83,7 +75,30 @@ $(function(){
 				var seatValue = $(this).attr("data-seat");
 				var seatNum = seatValue.split("_");
 				postDataId.append("<input type='hidden' name='seat[]' id='"+ seatValue +"' value='"+ seatValue +"' />");
+				dropCount++;
 			});
+			
+			//ダブルクリックすると消える
+			$(".cloneIcon").dblclick(function(){ 
+				$(this).fadeOut(200,function(){
+					$(this).remove();
+					$("#postData #"+$(this).attr("data-seat")).remove();
+					dropCount--;
+					var notDrag = $(".setEachChoiceContent, #sertEachChoice h5");
+					if (dropCount == 5){
+						notDrag.fadeOut(200);
+					} else {
+						notDrag.fadeIn(200);
+					}
+				});
+			});
+
+			var notDrag = $(".setEachChoiceContent, #sertEachChoice h5");
+			if (dropCount == 5){
+				notDrag.fadeOut(200);
+			} else {
+				notDrag.fadeIn(200);
+			}
 			
 
 
