@@ -49,7 +49,11 @@ $(function(){
 			if (cloneFlg) {
 				clone.attr("data-flg",false);
 				clone.appendTo(this);
+			} else {
+				ui.draggable.appendTo(this);
 			}
+			
+			
 			//$("#"+seatId).append("<br /><img class='dragIcon' src='images/" + dragClass + "Image.png'>");
 
 			
@@ -65,13 +69,13 @@ $(function(){
 			}
 		},
 		out:function(event, ui){
-			var removeValue = ui.draggable.clone().data("seat");
-			console.log(removeValue);
-			ui.draggable.clone().attr("data-seat","notset");
-			
+			var removeValue = ui.draggable.data("seat");
+			ui.draggable.attr("data-seat","notset");
 			var formId = "#postData #" + removeValue;
-			console.log(formId);
 			$(formId).remove();
+
+			console.log(removeValue);
+			console.log(formId);
 		}
 	});
 	$(".dragIcon").draggable({
