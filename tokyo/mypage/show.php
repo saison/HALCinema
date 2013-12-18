@@ -56,7 +56,8 @@
 ?>
 
 <form action="edit.php" method="post">
-<div id="content">
+<div id="content" class="clearfix">
+	<div id="mypageMein">
 <h2>アカウント情報</h2>
 <?PHP
 	if($errWord!=""){
@@ -164,8 +165,18 @@
 </table>
 </div>
 	
-<p id="sendButton"><input type="submit" value="アカウント情報編集" name="send" /></p>
+<p id="sendButton"><input type="submit" value="アカウント情報編集" name="send" id="submitBt" /></p>
 </form>
+</div>
+<div id="mypageNav">
+<nav>
+<ul>
+<li><a href="mypage.php"><img src="images/mypagetop.png" alt="MypageTOP"></a></li>
+<li><a href="reserveView.php"><img src="images/reserveall.png" alt="予約一覧"></a></li>	
+<li><a href="show.php"><img src="images/accountinfo.png" alt="アカウント情報"></a></li>	
+</ul>	
+</nav>
+</div>
 </div>
 <?PHP
 	require_once("../module/reservefooter.php");
