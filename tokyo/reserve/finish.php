@@ -3,9 +3,6 @@
 	require_once("../module/reserveHeader.php");
 	$con = getConnection();
 
-	//フラグ変更
-	$finishSql = "UPDATE seat_reserve_list SET reserve_flag=1 WHERE user_id='".$_SESSION["userid"]."' AND show_id='".$_SESSION["showid"]."'";
-	$finishResult = mysqli_query($con,$finishSql);
 
 	//DBかくのう
 	$reserveNumber = uniqid($_SESSION["showid"]);
@@ -21,9 +18,13 @@
 	$price = 1500;
 	while($reserveSelectRow = mysqli_fetch_array($reserveSelectResult)){
 		$seatNumber = $reserveSelectRow["seat_number"];
+		var_dump($seatNumber);
 		$innerSQL = "INSERT INTO movie_reserve_content VALUE ('','".$reserveNumber."','".$_SESSION["showid"]."','".$seatNumber."','".$priceId."',".$price.")";
 		$innerSQLResult = mysqli_query($con,$innerSQL);
 	}
+	//フラグ変更
+	$finishSql = "UPDATE seat_reserve_list SET reserve_flag=1 WHERE user_id='".$_SESSION["userid"]."' AND show_id='".$_SESSION["showid"]."'";
+	$finishResult = mysqli_query($con,$finishSql);
 ?>
 
 <!-- ここ中身 -->
