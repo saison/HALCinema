@@ -4,7 +4,7 @@
 	require_once("../module/functions.php");
 ?>
 <!--上映中映画スクロール-->
-<div id="nowScheduleScroll" class="clearfix"><p id="nowScheduleScrollTitle">NowShowing!</p>
+<div id="nowScheduleScroll" class="clearfix"><p id="nowScheduleScrollTitle">Next Movie</p>
 	<!--上映中映画scroll。.scrollStrongをspanに当てることで太字&色が変わります -->
 	<div id="s2" class="es">
     <?php
