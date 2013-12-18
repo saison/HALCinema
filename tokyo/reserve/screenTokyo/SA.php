@@ -4,6 +4,18 @@
       <p class="sertTitleCenter"><?php echo "HALCinemaTOKYO Screen<span class='captionBig'>".substr($screenID,-1,1)."</span>"; ?><span class="captionBig">A</span>(Left)Block</p>
       <p class="sertChangeRight"><span class='captionBig'>B</span>(Right)Block ▶</p>
     </div>
+    <?php
+		require_once("../module/functions.php");
+		$con = getConnection();
+		$reserveListSql = "SELECT  seat_number FROM seat_reserve_list WHERE show_id = '{$showID}'" ;
+		$reserveListResult = mysqli_query($con,$reserveListSql);
+		$arrayRearveList = array();
+		while(($rowReserveList = mysqli_fetch_array($reserveListResult)) != false){
+			array_push($arrayRearveList ,$rowReserveList[0]);
+		}
+		mysqli_close($con);
+		 
+    ?>
     <table id="ABlockSeat">
       <tr>
         <th></th>
@@ -27,123 +39,123 @@
       </tr>
       <tr>
         <th>A</th>
-        <td id="a-1" class="seat">A-1</td>
-        <td id="a-2" class="seat">A-2</td>
-        <td id="a-3" class="seat">A-3</td>
-        <td id="a-4" class="seat">A-4</td>
-        <td id="a-5" class="seat lMargin30">A-5</td>
-        <td id="a-6" class="seat">A-6</td>
-        <td id="a-7" class="seat">A-7</td>
-        <td id="a-8" class="seat">A-8</td>
-        <td id="a-9" class="seat">A-9</td>
-        <td id="a-10" class="seat">A-10</td>
-        <td id="a-11" class="seat">A-11</td>
-        <td id="a-12" class="seat">A-12</td>
-        <td id="a-13" class="seat">A-13</td>
-        <td id="a-14" class="seat">A-14</td>
-        <td id="a-15" class="seat">A-15</td>
-        <td id="a-16" class="seat">A-16</td>
-        <td id="a-17" class="seat">A-17</td>
+        <?php echo reserve("a-1",$arrayRearveList,"A-1","seat",0);?>
+        <?php echo reserve("a-2",$arrayRearveList,"A-2","seat",0);?>
+        <?php echo reserve("a-3",$arrayRearveList,"A-3","seat",0);?>
+        <?php echo reserve("a-4",$arrayRearveList,"A-4","seat",0);?>
+   		<?php echo reserve("a-5",$arrayRearveList,"A-5","seat lMargin30",1);?>
+        <?php echo reserve("a-6",$arrayRearveList,"A-6","seat",0);?>
+        <?php echo reserve("a-7",$arrayRearveList,"A-7","seat",0);?>
+        <?php echo reserve("a-8",$arrayRearveList,"A-8","seat",0);?>
+        <?php echo reserve("a-9",$arrayRearveList,"A-9","seat",0);?>
+        <?php echo reserve("a-10",$arrayRearveList,"A-10","seat",0);?>
+        <?php echo reserve("a-11",$arrayRearveList,"A-11","seat",0);?>
+        <?php echo reserve("a-12",$arrayRearveList,"A-12","seat",0);?>
+        <?php echo reserve("a-13",$arrayRearveList,"A-13","seat",0);?>
+        <?php echo reserve("a-14",$arrayRearveList,"A-14","seat",0);?>
+        <?php echo reserve("a-15",$arrayRearveList,"A-15","seat",0);?>
+        <?php echo reserve("a-16",$arrayRearveList,"A-16","seat",0);?>
+        <?php echo reserve("a-17",$arrayRearveList,"A-17","seat",0);?>
       </tr>
       <tr>
         <th>B</th>
-        <td id="b-1" class="seat">B-1</td>
-        <td id="b-2" class="seat">B-2</td>
-        <td id="b-3" class="seat">B-3</td>
-        <td id="b-4" class="seat">B-4</td>
-        <td id="b-5" class="seat lMargin30">B-5</td>
-        <td id="b-6" class="seat">B-6</td>
-        <td id="b-7" class="seat">B-7</td>
-        <td id="b-8" class="seat">B-8</td>
-        <td id="b-9" class="seat">B-9</td>
-        <td id="b-10" class="seat">B-10</td>
-        <td id="b-11" class="seat">B-11</td>
-        <td id="b-12" class="seat">B-12</td>
-        <td id="b-13" class="seat">B-13</td>
-        <td id="b-14" class="seat">B-14</td>
-        <td id="b-15" class="seat">B-15</td>
-        <td id="b-16" class="seat">B-16</td>
-        <td id="b-17" class="seat">B-17</td>
+        <?php echo reserve("b-1",$arrayRearveList,"B-1","seat",0);?>
+        <?php echo reserve("b-2",$arrayRearveList,"B-2","seat",0);?>
+        <?php echo reserve("b-3",$arrayRearveList,"B-3","seat",0);?>
+        <?php echo reserve("b-4",$arrayRearveList,"B-4","seat",0);?>
+   		<?php echo reserve("b-5",$arrayRearveList,"B-5","seat lMargin30",1);?>
+        <?php echo reserve("b-6",$arrayRearveList,"B-6","seat",0);?>
+        <?php echo reserve("b-7",$arrayRearveList,"B-7","seat",0);?>
+        <?php echo reserve("b-8",$arrayRearveList,"B-8","seat",0);?>
+        <?php echo reserve("b-9",$arrayRearveList,"B-9","seat",0);?>
+        <?php echo reserve("b-10",$arrayRearveList,"B-10","seat",0);?>
+        <?php echo reserve("b-11",$arrayRearveList,"B-11","seat",0);?>
+        <?php echo reserve("b-12",$arrayRearveList,"B-12","seat",0);?>
+        <?php echo reserve("b-13",$arrayRearveList,"B-13","seat",0);?>
+        <?php echo reserve("b-14",$arrayRearveList,"B-14","seat",0);?>
+        <?php echo reserve("b-15",$arrayRearveList,"B-15","seat",0);?>
+        <?php echo reserve("b-16",$arrayRearveList,"B-16","seat",0);?>
+        <?php echo reserve("b-17",$arrayRearveList,"B-17","seat",0);?>
       </tr>
       <tr>
         <th>C</th>
-        <td id="c-1" class="seat">C-1</td>
-        <td id="c-2" class="seat">C-2</td>
-        <td id="c-3" class="seat">C-3</td>
-        <td id="c-4" class="seat">C-4</td>
-        <td id="c-5" class="seat lMargin30">C-5</td>
-        <td id="c-6" class="seat">C-6</td>
-        <td id="c-7" class="seat">C-7</td>
-        <td id="c-8" class="seat">C-8</td>
-        <td id="c-9" class="seat">C-9</td>
-        <td id="c-10" class="seat">C-10</td>
-        <td id="c-11" class="seat">C-11</td>
-        <td id="c-12" class="seat">C-12</td>
-        <td id="c-13" class="seat">C-13</td>
-        <td id="c-14" class="seat">C-14</td>
-        <td id="c-15" class="seat">C-15</td>
-        <td id="c-16" class="seat">C-16</td>
-        <td id="c-17" class="seat">C-17</td>
+        <?php echo reserve("c-1",$arrayRearveList,"C-1","seat",0);?>
+        <?php echo reserve("c-2",$arrayRearveList,"C-2","seat",0);?>
+        <?php echo reserve("c-3",$arrayRearveList,"C-3","seat",0);?>
+        <?php echo reserve("c-4",$arrayRearveList,"C-4","seat",0);?>
+   		<?php echo reserve("c-5",$arrayRearveList,"C-5","seat lMargin30",1);?>
+        <?php echo reserve("c-6",$arrayRearveList,"C-6","seat",0);?>
+        <?php echo reserve("c-7",$arrayRearveList,"C-7","seat",0);?>
+        <?php echo reserve("c-8",$arrayRearveList,"C-8","seat",0);?>
+        <?php echo reserve("c-9",$arrayRearveList,"C-9","seat",0);?>
+        <?php echo reserve("c-10",$arrayRearveList,"C-10","seat",0);?>
+        <?php echo reserve("c-11",$arrayRearveList,"C-11","seat",0);?>
+        <?php echo reserve("c-12",$arrayRearveList,"C-12","seat",0);?>
+        <?php echo reserve("c-13",$arrayRearveList,"C-13","seat",0);?>
+        <?php echo reserve("c-14",$arrayRearveList,"C-14","seat",0);?>
+        <?php echo reserve("c-15",$arrayRearveList,"C-15","seat",0);?>
+        <?php echo reserve("c-16",$arrayRearveList,"C-16","seat",0);?>
+        <?php echo reserve("c-17",$arrayRearveList,"C-17","seat",0);?>
       </tr>
       <tr>
         <th>D</th>
-        <td id="d-1" class="seat">D-1</td>
-        <td id="d-2" class="seat">D-2</td>
-        <td id="d-3" class="seat">D-3</td>
-        <td id="d-4" class="seat">D-4</td>
-        <td id="d-5" class="seat lMargin30">D-5</td>
-        <td id="d-6" class="seat">D-6</td>
-        <td id="d-7" class="seat">D-7</td>
-        <td id="d-8" class="seat">D-8</td>
-        <td id="d-9" class="seat">D-9</td>
-        <td id="d-10" class="seat">D-10</td>
-        <td id="d-11" class="seat">D-11</td>
-        <td id="d-12" class="seat">D-12</td>
-        <td id="d-13" class="seat">D-13</td>
-        <td id="d-14" class="seat">D-14</td>
-        <td id="d-15" class="seat">D-15</td>
-        <td id="d-16" class="seat">D-16</td>
-        <td id="d-17" class="seat">D-17</td>
+        <?php echo reserve("d-1",$arrayRearveList,"D-1","seat",0);?>
+        <?php echo reserve("d-2",$arrayRearveList,"D-2","seat",0);?>
+        <?php echo reserve("d-3",$arrayRearveList,"D-3","seat",0);?>
+        <?php echo reserve("d-4",$arrayRearveList,"D-4","seat",0);?>
+   		<?php echo reserve("d-5",$arrayRearveList,"D-5","seat lMargin30",1);?>
+        <?php echo reserve("d-6",$arrayRearveList,"D-6","seat",0);?>
+        <?php echo reserve("d-7",$arrayRearveList,"D-7","seat",0);?>
+        <?php echo reserve("d-8",$arrayRearveList,"D-8","seat",0);?>
+        <?php echo reserve("d-9",$arrayRearveList,"D-9","seat",0);?>
+        <?php echo reserve("d-10",$arrayRearveList,"D-10","seat",0);?>
+        <?php echo reserve("d-11",$arrayRearveList,"D-11","seat",0);?>
+        <?php echo reserve("d-12",$arrayRearveList,"D-12","seat",0);?>
+        <?php echo reserve("d-13",$arrayRearveList,"D-13","seat",0);?>
+        <?php echo reserve("d-14",$arrayRearveList,"D-14","seat",0);?>
+        <?php echo reserve("d-15",$arrayRearveList,"D-15","seat",0);?>
+        <?php echo reserve("d-16",$arrayRearveList,"D-16","seat",0);?>
+        <?php echo reserve("d-17",$arrayRearveList,"D-17","seat",0);?>
       </tr>
       <tr>
         <th>E</th>
-        <td id="e-1" class="seat">E-1</td>
-        <td id="e-2" class="seat">E-2</td>
-        <td id="e-3" class="seat">E-3</td>
-        <td id="e-4" class="seat">E-4</td>
-        <td id="e-5" class="seat lMargin30">E-5</td>
-        <td id="e-6" class="seat">E-6</td>
-        <td id="e-7" class="seat">E-7</td>
-        <td id="e-8" class="seat">E-8</td>
-        <td id="e-9" class="seat">E-9</td>
-        <td id="e-10" class="seat">E-10</td>
-        <td id="e-11" class="seat">E-11</td>
-        <td id="e-12" class="seat">E-12</td>
-        <td id="e-13" class="seat">E-13</td>
-        <td id="e-14" class="seat">E-14</td>
-        <td id="e-15" class="seat">E-15</td>
-        <td id="e-16" class="seat">E-16</td>
-        <td id="e-17" class="seat">E-17</td>
+        <?php echo reserve("e-1",$arrayRearveList,"E-1","seat",0);?>
+        <?php echo reserve("e-2",$arrayRearveList,"E-2","seat",0);?>
+        <?php echo reserve("e-3",$arrayRearveList,"E-3","seat",0);?>
+        <?php echo reserve("e-4",$arrayRearveList,"E-4","seat",0);?>
+   		<?php echo reserve("e-5",$arrayRearveList,"E-5","seat lMargin30",1);?>
+        <?php echo reserve("e-6",$arrayRearveList,"E-6","seat",0);?>
+        <?php echo reserve("e-7",$arrayRearveList,"E-7","seat",0);?>
+        <?php echo reserve("e-8",$arrayRearveList,"E-8","seat",0);?>
+        <?php echo reserve("e-9",$arrayRearveList,"E-9","seat",0);?>
+        <?php echo reserve("e-10",$arrayRearveList,"E-10","seat",0);?>
+        <?php echo reserve("e-11",$arrayRearveList,"E-11","seat",0);?>
+        <?php echo reserve("e-12",$arrayRearveList,"E-12","seat",0);?>
+        <?php echo reserve("e-13",$arrayRearveList,"E-13","seat",0);?>
+        <?php echo reserve("e-14",$arrayRearveList,"E-14","seat",0);?>
+        <?php echo reserve("e-15",$arrayRearveList,"E-15","seat",0);?>
+        <?php echo reserve("e-16",$arrayRearveList,"E-16","seat",0);?>
+        <?php echo reserve("e-17",$arrayRearveList,"E-17","seat",0);?>
       </tr>
       <tr>
         <th>F</th>
         <td class="notSeat"></td>
         <td class="notSeat"></td>
-        <td id="f-3" class="seat wheelChair">F-3</td>
-        <td id="f-4" class="seat wheelChair">F-4</td>
-        <td id="f-5" class="seat lMargin30">F-5</td>
-        <td id="f-6" class="seat">F-6</td>
-        <td id="f-7" class="seat">F-7</td>
-        <td id="f-8" class="seat">F-8</td>
-        <td id="f-9" class="seat">F-9</td>
-        <td id="f-10" class="seat">F-10</td>
-        <td id="f-11" class="seat">F-11</td>
-        <td id="f-12" class="seat">F-12</td>
-        <td id="f-13" class="seat">F-13</td>
-        <td id="f-14" class="seat">F-14</td>
-        <td id="f-15" class="seat">F-15</td>
-        <td id="f-16" class="seat">F-16</td>
-        <td id="f-17" class="seat">F-17</td>
+        <?php echo reserve("f-3",$arrayRearveList,"F-3","seat wheelChair",0);?>
+        <?php echo reserve("f-4",$arrayRearveList,"F-4","seat wheelChair",0);?>
+   		<?php echo reserve("f-5",$arrayRearveList,"F-5","seat lMargin30",1);?>
+        <?php echo reserve("f-6",$arrayRearveList,"F-6","seat",0);?>
+        <?php echo reserve("f-7",$arrayRearveList,"F-7","seat",0);?>
+        <?php echo reserve("f-8",$arrayRearveList,"F-8","seat",0);?>
+        <?php echo reserve("f-9",$arrayRearveList,"F-9","seat",0);?>
+        <?php echo reserve("f-10",$arrayRearveList,"F-10","seat",0);?>
+        <?php echo reserve("f-11",$arrayRearveList,"F-11","seat",0);?>
+        <?php echo reserve("f-12",$arrayRearveList,"F-12","seat",0);?>
+        <?php echo reserve("f-13",$arrayRearveList,"F-13","seat",0);?>
+        <?php echo reserve("f-14",$arrayRearveList,"F-14","seat",0);?>
+        <?php echo reserve("f-15",$arrayRearveList,"F-15","seat",0);?>
+        <?php echo reserve("f-16",$arrayRearveList,"F-16","seat",0);?>
+        <?php echo reserve("f-17",$arrayRearveList,"F-17","seat",0);?>
       </tr>
       <tr class="tMargin40">
         <th>G</th>
@@ -151,19 +163,19 @@
         <td class="notSeat"></td>
         <td class="notSeat"></td>
         <td class="notSeat"></td>
-        <td id="g-5" class="seat lMargin30">G-5</td>
-        <td id="g-6" class="seat">G-6</td>
-        <td id="g-7" class="seat">G-7</td>
-        <td id="g-8" class="seat">G-8</td>
-        <td id="g-9" class="seat">G-9</td>
-        <td id="g-10" class="seat">G-10</td>
-        <td id="g-11" class="seat">G-11</td>
-        <td id="g-12" class="seat">G-12</td>
-        <td id="g-13" class="seat">G-13</td>
-        <td id="g-14" class="seat">G-14</td>
-        <td id="g-15" class="seat">G-15</td>
-        <td id="g-16" class="seat">G-16</td>
-        <td id="g-17" class="seat">G-17</td>
+   		<?php echo reserve("g-5",$arrayRearveList,"G-5","seat lMargin30",1);?>
+        <?php echo reserve("g-6",$arrayRearveList,"G-6","seat",0);?>
+        <?php echo reserve("g-7",$arrayRearveList,"G-7","seat",0);?>
+        <?php echo reserve("g-8",$arrayRearveList,"G-8","seat",0);?>
+        <?php echo reserve("g-9",$arrayRearveList,"G-9","seat",0);?>
+        <?php echo reserve("g-10",$arrayRearveList,"G-10","seat",0);?>
+        <?php echo reserve("g-11",$arrayRearveList,"G-11","seat",0);?>
+        <?php echo reserve("g-12",$arrayRearveList,"G-12","seat",0);?>
+        <?php echo reserve("g-13",$arrayRearveList,"G-13","seat",0);?>
+        <?php echo reserve("g-14",$arrayRearveList,"G-14","seat",0);?>
+        <?php echo reserve("g-15",$arrayRearveList,"G-15","seat",0);?>
+        <?php echo reserve("g-16",$arrayRearveList,"G-16","seat",0);?>
+        <?php echo reserve("g-17",$arrayRearveList,"G-17","seat",0);?>
       </tr>
       <tr>
         <th>H</th>
@@ -171,39 +183,39 @@
         <td class="notSeat"></td>
         <td class="notSeat"></td>
         <td class="notSeat"></td>
-        <td id="h-5" class="seat lMargin30">H-5</td>
-        <td id="h-6" class="seat">H-6</td>
-        <td id="h-7" class="seat">H-7</td>
-        <td id="h-8" class="seat">H-8</td>
-        <td id="h-9" class="seat">H-9</td>
-        <td id="h-10" class="seat">H-10</td>
-        <td id="h-11" class="seat">H-11</td>
-        <td id="h-12" class="seat">H-12</td>
-        <td id="h-13" class="seat">H-13</td>
-        <td id="h-14" class="seat">H-14</td>
-        <td id="h-15" class="seat">H-15</td>
-        <td id="h-16" class="seat">H-16</td>
-        <td id="h-17" class="seat">H-17</td>
+        <?php echo reserve("h-5",$arrayRearveList,"H-5","seat lMargin30",1);?>
+        <?php echo reserve("h-6",$arrayRearveList,"H-6","seat",0);?>
+        <?php echo reserve("h-7",$arrayRearveList,"H-7","seat",0);?>
+        <?php echo reserve("h-8",$arrayRearveList,"H-8","seat",0);?>
+        <?php echo reserve("h-9",$arrayRearveList,"H-9","seat",0);?>
+        <?php echo reserve("h-10",$arrayRearveList,"H-10","seat",0);?>
+        <?php echo reserve("h-11",$arrayRearveList,"H-11","seat",0);?>
+        <?php echo reserve("h-12",$arrayRearveList,"H-12","seat",0);?>
+        <?php echo reserve("h-13",$arrayRearveList,"H-13","seat",0);?>
+        <?php echo reserve("h-14",$arrayRearveList,"H-14","seat",0);?>
+        <?php echo reserve("h-15",$arrayRearveList,"H-15","seat",0);?>
+        <?php echo reserve("h-16",$arrayRearveList,"H-16","seat",0);?>
+        <?php echo reserve("h-17",$arrayRearveList,"H-17","seat",0);?>
       </tr>
       <tr>
         <th>I</th>
-        <td id="i-1" class="seat">I-1</td>
-        <td id="i-2" class="seat">I-2</td>
-        <td id="i-3" class="seat">I-3</td>
-        <td id="i-4" class="seat">I-4</td>
-        <td id="i-5" class="seat lMargin30">I-5</td>
-        <td id="i-6" class="seat">I-6</td>
-        <td id="i-7" class="seat">I-7</td>
-        <td id="i-8" class="seat">I-8</td>
-        <td id="i-9" class="seat">I-9</td>
-        <td id="i-10" class="seat">I-10</td>
-        <td id="i-11" class="seat">I-11</td>
-        <td id="i-12" class="seat">I-12</td>
-        <td id="i-13" class="seat">I-13</td>
-        <td id="i-14" class="seat">I-14</td>
-        <td id="i-15" class="seat">I-15</td>
-        <td id="i-16" class="seat">I-16</td>
-        <td id="i-17" class="seat">I-17</td>
+        <?php echo reserve("i-1",$arrayRearveList,"I-1","seat",0);?>
+        <?php echo reserve("i-2",$arrayRearveList,"I-2","seat",0);?>
+        <?php echo reserve("i-3",$arrayRearveList,"I-3","seat",0);?>
+        <?php echo reserve("i-4",$arrayRearveList,"I-4","seat",0);?>
+   		<?php echo reserve("i-5",$arrayRearveList,"I-5","seat lMargin30",1);?>
+        <?php echo reserve("i-6",$arrayRearveList,"I-6","seat",0);?>
+        <?php echo reserve("i-7",$arrayRearveList,"I-7","seat",0);?>
+        <?php echo reserve("i-8",$arrayRearveList,"I-8","seat",0);?>
+        <?php echo reserve("i-9",$arrayRearveList,"I-9","seat",0);?>
+        <?php echo reserve("i-10",$arrayRearveList,"I-10","seat",0);?>
+        <?php echo reserve("i-11",$arrayRearveList,"I-11","seat",0);?>
+        <?php echo reserve("i-12",$arrayRearveList,"I-12","seat",0);?>
+        <?php echo reserve("i-13",$arrayRearveList,"I-13","seat",0);?>
+        <?php echo reserve("i-14",$arrayRearveList,"I-14","seat",0);?>
+        <?php echo reserve("i-15",$arrayRearveList,"I-15","seat",0);?>
+        <?php echo reserve("i-16",$arrayRearveList,"I-16","seat",0);?>
+        <?php echo reserve("i-17",$arrayRearveList,"I-17","seat",0);?>
       </tr>
       <tr>
         <th>J</th>
@@ -211,19 +223,19 @@
         <td class="notSeat"></td>
         <td class="notSeat"></td>
         <td class="notSeat"></td>
-        <td id="j-5" class="seat lMargin30">J-5</td>
-        <td id="j-6" class="seat">J-6</td>
-        <td id="j-7" class="seat">J-7</td>
-        <td id="j-8" class="seat">J-8</td>
-        <td id="j-9" class="seat">J-9</td>
-        <td id="j-10" class="seat">J-10</td>
-        <td id="j-11" class="seat">J-11</td>
-        <td id="j-12" class="seat">J-12</td>
-        <td id="j-13" class="seat">J-13</td>
-        <td id="j-14" class="seat">J-14</td>
-        <td id="j-15" class="seat">J-15</td>
-        <td id="j-16" class="seat">J-16</td>
-        <td id="j-17" class="seat">J-17</td>
+        <?php echo reserve("j-5",$arrayRearveList,"J-5","seat lMargin30",1);?>
+        <?php echo reserve("j-6",$arrayRearveList,"J-6","seat",0);?>
+        <?php echo reserve("j-7",$arrayRearveList,"J-7","seat",0);?>
+        <?php echo reserve("j-8",$arrayRearveList,"J-8","seat",0);?>
+        <?php echo reserve("j-9",$arrayRearveList,"J-9","seat",0);?>
+        <?php echo reserve("j-10",$arrayRearveList,"J-10","seat",0);?>
+        <?php echo reserve("j-11",$arrayRearveList,"J-11","seat",0);?>
+        <?php echo reserve("j-12",$arrayRearveList,"J-12","seat",0);?>
+        <?php echo reserve("j-13",$arrayRearveList,"J-13","seat",0);?>
+        <?php echo reserve("j-14",$arrayRearveList,"J-14","seat",0);?>
+        <?php echo reserve("j-15",$arrayRearveList,"J-15","seat",0);?>
+        <?php echo reserve("j-16",$arrayRearveList,"J-16","seat",0);?>
+        <?php echo reserve("j-17",$arrayRearveList,"J-17","seat",0);?>
       </tr>
     </table>
     </div><!-- ABlock 終わり-->
@@ -256,191 +268,191 @@
       </tr>
       <tr>
         <th>A</th>
-        <td id="a-18" class="seat">A-18</td>
-        <td id="a-19" class="seat">A-19</td>
-        <td id="a-20" class="seat">A-20</td>
-        <td id="a-21" class="seat">A-21</td>
-        <td id="a-22" class="seat">A-22</td>
-        <td id="a-23" class="seat">A-23</td>
-        <td id="a-24" class="seat">A-24</td>
-        <td id="a-25" class="seat">A-25</td>
-        <td id="a-26" class="seat">A-26</td>
-        <td id="a-27" class="seat">A-27</td>
-        <td id="a-28" class="seat">A-28</td>
-        <td id="a-29" class="seat">A-29</td>
-        <td id="a-30" class="seat lMargin30">A-30</td>
-        <td id="a-31" class="seat">A-31</td>
-        <td id="a-32" class="seat">A-32</td>
-        <td id="a-33" class="seat">A-33</td>
+        <?php echo reserve("a-18",$arrayRearveList,"A-18","seat",0);?>
+        <?php echo reserve("a-19",$arrayRearveList,"A-19","seat",0);?>
+        <?php echo reserve("a-20",$arrayRearveList,"A-20","seat",0);?>
+        <?php echo reserve("a-21",$arrayRearveList,"A-21","seat",0);?>
+   		<?php echo reserve("a-22",$arrayRearveList,"A-22","seat",0);?>
+        <?php echo reserve("a-23",$arrayRearveList,"A-23","seat",0);?>
+        <?php echo reserve("a-24",$arrayRearveList,"A-24","seat",0);?>
+        <?php echo reserve("a-25",$arrayRearveList,"A-25","seat",0);?>
+        <?php echo reserve("a-26",$arrayRearveList,"A-26","seat",0);?>
+        <?php echo reserve("a-27",$arrayRearveList,"A-27","seat",0);?>
+        <?php echo reserve("a-28",$arrayRearveList,"A-28","seat",0);?>
+        <?php echo reserve("a-29",$arrayRearveList,"A-29","seat",0);?>
+        <?php echo reserve("a-30",$arrayRearveList,"A-30","seat  lMargin30",1);?>
+        <?php echo reserve("a-31",$arrayRearveList,"A-31","seat",0);?>
+        <?php echo reserve("a-32",$arrayRearveList,"A-32","seat",0);?>
+        <?php echo reserve("a-33",$arrayRearveList,"A-33","seat",0);?>
       </tr>
       <tr>
         <th>B</th>
-        <td id="b-18" class="seat">B-18</td>
-        <td id="b-19" class="seat">B-19</td>
-        <td id="b-20" class="seat">B-20</td>
-        <td id="b-21" class="seat">B-21</td>
-        <td id="b-22" class="seat">B-22</td>
-        <td id="b-23" class="seat">B-23</td>
-        <td id="b-24" class="seat">B-24</td>
-        <td id="b-25" class="seat">B-25</td>
-        <td id="b-26" class="seat">B-26</td>
-        <td id="b-27" class="seat">B-27</td>
-        <td id="b-28" class="seat">B-28</td>
-        <td id="b-29" class="seat">B-29</td>
-        <td id="b-30" class="seat lMargin30">B-30</td>
-        <td id="b-31" class="seat">B-31</td>
-        <td id="b-32" class="seat">B-32</td>
-        <td id="b-33" class="seat">B-33</td>
+        <?php echo reserve("b-18",$arrayRearveList,"B-18","seat",0);?>
+        <?php echo reserve("b-19",$arrayRearveList,"B-19","seat",0);?>
+        <?php echo reserve("b-20",$arrayRearveList,"B-20","seat",0);?>
+        <?php echo reserve("b-21",$arrayRearveList,"B-21","seat",0);?>
+   		<?php echo reserve("b-22",$arrayRearveList,"B-22","seat",0);?>
+        <?php echo reserve("b-23",$arrayRearveList,"B-23","seat",0);?>
+        <?php echo reserve("b-24",$arrayRearveList,"B-24","seat",0);?>
+        <?php echo reserve("b-25",$arrayRearveList,"B-25","seat",0);?>
+        <?php echo reserve("b-26",$arrayRearveList,"B-26","seat",0);?>
+        <?php echo reserve("b-27",$arrayRearveList,"B-27","seat",0);?>
+        <?php echo reserve("b-28",$arrayRearveList,"B-28","seat",0);?>
+        <?php echo reserve("b-29",$arrayRearveList,"B-29","seat",0);?>
+        <?php echo reserve("b-30",$arrayRearveList,"B-30","seat  lMargin30",1);?>
+        <?php echo reserve("b-31",$arrayRearveList,"B-31","seat",0);?>
+        <?php echo reserve("b-32",$arrayRearveList,"B-32","seat",0);?>
+        <?php echo reserve("b-33",$arrayRearveList,"B-33","seat",0);?>
       </tr>
       <tr>
         <th>C</th>
-        <td id="c-18" class="seat">C-18</td>
-        <td id="c-19" class="seat">C-19</td>
-        <td id="c-20" class="seat">C-20</td>
-        <td id="c-21" class="seat">C-21</td>
-        <td id="c-22" class="seat">C-22</td>
-        <td id="c-23" class="seat">C-23</td>
-        <td id="c-24" class="seat">C-24</td>
-        <td id="c-25" class="seat">C-25</td>
-        <td id="c-26" class="seat">C-26</td>
-        <td id="c-27" class="seat">C-27</td>
-        <td id="c-28" class="seat">C-28</td>
-        <td id="c-29" class="seat">C-29</td>
-        <td id="c-30" class="seat lMargin30">C-30</td>
-        <td id="c-31" class="seat">C-31</td>
-        <td id="c-32" class="seat">C-32</td>
-        <td id="c-33" class="seat">C-33</td>
+        <?php echo reserve("c-18",$arrayRearveList,"C-18","seat",0);?>
+        <?php echo reserve("c-19",$arrayRearveList,"C-19","seat",0);?>
+        <?php echo reserve("c-20",$arrayRearveList,"C-20","seat",0);?>
+        <?php echo reserve("c-21",$arrayRearveList,"C-21","seat",0);?>
+   		<?php echo reserve("c-22",$arrayRearveList,"C-22","seat",0);?>
+        <?php echo reserve("c-23",$arrayRearveList,"C-23","seat",0);?>
+        <?php echo reserve("c-24",$arrayRearveList,"C-24","seat",0);?>
+        <?php echo reserve("c-25",$arrayRearveList,"C-25","seat",0);?>
+        <?php echo reserve("c-26",$arrayRearveList,"C-26","seat",0);?>
+        <?php echo reserve("c-27",$arrayRearveList,"C-27","seat",0);?>
+        <?php echo reserve("c-28",$arrayRearveList,"C-28","seat",0);?>
+        <?php echo reserve("c-29",$arrayRearveList,"C-29","seat",0);?>
+        <?php echo reserve("c-30",$arrayRearveList,"C-30","seat  lMargin30",1);?>
+        <?php echo reserve("c-31",$arrayRearveList,"C-31","seat",0);?>
+        <?php echo reserve("c-32",$arrayRearveList,"C-32","seat",0);?>
+        <?php echo reserve("c-33",$arrayRearveList,"C-33","seat",0);?>
       </tr>
       <tr>
         <th>D</th>
-        <td id="d-18" class="seat">D-18</td>
-        <td id="d-19" class="seat">D-19</td>
-        <td id="d-20" class="seat">D-20</td>
-        <td id="d-21" class="seat">D-21</td>
-        <td id="d-22" class="seat">D-22</td>
-        <td id="d-23" class="seat">D-23</td>
-        <td id="d-24" class="seat">D-24</td>
-        <td id="d-25" class="seat">D-25</td>
-        <td id="d-26" class="seat">D-26</td>
-        <td id="d-27" class="seat">D-27</td>
-        <td id="d-28" class="seat">D-28</td>
-        <td id="d-29" class="seat">D-29</td>
-        <td id="d-30" class="seat lMargin30">D-30</td>
-        <td id="d-31" class="seat">D-31</td>
-        <td id="d-32" class="seat">D-32</td>
-        <td id="d-33" class="seat">D-33</td>
+        <?php echo reserve("d-18",$arrayRearveList,"D-18","seat",0);?>
+        <?php echo reserve("d-19",$arrayRearveList,"D-19","seat",0);?>
+        <?php echo reserve("d-20",$arrayRearveList,"D-20","seat",0);?>
+        <?php echo reserve("d-21",$arrayRearveList,"D-21","seat",0);?>
+   		<?php echo reserve("d-22",$arrayRearveList,"D-22","seat",0);?>
+        <?php echo reserve("d-23",$arrayRearveList,"D-23","seat",0);?>
+        <?php echo reserve("d-24",$arrayRearveList,"D-24","seat",0);?>
+        <?php echo reserve("d-25",$arrayRearveList,"D-25","seat",0);?>
+        <?php echo reserve("d-26",$arrayRearveList,"D-26","seat",0);?>
+        <?php echo reserve("d-27",$arrayRearveList,"D-27","seat",0);?>
+        <?php echo reserve("d-28",$arrayRearveList,"D-28","seat",0);?>
+        <?php echo reserve("d-29",$arrayRearveList,"D-29","seat",0);?>
+        <?php echo reserve("d-30",$arrayRearveList,"D-30","seat  lMargin30",1);?>
+        <?php echo reserve("d-31",$arrayRearveList,"D-31","seat",0);?>
+        <?php echo reserve("d-32",$arrayRearveList,"D-32","seat",0);?>
+        <?php echo reserve("d-33",$arrayRearveList,"D-33","seat",0);?>
       </tr>
       <tr>
         <th>E</th>
-        <td id="e-18" class="seat">E-18</td>
-        <td id="e-19" class="seat">E-19</td>
-        <td id="e-20" class="seat">E-20</td>
-        <td id="e-21" class="seat">E-21</td>
-        <td id="e-22" class="seat">E-22</td>
-        <td id="e-23" class="seat">E-23</td>
-        <td id="e-24" class="seat">E-24</td>
-        <td id="e-25" class="seat">E-25</td>
-        <td id="e-26" class="seat">E-26</td>
-        <td id="e-27" class="seat">E-27</td>
-        <td id="e-28" class="seat">E-28</td>
-        <td id="e-29" class="seat">E-29</td>
-        <td id="e-30" class="seat lMargin30">E-30</td>
-        <td id="e-31" class="seat">E-31</td>
-        <td id="e-32" class="seat">E-32</td>
-        <td id="e-33" class="seat">E-33</td>
+        <?php echo reserve("e-18",$arrayRearveList,"E-18","seat",0);?>
+        <?php echo reserve("e-19",$arrayRearveList,"E-19","seat",0);?>
+        <?php echo reserve("e-20",$arrayRearveList,"E-20","seat",0);?>
+        <?php echo reserve("e-21",$arrayRearveList,"E-21","seat",0);?>
+   		<?php echo reserve("e-22",$arrayRearveList,"E-22","seat",0);?>
+        <?php echo reserve("e-23",$arrayRearveList,"E-23","seat",0);?>
+        <?php echo reserve("e-24",$arrayRearveList,"E-24","seat",0);?>
+        <?php echo reserve("e-25",$arrayRearveList,"E-25","seat",0);?>
+        <?php echo reserve("e-26",$arrayRearveList,"E-26","seat",0);?>
+        <?php echo reserve("e-27",$arrayRearveList,"E-27","seat",0);?>
+        <?php echo reserve("e-28",$arrayRearveList,"E-28","seat",0);?>
+        <?php echo reserve("e-29",$arrayRearveList,"E-29","seat",0);?>
+        <?php echo reserve("e-30",$arrayRearveList,"E-30","seat  lMargin30",1);?>
+        <?php echo reserve("e-31",$arrayRearveList,"E-31","seat",0);?>
+        <?php echo reserve("e-32",$arrayRearveList,"E-32","seat",0);?>
+        <?php echo reserve("e-33",$arrayRearveList,"E-33","seat",0);?>
       </tr>
       <tr>
         <th>F</th>
-        <td id="f-18" class="seat">F-18</td>
-        <td id="f-19" class="seat">F-19</td>
-        <td id="f-20" class="seat">F-20</td>
-        <td id="f-21" class="seat">F-21</td>
-        <td id="f-22" class="seat">F-22</td>
-        <td id="f-23" class="seat">F-23</td>
-        <td id="f-24" class="seat">F-24</td>
-        <td id="f-25" class="seat">F-25</td>
-        <td id="f-26" class="seat">F-26</td>
-        <td id="f-27" class="seat">F-27</td>
-        <td id="f-28" class="seat">F-28</td>
-        <td id="f-29" class="seat">F-29</td>
-        <td id="f-30" class="seat lMargin30 wheelChair">F-30</td>
-        <td id="f-31" class="seat wheelChair">F-31</td>
+        <?php echo reserve("f-18",$arrayRearveList,"F-18","seat",0);?>
+        <?php echo reserve("f-19",$arrayRearveList,"F-19","seat",0);?>
+        <?php echo reserve("f-20",$arrayRearveList,"F-20","seat",0);?>
+        <?php echo reserve("f-21",$arrayRearveList,"F-21","seat",0);?>
+   		<?php echo reserve("f-22",$arrayRearveList,"F-22","seat",0);?>
+        <?php echo reserve("f-23",$arrayRearveList,"F-23","seat",0);?>
+        <?php echo reserve("f-24",$arrayRearveList,"F-24","seat",0);?>
+        <?php echo reserve("f-25",$arrayRearveList,"F-25","seat",0);?>
+        <?php echo reserve("f-26",$arrayRearveList,"F-26","seat",0);?>
+        <?php echo reserve("f-27",$arrayRearveList,"F-27","seat",0);?>
+        <?php echo reserve("f-28",$arrayRearveList,"F-28","seat",0);?>
+        <?php echo reserve("f-29",$arrayRearveList,"F-29","seat",0);?>
+        <?php echo reserve("f-30",$arrayRearveList,"F-30","seat lMargin30 wheelChair",1);?>
+        <?php echo reserve("f-31",$arrayRearveList,"F-31","seat wheelChair",0);?>
         <td class="notSeat"></td>
         <td class="notSeat"></td>
       </tr>
       <tr class="tMargin40">
         <th>G</th>
-        <td id="g-18" class="seat">G-18</td>
-        <td id="g-19" class="seat">G-19</td>
-        <td id="g-20" class="seat">G-20</td>
-        <td id="g-21" class="seat">G-21</td>
-        <td id="g-22" class="seat">G-22</td>
-        <td id="g-23" class="seat">G-23</td>
-        <td id="g-24" class="seat">G-24</td>
-        <td id="g-25" class="seat">G-25</td>
-        <td id="g-26" class="seat">G-26</td>
-        <td id="g-27" class="seat">G-27</td>
-        <td id="g-28" class="seat">G-28</td>
-        <td id="g-29" class="seat">G-29</td>
-							 <td class="notSeat lMargin30"></td>
-							 <td class="notSeat"></td>
+        <?php echo reserve("g-18",$arrayRearveList,"G-18","seat",0);?>
+        <?php echo reserve("g-19",$arrayRearveList,"G-19","seat",0);?>
+        <?php echo reserve("g-20",$arrayRearveList,"G-20","seat",0);?>
+        <?php echo reserve("g-21",$arrayRearveList,"G-21","seat",0);?>
+   		<?php echo reserve("g-22",$arrayRearveList,"G-22","seat",0);?>
+        <?php echo reserve("g-23",$arrayRearveList,"G-23","seat",0);?>
+        <?php echo reserve("g-24",$arrayRearveList,"G-24","seat",0);?>
+        <?php echo reserve("g-25",$arrayRearveList,"G-25","seat",0);?>
+        <?php echo reserve("g-26",$arrayRearveList,"G-26","seat",0);?>
+        <?php echo reserve("g-27",$arrayRearveList,"G-27","seat",0);?>
+        <?php echo reserve("g-28",$arrayRearveList,"G-28","seat",0);?>
+        <?php echo reserve("g-29",$arrayRearveList,"G-29","seat",0);?>
+		<td class="notSeat lMargin30"></td>
+		<td class="notSeat"></td>
         <td class="notSeat"></td>
         <td class="notSeat"></td>
       </tr>
       <tr>
         <th>H</th>
-        <td id="h-18" class="seat">H-18</td>
-        <td id="h-19" class="seat">H-19</td>
-        <td id="h-20" class="seat">H-20</td>
-        <td id="h-21" class="seat">H-21</td>
-        <td id="h-22" class="seat">H-22</td>
-        <td id="h-23" class="seat">H-23</td>
-        <td id="h-24" class="seat">H-24</td>
-        <td id="h-25" class="seat">H-25</td>
-        <td id="h-26" class="seat">H-26</td>
-        <td id="h-27" class="seat">H-27</td>
-        <td id="h-28" class="seat">H-28</td>
-        <td id="h-29" class="seat">H-29</td>
-							 <td class="notSeat lMargin30"></td>
-							 <td class="notSeat"></td>
+        <?php echo reserve("h-18",$arrayRearveList,"H-18","seat",0);?>
+        <?php echo reserve("h-19",$arrayRearveList,"H-19","seat",0);?>
+        <?php echo reserve("h-20",$arrayRearveList,"H-20","seat",0);?>
+        <?php echo reserve("h-21",$arrayRearveList,"H-21","seat",0);?>
+   		<?php echo reserve("h-22",$arrayRearveList,"H-22","seat",0);?>
+        <?php echo reserve("h-23",$arrayRearveList,"H-23","seat",0);?>
+        <?php echo reserve("h-24",$arrayRearveList,"H-24","seat",0);?>
+        <?php echo reserve("h-25",$arrayRearveList,"H-25","seat",0);?>
+        <?php echo reserve("h-26",$arrayRearveList,"H-26","seat",0);?>
+        <?php echo reserve("h-27",$arrayRearveList,"H-27","seat",0);?>
+        <?php echo reserve("h-28",$arrayRearveList,"H-28","seat",0);?>
+        <?php echo reserve("h-29",$arrayRearveList,"H-29","seat",0);?>
+		<td class="notSeat lMargin30"></td>
+		<td class="notSeat"></td>
         <td class="notSeat"></td>
         <td class="notSeat"></td>
       </tr>
       <tr>
         <th>I</th>
-        <td id="i-18" class="seat">I-18</td>
-        <td id="i-19" class="seat">I-19</td>
-        <td id="i-20" class="seat">I-20</td>
-        <td id="i-21" class="seat">I-21</td>
-        <td id="i-22" class="seat">I-22</td>
-        <td id="i-23" class="seat">I-23</td>
-        <td id="i-24" class="seat">I-24</td>
-        <td id="i-25" class="seat">I-25</td>
-        <td id="i-26" class="seat">I-26</td>
-        <td id="i-27" class="seat">I-27</td>
-        <td id="i-28" class="seat">I-28</td>
-        <td id="i-29" class="seat">I-29</td>
-							 <td id="i-30" class="seat lMargin30">I-29</td>
-							 <td id="i-31" class="seat">I-29</td>
-							 <td id="i-32" class="seat">I-29</td>
-							 <td id="i-33" class="seat">I-29</td>
+        <?php echo reserve("i-18",$arrayRearveList,"I-18","seat",0);?>
+        <?php echo reserve("i-19",$arrayRearveList,"I-19","seat",0);?>
+        <?php echo reserve("i-20",$arrayRearveList,"I-20","seat",0);?>
+        <?php echo reserve("i-21",$arrayRearveList,"I-21","seat",0);?>
+   		<?php echo reserve("i-22",$arrayRearveList,"I-22","seat",0);?>
+        <?php echo reserve("i-23",$arrayRearveList,"I-23","seat",0);?>
+        <?php echo reserve("i-24",$arrayRearveList,"I-24","seat",0);?>
+        <?php echo reserve("i-25",$arrayRearveList,"I-25","seat",0);?>
+        <?php echo reserve("i-26",$arrayRearveList,"I-26","seat",0);?>
+        <?php echo reserve("i-27",$arrayRearveList,"I-27","seat",0);?>
+        <?php echo reserve("i-28",$arrayRearveList,"I-28","seat",0);?>
+        <?php echo reserve("i-29",$arrayRearveList,"I-29","seat",0);?>
+        <?php echo reserve("i-30",$arrayRearveList,"I-30","seat  lMargin30",1);?>
+        <?php echo reserve("i-31",$arrayRearveList,"I-31","seat",0);?>
+        <?php echo reserve("i-32",$arrayRearveList,"I-32","seat",0);?>
+        <?php echo reserve("i-33",$arrayRearveList,"I-33","seat",0);?>
       </tr>
       <tr>
         <th>J</th>
-        <td id="j-18" class="seat">J-18</td>
-        <td id="j-19" class="seat">J-19</td>
-        <td id="j-20" class="seat">J-20</td>
-        <td id="j-21" class="seat">J-21</td>
-        <td id="j-22" class="seat">J-22</td>
-        <td id="j-23" class="seat">J-23</td>
-        <td id="j-24" class="seat">J-24</td>
-        <td id="j-25" class="seat">J-25</td>
-        <td id="j-26" class="seat">J-26</td>
-        <td id="j-27" class="seat">J-27</td>
-        <td id="j-28" class="seat">J-28</td>
-        <td id="j-29" class="seat">J-29</td>
-							 <td class="notSeat lMargin30"></td>
-							 <td class="notSeat"></td>
+        <?php echo reserve("j-18",$arrayRearveList,"J-18","seat",0);?>
+        <?php echo reserve("j-19",$arrayRearveList,"J-19","seat",0);?>
+        <?php echo reserve("j-20",$arrayRearveList,"J-20","seat",0);?>
+        <?php echo reserve("j-21",$arrayRearveList,"J-21","seat",0);?>
+   		<?php echo reserve("j-22",$arrayRearveList,"J-22","seat",0);?>
+        <?php echo reserve("j-23",$arrayRearveList,"J-23","seat",0);?>
+        <?php echo reserve("j-24",$arrayRearveList,"J-24","seat",0);?>
+        <?php echo reserve("j-25",$arrayRearveList,"J-25","seat",0);?>
+        <?php echo reserve("j-26",$arrayRearveList,"J-26","seat",0);?>
+        <?php echo reserve("j-27",$arrayRearveList,"J-27","seat",0);?>
+        <?php echo reserve("j-28",$arrayRearveList,"J-28","seat",0);?>
+        <?php echo reserve("j-29",$arrayRearveList,"J-29","seat",0);?>
+		<td class="notSeat lMargin30"></td>
+		<td class="notSeat"></td>
         <td class="notSeat"></td>
         <td class="notSeat"></td>
       </tr>
