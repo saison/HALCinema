@@ -36,16 +36,20 @@ $(function(){
 			//formに渡す値を作成
 			//ex : a-1_adult
 			var formValue = seatId + "_" + assortId;
-			
-			//formに追加する値のID
-			var formId = $("#postData #" + formValue).attr("id");
 
+			//formに追加する値のID
+			var formId = "#postData #" + formValue;
+			
+			var clone = ui.draggable.clone();
 
 			//ドロップされた際にオブジェクトにカスタムデータを付与
-			ui.draggable.attr("data-seat",formValue);
+			clone.attr("data-seat",formValue);
 			
-			ui.draggable.clone().appendTo(this);
-
+			var cloneFlg = clone.data("flg");
+			if (cloneFlg) {
+				clone.attr("data-flg",false);
+				clone.appendTo(this);
+			}
 			//$("#"+seatId).append("<br /><img class='dragIcon' src='images/" + dragClass + "Image.png'>");
 
 			
@@ -55,15 +59,19 @@ $(function(){
 			});
 			
 			//カスタムデータを取得
-			var custamData = $(this).data("seat");
-
-			if(custamData == formId){
+			var custamData = clone.data("seat");
+			if(custamData != formId){
 				$("#postData").append("<input type='hidden' name='seat[]' id='"+ formValue +"' value='"+ formValue +"' />");
 			}
 		},
 		out:function(event, ui){
-			var dragId = ui.draggable.attr("id");
-			$("#postData #"+dragId).remove();
+			var removeValue = ui.draggable.clone().data("seat");
+			console.log(removeValue);
+			ui.draggable.clone().attr("data-seat","notset");
+			
+			var formId = "#postData #" + removeValue;
+			console.log(formId);
+			$(formId).remove();
 		}
 	});
 	$(".dragIcon").draggable({
@@ -71,4 +79,5 @@ $(function(){
 		revert:"invalid",
 		helper:"clone"
 	});
+
 });
