@@ -1,20 +1,47 @@
 <?PHP
 	$pageTitle = "";
 	require_once("../module/header.php");
+	require_once("../module/functions.php");
 ?>
 <!--上映中映画スクロール-->
 <div id="nowScheduleScroll" class="clearfix"><p id="nowScheduleScrollTitle">NowShowing!</p>
 	<!--上映中映画scroll。.scrollStrongをspanに当てることで太字&色が変わります -->
 	<div id="s2" class="es">
-		<span class="screenStrong">Screen1</span>
-		･･･12:00~14:30　
-		<span class="scrollStrong">スター・トレック　イントゥ・ダークネス</span>　　　　　
-		<span class="screenStrong">Screen1</span>
-		･･･12:00~14:30　
-		<span class="scrollStrong">スター・トレック　イントゥ・ダークネス</span>　　　　　
-		<span class="screenStrong">Screen1</span>
-		･･･12:00~14:30　
-		<span class="scrollStrong">スター・トレック　イントゥ・ダークネス</span>　　　　　
+    <?php
+	//日付取得
+	$todayDate=date("Y-m-d");
+	//現在の時間
+	$nowTime=date("H:i");
+	//一時間先の時間（今より一時間より先の映画しか予約できない。）
+	$canReserveMovieStartTime=date('H:i', strtotime('+1 hour ' . $nowTime));
+	//上映中の映画情報取得
+	$con=getConnection();
+	$selectShowSheduleSql="SELECT cinema_id , screen_id, MIN(start_time) , show_day FROM show_schedule WHERE show_day >= '{$todayDate}' AND start_time >= '{$canReserveMovieStartTime}' GROUP BY  screen_id ORDER BY  screen_id ";
+	$selectResultShowDate = mysqli_query($con,$selectShowSheduleSql);
+	while(($row = mysqli_fetch_array($selectResultShowDate)) != false){
+		//スクリーン番号
+		$scNum=mb_substr($row[1],5,1);
+		//cinema_idをもとに上映時間と映画名をもってくる。
+		$selectMovieSql ="SELECT cinema_name , running_time FROM cinema_master WHERE cinema_id = '{$row[0]}' ";
+		$selectResultMovieDate = mysqli_query($con,$selectMovieSql);
+		while(($rowMovie = mysqli_fetch_array($selectResultMovieDate)) != false){
+			//上映時間の計算
+			$showTime=ceil($rowMovie[1]/10)*10;
+			//映画名
+			$movieName = $rowMovie[0];
+		}
+		//上映開始時間
+		$startTime = mb_substr($row[2],0,5);
+		//上映終了時間
+		$showTimeJp=$showTime." minute";
+		$endTime = date("H:i",strtotime($showTimeJp,strtotime($startTime)));//上映終了時間
+		echo "<span class='screenStrong'>Screen".$scNum."</span>･･･".$startTime."~".$endTime."　<span class='scrollStrong'>".$movieName."　　</span>";
+		
+	}
+	//切断
+	 mysqli_close($con);	
+    ?>
+		　
 	</div>
 </div>
 <!--上映中映画スクロール終わり-->
