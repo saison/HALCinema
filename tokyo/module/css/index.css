@@ -70,7 +70,6 @@
   /*今日の上映スケジュール*/
   margin: 20px 40px;
   padding: 5px;
-  height: 300px;
   background-color: #ffffff;
   box-shadow: 0px 0px 10px #dddddd;
 }
@@ -86,22 +85,36 @@
 }
 
 #todaySchedule td {
-  padding: 5px;
+  padding: 10px 5px;
   font-size: 85%;
   font-family: Century Gothic,"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic";
   margin: 5px;
-  background: #eeeeee;
+  background: #fafafa;
+  color: #333333;
+  text-align: center;
 }
 
 #todaySchedule th {
   margin: 5px;
-  background: #eeeeee;
+  background: #f5f5f5;
 }
 
 .screenName {
   font-family: Century Gothic,"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic";
   text-align: center;
-  font-size: 125%;
+  font-size: 100%;
+  color: #555555;
+  text-shadow: 0 0 2px #aaa;
+}
+
+.movieName {
+  width: 200px;
+}
+
+.movieName a {
+  color: #333333;
+  text-decoration: none;
+  display: block;
 }
 
 #comingsoonMovie {

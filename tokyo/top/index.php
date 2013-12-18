@@ -64,6 +64,7 @@
       <h2><img src="images/nowshowingTitle.png" alt="今日の上映スケジュール"></h2>
     </div>
     <div class="titleBar"></div>
+			<p id="todayDate"><?php date("Y/m/d"); ?></p>
 			<table>
 			<tr>
 			<th class="screenName">Screen1</th>
