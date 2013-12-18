@@ -46,13 +46,13 @@
       <h5>大人</h5>
 					<div class="setEachChoiceContent">
         <ul>
-          <li><img id="adult" class="dragIcon" src="images/adultImage.png"></li>
+          <li><img id="adult" class="dragIcon" data-flg="true" src="images/adultImage.png"></li>
         </ul>
       </div>
 					<h5>学生</h5>
       <div class="setEachChoiceContent">
         <ul>
-          <li><img id="student" class="dragIcon" src="images/studentImage.png"></li>
+          <li><img id="student" class="dragIcon" data-flg="true"  src="images/studentImage.png"></li>
         </ul>
       </div>
 					<?php //シニアのみ対応（本当はDBにつなげてやりたかった･･･
@@ -60,7 +60,7 @@
 						echo "<h5>シニア</h5>\r\n";
       echo'<div class="setEachChoiceContent">';
       echo '<ul>';
-      echo '<li><img id="senior" class="dragIcon" src="images/seniorImage.png"></li>';
+      echo '<li><img id="senior" class="dragIcon" data-flg="true" src="images/seniorImage.png"></li>';
       echo '</ul>';
       echo '</div>';
 							
