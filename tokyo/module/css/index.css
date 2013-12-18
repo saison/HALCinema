@@ -82,16 +82,26 @@
 
 #todaySchedule table {
   width: 100%;
+  border-collapse: separate;
 }
 
 #todaySchedule td {
   padding: 5px;
   font-size: 85%;
   font-family: Century Gothic,"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic";
+  margin: 5px;
+  background: #eeeeee;
+}
+
+#todaySchedule th {
+  margin: 5px;
+  background: #eeeeee;
 }
 
 .screenName {
   font-family: Century Gothic,"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic";
+  text-align: center;
+  font-size: 125%;
 }
 
 #comingsoonMovie {
