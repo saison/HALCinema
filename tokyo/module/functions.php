@@ -14,7 +14,12 @@
 			DBname = halcinema
 		**************************/
 		
-		$con = mysqli_connect('localhost','halcinema','halcinema');
+		//DB接続軽減モード実装中
+		if($_COOKIE["deve_db"]=="xampp"){
+			$con = mysqli_connect('127.0.0.1','halcinema','halcinema');
+		}else{
+			$con = mysqli_connect('localhost','halcinema','halcinema');
+		}
 		mysqli_set_charset($con,'utf8');
 		mysqli_select_db($con,'halcinema');
 		
