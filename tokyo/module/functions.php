@@ -15,8 +15,12 @@
 		**************************/
 		
 		//DB接続軽減モード実装中
+		if(!empty($_COOKIE["deve_db"])){
 		if($_COOKIE["deve_db"]=="xampp"){
 			$con = mysqli_connect('127.0.0.1','halcinema','halcinema');
+		}else{
+			$con = mysqli_connect('localhost','halcinema','halcinema');
+		}
 		}else{
 			$con = mysqli_connect('localhost','halcinema','halcinema');
 		}
