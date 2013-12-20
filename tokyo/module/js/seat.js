@@ -24,7 +24,6 @@ $(function(){
 
 	$(".seat").droppable({
 		drop:function(event, ui){
-			
 
 			//シートの番号を取得
 			var seatId = $(this).attr("id");
@@ -52,9 +51,6 @@ $(function(){
 				ui.draggable.appendTo(this);
 			}
 			
-			
-			//$("#"+seatId).append("<br /><img class='dragIcon' src='images/" + dragClass + "Image.png'>");
-
 			
 			$(".cloneIcon").draggable({
 				opacity:"0.5",
