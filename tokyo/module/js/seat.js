@@ -126,11 +126,6 @@ $(function(){
 			//	$(formId).remove();
 			//	$(originId).remove();
 			
-			//	//debug用
-			//	console.log(firstId);
-			//	console.log(removeValueOrigin);
-			//	console.log(removeValue);
-			//	console.log(formId);
 		}
 	});
 	$(".dragIcon").draggable({
