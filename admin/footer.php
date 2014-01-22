@@ -1,6 +1,7 @@
 <?PHP
 	/* footer module */
 ?>
+	</div><!-- /#mainWrapper -->	
 	<!-- footer start -->
 	<footer>
 

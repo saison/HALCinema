@@ -72,7 +72,7 @@ header {
 }
 /* line 11, ../sass/style.scss */
 header #headerWrap {
-  width: 1000px;
+  width: 96%;
   height: 60px;
   margin: 0 auto;
   color: #ffffff;
@@ -80,11 +80,20 @@ header #headerWrap {
 
 /* line 19, ../sass/style.scss */
 #mainWrapper {
-  width: 1000px;
+  width: 96%;
   margin: 0 auto;
   /* login style */
+  /* end login style */
+  /* movie style */
+  /* end movie style */
 }
-/* line 24, ../sass/style.scss */
+/* line 23, ../sass/style.scss */
+#mainWrapper h2 {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+/* line 30, ../sass/style.scss */
 #mainWrapper #loginArea {
   width: 360px;
   padding-top: 50px;
@@ -101,24 +110,32 @@ header #headerWrap {
   -o-border-radius: 5px;
   border-radius: 5px;
 }
-/* line 33, ../sass/style.scss */
+/* line 39, ../sass/style.scss */
 #mainWrapper #loginArea h2 {
   font-size: 20px;
   text-align: center;
 }
-/* line 40, ../sass/style.scss */
+/* line 46, ../sass/style.scss */
 #mainWrapper #loginForm p {
   margin-top: 20px;
   margin-bottom: 20px;
   line-height: 1.5em;
 }
-/* line 44, ../sass/style.scss */
+/* line 50, ../sass/style.scss */
 #mainWrapper #loginForm p input {
   width: 100%;
   height: 40px;
   line-height: 40px;
 }
-/* line 50, ../sass/style.scss */
+/* line 56, ../sass/style.scss */
 #mainWrapper #loginForm button {
   float: right;
+}
+/* line 64, ../sass/style.scss */
+#mainWrapper #listTable thead th {
+  font-weight: bold;
+}
+/* line 68, ../sass/style.scss */
+#mainWrapper #listTable tbody td img {
+  width: 100px;
 }

@@ -2,8 +2,6 @@
 	require_once("../header.php");
 ?>
 	
-	<!-- main start -->
-	<div id="mainWrapper" class="container">
 		<article id="loginArea">
 			<h2>HALCinema管理画面ログイン</h2>
 			<form id="loginForm" action="" method="post">
@@ -12,8 +10,6 @@
 				<button type="button" class="btn btn-success">ログイン</button>	
 			</form>
 		</article>
-	</div>
-	<!-- main end -->
 
 <?PHP
 	require_once("../footer.php");

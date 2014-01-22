@@ -9,7 +9,7 @@ header{
 	line-height:60px;
 	margin-bottom:40px;
 	#headerWrap{
-		width:1000px;
+		width:96%;
 		height:60px;
 		margin:0 auto;
 		color:#ffffff;
@@ -17,8 +17,14 @@ header{
 }
 
 #mainWrapper{
-	width:1000px;
+	width:96%;
 	margin:0 auto;
+	
+	h2{
+		font-size:30px;
+		font-weight:bold;
+		margin-bottom:40px;
+	}
 
 	/* login style */
 	#loginArea{
@@ -51,5 +57,19 @@ header{
 			float: right;
 		}
 	}
+	/* end login style */
+
+	/* movie style */
+	#listTable{
+		thead th{
+			font-weight: bold;
+		}
+		tbody td{
+			img{
+				width:100px;
+			}
+		}
+	}
+	/* end movie style */
 
 }
