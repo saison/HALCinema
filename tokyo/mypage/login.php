@@ -27,7 +27,8 @@
             				break;
             		}
             }
-            ?>
+?>
+
 <div class="login">
 <h4>ログイン</h4>
 <form action="loginSql.php" method="post">
