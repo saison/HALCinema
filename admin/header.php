@@ -18,7 +18,7 @@
 	<!-- header start -->
 	<header>
 		<div id="headerWrap">
-			<h1>ロゴ</h1>
+			<h1><a href="../top/index.php"><img src="../images/logo.png" alt="HALCinema 管理者画面" /></a></h1>
 		</div>
 	</header>
 	<!-- header end -->
