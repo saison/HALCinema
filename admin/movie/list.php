@@ -5,7 +5,7 @@
 	<!-- main start -->
 		<h2>映画リスト</h2>
 		<!-- movie list table -->
-		<table id="listTable" class="table table-striped table-bordered table-condensed">
+		<table class="table table-striped table-bordered table-condensed listTable">
 			<thead>
 				<tr>
 					<th>id</th>
@@ -17,6 +17,7 @@
 					<th class="description">映画説明文</th>
 					<th>監督</th>
 					<th>出演者</th>
+					<th>アクション</th>
 				</tr>
 			</thead>
 			
@@ -33,6 +34,7 @@
 					<td class="description">ダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミー</td>
 					<td>鈴木うーま</td>
 					<td>ウーマ・キックス</td>
+					<td><a href="edit.php?id=1" class="btn btn-primary"><span class="glyphicon glyphicon-pencil"></span>編集 & 削除</a></td>
 				</tr>
 				<?PHP endfor; ?>
 				<!-- ここの中身をループして出してね -->
