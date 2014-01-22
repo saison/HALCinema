@@ -1,0 +1,66 @@
+/* CSS Document */
+/* margin,padding */
+.m5 {
+  margin: 5px;
+}
+
+.m10 {
+  margin: 10px;
+}
+
+.m15 {
+  margin: 15px;
+}
+
+.m20 {
+  margin: 20px;
+}
+
+.m30 {
+  margin: 30px;
+}
+
+.m50 {
+  margin: 50px;
+}
+
+.p5 {
+  padding: 5px;
+}
+
+.p10 {
+  padding: 10px;
+}
+
+.p15 {
+  padding: 15px;
+}
+
+.p20 {
+  padding: 20px;
+}
+
+.p30 {
+  padding: 30px;
+}
+
+.p50px {
+  padding: 50px;
+}
+
+/* p */
+.smallText {
+  font-size: 80%;
+}
+
+.microText {
+  font-size: 60%;
+}
+
+.bigText {
+  font-size: 125%;
+}
+
+.largeText {
+  font-size: 150%;
+}
