@@ -132,10 +132,24 @@ header #headerWrap {
   float: right;
 }
 /* line 64, ../sass/style.scss */
-#mainWrapper #listTable thead th {
-  font-weight: bold;
+#mainWrapper #listTable .description {
+  width: 300px;
+  word-break: break-all;
 }
 /* line 68, ../sass/style.scss */
+#mainWrapper #listTable thead th {
+  font-weight: bold;
+  text-align: center;
+}
+/* line 73, ../sass/style.scss */
+#mainWrapper #listTable tbody td {
+  text-align: center;
+}
+/* line 75, ../sass/style.scss */
 #mainWrapper #listTable tbody td img {
   width: 100px;
+}
+/* line 79, ../sass/style.scss */
+#mainWrapper #listTable tbody .description {
+  text-align: left;
 }
