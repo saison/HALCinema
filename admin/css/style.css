@@ -93,7 +93,16 @@ header #headerWrap {
   font-weight: bold;
   margin-bottom: 40px;
 }
-/* line 30, ../sass/style.scss */
+/* line 28, ../sass/style.scss */
+#mainWrapper #editButton {
+  float: right;
+  margin-bottom: 10px;
+}
+/* line 33, ../sass/style.scss */
+#mainWrapper .glyphicon {
+  margin-right: 10px;
+}
+/* line 37, ../sass/style.scss */
 #mainWrapper #loginArea {
   width: 360px;
   padding-top: 50px;
@@ -110,46 +119,50 @@ header #headerWrap {
   -o-border-radius: 5px;
   border-radius: 5px;
 }
-/* line 39, ../sass/style.scss */
+/* line 46, ../sass/style.scss */
 #mainWrapper #loginArea h2 {
   font-size: 20px;
   text-align: center;
 }
-/* line 46, ../sass/style.scss */
+/* line 53, ../sass/style.scss */
 #mainWrapper #loginForm p {
   margin-top: 20px;
   margin-bottom: 20px;
   line-height: 1.5em;
 }
-/* line 50, ../sass/style.scss */
+/* line 57, ../sass/style.scss */
 #mainWrapper #loginForm p input {
   width: 100%;
   height: 40px;
   line-height: 40px;
 }
-/* line 56, ../sass/style.scss */
+/* line 63, ../sass/style.scss */
 #mainWrapper #loginForm button {
   float: right;
 }
-/* line 64, ../sass/style.scss */
-#mainWrapper #listTable .description {
+/* line 70, ../sass/style.scss */
+#mainWrapper .listTable {
+  margin-bottom: 60px;
+}
+/* line 72, ../sass/style.scss */
+#mainWrapper .listTable .description {
   width: 300px;
   word-break: break-all;
 }
-/* line 68, ../sass/style.scss */
-#mainWrapper #listTable thead th {
+/* line 76, ../sass/style.scss */
+#mainWrapper .listTable thead th {
   font-weight: bold;
   text-align: center;
 }
-/* line 73, ../sass/style.scss */
-#mainWrapper #listTable tbody td {
+/* line 81, ../sass/style.scss */
+#mainWrapper .listTable tbody td {
   text-align: center;
 }
-/* line 75, ../sass/style.scss */
-#mainWrapper #listTable tbody td img {
+/* line 83, ../sass/style.scss */
+#mainWrapper .listTable tbody td img {
   width: 100px;
 }
-/* line 79, ../sass/style.scss */
-#mainWrapper #listTable tbody .description {
+/* line 87, ../sass/style.scss */
+#mainWrapper .listTable tbody .description {
   text-align: left;
 }
