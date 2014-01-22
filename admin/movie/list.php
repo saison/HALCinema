@@ -26,7 +26,12 @@
 				<?PHP for($i = 0; $i < 5; $i++): ?>
 				<tr>	
 					<td>id</td>
-					<td><a href="details.php?id=1">タイトル</a></td>
+					<td>
+						<a href="details.php?id=1">タイトル</a>
+						<span class="label label-success">公開中</span>
+						<span class="label label-default">終了</span>
+						<span class="label label-primary">公開前</span>
+					</td>
 					<td><img src="" alt=""></td>
 					<td>2014/01/22</td>
 					<td>2014/01/23</td>

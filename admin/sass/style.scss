@@ -38,8 +38,8 @@ header{
 	/* login style */
 	#loginArea{
 		width:360px;
-		padding-top:50px;
-		padding-bottom:50px;
+		padding-top:20px;
+		padding-bottom:20px;
 		padding-left:20px;
 		padding-right:20px;
 		margin:0 auto;
@@ -62,8 +62,8 @@ header{
 				line-height:40px;
 			}
 		}
-		button{
-			float: right;
+		#loginButton{	
+			text-align: right;
 		}
 	}
 	/* end login style */
@@ -91,6 +91,9 @@ header{
 		}
 		.description{
 			text-align: left;
+		}
+		.label{
+			margin-left:10px;
 		}
 		.info{
 			width:200px;
