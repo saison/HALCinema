@@ -3,7 +3,7 @@
 ?>
 	
 	<!-- main start -->
-		<h2>映画リスト</h2>
+		<h2>映画リスト<a href="register.php" id="newButton" class="btn btn-success"><span class="glyphicon glyphicon-plus"></span>新規登録</a></h2>
 		<!-- movie list table -->
 		<table class="table table-striped table-bordered table-condensed listTable">
 			<thead>
