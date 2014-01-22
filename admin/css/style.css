@@ -65,7 +65,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 /* line 6, ../sass/style.scss */
 header {
-  background: #3c3c3c;
+  background: #dddddd;
   height: 60px;
   line-height: 60px;
   margin-bottom: 40px;
@@ -86,6 +86,8 @@ header #headerWrap {
   /* end login style */
   /* list table style */
   /* end list table style */
+  /* edit style */
+  /* end edit style */
 }
 /* line 23, ../sass/style.scss */
 #mainWrapper h2 {
@@ -98,11 +100,15 @@ header #headerWrap {
   float: right;
   margin-bottom: 10px;
 }
-/* line 33, ../sass/style.scss */
+/* line 32, ../sass/style.scss */
+#mainWrapper #newButton {
+  margin-left: 10px;
+}
+/* line 35, ../sass/style.scss */
 #mainWrapper .glyphicon {
   margin-right: 10px;
 }
-/* line 37, ../sass/style.scss */
+/* line 39, ../sass/style.scss */
 #mainWrapper #loginArea {
   width: 360px;
   padding-top: 50px;
@@ -119,50 +125,70 @@ header #headerWrap {
   -o-border-radius: 5px;
   border-radius: 5px;
 }
-/* line 46, ../sass/style.scss */
+/* line 48, ../sass/style.scss */
 #mainWrapper #loginArea h2 {
   font-size: 20px;
   text-align: center;
 }
-/* line 53, ../sass/style.scss */
+/* line 55, ../sass/style.scss */
 #mainWrapper #loginForm p {
   margin-top: 20px;
   margin-bottom: 20px;
   line-height: 1.5em;
 }
-/* line 57, ../sass/style.scss */
+/* line 59, ../sass/style.scss */
 #mainWrapper #loginForm p input {
   width: 100%;
   height: 40px;
   line-height: 40px;
 }
-/* line 63, ../sass/style.scss */
+/* line 65, ../sass/style.scss */
 #mainWrapper #loginForm button {
   float: right;
 }
-/* line 70, ../sass/style.scss */
+/* line 72, ../sass/style.scss */
+#mainWrapper #editTable {
+  width: 70%;
+  margin: 0 auto;
+}
+/* line 76, ../sass/style.scss */
 #mainWrapper .listTable {
   margin-bottom: 60px;
 }
-/* line 72, ../sass/style.scss */
+/* line 78, ../sass/style.scss */
 #mainWrapper .listTable .description {
   width: 300px;
   word-break: break-all;
 }
-/* line 76, ../sass/style.scss */
-#mainWrapper .listTable thead th {
+/* line 82, ../sass/style.scss */
+#mainWrapper .listTable th {
   font-weight: bold;
+  text-align: center !important;
+}
+/* line 86, ../sass/style.scss */
+#mainWrapper .listTable td {
   text-align: center;
 }
-/* line 81, ../sass/style.scss */
-#mainWrapper .listTable tbody td {
-  text-align: center;
-}
-/* line 83, ../sass/style.scss */
-#mainWrapper .listTable tbody td img {
+/* line 88, ../sass/style.scss */
+#mainWrapper .listTable td img {
   width: 100px;
 }
-/* line 87, ../sass/style.scss */
-#mainWrapper .listTable tbody .description {
+/* line 92, ../sass/style.scss */
+#mainWrapper .listTable .description {
   text-align: left;
+}
+/* line 95, ../sass/style.scss */
+#mainWrapper .listTable .info {
+  width: 200px;
+  word-break: break-all;
+}
+/* line 104, ../sass/style.scss */
+#mainWrapper #editSend {
+  width: 70%;
+  margin: 30px auto;
+  text-align: right;
+}
+/* line 108, ../sass/style.scss */
+#mainWrapper #editSend input {
+  margin-left: 20px;
 }

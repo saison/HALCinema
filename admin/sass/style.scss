@@ -4,7 +4,7 @@
 @import "compass";
 
 header{
-	background:#3c3c3c;
+	background:#dddddd;
 	height:60px;
 	line-height:60px;
 	margin-bottom:40px;
@@ -29,7 +29,9 @@ header{
 		float: right;
 		margin-bottom:10px;
 	}
-	
+	#newButton{
+		margin-left:10px;
+	}
 	.glyphicon{
 		margin-right:10px;
 	}
@@ -67,28 +69,46 @@ header{
 	/* end login style */
 
 	/* list table style */
+	#editTable{
+		width:70%;
+		margin:0 auto;
+	}
 	.listTable{
 		margin-bottom:60px;	
 		.description{
 			width:300px;
 			word-break: break-all;	
 		}
-		thead th{
+		th{
 			font-weight: bold;
+			text-align: center !important;
+		}
+		td{
 			text-align: center;
-		}
-		tbody{
-			td{
-				text-align: center;
-				img{
-					width:100px;
-				}
-			}
-			.description{
-				text-align: left;
+			img{
+				width:100px;
 			}
 		}
+		.description{
+			text-align: left;
+		}
+		.info{
+			width:200px;
+			word-break: break-all;
+		}
+		
 	}
 	/* end list table style */
+
+	/* edit style */
+	#editSend{
+		width: 70%;
+		margin:30px auto;
+		text-align: right;
+		input{
+			margin-left:20px;
+		}
+	}
+	/* end edit style */
 
 }
