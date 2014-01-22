@@ -111,8 +111,8 @@ header #headerWrap {
 /* line 39, ../sass/style.scss */
 #mainWrapper #loginArea {
   width: 360px;
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   padding-left: 20px;
   padding-right: 20px;
   margin: 0 auto;
@@ -143,8 +143,8 @@ header #headerWrap {
   line-height: 40px;
 }
 /* line 65, ../sass/style.scss */
-#mainWrapper #loginForm button {
-  float: right;
+#mainWrapper #loginForm #loginButton {
+  text-align: right;
 }
 /* line 72, ../sass/style.scss */
 #mainWrapper #editTable {
