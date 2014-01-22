@@ -28,7 +28,7 @@
             
 			<form id="loginForm" action="loginSql.php" method="post">
 				<p>ユーザー名<br /><input class="" type="text" name="userID" placeholder="user id" ></p>
-				<p>パスワード<br /><input class="" type="pass" name="userPass" placeholder="password" ></p>
+				<p>パスワード<br /><input class="" type="password" name="userPass" placeholder="password" ></p>
                 <button type="submit" class="btn btn-success">ログイン</button>	
             </form>
 		</article>
