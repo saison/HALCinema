@@ -74,20 +74,22 @@
 			</tbody>
 
 		</table>
-        <?php
+		<div class="btn-group">
+    <?php
 		$pageCount = 1;//ページ
-        while($pageAllCount>0){
+    while($pageAllCount>0){
 			if($nowPage==$pageCount){//今見てるページだったとき
-				echo $pageCount;
+				echo "<span class='btn btn-default'>".$pageCount."</span>";
 				echo "　";
 			}else{
-				echo "<a href='list.php?nowPage=".$pageCount."'>".$pageCount."</a>";
+				echo "<a class='btn btn-default' href='list.php?nowPage=".$pageCount."'>".$pageCount."</a>";
 				echo "　";
 			}				
 			$pageCount++;
 			$pageAllCount--;
 		}
 		?>
+		</div>
 		<!-- /movie list table -->
 	<!-- main end -->
 
