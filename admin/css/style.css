@@ -186,13 +186,21 @@ header #headerWrap {
   width: 200px;
   word-break: break-all;
 }
-/* line 107, ../sass/style.scss */
+/* line 104, ../sass/style.scss */
+#mainWrapper .current {
+  background: #ccc;
+}
+/* line 110, ../sass/style.scss */
 #mainWrapper #editSend {
   width: 70%;
   margin: 30px auto;
   text-align: right;
 }
-/* line 111, ../sass/style.scss */
+/* line 114, ../sass/style.scss */
 #mainWrapper #editSend input {
   margin-left: 20px;
+}
+/* line 122, ../sass/style.scss */
+#mainWrapper .flr {
+  float: right;
 }

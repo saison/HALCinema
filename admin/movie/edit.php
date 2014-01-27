@@ -8,11 +8,6 @@
 		<form action="" method="post"></form>
 		<table id="editTable" class="table table-striped table-bordered table-condensed listTable">
 				<tr>
-					<th>id</th>
-					<td><input type="text" name="id"></td>
-					<td class="info">映画ID ex)xxxxxxxx</td>
-				</tr>
-				<tr>
 					<th>タイトル</th>
 					<td><input type="text" name="title"></td>
 					<td class="info">映画ID ex)xxxxxxxx</td>
