@@ -190,21 +190,25 @@ header #headerWrap {
 #mainWrapper .current {
   background: #ccc;
 }
-/* line 110, ../sass/style.scss */
+/* line 107, ../sass/style.scss */
+#mainWrapper .deleted, #mainWrapper .deleted th, #mainWrapper .deleted td {
+  background: #6c6c6c !important;
+}
+/* line 113, ../sass/style.scss */
 #mainWrapper #editSend {
   width: 70%;
   margin: 30px auto;
   text-align: right;
 }
-/* line 114, ../sass/style.scss */
+/* line 117, ../sass/style.scss */
 #mainWrapper #editSend input {
   margin-left: 20px;
 }
-/* line 122, ../sass/style.scss */
+/* line 125, ../sass/style.scss */
 #mainWrapper .flr {
   float: right;
 }
-/* line 125, ../sass/style.scss */
+/* line 128, ../sass/style.scss */
 #mainWrapper .mb30 {
   margin-bottom: 30px;
 }
