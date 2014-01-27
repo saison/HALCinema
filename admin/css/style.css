@@ -204,3 +204,7 @@ header #headerWrap {
 #mainWrapper .flr {
   float: right;
 }
+/* line 125, ../sass/style.scss */
+#mainWrapper .mb30 {
+  margin-bottom: 30px;
+}
