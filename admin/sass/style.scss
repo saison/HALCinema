@@ -101,6 +101,9 @@ header{
 		}
 		
 	}
+	.current{
+		background:#ccc;
+	}
 	/* end list table style */
 
 	/* edit style */
@@ -113,5 +116,10 @@ header{
 		}
 	}
 	/* end edit style */
+	
 
+
+	.flr{
+		float: right;
+	}
 }

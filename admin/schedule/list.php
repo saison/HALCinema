@@ -79,7 +79,7 @@
 		$pageCount = 1;//ページ
     while($pageAllCount>0){
 			if($nowPage==$pageCount){//今見てるページだったとき
-				echo "<span class='btn btn-default'>".$pageCount."</span>";
+				echo "<span class='btn btn-default current'>".$pageCount."</span>";
 				echo "　";
 			}else{
 				echo "<a class='btn btn-default' href='list.php?nowPage=".$pageCount."'>".$pageCount."</a>";
