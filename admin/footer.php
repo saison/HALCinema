@@ -3,11 +3,9 @@
 ?>
 	</div><!-- /#mainWrapper -->	
 	<!-- footer start -->
-	<footer>
-
+	<footer id="footer">
+		Copyright &copy; 2014 HALCinema All Rights Reserved.
 	</footer>
 	<!-- footer end -->
-
-
 </body>
 </html>
