@@ -1,4 +1,5 @@
 <?PHP
+	$pageTitle="";
 	require_once("../header.php");
 ?>
 	<h2>HALCinema管理画面</h2>

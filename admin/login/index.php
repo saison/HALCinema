@@ -1,4 +1,5 @@
 <?PHP
+	$pageTitle="ログイン";
 	require_once("../header.php");
 ?>
 	

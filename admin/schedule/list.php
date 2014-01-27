@@ -1,4 +1,5 @@
 <?PHP
+	$pageTitle="上映スケジュール一覧";
 	require_once("../header.php");
 	require_once("../../tokyo/module/functions.php");
 	$con = getConnection();
@@ -28,7 +29,7 @@
 				<!-- ここの中身をループして出してね -->
 				<?PHP
 					$scheduleCount = 0;//上映スケジュール件数
-					$scheduleListSql = "SELECT*FROM show_schedule" ;
+					$scheduleListSql = "SELECT * FROM show_schedule" ;
 					$scheduleListResult = mysqli_query($con,$scheduleListSql);	
 					while(($rowScheduleList = mysqli_fetch_array($scheduleListResult)) != false){
 					$scheduleCount++;
