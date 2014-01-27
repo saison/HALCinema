@@ -1,4 +1,5 @@
 <?PHP
+	$pagetitle="";
 	require_once("../header.php");
 ?>
 	

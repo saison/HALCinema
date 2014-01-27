@@ -1,4 +1,5 @@
 <?PHP
+	$pageTitle="上映スケジュール一覧";
 	require_once("../header.php");
 	require_once("../../tokyo/module/functions.php");
 	$con = getConnection();
