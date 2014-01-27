@@ -104,6 +104,9 @@ header{
 	.current{
 		background:#ccc;
 	}
+	.deleted, .deleted th, .deleted td{
+		background: #6c6c6c !important;
+	}
 	/* end list table style */
 
 	/* edit style */
