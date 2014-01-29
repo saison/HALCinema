@@ -3,8 +3,10 @@
 	require_once("../header.php");
 ?>
 	<h2>HALCinema管理画面</h2>
+	
+	<h3>サイトマップ</h3>
 	<ul>
-		<li><a href="/index.php">TOPページ</a>　top/index.php(現在いる位置）</li>
+		<li><a href="./index.php">TOPページ</a>　top/index.php(現在いる位置）</li>
 		<li><a href="../login/index.php">ログイン</a>　login/index.php</li>
 		<li><a href="../movie/list.php">映画一覧ページ</a>　movie/list.php</li>
 		<li><a href="../movie/details.php">映画詳細ページ</a>　movie/details.php</li>

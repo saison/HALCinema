@@ -3,6 +3,7 @@
 	$filename = dirname($_SERVER['PHP_SELF'])."/".basename($_SERVER['PHP_SELF']);
 	print $filename;
 	if(!$filename=="/HALCinema/admin/login/index.php"){
+		print "<br>if通過<br>";
 		if(!isset($_SESSION["userID"])){
 			header("location:../login/index.php?error=session");
 			exit();
