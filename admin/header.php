@@ -1,18 +1,17 @@
 <?PHP
-	session_start();
+	require_once('../../tokyo/module/functions.php');
 	$filename = dirname($_SERVER['PHP_SELF'])."/".basename($_SERVER['PHP_SELF']);
-	print $filename;
-	if(!$filename=="/HALCinema/admin/login/index.php"){
-		if(!isset($_SESSION["userID"])){
-			header("location:../login/index.php?error=session");
-			exit();
-		}
-	}
+ 	var_dump($filename);
+	var_dump($_SESSION["userID"]);
+//		if (!isset($_SESSION["userID"])) {
+//			header("location:../login/index.php?error=session");
+//			exit();
+//		}
 ?>
 <?php 
-	if(isset($_SESSION["userID"])){
-		echo "<br>".$_SESSION["userID"];
-	}
+//	if(isset($_SESSION["userID"])){
+//		echo "<br>".$_SESSION["userID"];
+//	}
 ?>
 
 <!DOCTYPE html>
@@ -20,11 +19,10 @@
 <head>
 	<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-	<link rel="stylesheet" href="../css/bootstrap.min.css" media="screen">
 	<link rel="stylesheet" href="../css/style.css" media="all">
+	<link rel="stylesheet" href="../css/bootstrap.min.css" media="screen">
 	<script src="../js/jquery-1.10.2.min.js"></script>
 	<script src="../js/bootstrap.min.js"></script>
-	<script src="../js/footerFixed.js"></script>
 	<title>
 		<?PHP if($pageTitle != ""){ echo $pageTitle." | "; } ?>HALCinema管理者サイト
 	</title>
@@ -39,3 +37,20 @@
 	</header>
 	<!-- header end -->
 	<div id="mainWrapper">
+	<aside id="sidemenu">
+		<nav>
+			<ul>
+				<li><a href="">めにゅー</a></li>
+				<li><a href="">めにゅー</a></li>
+				<li><a href="">めにゅー</a></li>
+				<li><a href="">めにゅー</a></li>
+				<li><a href="">めにゅー</a></li>
+				<li><a href="">めにゅー</a></li>
+				<li><a href="">めにゅー</a></li>
+				<li><a href="">めにゅー</a></li>
+				<li><a href="">めにゅー</a></li>
+			</ul>
+		</nav>
+	</aside>
+	
+	<div id="mainContent">
