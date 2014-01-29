@@ -24,14 +24,10 @@
 	<link rel="stylesheet" href="../css/style.css" media="all">
 	<script src="../js/jquery-1.10.2.min.js"></script>
 	<script src="../js/bootstrap.min.js"></script>
-<<<<<<< HEAD
 	<script src="../js/footerFixed.js"></script>
-	<title>template</title>
-=======
 	<title>
 		<?PHP if($pageTitle != ""){ echo $pageTitle." | "; } ?>HALCinema管理者サイト
 	</title>
->>>>>>> 0127_yu_schedulelist2
 </head>
 <body>
 	<!-- header start -->
