@@ -3,26 +3,70 @@
 @import "compass/reset";
 @import "compass";
 
+.clearfix{
+	@include clearfix;
+}
+
 header{
 	background:#dddddd;
 	height:60px;
 	line-height:60px;
-	margin-bottom:40px;
 	#headerWrap{
 		width:96%;
 		height:60px;
 		margin:0 auto;
 		color:#ffffff;
+		h1{
+			margin:0;
+		}
 	}
 }
 
 #mainWrapper{
-	width:96%;
+	width:100%;
+	display: inline-block;
+	background:#3c3c3c;
 	margin:0 auto;
+	#sidemenu{
+		width:15%;
+		float: left;
+		nav{
+			width:100%;
+			ul{
+				width:100%;
+				li{
+					line-height:40px;
+					width:100%;
+					a{
+						display: inline-block;
+						color:#ffffff;
+						width:100%;
+						padding-left:5%;
+						line-height:40px;
+						&:hover{
+							background:#C0392B;
+						}
+					}
+				}
+			}
+		}
+	}
+	#mainContent{
+		background:#ffffff;
+		height: auto;
+		min-height:800px;
+		width:85%;
+		padding-left:2%;
+		padding-right:2%;
+		float: left;
+		padding-top:20px;
+		padding-bottom:20px;
+	}
 	
 	h2{
 		font-size:30px;
 		font-weight:bold;
+		margin-top:0;
 		margin-bottom:40px;
 	}
 	#editButton{
@@ -131,12 +175,13 @@ header{
 }
 
 footer{
-	margin-top:20px;
 	background:#3c3c3c;
 	font-size:12px;
 	color:#ffffff;
 	height:40px;
 	line-height:40px;
 	width:100%;
+	clear: both;
 	text-align: center;
+	margin-top:-5px;
 }
