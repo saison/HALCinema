@@ -40,15 +40,17 @@
 	<aside id="sidemenu">
 		<nav>
 			<ul>
-				<li><a href="">めにゅー</a></li>
-				<li><a href="">めにゅー</a></li>
-				<li><a href="">めにゅー</a></li>
-				<li><a href="">めにゅー</a></li>
-				<li><a href="">めにゅー</a></li>
-				<li><a href="">めにゅー</a></li>
-				<li><a href="">めにゅー</a></li>
-				<li><a href="">めにゅー</a></li>
-				<li><a href="">めにゅー</a></li>
+				<?php
+					$pageurl=array("../top/","../movie/list.php","../movie/register.php","../schedule/list.php","../schedule/register.php","../schedule/csvRegister.php","../user/list.php","../pdf/index.php","../developer/sitemap.php");
+					$paget=array("TOP","映画一覧","映画登録","上映スケジュール一覧","上映スケジュール登録","上映スケジュールCSV登録","ユーザ一覧","PDF出力","【開発者専用】<br>サイトマップ");
+				for($i=0;$i<count($paget);$i++){
+					if($pageTitle==$paget[$i]){
+						echo "<li class='current'>".$paget[$i]."</li>\r\n";
+					}else{
+						echo "<li><a href='".$pageurl[$i]."'>".$paget[$i]."</a></li>\r\n";
+					}
+				}
+				?>
 			</ul>
 		</nav>
 	</aside>
