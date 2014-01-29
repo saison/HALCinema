@@ -1,23 +1,12 @@
 <?PHP
 	require_once('../../tokyo/module/functions.php');
 	$filename = dirname($_SERVER['PHP_SELF'])."/".basename($_SERVER['PHP_SELF']);
-<<<<<<< HEAD
  	var_dump($filename);
 	var_dump($_SESSION["userID"]);
 //		if (!isset($_SESSION["userID"])) {
 //			header("location:../login/index.php?error=session");
 //			exit();
 //		}
-=======
-	print $filename;
-	if(!$filename=="/HALCinema/admin/login/index.php"){
-		print "<br>if通過<br>";
-		if(!isset($_SESSION["userID"])){
-			header("location:../login/index.php?error=session");
-			exit();
-		}
-	}
->>>>>>> b133f99fbcd398b72f4f118fdba843ed69828db2
 ?>
 <?php 
 //	if(isset($_SESSION["userID"])){
