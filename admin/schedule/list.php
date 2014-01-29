@@ -32,7 +32,7 @@
 					$scheduleListSql = "SELECT * FROM show_schedule" ;
 					$scheduleListResult = mysqli_query($con,$scheduleListSql);	
 					while(($rowScheduleList = mysqli_fetch_array($scheduleListResult)) != false){
-					$scheduleCount++;
+						$scheduleCount++;
 					}
 					
 					
@@ -59,7 +59,7 @@
 				?>
 				<tr>	
 					<td><?PHP echo $rowScheduleList [0]; ?></td>
-					<td><a href="details.php?id=<?PHP echo $rowScheduleList[1];?>"><?PHP echo $rowMovieTitleResult[0];?></a></td>
+					<td><a href="details.php?id=<?PHP echo $rowScheduleList[0];?>"><?PHP echo $rowMovieTitleResult[0];?></a></td>
 					<td><?PHP echo $rowScheduleList [4]; ?></td>
 					<td><?PHP echo $rowScheduleList [3]; ?></td>
 					<td><?PHP echo date("H:i",strtotime($showTimeJp,strtotime($rowScheduleList [3])));?></td>
