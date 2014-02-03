@@ -1,9 +1,10 @@
 <?PHP
+	$pageTitle="映画一覧";
 	require_once("../header.php");
 ?>
 	
 	<!-- main start -->
-		<h2>映画リスト<a href="register.php" id="newButton" class="btn btn-success"><span class="glyphicon glyphicon-plus"></span>新規登録</a></h2>
+		<h2>映画一覧<a href="register.php" id="newButton" class="btn btn-success"><span class="glyphicon glyphicon-plus"></span>新規登録</a></h2>
 		<!-- movie list table -->
 		<table class="table table-striped table-bordered table-condensed listTable">
 			<thead>
@@ -22,27 +23,52 @@
 			</thead>
 			
 			<tbody>
-				<!-- ここの中身をループして出してね -->
-				<?PHP for($i = 0; $i < 5; $i++): ?>
-				<tr>	
-					<td>id</td>
-					<td>
-						<a href="details.php?id=1">タイトル</a>
-						<span class="label label-success">公開中</span>
-						<span class="label label-default">終了</span>
-						<span class="label label-primary">公開前</span>
-					</td>
-					<td><img src="" alt=""></td>
-					<td>2014/01/22</td>
-					<td>2014/01/23</td>
-					<td>150分</td>
-					<td class="description">ダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミー</td>
-					<td>鈴木うーま</td>
-					<td>ウーマ・キックス</td>
-					<td><a href="edit.php?id=1" class="btn btn-primary"><span class="glyphicon glyphicon-pencil"></span>編集 & 削除</a></td>
-				</tr>
-				<?PHP endfor; ?>
-				<!-- ここの中身をループして出してね -->
+            	<?PHP
+					//MySQLサーバー接続
+					$con=mysqli_connect('localhost','halcinema','halcinema');
+						//文字コード設定
+						if($con!=false){
+							mysqli_set_charset($con,'utf8');
+						//データベース選択
+						$isSuccess =mysqli_select_db($con, 'halcinema');	
+						if($isSuccess){
+							$result =mysqli_query($con,"SELECT * FROM cinema_master");
+							while(($row = mysqli_fetch_array($result)) != false){
+								$cinemaId = $row[0];
+								$cinemaName = $row[1];
+								$startDay = str_replace("-","/",$row[2]);
+								$endDay = str_replace("-","/",$row[3]);
+								$runningTime = $row[4];
+								$cinemaDescription = $row[5];
+								$movieDirector = $row[6];
+								$moviePerfomer = $row[7];
+								$mainPhoto = $row[8];
+								
+				  				echo "<tr>";	
+				  					echo "<td>".$cinemaId."</td>";
+				  					echo "<td>";
+				  						echo "<a href='details.php?id=".$cinemaId."'>".$cinemaName."</a>";
+				  						echo "<span class='label label-success'>公開中</span>";
+				  						echo "<span class='label label-default'>終了</span>";
+				  						echo "<span class='label label-primary'>公開前</span>";
+				  					echo "</td>";
+				  					echo "<td><img src='../../tokyo/movie/images/".$mainPhoto."' alt=''></td>";
+				  					echo "<td>".$startDay."</td>";
+				  					echo "<td>".$endDay."</td>";
+				  					echo "<td>".$runningTime."分</td>";
+				  					echo "<td class='description'>".$cinemaDescription."</td>";
+				  					echo "<td>".$movieDirector."</td>";
+				  					echo "<td>".$moviePerfomer."</td>";
+				  					echo "<td><a href='edit.php?id=".$cinemaId."' class='btn btn-primary'><span class='glyphicon glyphicon-pencil'></span>編集 & 削除</a></td>";
+				  				echo "</tr>";
+							}
+										
+						}		
+						//サーバー切断				
+						mysqli_close($con);		
+					}   
+				?>
+           
 			</tbody>
 
 		</table>
