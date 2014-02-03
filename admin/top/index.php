@@ -3,7 +3,17 @@
 	require_once("../header.php");
 ?>
 	<h2>HALCinema管理画面</h2>
-	
+
+	<div class="row">
+  	<div class="col-md-4">
+			<h3>現在上映している映画</h3>
+		
+		</div>
+  	<div class="col-md-8">
+			<h3>今日の上映映画</h3>
+		
+		</div>
+	</div>
 	<h3>サイトマップ</h3>
 	<ul>
 		<li><a href="./index.php">TOPページ</a>　top/index.php(現在いる位置）</li>
