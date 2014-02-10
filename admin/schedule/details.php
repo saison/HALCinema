@@ -37,6 +37,14 @@
 	$endTime=date("H:i",strtotime($showTimeJp,strtotime($startTime)));
 
 	mysqli_close($con);
+	
+	$_SESSION['showId'] = $showId;//上映ＩＤ
+	$_SESSION['cinemaName'] = $cinemaName;//映画名
+	$_SESSION['showDay'] = $showDay;//上映日
+	$_SESSION['startTime'] = $startTime;//上映開始時間
+	$_SESSION['endTime'] = $endTime;//上映終了時間
+	$_SESSION['screen'] = $screen;//スクリーン
+	
 
 ?>
 	
@@ -68,7 +76,7 @@
 					<td><?PHP echo $endTime;?></td>
 					<td>Screen<?PHP echo $screen; ?></td>
 					<td>
-						<a href="../schedule/edit.php?id=1" class="btn btn-primary"><span class="glyphicon glyphicon-pencil"></span>編集 & 削除</a>
+						<a href="../schedule/edit.php?id=<?PHP echo $showId; ?>" class="btn btn-primary"><span class="glyphicon glyphicon-pencil"></span>編集 & 削除</a>
 					</td>
 				</tr>
 				<!-- ここの中身をループして出してね -->
