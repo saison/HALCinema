@@ -1,10 +1,10 @@
 <?PHP
-	$pageTitle="ユーザー一覧";
+	$pageTitle="ユーザ一覧";
 	require_once("../header.php");
 ?>
 	
 	<!-- main start -->
-		<h2>ユーザーリスト</h2>
+		<h2>ユーザ一覧</h2>
 		<!-- movie list table -->
 		<table class="table table-striped table-bordered table-condensed listTable">
 			<thead>
