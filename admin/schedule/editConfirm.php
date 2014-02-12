@@ -1,25 +1,26 @@
 <?PHP
+	$pageTitle="上映スケジュール確認";
 	require_once("../header.php");
-	if(isset($_SESSION['year'])){
+	if(isset($_SESSION['editCheckYear'])){
 	
-		$year = $_SESSION['year'];
-		$month = $_SESSION['month'];
+		$year = $_SESSION['editCheckYear'];
+		$month = $_SESSION['editCheckMonth'];
 		if(strlen($month)==1){
 			$month="0".$month;
 		}
-		$day = $_SESSION['day'];
+		$day = $_SESSION['editCheckDay'];
 		if(strlen($day)==1){
 			$day="0".$day;
 		}
-		$startHour = $_SESSION['startHour'];
+		$startHour = $_SESSION['editCheckStartHour'];
 		if(strlen($startHour)==1){
 			$startHour="0".$startHour;
 		}
-		$startMin = $_SESSION['startMin'];
+		$startMin = $_SESSION['editCheckStartMin'];
 		if(strlen($startMin)==1){
 			$startMin="0".$startMin;
 		}
-		$cinemaId = $_SESSION['cinemaId'];
+		$cinemaId = $_SESSION['editCheckCinemaId'];
 		$con = getConnection();
 		$movieSql = "SELECT * FROM cinema_master WHERE cinema_id = '{$cinemaId}'";
 		$movieSqlResult = mysqli_query($con,$movieSql);
@@ -28,19 +29,19 @@
 		$cinemaName = $rowMovieSqlResult['cinema_name'];
 		mysqli_close($con);
 		
-		$screen = $_SESSION['scNum'];
+		$screen = $_SESSION['editCheckScNum'];
 		
-		$_SESSION['registerShowId'] = $_SESSION['showId'];
-		$_SESSION['registerCinemaId'] = $cinemaId;
-		$_SESSION['registerShowDay'] = $year."-".$month."-".$day;
-		$_SESSION['registerStartTime'] = $startHour.":".$startMin.":00";
-		$_SESSION['registerScreen'] = "sc000".$screen;
+		$_SESSION['editShowId'] = $_SESSION['showId'];
+		$_SESSION['editCinemaId'] = $cinemaId;
+		$_SESSION['editShowDay'] = $year."-".$month."-".$day;
+		$_SESSION['editStartTime'] = $startHour.":".$startMin.":00";
+		$_SESSION['editScreen'] = "sc000".$screen;
 				
 	}
 ?>
 	
 	<!-- main start -->
-	<h2><?PHP echo "映画スケジュール" ?> - 確認</h2>
+	<h2><?PHP echo "上映スケジュール" ?> - 確認</h2>
 		<!-- movie list table -->
 		<form action="editSql.php" method="post">
 		<table id="editTable" class="table table-striped table-bordered table-condensed listTable">

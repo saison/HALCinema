@@ -8,18 +8,16 @@
 		$startHour = $_POST['startHour'];//開始時間　時
 		$startMin = $_POST['startMin'];//開始時間　分
 		$screen = $_POST['screen'];//スクリーン
-		$cinemaId = $_POST['cinemaId'];
 		
-		$_SESSION['editCheckYear'] = $year;
-		$_SESSION['editCheckMonth'] = $month;
-		$_SESSION['editCheckDay'] = $day;
-		$_SESSION['editCheckStartHour'] = $startHour;
-		$_SESSION['editCheckStartMin'] = $startMin;
-		$_SESSION['editCheckScNum'] = $screen;
-		$_SESSION['editCheckCinemaId'] = $cinemaId;
+		$_SESSION['registerCheckYear'] = $year;
+		$_SESSION['registerCheckMonth'] = $month;
+		$_SESSION['registerCheckDay'] = $day;
+		$_SESSION['registerCheckStartHour'] = $startHour;
+		$_SESSION['registerCheckStartMin'] = $startMin;
+		$_SESSION['registerCheckScNum'] = $screen;
 		
 	}else{
-		header("Location:list.php");
+		header("Location:register.php");
 	}
 	
 	//入力チェック
@@ -53,10 +51,10 @@
 	}
 	
 	if(count($errorArray)==0){//エラーなし
-		header("Location:editConfirm.php");
+		header("Location:registerConfirm.php");
 	}else{
 		$errorArray += array('error'=>'1');
-		header("Location:edit.php?".http_build_query($errorArray)."");
+		header("Location:registerDetail.php?".http_build_query($errorArray)."");
 	}
 
 
