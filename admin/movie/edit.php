@@ -1,4 +1,5 @@
 <?PHP
+	$pageTitle="映画情報編集";
 	require_once("../header.php");
 ?>
 	
