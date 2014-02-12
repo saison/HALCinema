@@ -28,7 +28,7 @@
             $index = $_GET["page"];
           }
 
-          $listSelect = "SELECT * FROM show_schedule INNER JOIN cinema_master ON show_schedule.cinema_id = cinema_master.cinema_id ORDER BY show_schedule.show_day DESC , show_schedule.start_time DESC  LIMIT ". $index*50 .",50";
+          $listSelect = "SELECT * FROM show_schedule INNER JOIN cinema_master ON show_schedule.cinema_id = cinema_master.cinema_id ORDER BY show_schedule.show_id ASC LIMIT ". $index*50 .",50";
           $listSelectResult = mysqli_query($con, $listSelect);
 
           if ($listSelectResult != false):
