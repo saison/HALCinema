@@ -5,7 +5,10 @@
 	if(isset($_GET['id'])){//スケジュール詳細から飛んできた時
 		
 		$showId = $_SESSION['showId'];
-		$cinemaName = $_SESSION['cinemaName'];//映画名
+		
+		//映画名
+		$cinemaName = $_SESSION['cinemaName'];
+		
 		$showDay = $_SESSION['showDay'];//上映日
 		$startTime = $_SESSION['startTime'];//上映開始時間
 		$endTime = $_SESSION['endTime'];//上映終了時間

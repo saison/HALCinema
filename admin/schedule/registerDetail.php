@@ -69,7 +69,7 @@
 ?>
 	
 	<!-- main start -->
-	<h2><?PHP echo "上映スケジュール" ?> - 新規追加 - 追加詳細<a href="register.php" id="newButton" class="flr btn btn-success"><span class="glyphicon glyphicon-log-in"></span>CSVファイルで追加</a></h2>
+	<h2><?PHP echo "上映スケジュール" ?> - 新規追加 - 追加詳細</h2>
     <?PHP echo $error;?>
     
 		<form action="registerDetailCheck.php" method="post">
