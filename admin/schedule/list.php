@@ -53,7 +53,7 @@
 
     <!-- 前へボタン -->
     <div class="btn-group">
-    <?PHP if ($_GET["page"] != 1 && isset($_GET["page"])): //もし１ページじゃ無かったら前へを表示?>
+    <?PHP if ($_GET["page"] != 1 && isset($_GET["page"])):?>
     <a class="btn btn-default" href="list.php?page=<?PHP echo $_GET["page"]-1; ?>" >前へ</a>
     <?PHP endif; ?>
     </div>
@@ -98,7 +98,7 @@
     <!-- 次へボタン -->
     <div class="btn-group">
     <?PHP
-      if ($_GET["page"] != $count-1): //もし最後のページじゃなかったら表示
+      if ($_GET["page"] != $count-1):
         if (isset($_GET["page"])) {
           $afterPage = $_GET["page"];
         } else {
