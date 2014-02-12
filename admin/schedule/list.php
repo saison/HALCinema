@@ -86,7 +86,7 @@
         $lastPage = ceil($rowCount[0]/50);
       }
 
-      for ($count = $index; $count <= $lastPage; $count++):
+      for ($count = $index; $count < $lastPage; $count++):
     ?>
     <?PHP if ($index == $count): ?>
       <span class='btn btn-default current'><?PHP echo $count; ?></span>
