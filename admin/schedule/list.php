@@ -41,7 +41,7 @@
         <tr>
           <td><?PHP echo $rowList["show_id"]; ?></td>
           <td><a href="details.php?id=<?PHP echo $rowList["show_id"]; ?>"><?PHP echo $rowList["cinema_name"]; ?></a></td>
-          <td><?PHP echo $rowList["start_day"]; ?></td>
+          <td><?PHP echo $rowList["show_day"]; ?></td>
           <td><?PHP echo substr($rowList["start_time"],0,5); ?></td>
           <td><?PHP echo date("H:i",strtotime($showTimeJp,strtotime($rowList["start_time"])));?></td>
           <td>スクリーン<?PHP echo substr($rowList["screen_id"],5,1); ?></td>
