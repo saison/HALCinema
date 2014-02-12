@@ -20,15 +20,15 @@
 		$startHour = $startTime[0];
 		$startMin = $startTime[1];
 		
-	}else if(isset($_SESSION['year'])){//チェックで戻ってきたとき
+	}else if(isset($_GET['error'])){//チェックで戻ってきたとき
 	
-		$year = $_SESSION['year'];
-		$month = $_SESSION['month'];
-		$day = $_SESSION['day'];
-		$startHour = $_SESSION['startHour'];
-		$startMin = $_SESSION['startMin'];
-		$screen = $_SESSION['scNum'];
-		$cinemaId = $_SESSION['cinemaId'];
+		$year = $_SESSION['editCheckYear'];
+		$month = $_SESSION['editCheckMonth'];
+		$day = $_SESSION['editCheckDay'];
+		$startHour = $_SESSION['editCheckStartHour'];
+		$startMin = $_SESSION['editCheckStartMin'];
+		$screen = $_SESSION['editCheckScNum'];
+		$cinemaId = $_SESSION['editCheckCinemaId'];
 		
 		$con = getConnection();
 		$movieSql = "SELECT * FROM cinema_master WHERE cinema_id = '{$cinemaId}'";
@@ -55,29 +55,20 @@
 	if(isset($_GET['day'])){
 		$error .="<p>上映日が間違っています。</p>";
 	}
-	if(isset($_GET['startEnd'])){
-		$error .="<p>開始時間と終了時間が矛盾しています。</p>";
-	}
 	if(isset($_GET['startHour'])){
 		$error .="<p>開始時間が間違っています。（時）</p>";
 	}
 	if(isset($_GET['startMin'])){
 		$error .="<p>開始時間が間違っています。（分）</p>";
 	}
-	if(isset($_GET['endHour'])){
-		$error .="<p>終了時間が間違っています。（時）</p>";
-	}
-	if(isset($_GET['endMin'])){
-		$error .="<p>終了時間が間違っています。（分）</p>";
-	}
 	if(isset($_GET['screen'])){
-		$error .="<p>スクリーンは1～8の半角数字で入力して下さい。</p>";
+		$error .="<p>スクリーンが選択されていません。</p>";
 	}
 
 ?>
 	
 	<!-- main start -->
-	<h2><?PHP echo "映画スケジュール" ?> - 編集</h2>
+	<h2><?PHP echo "上映スケジュール" ?> - 編集</h2>
     <?PHP echo $error;?>
 		<!-- movie list table -->
 		<form action="editCheck.php" method="post">
@@ -85,7 +76,6 @@
        			 <tr>
 					<th>上映ID</th>
 					<td><?PHP echo $_SESSION['showId'];?></td>
-					<td class="info">映画ID ex)xxxxxxxx </td>
 				</tr>
 				<tr>
 					<th>映画名</th>
@@ -100,33 +90,46 @@
 							}else{
 								echo "<option value='".$rowMovieSqlResult['cinema_id']."'>".$rowMovieSqlResult['cinema_name']."</option>";		
 							}
-						}
-						mysqli_close($con);		
+						}		
 					?>
                     </select></td>
-					<td class="info">映画ID ex)xxxxxxxx</td>
 				</tr>
 				<tr>
 					<th>上映日</th>
 					<td><input type="text" name="year" value="<?PHP echo $year;?>" style="width:50px; text-align:right;"> / <input type="text" name="month" value="<?PHP echo $month;?>"  style="width:25px; text-align:right;"> / <input type="text" name="day" value="<?PHP echo $day;?>"  style="width:25px;"></td>
-					<td class="info">映画ID ex)xxxxxxxx</td>
 				</tr>
 				<tr>
 					<th>上映開始時間</th>
 					<td><input type="text" name="startHour" value="<?PHP echo $startHour;?>" style="width:25px; text-align:right;">：<input type="text" name="startMin" value="<?PHP echo $startMin;?>"  style="width:25px;"></td>
-					<td class="info">映画ID ex)xxxxxxxx</td>
 				</tr>
 				<tr> 
 					<th>スクリーン</th>
-					<td><input type="text" name="screen" value="<?PHP echo $screen;?>"></td>
-					<td class="info">映画ID ex)xxxxxxxx</td>
+					<td>
+                        <select name="screen">
+                            <option value="0" >選択して下さい。</option>
+                            <?PHP
+                                $screenSql = "SELECT screen_number FROM screen_master WHERE theater_id='th0001'";
+                                $screenSqlResult = mysqli_query($con,$screenSql);
+                                
+                                while(($rowscreenSqlResult = mysqli_fetch_array($screenSqlResult))!=false){
+                                    if($screen==$rowscreenSqlResult['screen_number']){
+										echo "<option value='".$rowscreenSqlResult['screen_number']."' selected>".$rowscreenSqlResult['screen_number']."</option>";
+									}else{
+										echo "<option value='".$rowscreenSqlResult['screen_number']."'>".$rowscreenSqlResult['screen_number']."</option>";
+									}
+                                }
+                                mysqli_close($con);
+                                                    
+                            ?>
+                        </select>        
+            		</td>
 				</tr>
 		</table>
 		<div id="editSend">
-			<a href="delete.php" class="btn btn-danger btn-lg"><span class="glyphicon glyphicon-remove"></span>削除する</a>
+			<a href="delete.php?id=<?PHP echo $_SESSION['showId']; ?>" class="btn btn-danger btn-lg"><span class="glyphicon glyphicon-remove"></span>削除する</a>
 			<input type="submit" class="btn btn-primary btn-lg" value="確認画面へ" name="send"></div>
 		</form>
-        <a href="../schedule/edit.php?id=<?PHP echo $_SESSION['showId']; ?>" class="btn btn-primary"><span class="glyphicon glyphicon-pencil"></span>デフォルト</a>
+        <a href="edit.php?id=<?PHP echo $_SESSION['showId']; ?>" class="btn btn-primary"><span class="glyphicon glyphicon-pencil"></span>デフォルト</a>
 		<!-- /movie list table -->
 	<!-- main end -->
 
