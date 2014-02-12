@@ -37,6 +37,14 @@ header{
 				li{
 					line-height:40px;
 					width:100%;
+					&.current{
+						color:#ffffff;
+						font-weight:bold;
+						width:100%;
+						padding-left:5%;
+						line-height:40px;
+						background:#C0392B;
+					}
 					a{
 						display: inline-block;
 						color:#ffffff;
@@ -120,8 +128,9 @@ header{
 	.listTable{
 		margin-bottom:60px;	
 		.description{
-			width:300px;
+			width:400px;
 			word-break: break-all;	
+			text-align: left;
 		}
 		th{
 			font-weight: bold;
@@ -129,19 +138,15 @@ header{
 		}
 		td{
 			text-align: center;
+			&:nth-child(2),&:nth-child(6),&:nth-child(8){
+				white-space: nowrap;
+			}
 			img{
 				width:100px;
 			}
 		}
-		.description{
-			text-align: left;
-		}
 		.label{
 			margin-left:10px;
-		}
-		.info{
-			width:200px;
-			word-break: break-all;
 		}
 		
 	}
