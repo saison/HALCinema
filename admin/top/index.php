@@ -2,35 +2,32 @@
 	$pageTitle="TOP";
 	require_once("../header.php");
 ?>
+
+<blockquote>
+  <p class="bg-info"><a href="../developer/sitemap.php">【開発者専用】サイトマップ(FE/BE)はここから</a></p>
+</blockquote>
 	<h2>HALCinema管理画面</h2>
 
 	<div class="row">
   	<div class="col-md-4">
 			<h3>現在上映している映画</h3>
-		
 		</div>
   	<div class="col-md-8">
 			<h3>今日の上映映画</h3>
-		
+      <ul>
+      <?php
+      $con=getConnection();
+			$reserveSelectSql = "SELECT cinema_master.cinema_name AS cinemaName , cinema_master.cinema_id AS cinemaID , show_schedule.screen_id AS SID FROM cinema_master INNER JOIN show_schedule ON cinema_master.cinema_id = show_schedule.cinema_id WHERE show_schedule.show_day='".date("Y-m-d")."' GROUP BY cinema_master.cinema_name ORDER BY show_schedule.screen_id ASC";
+			$reserveSelectResult = mysqli_query($con,$reserveSelectSql);
+      while(($reserveSelectRow = mysqli_fetch_array($reserveSelectResult)) != false){
+		    echo "<li>スクリーン".substr($reserveSelectRow["SID"],-1,1)."　<a href='../movie/details.php?id=".$reserveSelectRow["cinemaID"]."'>";
+			 echo $reserveSelectRow["cinemaName"];
+			 echo "</a></li>";
+      }
+			?>
+      </ul>
 		</div>
 	</div>
-	<h3>サイトマップ</h3>
-	<ul>
-		<li><a href="./index.php">TOPページ</a>　top/index.php(現在いる位置）</li>
-		<li><a href="../login/index.php">ログイン</a>　login/index.php</li>
-		<li><a href="../movie/list.php">映画一覧ページ</a>　movie/list.php</li>
-		<li><a href="../movie/details.php">映画詳細ページ</a>　movie/details.php</li>
-		<li><a href="../movie/register.php">映画登録ページ</a>　movie/register.php</li>
-		<li><a href="../movie/edit.php">映画情報編集ページ</a>　movie/edit.php</li>
-		<li><a href="../movie/confirm.php">映画情報編集確認ページ</a>　movie/confirm.php</li>
-		<li><a href="../schedule/list.php">上映スケジュール一覧</a>　schedule/list.php</li>
-		<li><a href="../schedule/details.php">上映スケジュール詳細</a>　schedule/details.php</li>
-		<li><a href="../schedule/register.php">上映スケジュール登録</a>　schedule/register.php</li>
-		<li><a href="../schedule/edit.php">上映スケジュール編集</a>　schedule/edit.php</li>
-		<li><a href="../schedule/confirm.php">上映スケジュール編集確認</a>　schedule/confirm.php</li>
-		<li><a href="../user/list.php">ユーザ一覧</a>　user/list.php</li>
-		<li><a href="../user/pdf.php">PDF作成</a>　user/pdf.php</li>
-	</ul>
 
 <?PHP
 	require_once("../footer.php");
