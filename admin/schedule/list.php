@@ -28,7 +28,7 @@
             $index = $_GET["page"];
           }
 
-          $listSelect = "SELECT * FROM show_schedule INNER JOIN cinema_master ON show_schedule.cinema_id = cinema_master.cinema_id ORDER BY show_schedule.show_day DESC , show_schedule.start_time DESC  LIMIT ". $index*50 .",50";
+          $listSelect = "SELECT * FROM show_schedule INNER JOIN cinema_master ON show_schedule.cinema_id = cinema_master.cinema_id ORDER BY show_schedule.show_id ASC LIMIT ". $index*50 .",50";
           $listSelectResult = mysqli_query($con, $listSelect);
 
           if ($listSelectResult != false):
@@ -53,7 +53,7 @@
 
     <!-- 前へボタン -->
     <div class="btn-group">
-    <?PHP if ($_GET["page"] != 1 && isset($_GET["page"])):?>
+    <?PHP if ($_GET["page"] != 0 && isset($_GET["page"])):?>
     <a class="btn btn-default" href="list.php?page=<?PHP echo $_GET["page"]-1; ?>" >前へ</a>
     <?PHP endif; ?>
     </div>
@@ -72,12 +72,12 @@
 
       $startPage = $index-10;
       if($startPage < 1){
-        $startPage = 1;
+        $startPage = 0;
       }
 
       for ($count = $startPage; $count < $index; $count++):
     ?>
-      <a class='btn btn-default' href='list.php?page=<?PHP echo $count;?>'><?PHP echo $count; ?></a>
+      <a class='btn btn-default' href='list.php?page=<?PHP echo $count;?>'><?PHP echo $count+1; ?></a>
     <?PHP endfor; ?>
     <?PHP
 
@@ -89,9 +89,9 @@
       for ($count = $index; $count < $lastPage; $count++):
     ?>
     <?PHP if ($index == $count): ?>
-      <span class='btn btn-default current'><?PHP echo $count; ?></span>
+      <span class='btn btn-default current'><?PHP echo $count+1; ?></span>
     <?PHP else: ?>
-      <a class='btn btn-default' href='list.php?page=<?PHP echo $count;?>'><?PHP echo $count; ?></a>
+      <a class='btn btn-default' href='list.php?page=<?PHP echo $count;?>'><?PHP echo $count+1; ?></a>
     <?PHP endif; endfor; ?>
     </div>
 
