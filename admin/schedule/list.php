@@ -23,7 +23,7 @@
       <tbody>
         <?PHP
           //現ページを取得(ない場合は1)
-          $index = 1;
+          $index = 0;
           if (isset($_GET["page"])) {
             $index = $_GET["page"];
           }
