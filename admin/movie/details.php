@@ -1,5 +1,5 @@
 <?PHP
-  	$pageTitle="映画詳細";
+  	$pageTitle="映画一覧";
 	require_once("../header.php");
 	require_once("../../tokyo/module/functions.php");
 	$con = getConnection();
@@ -40,7 +40,7 @@
 						//データベース選択
 						$isSuccess =mysqli_select_db($con, 'halcinema');	
 						if($isSuccess){
-							$result =mysqli_query($con,"SELECT * FROM cinema_master");
+							$result =mysqli_query($con,"SELECT * FROM cinema_master WHERE cinema_id='{$_GET["id"]}'");
 							while(($row = mysqli_fetch_array($result)) != false){
 								$cinemaId = $row[0];
 								$cinemaName = $row[1];
@@ -99,7 +99,7 @@
 				<!-- ここの中身をループして出してね -->
 				<?PHP
 					$scheduleCount = 0;//上映スケジュール件数
-					$scheduleListSql = "SELECT * FROM show_schedule" ;
+					$scheduleListSql = "SELECT * FROM show_schedule WHERE cinema_id='{$_GET["id"]}'" ;
 					$scheduleListResult = mysqli_query($con,$scheduleListSql);	
 					while(($rowScheduleList = mysqli_fetch_array($scheduleListResult)) != false){
 					$scheduleCount++;
@@ -130,8 +130,8 @@
 				<tr>	
 					<td><?PHP echo $rowScheduleList [0]; ?></td>
 					<td><a href="details.php?id=<?PHP echo $rowScheduleList[1];?>"><?PHP echo $rowMovieTitleResult[0];?></a></td>
-					<td><?PHP echo $rowScheduleList [4]; ?></td>
-					<td><?PHP echo $rowScheduleList [3]; ?></td>
+					<td><?PHP echo str_replace('-','/',$rowScheduleList[4]); ?></td>
+					<td><?PHP echo substr($rowScheduleList[3],0,5); ?></td>
 					<td><?PHP echo date("H:i",strtotime($showTimeJp,strtotime($rowScheduleList [3])));?></td>
 					<td>スクリーン<?PHP echo mb_substr($rowScheduleList[2],5,1); ?></td>
                     <td>
