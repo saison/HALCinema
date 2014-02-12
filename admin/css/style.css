@@ -119,6 +119,15 @@ header #headerWrap h1 {
   width: 100%;
 }
 /* line 40, ../sass/style.scss */
+#mainWrapper #sidemenu nav ul li.current {
+  color: #ffffff;
+  font-weight: bold;
+  width: 100%;
+  padding-left: 5%;
+  line-height: 40px;
+  background: #C0392B;
+}
+/* line 48, ../sass/style.scss */
 #mainWrapper #sidemenu nav ul li a {
   display: inline-block;
   color: #ffffff;
@@ -126,11 +135,11 @@ header #headerWrap h1 {
   padding-left: 5%;
   line-height: 40px;
 }
-/* line 46, ../sass/style.scss */
+/* line 54, ../sass/style.scss */
 #mainWrapper #sidemenu nav ul li a:hover {
   background: #C0392B;
 }
-/* line 54, ../sass/style.scss */
+/* line 62, ../sass/style.scss */
 #mainWrapper #mainContent {
   background: #ffffff;
   height: auto;
@@ -142,27 +151,27 @@ header #headerWrap h1 {
   padding-top: 20px;
   padding-bottom: 20px;
 }
-/* line 66, ../sass/style.scss */
+/* line 74, ../sass/style.scss */
 #mainWrapper h2 {
   font-size: 30px;
   font-weight: bold;
   margin-top: 0;
   margin-bottom: 40px;
 }
-/* line 72, ../sass/style.scss */
+/* line 80, ../sass/style.scss */
 #mainWrapper #editButton {
   float: right;
   margin-bottom: 10px;
 }
-/* line 76, ../sass/style.scss */
+/* line 84, ../sass/style.scss */
 #mainWrapper #newButton {
   margin-left: 10px;
 }
-/* line 79, ../sass/style.scss */
+/* line 87, ../sass/style.scss */
 #mainWrapper .glyphicon {
   margin-right: 10px;
 }
-/* line 83, ../sass/style.scss */
+/* line 91, ../sass/style.scss */
 #mainWrapper #loginArea {
   width: 360px;
   padding-top: 20px;
@@ -179,95 +188,91 @@ header #headerWrap h1 {
   -o-border-radius: 5px;
   border-radius: 5px;
 }
-/* line 92, ../sass/style.scss */
+/* line 100, ../sass/style.scss */
 #mainWrapper #loginArea h2 {
   font-size: 20px;
   text-align: center;
 }
-/* line 99, ../sass/style.scss */
+/* line 107, ../sass/style.scss */
 #mainWrapper #loginForm p {
   margin-top: 20px;
   margin-bottom: 20px;
   line-height: 1.5em;
 }
-/* line 103, ../sass/style.scss */
+/* line 111, ../sass/style.scss */
 #mainWrapper #loginForm p input {
   width: 100%;
   height: 40px;
   line-height: 40px;
 }
-/* line 109, ../sass/style.scss */
+/* line 117, ../sass/style.scss */
 #mainWrapper #loginForm #loginButton {
   text-align: right;
 }
-/* line 116, ../sass/style.scss */
+/* line 124, ../sass/style.scss */
 #mainWrapper #editTable {
   width: 70%;
   margin: 0 auto;
 }
-/* line 120, ../sass/style.scss */
+/* line 128, ../sass/style.scss */
 #mainWrapper .listTable {
   margin-bottom: 60px;
 }
-/* line 122, ../sass/style.scss */
+/* line 130, ../sass/style.scss */
 #mainWrapper .listTable .description {
-  width: 300px;
+  width: 400px;
   word-break: break-all;
+  text-align: left;
 }
-/* line 126, ../sass/style.scss */
+/* line 135, ../sass/style.scss */
 #mainWrapper .listTable th {
   font-weight: bold;
   text-align: center !important;
 }
-/* line 130, ../sass/style.scss */
+/* line 139, ../sass/style.scss */
 #mainWrapper .listTable td {
   text-align: center;
 }
-/* line 132, ../sass/style.scss */
+/* line 141, ../sass/style.scss */
+#mainWrapper .listTable td:nth-child(2), #mainWrapper .listTable td:nth-child(6), #mainWrapper .listTable td:nth-child(8) {
+  white-space: nowrap;
+}
+/* line 144, ../sass/style.scss */
 #mainWrapper .listTable td img {
   width: 100px;
 }
-/* line 136, ../sass/style.scss */
-#mainWrapper .listTable .description {
-  text-align: left;
-}
-/* line 139, ../sass/style.scss */
+/* line 148, ../sass/style.scss */
 #mainWrapper .listTable .label {
   margin-left: 10px;
 }
-/* line 142, ../sass/style.scss */
-#mainWrapper .listTable .info {
-  width: 200px;
-  word-break: break-all;
-}
-/* line 148, ../sass/style.scss */
+/* line 153, ../sass/style.scss */
 #mainWrapper .current {
   background: #ccc;
 }
-/* line 151, ../sass/style.scss */
+/* line 156, ../sass/style.scss */
 #mainWrapper .deleted, #mainWrapper .deleted th, #mainWrapper .deleted td {
   background: #6c6c6c !important;
 }
-/* line 157, ../sass/style.scss */
+/* line 162, ../sass/style.scss */
 #mainWrapper #editSend {
   width: 70%;
   margin: 30px auto;
   text-align: right;
 }
-/* line 161, ../sass/style.scss */
+/* line 166, ../sass/style.scss */
 #mainWrapper #editSend input {
   margin-left: 20px;
 }
-/* line 169, ../sass/style.scss */
+/* line 174, ../sass/style.scss */
 #mainWrapper .flr {
   float: right;
 }
-/* line 172, ../sass/style.scss */
+/* line 177, ../sass/style.scss */
 #mainWrapper .mb30 {
   margin-bottom: 30px;
 }
 
-/* line 177, ../sass/style.scss */
+/* line 182, ../sass/style.scss */
 footer {
   background: #3c3c3c;
   font-size: 12px;
