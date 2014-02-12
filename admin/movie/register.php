@@ -1,4 +1,5 @@
 <?PHP
+  	$pageTitle="映画登録";
 	require_once("../header.php");
 ?>
 	

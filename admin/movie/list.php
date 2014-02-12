@@ -1,6 +1,10 @@
 <?PHP
 	$pageTitle="映画一覧";
 	require_once("../header.php");
+	//今日の日付取得
+	$today = date("Y-m-d");
+	
+	
 ?>
 	
 	<!-- main start -->
@@ -44,14 +48,18 @@
 								$moviePerfomer = $row[7];
 								$mainPhoto = $row[8];
 								
-				  				echo "<tr>";	
-				  					echo "<td>".$cinemaId."</td>";
-				  					echo "<td>";
-				  						echo "<a href='details.php?id=".$cinemaId."'>".$cinemaName."</a>";
-				  						echo "<span class='label label-success'>公開中</span>";
-				  						echo "<span class='label label-default'>終了</span>";
-				  						echo "<span class='label label-primary'>公開前</span>";
-				  					echo "</td>";
+				  				echo "<tr>";
+				  					echo "<td>".$cinemaId;
+									echo "<br />";
+										if($startDay > $today){
+											echo "<span class='label label-primary'>公開前</span>";
+										}else if($startDay <= $today && $endDay >= $today){
+				  							echo "<span class='label label-success'>公開中</span>";
+										}else if($endDay < $today){
+											echo "<span class='label label-default'>終了</span>";
+										}
+									echo "</td>";
+									echo "<td><a href='details.php?id=".$cinemaId."'>　".$cinemaName."</a></td>";
 				  					echo "<td><img src='../../tokyo/movie/images/".$mainPhoto."' alt=''></td>";
 				  					echo "<td>".$startDay."</td>";
 				  					echo "<td>".$endDay."</td>";
