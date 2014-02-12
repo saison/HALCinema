@@ -1,12 +1,9 @@
 <?PHP
 	require_once('../../tokyo/module/functions.php');
-	$filename = dirname($_SERVER['PHP_SELF'])."/".basename($_SERVER['PHP_SELF']);
- 	var_dump($filename);
-	var_dump($_SESSION["userID"]);
-//		if (!isset($_SESSION["userID"])) {
-//			header("location:../login/index.php?error=session");
-//			exit();
-//		}
+  if (!isset($_SESSION["userID"])) {
+    header("location:../login/index.php?error=session");
+    exit();
+}
 ?>
 <?php 
 //	if(isset($_SESSION["userID"])){
@@ -42,7 +39,7 @@
 			<ul>
 				<?php
 					$pageurl=array("../top/","../movie/list.php","../movie/register.php","../schedule/list.php","../schedule/register.php","../schedule/csvRegister.php","../user/list.php","../pdf/index.php","../developer/sitemap.php");
-					$paget=array("TOP","映画一覧","映画登録","上映スケジュール一覧","上映スケジュール登録","上映スケジュールCSV登録","ユーザ一覧","PDF出力","【開発者専用】<br>サイトマップ");
+					$paget=array("TOP","映画一覧","映画登録","上映スケジュール一覧","上映スケジュール登録","上映スケジュールCSV登録","ユーザ一覧","PDF出力","【開発者】サイトマップ(FE/BE)");
 				for($i=0;$i<count($paget);$i++){
 					if($pageTitle==$paget[$i]){
 						echo "<li class='current'>".$paget[$i]."</li>\r\n";

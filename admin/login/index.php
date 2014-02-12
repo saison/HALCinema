@@ -1,8 +1,40 @@
 <?PHP
 	$pageTitle="ログイン";
-	require_once("../header.php");
+  session_start();
+	//require_once("../header.php");
 ?>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" href="../css/style.css" media="all">
+	<link rel="stylesheet" href="../css/bootstrap.min.css" media="screen">
+	<script src="../js/jquery-1.10.2.min.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
+	<title>
+		<?PHP if($pageTitle != ""){ echo $pageTitle." | "; } ?>HALCinema管理者サイト
+	</title>
+</head>
+<body>
+	<!-- header start -->
+	<header>
+		<div id="headerWrap">
+			<h1><a href="../top/index.php"><img src="../images/logo.png" alt="HALCinema 管理者画面" /></a></h1>
+			<p id="userId"></p>
+		</div>
+	</header>
+	<!-- header end -->
+	<div id="mainWrapper">
+	<aside id="sidemenu">
+		<nav>
+			<ul>
 
+			</ul>
+		</nav>
+	</aside>
+	
+	<div id="mainContent">
 <article id="loginArea">
 	<h2>HALCinema管理画面ログイン</h2>
 	<?php
