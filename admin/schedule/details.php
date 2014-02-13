@@ -7,6 +7,12 @@
 	if(isset($_GET['id'])){
 		$showId = $_GET['id'];
 	}
+   $editResult = "";
+   if(isset($_GET['edit'])){
+   
+	   $editResult= "<p>編集完了しました。</p>";
+	  
+   }
 	//映画のスケジュール情報取得
 	$scheduleSql = "SELECT * FROM show_schedule WHERE  show_id = '{$showId}'" ;
 	$scheduleSqlResult = mysqli_query($con,$scheduleSql);
@@ -53,6 +59,7 @@
         <script src='../../tokyo/module/js/seat.js' /></script>
         <script src="../../tokyo/module/js/jquery.easing.1.3.js"></script>
 		<h2><?PHP echo "映画タイトル" ?> - スケジュール</h2>
+        <?PHP echo $editResult;?>
 		<table class="table table-striped table-bordered table-condensed listTable">
 			<thead>
 				<tr>

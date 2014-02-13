@@ -17,7 +17,7 @@
 	$nowTime=date("H:i");
 	//上映中の映画情報取得
 	$con=getConnection();
-	$selectShowSheduleSql="SELECT * FROM show_schedule WHERE show_day = '".date("Y-m-d")."' AND start_time < '".date("H:i:s")."' GROUP BY screen_id ORDER BY screen_id ASC , start_time DESC";
+	$selectShowSheduleSql="SELECT * FROM show_schedule WHERE show_day = '".date("Y-m-d")."' AND start_time < ".date("H:i:s")." GROUP BY screen_id ORDER BY screen_id ASC , start_time DESC";
 	$selectResultShowDate = mysqli_query($con,$selectShowSheduleSql);
 	while(($row = mysqli_fetch_array($selectResultShowDate)) != false){
 		//スクリーン番号
