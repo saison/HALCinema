@@ -1,7 +1,7 @@
 <?PHP
 	require_once("../../tokyo/module/functions.php");
 	$con=getConnection();
-	if(isset($_SESSION['editShowId'])){
+	if(isset($_POST['send'])){
 		$showId = $_SESSION['editShowId'];
 		$cinemaId = $_SESSION['editCinemaId'];
 		$con=getConnection();			
@@ -13,6 +13,6 @@
 			
 		$updateResult = mysqli_query($con,$updateSql);
 		mysqli_close($con);
-		header("Location:list.php");
+		header("Location:details.php?id=".$showId."&&edit=1");
 	}
 ?>

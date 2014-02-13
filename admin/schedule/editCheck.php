@@ -1,60 +1,95 @@
 <?PHP
 	require_once('../../tokyo/module/functions.php');
-	if(isset($_POST['send'])){
+	if(isset($_POST['send'])){// from edit.php
 		
-		$year = $_POST['year'];//上映日　年
-		$month = $_POST['month'];//上映日　月
-		$day = $_POST['day'];//上映日　日
-		$startHour = $_POST['startHour'];//開始時間　時
-		$startMin = $_POST['startMin'];//開始時間　分
+		$showId = $_POST['showId'];//上映ID
+		$showDay = $_POST['showDay'];//上映日
+		$startTime = $_POST['startTime'];//開始時間
 		$screen = $_POST['screen'];//スクリーン
-		$cinemaId = $_POST['cinemaId'];
+		$cinemaId = $_POST['cinemaId'];//映画ID
 		
-		$_SESSION['editCheckYear'] = $year;
-		$_SESSION['editCheckMonth'] = $month;
-		$_SESSION['editCheckDay'] = $day;
-		$_SESSION['editCheckStartHour'] = $startHour;
-		$_SESSION['editCheckStartMin'] = $startMin;
+		//セッションセット
+		$_SESSION['editCheckShowId'] = $showId;
+		$_SESSION['editCheckShowDay'] = $showDay;
+		$_SESSION['editCheckStartTime'] = $startTime;
 		$_SESSION['editCheckScNum'] = $screen;
 		$_SESSION['editCheckCinemaId'] = $cinemaId;
 		
-	}else{
+	}else{//form other
 		header("Location:list.php");
 	}
 	
-	//入力チェック
+	//エラー情報を入れる配列
 	$errorArray=array();
 
-	//数値かどうか
-	if(!is_numeric($year)||!is_numeric($month)||!is_numeric($day)||!is_numeric($startHour)||!is_numeric($startMin)){
-		$errorArray += array('type'=>'1');
+	//上映日のチェック
+	if(!preg_match('/^[0-9]{4}-[0-1][0-9]-[0-3][0-9]$/',$showDay)){//YYYY-MM-DDの形式チェック
+	
+		$errorArray += array('showDay'=>'1');
+		
+	}else{//具体的なチェック
+	
+		$checkShowday = explode('-',$showDay);
+		
+		//月のチェック
+		if($checkShowday[1]>12||$checkShowday[1]<1){
+			
+			$errorArray += array('showDay'=>'1');
+		
+		//日チェック
+		}else if($checkShowday[1]==2){
+			
+			//うるう年のチェック
+			if($checkShowday[0]%4 == 0 && $checkShowday[0]%100 != 0 || $checkShowday[0]%400 == 0){//うるう年です。
+			
+				if($checkShowday[2]>29||$checkShowday[2]<1){//29日まで
+					
+					$errorArray += array('showDay'=>'1');		
+					
+				}
+			}else{//うるう年じゃない
+				
+				if($checkShowday[2]>28||$checkShowday[2]<1){//28日まで	
+					
+					$errorArray += array('showDay'=>'1');		
+					
+				}	
+			}
+		}else if($checkShowday[1]==4||$checkShowday[1]==6||$checkShowday[1]==9||$checkShowday[1]==11){
+		
+			if($checkShowday[2]>30||$checkShowday[2]<1){//30日まで
+					
+				$errorArray += array('showDay'=>'1');		
+					
+			}			
+		}else{
+			if($checkShowday[2]>30||$checkShowday[2]<1){//31日まで
+					
+				$errorArray += array('showDay'=>'1');		
+					
+			}	
+		}
 	}
-	//上映年
-	if($year<=2000||$year>9999){
-		$errorArray += array('year'=>'1');
-	}
-	//上映月
-	if($month<1||$month>12){
-		$errorArray += array('month'=>'1');
-	}
-	//上映日
-	if($day<1||$day>31){
-		$errorArray += array('day'=>'1');
-	}
-	if($startHour>24||$startHour<0){
-		$errorArray += array('startHour'=>'1');	
-	}
-	if($startMin>60||$startMin<0){
-		$errorArray += array('startMin'=>'1');	
-	}
-	//スクリーン
-	if($screen==0){
-		$errorArray += array('screen'=>'1');
+	
+	//上映開始時間のチェック
+	if(!preg_match('/^[0-2][0-9]:[0-5][0-9]$/',$startTime)){
+		
+		$errorArray += array('startTime'=>'2');	
+		
+	}else{
+		
+		$checkStartTime = explode(':',$startTime);
+		
+		if($checkStartTime[0]>24){
+			
+			$errorArray += array('startTime'=>'1');		
+				
+		}	
 	}
 	
 	if(count($errorArray)==0){//エラーなし
-		header("Location:editConfirm.php");
-	}else{
+		header("Location:editConfirm.php?error=0");
+	}else{//エラーあり
 		$errorArray += array('error'=>'1');
 		header("Location:edit.php?".http_build_query($errorArray)."");
 	}
