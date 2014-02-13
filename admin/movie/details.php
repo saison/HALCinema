@@ -11,7 +11,7 @@
 ?>
 	
 		<!-- main start -->
-		<h2><?PHP echo "映画タイトル" ?> - 詳細<a href="edit.php?id=1" id="editButton" class="btn btn-primary"><span class="glyphicon glyphicon-pencil"></span>編集 & 削除</a>
+		<h2><?PHP echo "映画タイトル" ?> - 詳細<a href="edit.php?id=1" id="editButton" class="btn btn-primary"><span class="glyphicon glyphicon-pencil"></span>編集 & 削除</a><a href="【URLを入れてね】" id="editButton" class="btn btn-danger"><span class="glyphicon glyphicon-align-left"></span>PDF作成</a>　
 </h2>
 		<!-- movie details table -->
 			<table class="table table-striped table-bordered table-condensed listTable">
