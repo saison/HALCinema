@@ -19,11 +19,13 @@
 		
 		mysqli_close($con);
 				
+	}else{
+		header("Location:list.php");
 	}
 ?>
 	
 	<!-- main start -->
-	<h2><?PHP echo "上映スケジュール" ?> - 確認</h2>
+	<h2><?PHP echo $_SESSION['editCheckShowId']; ?> - 確認</h2>
 		<!-- movie list table -->
 		<form action="editSql.php" method="post">
 		<table id="editTable" class="table table-striped table-bordered table-condensed listTable">

@@ -8,6 +8,6 @@
 
 		$deleteResult = mysqli_query($con,$deleteSql);
 		mysqli_close($con);
-		header("Location:list.php");
+		header("Location:list.php?delete=1");
 	}
 ?>

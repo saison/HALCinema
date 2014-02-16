@@ -90,7 +90,7 @@
 
     </table>
 
-    <h2><?PHP echo "映画タイトル" ?> - 詳細<a href="edit.php?id=1" id="editButton" class="btn btn-primary"><span class="glyphicon glyphicon-pencil"></span>編集 & 削除</a>
+    <h2><?PHP echo "映画タイトル" ?> - 詳細<a href="../movie/edit.php?id=<?PHP echo $cinemaId;?>" id="editButton" class="btn btn-primary"><span class="glyphicon glyphicon-pencil"></span>編集 & 削除</a>
 </h2>
     <!-- movie details table -->
     <table class="table table-striped table-bordered table-condensed listTable">
