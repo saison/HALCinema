@@ -42,7 +42,7 @@
 
 ?>	
 	<!-- main start -->
-	<h2><?PHP echo "上映スケジュール" ?> - 編集</h2>
+	<h2><?PHP echo $showId; ?> - 編集</h2>
     <?PHP echo $error;?>
 		<!-- movie list table -->
 		<form action="editCheck.php" method="post">
@@ -90,8 +90,13 @@
 				</tr>
 				<tr>
 					<th>上映開始時間</th>
-					<td><input type="time" name="startTime" value="<?PHP echo $startTime;?>" required></td>
+                    <?PHP if(mb_ereg("Chrome",$agent))://chromeの時?>	
+                    <td><input type="time" name="startTime" value="<?PHP echo $startTime;?>" required></td>
+					<?PHP else: //chrome以外の場合 ?>
+                    <td><input type="time" name="startTime" value="<?PHP echo $startTime;?>" required></td>
                     <td class="info">ex)   hh:mm</td>
+                    <?PHP endif; ?>  
+					
 				</tr>
 				<tr> 
 					<th>スクリーン</th>
@@ -118,7 +123,7 @@
 				</tr>
 		</table>
 		<div id="editSend">
-			<a href="delete.php?id=<?PHP echo $_SESSION['showId']; ?>" class="btn btn-danger btn-lg"><span class="glyphicon glyphicon-remove"></span>削除する</a>
+			<a href="deleteSql.php?id=<?PHP echo $_SESSION['showId']; ?>" class="btn btn-danger btn-lg"><span class="glyphicon glyphicon-remove"></span>削除する</a>
             <input type="hidden" name="showId" value="<?PHP echo $showId;?>">
 			<input type="submit" class="btn btn-primary btn-lg" value="確認画面へ" name="send"></div>
         </form>

@@ -11,8 +11,8 @@
 		
 		$insertSql = "INSERT INTO show_schedule (show_id,cinema_id, show_day,start_time, screen_id) VALUE('{$showId}','{$cinemaId}','{$showDay}','{$startTime}','{$screen}')";
 
-		$updateResult = mysqli_query($con,$insertSql);
+		$insertResult = mysqli_query($con,$insertSql);
 		mysqli_close($con);
-		header("Location:list.php");
+		header("Location:list.php?register=1");
 	}
 ?>

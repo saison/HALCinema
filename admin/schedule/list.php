@@ -7,6 +7,12 @@
 
   <!-- main start -->
     <h2>スケジュールリスト</h2>
+    <?PHP if(isset($_GET['register'])):?>
+    <p>登録完了しました。</p>
+    <?PHP endif; ?>
+    <?PHP if(isset($_GET['delete'])):?>
+    <p>削除完了しました。</p>
+    <?PHP endif; ?>
     <!-- movie list table -->
     <table class="table table-striped table-bordered table-condensed listTable">
       <thead>

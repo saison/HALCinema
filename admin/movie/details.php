@@ -11,7 +11,7 @@
 ?>
 	
 		<!-- main start -->
-		<h2><?PHP echo "映画タイトル" ?> - 詳細<a href="edit.php?id=1" id="editButton" class="btn btn-primary"><span class="glyphicon glyphicon-pencil"></span>編集 & 削除</a><a href="【URLを入れてね】" id="editButton" class="btn btn-danger"><span class="glyphicon glyphicon-align-left"></span>PDF作成</a>　
+		<h2><?PHP echo "映画タイトル" ?> - 詳細<a href="edit.php?id=<?PHP echo $_GET['id'];?>" id="editButton" class="btn btn-primary"><span class="glyphicon glyphicon-pencil"></span>編集 & 削除</a><a href="【URLを入れてね】" id="editButton" class="btn btn-danger"><span class="glyphicon glyphicon-align-left"></span>PDF作成</a>　
 </h2>
 		<!-- movie details table -->
 			<table class="table table-striped table-bordered table-condensed listTable">
@@ -30,54 +30,26 @@
 			</thead>
 			
 			<tbody>
-				
-                <?PHP
-					//MySQLサーバー接続
-					$con=mysqli_connect('localhost','halcinema','halcinema');
-						//文字コード設定
-						if($con!=false){
-							mysqli_set_charset($con,'utf8');
-						//データベース選択
-						$isSuccess =mysqli_select_db($con, 'halcinema');	
-						if($isSuccess){
-							$result =mysqli_query($con,"SELECT * FROM cinema_master WHERE cinema_id='{$_GET["id"]}'");
-							while(($row = mysqli_fetch_array($result)) != false){
-								$cinemaId = $row[0];
-								$cinemaName = $row[1];
-								$startDay = str_replace("-","/",$row[2]);
-								$endDay = str_replace("-","/",$row[3]);
-								$runningTime = $row[4];
-								$cinemaDescription = $row[5];
-								$movieDirector = $row[6];
-								$moviePerfomer = $row[7];
-								$mainPhoto = $row[8];
-								$subPhoto1 = $row[9];
-								$subPhoto2 = $row[10];
-								$subPhoto3 = $row[11];
-								$subPhoto4 = $row[12];
-								
-				  				echo "<tr>";	
-				  					echo "<td>".$cinemaId."</td>";
-				  					echo "<td>";
-				  						echo "<a href='details.php?id=".$cinemaId."'>".$cinemaName."</a>";
-				  						/*echo "<span class='label label-success'>公開中</span>";
-				  						echo "<span class='label label-default'>終了</span>";
-				  						echo "<span class='label label-primary'>公開前</span>";*/
-				  					echo "</td>";
-				  					echo "<td><img src='../../tokyo/movie/images/".$mainPhoto."' alt=''></td>";
-				  					echo "<td>".$startDay."</td>";
-				  					echo "<td>".$endDay."</td>";
-				  					echo "<td>".$runningTime."分</td>";
-				  					echo "<td class='description'>".$cinemaDescription."</td>";
-				  					echo "<td>".$movieDirector."</td>";
-				  					echo "<td>".$moviePerfomer."</td>";
-				  				echo "</tr>";
-							}
-										
-						}
-							
-					}   
-				?>
+            <?PHP
+				//映画情報取得 表示
+				$con = getConnection();
+				$movieSql="SELECT * FROM cinema_master WHERE cinema_id='{$_GET["id"]}'";
+				$movieSelectResult =  mysqli_query($con,$movieSql);
+				while(($rowMovieSelectResult = mysqli_fetch_array($movieSelectResult))!=false):
+			?>
+			<tr>
+				<td><?PHP echo $rowMovieSelectResult['cinema_id'];//映画id?></td>
+				<td><?PHP echo $rowMovieSelectResult['cinema_name'];?></td>
+				<td><img src='../../tokyo/movie/images/<?PHP echo $rowMovieSelectResult['main_photo'];?>'alt=''></td>
+				<td><?PHP echo str_replace("-","/",$rowMovieSelectResult['start_day']);?></td>
+				<td><?PHP echo str_replace("-","/",$rowMovieSelectResult['end_day']);?></td>
+				<td><?PHP echo $rowMovieSelectResult['running_time'];?></td>
+				<td class='description'><?PHP echo $rowMovieSelectResult['cinema_description'];?></td>
+				<td><?PHP echo $rowMovieSelectResult['movie_director'];?></td>
+				<td><?PHP echo $rowMovieSelectResult['movie_perfomer'];?></td>
+				<td><a href='edit.php?id=<?PHP echo $rowMovieSelectResult['cinema_id'] ; ?>' class='btn btn-primary'><span class='glyphicon glyphicon-pencil'></span>編集 & 削除</a></td>
+			</tr>
+			<?PHP endwhile; mysqli_close($con);?>
 			</tbody>
 		</table>
 		
@@ -98,6 +70,7 @@
 			<tbody>
 				<!-- ここの中身をループして出してね -->
 				<?PHP
+					$con = getConnection();
 					$scheduleCount = 0;//上映スケジュール件数
 					$scheduleListSql = "SELECT * FROM show_schedule WHERE cinema_id='{$_GET["id"]}'" ;
 					$scheduleListResult = mysqli_query($con,$scheduleListSql);	
@@ -156,7 +129,7 @@
 					echo "<span class='btn btn-default current'>".$pageCount."</span>";
 					echo "　";
 				}else{
-					echo "<a class='btn btn-default' href='details.php?nowPage=".$pageCount."'>".$pageCount."</a>";
+					echo "<a class='btn btn-default' href='details.php?id=".$_GET['id']."&&nowPage=".$pageCount."'>".$pageCount."</a>";
 					echo "　";
 				}				
 				$pageCount++;
