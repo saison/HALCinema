@@ -1,95 +1,4 @@
 @charset "UTF-8";
-html {
-  font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
-}
-
-/* clearfix(base.css(移行予定) */
-.clearfix:after {
-  content: ".";
-  display: block;
-  height: 0;
-  clear: both;
-  visibility: hidden;
-}
-
-.clearfix {
-  display: inline-table;
-}
-
-/* Hides from IE-mac \*/
-* html .clearfix {
-  height: 1%;
-}
-
-.clearfix {
-  display: block;
-}
-
-/* End hide from IE-mac */
-.clear {
-  clear: both;
-}
-
-header {
-  background-color: #ffffff;
-  box-shadow: 0 0 5px #555,0 0 5px #555;
-  padding: 0 0 5px 0;
-  position: relative;
-  z-index: 100;
-}
-
-#headerIn {
-  width: 980px;
-  margin: 0 auto;
-}
-
-#headerLeft {
-  float: left;
-}
-
-#headerRight {
-  float: right;
-}
-
-h1 {
-  padding: 10px 0;
-}
-
-#login {
-  float: right;
-  background: #555555;
-  padding: 0px 5px 0 10px;
-  background-image: url(../images/userBack.png);
-  box-shadow: 0 0 4px #eee;
-  -webkit-border-radius: 0 0 5px 5px;
-  -moz-border-radius: 0 0 5px 5px;
-  -ms-border-radius: 0 0 5px 5px;
-  -o-border-radius: 0 0 5px 5px;
-  border-radius: 0 0 5px 5px;
-}
-
-#login img {
-  line-height: 1em;
-}
-
-#login p {
-  font-size: 75%;
-  color: #555555;
-  padding: 5px 10px;
-  float: left;
-}
-
-#login a {
-  color: #333333;
-  text-decoration: none;
-  text-shadow: 0 0 2px #eee;
-}
-
-#login a:hover {
-  color: #888888;
-  text-decoration: underline;
-}
-
 #mypageLink {
   float: right;
   margin: 3px 10px;
@@ -103,50 +12,6 @@ h1 {
 
 #mypageLink li:first-child {
   border-right: 1px solid #aaa;
-}
-
-header nav {
-  margin: 10px auto 0 auto;
-}
-
-header nav li {
-  width: 170px;
-  float: left;
-  font-size: 70%;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  padding: 5px;
-}
-
-header nav li img {
-  width: 100%;
-}
-
-header nav li a {
-  display: block;
-}
-
-.theatres {
-  border-bottom: 5px solid #ffd6d6;
-}
-
-.workinfo {
-  border-bottom: 5px solid #ffffb7;
-}
-
-.service {
-  border-bottom: 5px solid #dbffb7;
-}
-
-.companyinfo {
-  border-bottom: 5px solid #e0ffff;
-}
-
-/*メインコンテンツ*/
-#mainContent {
-  width: 980px;
-  margin: 0 auto;
 }
 
 .contentTitle {
@@ -190,58 +55,6 @@ header nav li a {
   font-family: Century Gothic,"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic";
 }
 
-#pagetop {
-  margin: 50px 0 20px 0;
-  width: 200px;
-  position: fixed;
-  bottom: 20px;
-  right: 0px;
-}
-
-#pagetop a {
-  color: #333333;
-  background-color: #efefef;
-  box-shadow: 0 0 5px #aaa;
-  text-decoration: none;
-  font-size: 75%;
-  padding: 10px 30px;
-}
-
-#pagetop a:hover {
-  background-color: #A7FDFF;
-}
-
-footer {
-  background-color: #efefef;
-  height: 200px;
-  box-shadow: 0 0 2px #aaa;
-  margin: 0;
-  width: 100%;
-}
-
-#footerIn {
-  width: 980px;
-  margin: 0 auto;
-}
-
-#footerLeft {
-  float: left;
-  width: 500px;
-}
-
-#footerRight {
-  float: left;
-  width: 480px;
-}
-
-#copyright {
-  font-size: 70%;
-  color: #777777;
-  text-shadow: 0 0 2px #ccc;
-  text-align: right;
-  padding: 10px 5px;
-}
-
 .ribbon {
   position: relative;
   color: #fefefe;
@@ -276,24 +89,4 @@ h4 {
   border-left: 4px solid #3c3c3c;
   padding-left: 10px;
   margin-bottom: 15px;
-}
-
-#footerLeft li {
-  font-size: 80%;
-  margin: 10px 0px;
-  padding: 0 10px;
-  float: left;
-}
-
-#footerLeft li:first-child {
-  border-right: 1px solid #aaa;
-}
-
-#footerLeft li a {
-  color: #333333;
-  text-decoration: none;
-}
-
-#footerLeft li a:hover {
-  opacity: 0.8;
 }

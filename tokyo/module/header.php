@@ -39,29 +39,6 @@
 	<title><?PHP if($pageTitle != ""){ echo $pageTitle." | "; } ?>HALCinema</title>
 </head>
 <body>
-<header>
-<div id="headerIn" class="clearfix">
-<div id="headerLeft">
-<h1><a href="../top/index.php"><img src="../module/images/reserveLogo.png"></a></h1>
-</div>
-	<div id="login" class="clearfix">
-<?php
-if(isset($_SESSION["userid"])){
-	echo "<p>ようこそ".$_SESSION["userid"]."さん！</p><ul id='mypageLink'><li><a href='../mypage/mypage.php'>MyPage(仮)</a></li><li><a href='../top/logout.php'>ログアウト</a></li></ul>";
-}else{
-	echo '<a href="../mypage/login.php">ログイン&新規会員登録</a>'."\n";
-}
-?>
-</div>
-<div id="headerRight">
-<nav>
-<ul class="clearfix">
-<li class="theatres"><a href="../shop/shop.php"><img src="../module/images/menu/theaters.png"></a></li>
-<li class="workinfo"><a href="../movie/movie.php"><img src="../module/images/menu/workinfo.png"></a></li>
-<li class="service"><a href="../shop/serviceday.php"><img src="../module/images/menu/service.png"></a></li>
-<li class="companyinfo"><a href="../company/about.php"><img src="../module/images/menu/companyinfo.png"></a></li>
-</ul>
-</nav>
-</div>
-</div>
-</header>
+  <div id="wrapper">
+    <div id="main">
+      <div id="content">

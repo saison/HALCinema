@@ -10,7 +10,7 @@
     <dt><a href='https://docs.google.com/spreadsheet/ccc?key=0AgvRmkGL_iUQdE0yb25GZzUtSGhjQTNzWEYyWU1xaFE&usp=drive_web#gid=0'>進捗管理表</a></dt><dd>フロントエンドとバックエンドの進捗管理･画面一覧です https://docs.google.com/spreadsheet/ccc?key=0AgvRmkGL_iUQdE0yb25GZzUtSGhjQTNzWEYyWU1xaFE&usp=drive_web#gid=0</dd>
     <dt><a href='https://docs.google.com/spreadsheet/ccc?key=0AgvRmkGL_iUQdFota3I3MmFfUFdpdmU4Y3NFbTR2VUE&usp=drive_web#gid=3'>テーブル仕様書</a></dt><dd>HALシネマのテーブル仕様書です https://docs.google.com/spreadsheet/ccc?key=0AgvRmkGL_iUQdFota3I3MmFfUFdpdmU4Y3NFbTR2VUE&usp=drive_web#gid=3</dd>
 </dl>
-<h4>管理者設定 <small>XAMPPの設定など</small></h4>
+<h4>開発者設定 <small>XAMPPの設定など</small></h4>
   <dl class="dl-horizontal">
     <dt><a href='../../tokyo/top/developer.php'>開発者設定</a></dt><dd>開発者の環境設定を変更するページです。 tokyo/top/developer.php</dd>
   </dl>

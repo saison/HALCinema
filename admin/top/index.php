@@ -7,7 +7,10 @@
   <p class="bg-info"><a href="../developer/sitemap.php">【開発者専用】サイトマップ(FE/BE)はここから</a></p>
 </blockquote>
 <blockquote>
-	 <p>PDFの作成については<a href="https://docs.google.com/spreadsheet/ccc?key=0AgvRmkGL_iUQdFl3ZndTVWVzSG0yLVZ3dVhycTYxUVE&usp=drive_web#gid=2" target="_blank" >PDF作成ページの仕様</a>を見てください。</p>
+  <p class="bg-info"><a href="../developer/frontParts.php">【開発者専用】ユーザ側(FE)パーツリストはここから</a></p>
+</blockquote>
+<blockquote>
+	 <p>PDFの作成については<a href="https://docs.google.com/spreadsheet/ccc?key=0AgvRmkGL_iUQdFl3ZndTVWVzSG0yLVZ3dVhycTYxUVE&usp=drive_web#gid=2" target="_blank" >PDF作成ページの仕様</a>を見てください</p>
   </blockquote>
 
 <!-- ▲作成時のみ表示▲ -->
