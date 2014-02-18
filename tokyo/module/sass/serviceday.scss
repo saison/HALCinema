@@ -1,0 +1,19 @@
+@charset "UTF-8";
+/* CSS Document */
+.pricelist {
+  width:100%;
+  border-spacing: 0;
+}
+.pricelist th {
+  border-bottom: 1px solid #CCCCCC;
+  padding:10px;
+  background:#fafafa;
+  font-size:90%;
+}
+.pricelist td {
+  border-bottom: 1px solid #CCCCCC;
+  padding:10px;
+  background:#fafafa;
+  font-size:90%;
+  text-align:right;
+}

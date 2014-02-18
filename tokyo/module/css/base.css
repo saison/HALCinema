@@ -33,6 +33,31 @@ html {
   padding: 0 0 0 5px;
 }
 
+/* menuPageBase */
+#menuPB {
+  float: right;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+#menuPBContent {
+  padding-left: 280px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  float: right;
+  width: 100%;
+}
+
+#menuPBSidebar {
+  float: left;
+  margin-right: -280px;
+  width: 250px;
+  padding: 0 0px 0 0;
+}
+
 /* clear */
 .clear {
   clear: both;
@@ -135,12 +160,61 @@ h1 img:hover {
   opacity: 0.7;
 }
 
+/* subnavi */
+#subnav ul {
+  border: 2px solid #eeeeee;
+  box-shadow: 0 0 3px #aaa;
+  padding: 15px 5px;
+  background: #ffffff;
+  border-radius: 5px;
+}
+
+#subnav li a {
+  border-bottom: 1px solid #ccc;
+  color: #222222;
+  padding: 10px 5px;
+  display: block;
+  font-size: 80%;
+  text-decoration: none;
+}
+
+#subnav li a:hover {
+  background-color: #eeeeee;
+  text-decoration: underline;
+}
+
+/* BOX */
+.contentBox {
+  border: 2px solid #eeeeee;
+  box-shadow: 0 0 5px #aaa;
+  padding: 15px;
+  background: #ffffff;
+  border-radius: 5px;
+}
+
+.contentAttentionBox {
+  border: 2px solid #eeeeee;
+  box-shadow: 0 0 5px #0af;
+  padding: 15px;
+  background: #ffffff;
+  border-radius: 5px;
+}
+
+.contentProhibitionBox {
+  border: 2px solid #eeeeee;
+  box-shadow: 0 0 5px #f00;
+  padding: 15px;
+  background: #ffffff;
+  border-radius: 5px;
+}
+
 /* pagetop */
 #pagetop {
   position: fixed;
   bottom: 5px;
   right: 15px;
   text-align: right;
+  opacity: 0.6;
 }
 
 #pagetop a img {
@@ -148,7 +222,7 @@ h1 img:hover {
 }
 
 #pagetop a:hover {
-  opacity: 0.7;
+  opacity: 1.0;
 }
 
 /* footer */
@@ -387,22 +461,22 @@ footer {
   background-color: #eeeeee;
   color: #ffffff;
   text-shadow: 0 0 5px #000;
-  font-size: 150%;
-  font-weight: bold;
+  font-size: 250%;
+  font-weight: normal;
   vertical-align: middle;
   line-height: 200px;
-  box-shadow: 0 0 5px #aaa;
   overflow: hidden;
   background: url(../../shop/images/h2TitleBack.png);
   background-size: cover;
   background-origin: border-box;
   height: 200px;
+  border-bottom: 5px solid red;
 }
 
 .movieTitle h2 small {
   padding-left: 10px;
-  color: #cccccc;
-  font-size: 75%;
+  color: #dddddd;
+  font-size: 50%;
 }
 
 .movieTitle h3 {

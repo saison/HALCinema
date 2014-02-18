@@ -1,80 +1,26 @@
 @charset "UTF-8";
 /* CSS Document */
-/*----------------共通項目-------------------*/
-.aboutContents {
-  height: 100%;
-  margin: 0 auto;
-  margin-bottom: 20px;
-  padding: 70px 10px 20px 10px;
-  background: #efefef;
-  font-size: 0.8em;
-}
-
-h3 {
-  margin: 0 auto;
-  margin: 50px -10px -60px -10px !important;
-}
-
-.pageTop {
-  float: right;
-}
-
-/*------------------------------------------*/
-#subnav {
-  width: 200px;
-  float: left;
-}
-
-#subnav ul {
-  margin: 15px 0;
-}
-
-#subnav li a {
-  border-bottom: 1px solid #ccc;
-  color: #333333;
-  padding: 10px 5px;
-  display: block;
-  font-size: 80%;
-  text-decoration: none;
-}
-
-#subnav li a:hover {
-  background-color: #eeeeee;
-  text-decoration: underline;
-}
-
-#rightMeinContent {
-  width: 750px;
-  margin: 0 0 0 30px;
-  float: left;
-}
-
 /*----------------会社概要------------------*/
-.aboutContents {
-  margin-bottom: 20px;
-}
-
-.company {
+#company {
   border-spacing: 0;
 }
 
-.company_item {
-  width: 250px;
-  border-spacing: 0;
+#company tr {
+  border-bottom: 1px solid #dddddd;
 }
 
-.company_text {
-  width: 650px;
+#company th {
+  padding: 10px;
+  background: #fafafa;
+  font-weight: bold;
+  font-size: 85%;
+  width: 150px;
 }
 
-.company_text th, .company_text td {
-  font-size: 90%;
-  margin: 10px auto;
-}
-
-.aboutContents td {
-  border-bottom: 1px dashed #CCCCCC;
-  padding: 10px 10px;
+#company td {
+  padding: 10px;
+  background: #fafafa;
+  font-size: 80%;
 }
 
 /*------------------------------------------*/
@@ -106,31 +52,29 @@ h3 {
 
 /*------------------------------------------*/
 /*---------特定商取引法に基づく表示---------*/
-.tokuteiContents {
-  height: 100%;
-  margin: 0 auto;
-  margin-bottom: 20px;
-  padding: 70px 10px 20px 10px;
-  background: #efefef;
-  font-size: 0.8em;
+.siteTable table {
+  background: #fafafa;
+  width: 100%;
 }
 
 .tokuteiTitle {
-  background: #666;
-  color: white;
+  background: #111111;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 85%;
 }
 
-.tokuteiContents th {
+.siteTable tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+.siteTable th {
   width: 250px;
   padding: 10px;
+  font-size: 80%;
 }
 
-.tokuteiContents td {
-  width: 650px;
+.siteTable td {
   padding: 10px;
+  font-size: 80%;
 }
-
-/*------------------------------------------*/
-/*--------サイトのご利用に関して------------*/
-/*プライパシーと同じような形だったので、同じクラス使ってます。*/
-/*------------------------------------------*/
