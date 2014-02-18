@@ -4,140 +4,134 @@
 ?>
 
 <!--メインコンテンツが先、ナビ部分は後-->
-<div class="contentTitle" id="theatesTitle">
-    <h2>劇場案内<span class="h2En">Theater Info.</span></h2>
+<div class="movieTitle">
+  <h2>劇場案内<small>Theaters</small></h2>
+</div>
+
+<div id="mainContent" class="mtb20"><!--メインコンテンツ-->
+  <div id="menuPB">
+    <div id="menuPBContent">
+      <div id="menuPBMainContent">
+        <!-- MainContent -->
+        <p class="smallText">お好きな映画が選べる8スクリーン。約1,600席のシネマコンプレックス！無料駐車場4,000台。大型のショッピングモールも併設してますので、ショッピングからエンターテインメントまで1日中お楽しみいただけます。</p>
+        <div id="screen" class="contentBox mtb30">
+          <div class="movieTitle">
+            <h3>スクリーン</h3>
+          </div>
+          <p class="mtb10 smallText">HALCinemaTokyoは8つのスクリーンが有ります。全てのスクリーンでデジタル音響を採用し、歩行が困難な方でも楽しめる用「車椅子用スペース」を完備しています。</p>
+          <div class="mlr50">
+            <table class="movieInfoTable">
+              <tr>
+                <th>スクリーン</th>
+                <th>座席数＋車椅子用スペース</th>
+                <th>デジタル音響</th>
+              </tr>
+              <tr>
+                <td>SCREEN 1</td>
+                <td>296+(4)</td>
+                <td>ドルビーアトモス</td>
+              </tr>
+              <tr>
+                <td>SCREEN 2</td>
+                <td>296+(4)</td>
+                <td>ドルビーアトモス</td>
+              </tr>
+              <tr>
+                <td>SCREEN 3</td>
+                <td>296+(4)</td>
+                <td>ドルビーアトモス</td>
+              </tr>
+              <tr>
+                <td>SCREEN 4</td>
+                <td>196+(4)</td>
+                <td>ドルビーサラウンド 7.1</td>
+              </tr>
+              <tr>
+                <td>SCREEN 5</td>
+                <td>196+(4)</td>
+                <td>ドルビーサラウンド 7.1</td>
+              </tr>
+              <tr>
+                <td>SCREEN 6</td>
+                <td>196+(4)</td>
+                <td>ドルビーサラウンド 7.1</td>
+              </tr>
+              <tr>
+                <td>SCREEN 7</td>
+                <td>96+(4)</td>
+                <td>ドルビーサラウンド 7.1</td>
+              </tr>
+              <tr>
+                <td>SCREEN 8</td>
+                <td>96+(4)</td>
+                <td>ドルビーサラウンド 7.1</td>
+              </tr>
+              <tr>
+                <td class="fontBold bigText">合計8スクリーン</td>
+                <td colspan="2" class="fontBold bigText">1568+(32)</td>
+              </tr>
+            </table>
+            <p class="()は車椅子スペース"></p>
+          </div>
+        </div>
+        
+        <!-- チケット購入方法 -->
+        <div id="ticket" class="contentBox mtb20">
+          <div class="movieTitle">
+            <h3>チケット購入方法</h3>
+          </div>
+          <p class="mtb10 smallText">映画のチケットはオンラインと店頭で購入することが出来ます。<br>HALCinemaのアカウントをお持ちいただくと、オンライン上で映画の予約、HALCinemaポイントを貯めることが出来ます。</p>
+          
+          <div class="movieTitle">
+            <h4>1.オンラインでチケット購入【ここ直します】</h4>
+          </div>
+          <p class="smallText">HALCinemaなら、映画チケットはパソコン・携帯電話から事前に購入できます。クレジットカード、docomo･au･SoftBankのキャリア決済も利用可能です。（現金での決済は取り扱いしておりません）</p>
+          
+        </div>
+        
+        <!-- HALCinemaポイント -->
+        <div id="point" class="contentBox mtb20">
+          <div class="movieTitle">
+            <h3>HALCinemaポイント</h3>
+          </div>
+          <p class="smallText mtb10">当サイトから予約するとハルシネマポイントが105円(税込み)に付き1ポイント付きます。1ポイント1円として次回からの予約時に利用することができます。</p>
+        </div>
+        
+        <!-- HALCinemaメルマガ -->
+        <div id="merumaga" class="contentBox mtb20">
+          <div class="movieTitle">
+            <h3>HALCinemaメルマガ</h3>
+          </div>
+          <p class="smallText mtb10">HALCinemaでは会員向けサービスとしてメールマガジンを配信しています。お客様の予約された映画を元にお客様が見たい！と思われる映画を毎週金曜日にお届けします。<br>
+          <span class="fontBold">メール配信設定などはログイン後、マイページから設定することができます。</span><br>
+          <span class="fontBold fontCRed">※重要なお知らせは配信設定に限らず、会員の皆様に配信します。</span></p>
+      </div>
+
+        <!-- MainContent End -->
+      </div>
+    </div>
+    <div id="menuPBSidebar">
+      <!-- Sidebar -->
+      <div id="subnav">
+        <ul>
+          <li><a href="#screen">スクリーン</a></li>
+          <li><a href="#ticket">チケット購入方法</a></li>
+          <li><a href="#point">HALCinemaポイント</a></li>
+          <li><a href="#merumaga">HALCinemaメルマガ</a></li>
+        </ul>
+      </div>
+      <!-- Sidebar End -->
+    </div>
   </div>
-<div id="mainContent"><!--メインコンテンツ-->
+</div>
+  
   
   <!-- ここからcontent -->
   <!-- ここh2タイトル -->
   <div class="clearfix">
-    <div id="subnav"><!-- w200px -->
-    	<ul>
-        	<li><a href="#movieInfo">劇場案内</a></li>
-            <li><a href="#serviceDay">料金&amp;サービスデー</a></li>
-            <li><a href="#ticket">チケット購入方法</a></li>
-            <li><a href="#point">ハルシネマポイント</a></li>
-            <li><a href="#merumaga">ハルシネマメールマガジン</a></li>
-        </ul>
-    </div>
+    
     <div id="rightMeinContent"><!-- w950px m-l30px -->
-      <!-- 劇場案内 -->
-        <h3 class="ribbon" id="movieInfo">劇場案内</h3>
-      <div class="shopContents">
-        <p>お好きな映画が選べる8スクリーン。約1,600席のシネマコンプレックス！無料駐車場4,000台。大型のショッピングモールも併設してますので、ショッピングからエンターテインメントまで1日中お楽しみいただけます。</p>
-        <br />
-        <h4>スクリーン</h4>
-        <table class="movieInfoTable" style="margin-bottom:25px;">
-          <tr>
-            <th style="width:20%;">スクリーン</th>
-            <th style="width:20%;">座席数＋車椅子用スペース</th>
-            <th style="width:30%;">デジタル音響</th>
-          </tr>
-          <tr>
-            <td>SCREEN 1</td>
-            <td>296+(4)</td>
-            <td>ドルビーアトモス</td>
-          </tr>
-          <tr>
-            <td>SCREEN 2</td>
-            <td>296+(4)</td>
-            <td>ドルビーアトモス</td>
-          </tr>
-          <tr>
-            <td>SCREEN 3</td>
-            <td>296+(4)</td>
-            <td>ドルビーアトモス</td>
-          </tr>
-          <tr>
-            <td>SCREEN 4</td>
-            <td>196+(4)</td>
-            <td>ドルビーサラウンド 7.1</td>
-          </tr>
-          <tr>
-            <td>SCREEN 5</td>
-            <td>196+(4)</td>
-            <td>ドルビーサラウンド 7.1</td>
-          </tr>
-          <tr>
-            <td>SCREEN 6</td>
-            <td>196+(4)</td>
-            <td>ドルビーサラウンド 7.1</td>
-          </tr>
-          <tr>
-            <td>SCREEN 7</td>
-            <td>96+(4)</td>
-            <td>ドルビーサラウンド 7.1</td>
-          </tr>
-          <tr>
-            <td>SCREEN 8</td>
-            <td>96+(4)</td>
-            <td>ドルビーサラウンド 7.1</td>
-          </tr>
-          <tr>
-            <td><strong>8スクリーン</strong></td>
-            <td><strong>1568+(32)</strong></td>
-            <td>&nbsp;</td>
-          </tr>
-        </table>
-      </div>
-
-      <!-- サービスデー -->
-      <div class="shopH3Title">
-        <h3 class="ribbon" id="serviceDay">料金一覧</h3>
-      </div>
-      <div class="shopContents">
-        <table class="pricelist">
-          <tr class="none">
-            <td>一般</td>
-            <td class="right">&yen;1,800</td>
-          </tr>
-          <tr>
-            <td>3D鑑賞</td>
-            <td class="right">&yen;1,800</td>
-          </tr>
-          <tr>
-            <td>学生(小・中・高・大生)
-              <span class="caution">＊要学生証</span></td>
-            <td class="right">&yen;1,500</td>
-          </tr>
-        </table>
-        <p id="priceListP"> ＊前売り券ご利用のお客様は座席指定券との引き換えが必要でございます（前売り券ご利用の場合当サイトからは予約することができません）。<br />
-          ＊他劇場発行のCINEMA TICKET、招待券等はご利用いただけませんので、ご注意下さい。<br />
-          ＊当映画館では当サイトのみ7日前からチケットを購入することができます。 </p>
-      </div>
-
-      <!-- チケット購入方法 -->
-      <div class="shopH3Title">
-        <h3 class="ribbon" id="ticket">チケット購入方法</h3>
-      </div>
-      <div class="shopContents">
-        <h4>1.オンラインでチケット購入</h4>
-        <p>HALCinemaなら、映画チケットはパソコン・携帯電話から事前に購入できます。クレジットカード、docomo･au･SoftBankのキャリア決済も利用可能です。（現金での決済は取り扱いしておりません）</p>
-        <h4>2.ペアシートを完備</h4>
-        <p>一部のスクリーンにはペアシートを完備しています。ペアシートはペア･お一人様どちらでも利用可能です。 </p>
-        <h4>3.あなただけのシートをキープ</h4>
-        <p>当館のすべての上映は定員入れ替え制です。立ち見なしでゆったりと作品をご鑑賞ください。 </p>
-      </div>
-
-      <!-- ハルシネマポイント -->
-      <div class="shopH3Title">
-        <h3 class="ribbon" id="point">ハルシネマポイント</h3>
-      </div>
-      <div class="shopContents">
-        <p>当サイトから予約するとハルシネマポイントが105円(税込み)に付き1ポイント付きます。1ポイント1円として次回からの予約時に利用することができます。</p>
-      </div>
-
-      <!-- ハルシネマメルマガ -->
-      <div class="shopH3Title">
-        <h3 class="ribbon" id="merumaga">ハルシネマメルマガ</h3>
-      </div>
-      <div class="shopContents">
-        <p>ハルシネマでは会員向けサービスとしてメールマガジンを配信しています。お客様の予約された映画を元にお客様が見たい！と思われる映画を毎週金曜日にお届けします。<br />
-          メール配信設定などはログイン後、マイページから設定することができます。<br />
-          ※重要なお知らせは配信設定に限らず、会員の皆様に配信します。</p>
-      </div>
-    </div>
+      
   </div>
 </div>
 <!-- / #mainContent -->

@@ -10,6 +10,9 @@
   <li><a href="#kiso">ページ基礎(メニューも含む)</a></li>
   <li><a href="#title">タイトル</a></li>
   <li><a href="#font">フォント</a></li>
+  <li><a href="#menu">メニュー</a></li>
+  <li><a href="#box">ボックス</a></li>
+  <li><a href="#font">フォント</a></li>
   <li><a href="#yohaku">余白</a></li>
 </ul>
 
@@ -38,13 +41,72 @@ h2は#mainContentの外に書いてください。。
 </div>
 </div>
 
+<h4>サブメニューありコンテンツページ</h4>
+<p>サブメニューが必要なコンテンツページの場合には以下の指定をしてください。余白などは指定していませんので、#menuContentの外で使う場合余白をつけるなど、注意してください。</p>
+<div class="panel panel-info">
+<div class="panel-heading">
+<h5>サブメニューありコンテンツページ基礎</h5>
+</div>
+<div class="panel-body">
+<div id="menuPB">
+  <div id="menuPBContent">
+    <div id="menuPBMainContent">
+      <!-- MainContent -->
+      <div class="contentBox">
+        <div class="movieTitle">
+          <h3>h3タイトル</h3>
+        </div>
+        <p>【使用例】コンテンツの中身です。</p>
+      </div>
+      <!-- MainContent End -->
+    </div>
+  </div>
+  <div id="menuPBSidebar">
+    <!-- Sidebar -->
+    <div id="subnav">
+      <ul>
+        <li><a href="#">【使用例】劇場案内</a></li>
+      </ul>
+    </div>
+    <!-- Sidebar End -->
+  </div>
+</div>
+<div class="clear"></div>
+<pre>
+&lt;div id="menuPB"&gt;
+  &lt;div id="menuPBContent"&gt;
+    &lt;div id="menuPBMainContent"&gt;
+    &lt;!-- MainContent --&gt;
+      &lt;div class="contentBox"&gt;
+        &lt;div class="movieTitle"&gt;
+          &lt;h3&gt;h3タイトル&lt;/h3&gt;
+        &lt;/div&gt;
+        &lt;p&gt;【使用例】コンテンツの中身です。&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;!-- MainContent End --&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div id="menuPBSidebar"&gt;
+  &lt;!-- Sidebar --&gt;
+    &lt;div id="subnav"&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href="#"&gt;【使用例】劇場案内&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;!-- Sidebar End --&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+</div>
+</div>
+
 
 <h4>フロート</h4>
 <p>フロートを使用する際に使用してください。<strong>通常はclearFixを使用してください。どうしてもfloatが解除されない時はclass="clear"を使用してください</strong>。</p>
 
 <div class="panel panel-success">
 <div class="panel-heading">
-<h5>clearFix</h5>
+<h5>clearfix</h5>
 </div>
 <div class="panel-body">
 &lt;div class="clearfix"&gt; //floatをかけているboxを囲って指定してください<br>
@@ -55,7 +117,7 @@ h2は#mainContentの外に書いてください。。
   &lt;p&gt;右&lt;/p&gt;<br>
  &lt;/div&gt;<br>
 &lt;/div&gt;<br>
-<pre>class="clearFix"</pre>
+<pre>class="clearfix"</pre>
 </div>
 </div>
 
@@ -274,6 +336,76 @@ BootStrapの関係上見た目が異なる場合があります。</p>
 </div>
 
 
+<h3 id="menu">メニュー</h3>
+
+<p>コンテンツページのメニューです。</p>
+
+<div class="panel panel-info">
+<div class="panel-heading">
+<h5>MENU</h5>
+</div>
+<div class="panel-body">
+<div id="subnav">
+  <ul>
+    <li><a href="#">値段</a></li>
+    <li><a href="#">サービスデー</a></li>
+  </ul>
+</div>
+<pre>&lt;div id="subnav"&gt;
+        &lt;ul&gt;
+          &lt;li&gt;&lt;a href="【コンテンツID】"&gt;【コンテンツ名】&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/div&gt;</pre>
+</div>
+</div>
+
+
+
+<h3 id="box">ボックス</h3>
+
+<p>コンテンツページのボックスです。各ページに複数指定することが出来ます。コンテンツの内容は必ずこのボックス内に入れてください（一部例外有り）</p>
+
+<div class="panel panel-info">
+<div class="panel-heading">
+<h5>contentBox</h5>
+</div>
+<div class="panel-body">
+<div class="contentBox">
+  <p>通常のコンテンツボックスです</p>
+</div>
+<pre>&lt;div class="contentBox"&gt;
+  &lt;p&gt;コンテンツの中身です&lt;/p&gt;
+&lt;/div&gt;</pre>
+</div>
+</div>
+
+<div class="panel panel-info">
+<div class="panel-heading">
+<h5>contentAttentionBox</h5>
+</div>
+<div class="panel-body">
+<div class="contentAttentionBox">
+  <p>注目して欲しいコンテンツの場合に使用してください</p>
+</div>
+<pre>&lt;div class="contentAttentionBox"&gt;
+  &lt;p&gt;コンテンツの中身です&lt;/p&gt;
+&lt;/div&gt;</pre>
+</div>
+</div>
+
+<div class="panel panel-info">
+<div class="panel-heading">
+<h5>contentProhibitionBox</h5>
+</div>
+<div class="panel-body">
+<div class="contentProhibitionBox">
+  <p>注意して欲しい（とても重要な項目）コンテンツの場合に使用してください</p>
+</div>
+<pre>&lt;div class="contentProhibitionBox"&gt;
+  &lt;p&gt;コンテンツの中身です&lt;/p&gt;
+&lt;/div&gt;</pre>
+</div>
+</div>
 
 <h3 id="yohaku">余白</h3>
 <h4>マージン(margin)</h4>
