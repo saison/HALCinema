@@ -166,10 +166,10 @@
 		<td class="notSeat"></td>
 		<td class="notSeat"></td>
 		<td class="notSeat"></td>
-        <?php echo reserve("g-13",$arrayRearveList,"G-13S","seat pear1",0);?>
-        <?php echo reserve("g-14",$arrayRearveList,"G-14W","seat pear2",0);?>
-   		<?php echo reserve("g-15",$arrayRearveList,"G-15S","seat pear1",0);?>
-        <?php echo reserve("g-16",$arrayRearveList,"G-16W","seat pear2",0);?>
+        <?php echo reserve("g-13",$arrayRearveList,"G-13S","pearSeat pear1",0);?>
+        <?php echo reserve("g-14",$arrayRearveList,"G-14W","pearSeat pear2",0);?>
+   		<?php echo reserve("g-15",$arrayRearveList,"G-15S","pearSeat pear1",0);?>
+        <?php echo reserve("g-16",$arrayRearveList,"G-16W","pearSeat pear2",0);?>
        </tr>
     </table>
     </div><!-- ABlock 終わり-->
@@ -323,12 +323,12 @@
       </tr>
 	  <tr>
         <th>G</th>
-        <?php echo reserve("g-17",$arrayRearveList,"G-17S","seat pear1",0);?>
-        <?php echo reserve("g-18",$arrayRearveList,"G-18W","seat pear2",0);?>
-        <?php echo reserve("g-19",$arrayRearveList,"G-19S","seat pear1",0);?>
-        <?php echo reserve("g-20",$arrayRearveList,"G-20W","seat pear2",0);?>
-   		<?php echo reserve("g-21",$arrayRearveList,"G-21S","seat pear1",0);?>
-        <?php echo reserve("g-22",$arrayRearveList,"G-22W","seat pear2",0);?>
+        <?php echo reserve("g-17",$arrayRearveList,"G-17S","pearSeat pear1",0);?>
+        <?php echo reserve("g-18",$arrayRearveList,"G-18W","pearSeat pear2",0);?>
+        <?php echo reserve("g-19",$arrayRearveList,"G-19S","pearSeat pear1",0);?>
+        <?php echo reserve("g-20",$arrayRearveList,"G-20W","pearSeat pear2",0);?>
+   		<?php echo reserve("g-21",$arrayRearveList,"G-21S","pearSeat pear1",0);?>
+        <?php echo reserve("g-22",$arrayRearveList,"G-22W","pearSeat pear2",0);?>
 		<td class="notSeat"></td>
         <td class="notSeat"></td>
 		<td class="notSeat"></td>
