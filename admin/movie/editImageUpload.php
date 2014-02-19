@@ -1,5 +1,5 @@
 <?PHP
-	$pageTitle="映画情報編集-画像アップロード";
+	$pageTitle="映画一覧";
 	require_once("../header.php");
 	
 	//映画ID取得

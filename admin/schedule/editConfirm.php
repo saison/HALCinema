@@ -1,5 +1,5 @@
 <?PHP
-	$pageTitle="上映スケジュール確認";
+	$pageTitle="上映スケジュール一覧";
 	require_once("../header.php");
 	if(isset($_GET['error'])){//form editCheck.php
 	

@@ -1,5 +1,5 @@
 <?PHP
-	$pageTitle="映画情報登録確認";
+	$pageTitle="映画登録";
 	require_once("../header.php");
 	if(isset($_GET['error'])){//form registerCheck.php
 	
