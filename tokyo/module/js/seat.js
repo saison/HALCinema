@@ -32,7 +32,7 @@ $(function(){
   });
 
 
-  $(".seat,.pearseat").droppable({
+  $(".seat,.pearSeat").droppable({
     drop:function(event, ui){
 
       //シートの番号を取得
@@ -100,47 +100,28 @@ $(function(){
       } else {
         notDrag.fadeIn(200);
       }
-
-
-
-      //  //カスタムデータを取得
-      //  var custamData = clone.data("seat");
-      //  if(custamData != formId){
-      //    $("#postData").append("<input type='hidden' name='seat[]' id='"+ formValue +"' value='"+ formValue +"' />");
-      //  }
-      //
     },
     out:function(event, ui){
 
-      //form内全件取得
+      //form内全件削除
       $("#postData input[type = hidden]").each(function(){
         $("#"+$(this).attr("id")).remove();
+        console.log($(this).attr("id"));
       });
-
-
-
-
-      //  //data-seatを取得
-      //  var removeValue = ui.draggable.clone().data("seat");
-      //  var removeValueOrigin = firstId;
-      //
-      //  //data-seatにnotsetを設定
-      //  ui.draggable.attr("data-seat","notset");
-
-      //  //削除するpostのIDを設定
-      //  //ex) #postData #a-5_adult
-      //  var formId = "#postData #" + removeValue;
-      //  var originId = "#postData #" + removeValueOrigin;
-
-      //  //remove
-      //  $(formId).remove();
-      //  $(originId).remove();
 
     }
   });
   $(".dragIcon").draggable({
-      opacity:"0.5",
-      revert:"invalid",
-      helper:"clone"
+    opacity:"0.5",
+    revert:"invalid",
+    helper:"clone",
+    drag: function(event, ui) {
+      //form内全件削除
+      $("#postData input[type = hidden]").each(function(){
+        $("#"+$(this).attr("id")).remove();
+        console.log($(this).attr("id"));
+      });
+
+    }
   });
 });
