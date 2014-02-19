@@ -12,7 +12,7 @@
     <div class="col-md-6">
       <h3>映画一覧</h3>
       <p>全ての映画を出力します</p>
-      <a href="【アドレス】" class="btn btn-danger btn-lg btn-block"><span class="glyphicon glyphicon-film"></span>映画一覧 PDF作成</a>
+      <a href="moviePdf.php" class="btn btn-danger btn-lg btn-block"><span class="glyphicon glyphicon-film"></span>映画一覧 PDF作成</a>
       
       <h3>ユーザ一覧</h3>
       <p>全てのユーザを出力します</p>
