@@ -33,7 +33,6 @@ $(function(){
 
 
   $(".seat,.pearseat").droppable({
-    accept : "#adult, #student",
     drop:function(event, ui){
 
       //シートの番号を取得
