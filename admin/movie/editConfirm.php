@@ -1,5 +1,5 @@
 <?PHP
-	$pageTitle="映画情報編集確認";
+	$pageTitle="映画一覧";
 	require_once("../header.php");
 	if(isset($_GET['error'])){//form editCheck.php
 	

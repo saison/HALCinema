@@ -1,4 +1,5 @@
 <?PHP
+	$pageTitle="上映スケジュールCSV登録";
 	require_once("../header.php");
 ?>
 	
