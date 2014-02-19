@@ -9,55 +9,6 @@ html{
 	font-family:"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
 }
 
-/* pageBase */
-#wrapper {
-
-}
-#main {
-	float:right;
-	width:100%;
-	background-color: #111111;
-  border-left:3px solid $mainColor;
-  @include box-sizing(border-box);
-}
-#content {
-	margin-left:255px;
-  padding:0;
-	background-color:#fafafa;
-}
-#mainContent{
-  padding:0px 15px 30px 15px;
-}
-#sidebar {
-	float:left;
-	margin-left:0;
-	margin-right:-255px;
-	width:250px;
-  padding:0 0 0 5px;
-}
-
-/* menuPageBase */
-#menuPB {
-	float:right;
-	width:100%;
-  @include box-sizing(border-box);
-}
-#menuPBContent {
-	padding-left:280px;
-  @include box-sizing(border-box);
-  float:right;
-  width:100%;
-}
-#menuPBMainContent{
-}
-#menuPBSidebar {
-	float:left;
-	margin-right:-280px;
-	width:250px;
-  padding:0 0px 0 0;
-}
-
-
 /* clear */
 .clear{
 	clear:both;
@@ -75,25 +26,6 @@ html{
 .clearfix { display: block; }
 
 
-/* header */
-header{
-
-}
-h1{
-  height:150px;
-  line-height:150px;
-  width:250px;
-  text-align:center;
-}
-h1 a{
-  display:block;
-}
-h1 img{
-  width:95%;
-}
-h1 img:hover{
-  opacity:0.7;
-}
 /* login･newAccount･mypageLink */
 #login{
 
@@ -192,6 +124,20 @@ h1 img:hover{
 }
 
 
+/* BOXflor t*/
+.boxCol2{
+}
+.boxCol2Left{
+  width:50%;
+  float:left;
+}
+.boxCol2Right{
+  width:50%;
+  @include box-sizing(border-box);
+  padding-left:30px;
+  float:left;
+}
+
 /* pagetop */
 #pagetop{
 	position:fixed;
@@ -210,49 +156,15 @@ h1 img:hover{
   opacity:1.0;
 }
 
-
-/* footer */
-footer{
-  clear:both;
-	background-color:#111111;
-  border-left:3px solid $mainColor;
-	height:100px;
-	box-shadow:0 0 2px #aaa;
-	margin:0;
-	width:100%;
-  @include box-sizing(border-box);
+/* text-align */
+.textLeft{
+  text-align:left;
 }
-#footerLeft{
-	float:left;
-	width:50%;
+.textCenter{
+  text-align:center;
 }
-#footerRight{
-	float:left;
-	width:50%;
-}
-#footerLeft li{
-	font-size:80%;
-	margin:10px 0px;
-	padding:0 10px;
-	float:left;
-}
-#footerLeft li:first-child{
-	border-right:1px solid #aaa;
-}
-#footerLeft li a{
-	color:#eeeeee;
-	text-decoration:none;
-}
-
-#footerLeft li a:hover{
-	opacity:0.7;
-}
-#copyright{
-	font-size:70%;
-	color:#ffffff;
-	text-shadow:0 0 2px #ccc;
-	text-align:right;
-	padding:10px 15px;
+.textRight{
+  text-align:right;
 }
 
 /* margin,padding */
@@ -461,12 +373,12 @@ footer{
 }
 
 .reserveTitle h3{
-  padding:10px;
-  border-left:10px solid $mainColor;
+  padding:5px 10px;
+  border-left:5px solid $mainColor;
   background-color:#eeeeee;
   color:#222222;
   text-shadow:0 0 2px #fff;
-  font-size:125%;
+  font-size:120%;
   font-weight:bold;
 }
 
