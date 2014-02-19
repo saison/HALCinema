@@ -168,14 +168,14 @@
         <?php echo reserve("g-7",$arrayRearveList,"G-7","seat",0);?>
         <?php echo reserve("g-8",$arrayRearveList,"G-8","seat",0);?>
         <?php echo reserve("g-9",$arrayRearveList,"G-9","seat",0);?>
-        <?php echo reserve("g-10",$arrayRearveList,"G-10","seat",0);?>
-        <?php echo reserve("g-11",$arrayRearveList,"G-11","seat",0);?>
-        <?php echo reserve("g-12",$arrayRearveList,"G-12","seat",0);?>
-        <?php echo reserve("g-13",$arrayRearveList,"G-13","seat",0);?>
-        <?php echo reserve("g-14",$arrayRearveList,"G-14","seat",0);?>
-        <?php echo reserve("g-15",$arrayRearveList,"G-15","seat",0);?>
-        <?php echo reserve("g-16",$arrayRearveList,"G-16","seat",0);?>
-        <?php echo reserve("g-17",$arrayRearveList,"G-17","seat",0);?>
+        <?php echo reserve("g-10",$arrayRearveList,"G-10S","seat pear1",0);?>
+        <?php echo reserve("g-11",$arrayRearveList,"G-11W","seat pear2",0);?>
+        <?php echo reserve("g-12",$arrayRearveList,"G-12S","seat pear1",0);?>
+        <?php echo reserve("g-13",$arrayRearveList,"G-13W","seat pear2",0);?>
+        <?php echo reserve("g-14",$arrayRearveList,"G-14S","seat pear1",0);?>
+        <?php echo reserve("g-15",$arrayRearveList,"G-15W","seat pear2",0);?>
+        <?php echo reserve("g-16",$arrayRearveList,"G-16S","seat pear1",0);?>
+        <?php echo reserve("g-17",$arrayRearveList,"G-17W","seat pear2",0);?>
       </tr>
       <tr>
         <th>H</th>
@@ -382,14 +382,14 @@
       </tr>
       <tr class="tMargin40">
         <th>G</th>
-        <?php echo reserve("g-18",$arrayRearveList,"G-18","seat",0);?>
-        <?php echo reserve("g-19",$arrayRearveList,"G-19","seat",0);?>
-        <?php echo reserve("g-20",$arrayRearveList,"G-20","seat",0);?>
-        <?php echo reserve("g-21",$arrayRearveList,"G-21","seat",0);?>
-   		<?php echo reserve("g-22",$arrayRearveList,"G-22","seat",0);?>
-        <?php echo reserve("g-23",$arrayRearveList,"G-23","seat",0);?>
-        <?php echo reserve("g-24",$arrayRearveList,"G-24","seat",0);?>
-        <?php echo reserve("g-25",$arrayRearveList,"G-25","seat",0);?>
+        <?php echo reserve("g-18",$arrayRearveList,"G-18S","seat pear1",0);?>
+        <?php echo reserve("g-19",$arrayRearveList,"G-19W","seat pear2",0);?>
+        <?php echo reserve("g-20",$arrayRearveList,"G-20S","seat pear1",0);?>
+        <?php echo reserve("g-21",$arrayRearveList,"G-21W","seat pear2",0);?>
+   		<?php echo reserve("g-22",$arrayRearveList,"G-22S","seat pear1",0);?>
+        <?php echo reserve("g-23",$arrayRearveList,"G-23W","seat pear2",0);?>
+        <?php echo reserve("g-24",$arrayRearveList,"G-24S","seat pear1",0);?>
+        <?php echo reserve("g-25",$arrayRearveList,"G-25W","seat pear2",0);?>
         <?php echo reserve("g-26",$arrayRearveList,"G-26","seat",0);?>
         <?php echo reserve("g-27",$arrayRearveList,"G-27","seat",0);?>
         <?php echo reserve("g-28",$arrayRearveList,"G-28","seat",0);?>

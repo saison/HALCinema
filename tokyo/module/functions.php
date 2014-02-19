@@ -72,7 +72,7 @@
 		}else if($reserveFlag==1 && $marginFlag==0){//予約している
 			return "<td id='".$seatNum."' class='reserveSeat'>".$seatValue."</td>";
 		}else if($reserveFlag==0 && $marginFlag==1){//予約してない
-			return "<td id='".$seatNum."' class='".$seatType." lMargin30'>".$seatValue."</td>";
+			return "<td id='".$seatNum."' class='".$seatType."'>".$seatValue."</td>";
 		}else if($reserveFlag==1 && $marginFlag==1){//予約している
 			return "<td id='".$seatNum."' class='reserveSeat lMargin30'>".$seatValue."</td>";
 		}
