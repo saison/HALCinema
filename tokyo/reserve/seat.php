@@ -33,8 +33,8 @@
 <div id="content100">
 	<div class="m10">
 		<div class="reserveTitle">
-			<h3>座席を選択してください</h3>
-		</div>
+      <h2>座席を選択してください</h2>
+    </div>
 		<p id="seatCenter"><img src="images/seatExplanation.png"></p>
 		<div class="arrow_box"><!-- 映画情報 -->
 			<p>日時･･･<?php echo $screenDay["year"]."年".$screenDay["month"]."月".$screenDay["day"]."日 ".$screenDay["hour"]."：".$screenDay["minute"]."~"; ?>　
@@ -59,13 +59,13 @@
       <h5>ペア(2人)</h5>
       <div class="setEachChoiceContent">
         <ul>
-          <li><img id="pear1" class="dragIcon" data-flg="true"  src="images/pear1Image.png"></li>
+          <li><img id="pear2" class="dragIcon" data-flg="true"  src="images/pear2Image.png"></li>
         </ul>
       </div>
       <h5>ペア(1人)</h5>
       <div class="setEachChoiceContent">
         <ul>
-          <li><img id="pear2" class="dragIcon" data-flg="true"  src="images/pear2Image.png"></li>
+          <li><img id="pear1" class="dragIcon" data-flg="true"  src="images/pear1Image.png"></li>
         </ul>
       </div>
 					<?php //シニアのみ対応（本当はDBにつなげてやりたかった･･･

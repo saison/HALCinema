@@ -22,7 +22,10 @@ html{
 }
 header{
 	box-shadow:0 0 5px #aaa;
-	background-color:#fafafa;
+	background-color:#111111;
+  border-top:5px solid #ff0000;
+  overflow:hidden;
+  padding:15px;
 }
 #headerIn{
 	width:980px;
@@ -70,18 +73,15 @@ h5{
   border-left:3px solid #aaa; 
 }
 footer{
-	background-color:#efefef;
+	background-color:#111111;
 	padding:10px 0;
 	display:block;
 	width:100%;
 }
-#footerIn{
-	width:980px;
-	margin:0 auto;
-}
 #copyright{
 	font-size:70%;
-	color:#555555;
+	color:#ffffff;
+  padding:0 20px 0 0;
 	text-shadow:0 0 2px #ccc;
 	text-align:right;
 }

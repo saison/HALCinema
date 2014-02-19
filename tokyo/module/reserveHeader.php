@@ -38,9 +38,6 @@
 </head>
 <body>
 <header>
-<div id="headerIn">
-<h1><a href="../top/index.php"><img src="../module/images/reserveLogo.png" alt="HALCinema"></a></h1>
+<h1><a href="../top/index.php"><img src="../module/images/logo.png" alt="HALCinema"></a></h1>
 <div id="progressBar"><!--ここにBar--></div>
-<div class="clear"></div>
-</div>
 </header>
