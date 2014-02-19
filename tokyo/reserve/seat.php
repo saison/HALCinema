@@ -45,15 +45,27 @@
   <div id="sertChoice"><!-- シートブロック・種類選択 200px-->
     <div id="sertEachChoice" class="clearfix"><!-- シート選択指定 --><!-- 人形は増やしてちょうだい！ -->
       <h5>大人</h5>
-					<div class="setEachChoiceContent">
+      <div class="setEachChoiceContent">
         <ul>
           <li><img id="adult" class="dragIcon" data-flg="true" src="images/adultImage.png"></li>
         </ul>
       </div>
-					<h5>学生</h5>
+      <h5>学生</h5>
       <div class="setEachChoiceContent">
         <ul>
           <li><img id="student" class="dragIcon" data-flg="true"  src="images/studentImage.png"></li>
+        </ul>
+      </div>
+      <h5>ペア(2人)</h5>
+      <div class="setEachChoiceContent">
+        <ul>
+          <li><img id="pear1" class="dragIcon" data-flg="true"  src="images/pear1Image.png"></li>
+        </ul>
+      </div>
+      <h5>ペア(1人)</h5>
+      <div class="setEachChoiceContent">
+        <ul>
+          <li><img id="pear2" class="dragIcon" data-flg="true"  src="images/pear2Image.png"></li>
         </ul>
       </div>
 					<?php //シニアのみ対応（本当はDBにつなげてやりたかった･･･
