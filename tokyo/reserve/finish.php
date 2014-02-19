@@ -7,24 +7,34 @@
 	//現在の時間
 	$nowTime=date("H:i");
 
-	//DBかくのう
+	//DB格納
 	$reserveNumber = uniqid($_SESSION["showid"]);
 	$reserveSaveSql = "INSERT INTO reserve_master (reserve_id,user_id,reserve_time,reserve_number,settle_flag) VALUES ('','".$_SESSION["userid"]."','".$todayDate."  ". $nowTime ."','".$reserveNumber."',1);";
 	$reserveSaveResult = mysqli_query($con,$reserveSaveSql);
+	
+	
+	//今回予約する座席ひとつひとつを movie_reserve_contentに書き込みます。
+	foreach ($_SESSION['reserveSeat'] as $value){
+		
+		$reserveValue = array();
+		$reserveValue = explode('_',$value);
+		$reserveSeatNum = $reserveValue[0];//予約のシート番号
+		
+		echo $_SESSION["showid"];
+		
+		echo $reserveSeatNum;
+		//seat_reserve_listとmovie_price_masterを結合。show_idと今回予約した座席をもとに$priceIdと$priceをとる
+		$reserveSelectSql ="SELECT seat_reserve_list.movie_price_id, movie_price_master.movie_price FROM seat_reserve_list INNER JOIN movie_price_master ON seat_reserve_list.movie_price_id = movie_price_master.movie_price_id WHERE seat_reserve_list.show_id = '{$_SESSION["showid"]}' AND seat_reserve_list.seat_number = '{$reserveSeatNum}'";	
+		$reserveSelectResult = mysqli_query($con,$reserveSelectSql);	
+		$rowReserveSelectResult = mysqli_fetch_array($reserveSelectResult);
 
-	//ゆーまさんからいわれたやつ
-	$reserveSelectSql = "SELECT * FROM seat_reserve_list WHERE show_id='".$_SESSION["showid"]."' AND user_id='".$_SESSION["userid"]."' AND reserve_flag=0";
-	$reserveSelectResult = mysqli_query($con,$reserveSelectSql);
-
-
-	$priceId = "大人";
-	$price = 1500;
-	while($reserveSelectRow = mysqli_fetch_array($reserveSelectResult)){
-		$seatNumber = $reserveSelectRow["seat_number"];
-		var_dump($seatNumber);
-		$innerSQL = "INSERT INTO movie_reserve_content VALUE ('','".$reserveNumber."','".$_SESSION["showid"]."','".$seatNumber."','".$priceId."',".$price.")";
-		$innerSQLResult = mysqli_query($con,$innerSQL);
+		
+		//movie_reserve_contentに書き込み
+		$insertSql = "INSERT INTO movie_reserve_content VALUE ('','".$reserveNumber."','".$_SESSION["showid"]."','".$reserveSeatNum."','".$rowReserveSelectResult[0]."',".$rowReserveSelectResult[1].")";
+		$insertSqlResult = mysqli_query($con,$insertSql);
+			
 	}
+	
 	//フラグ変更
 	$finishSql = "UPDATE seat_reserve_list SET reserve_flag=1 WHERE user_id='".$_SESSION["userid"]."' AND show_id='".$_SESSION["showid"]."'";
 	$finishResult = mysqli_query($con,$finishSql);
