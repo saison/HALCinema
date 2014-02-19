@@ -1,4 +1,8 @@
 <?PHP
+  if (!isset($_GET["page"])) {
+    header("location:list.php?page=0");
+    exit;
+  }
   $pageTitle="上映スケジュール一覧";
   require_once("../header.php");
   require_once("../../tokyo/module/functions.php");
@@ -77,7 +81,7 @@
       ------------------------------*/
 
       $startPage = $index-10;
-      if($startPage < 1){
+      if($startPage <= 1){
         $startPage = 0;
       }
 
@@ -97,7 +101,7 @@
     <?PHP if ($index == $count): ?>
       <span class='btn btn-default current'><?PHP echo $count+1; ?></span>
     <?PHP else: ?>
-      <a class='btn btn-default' href='list.php?page=<?PHP echo $count;?>'><?PHP echo $count+1; ?></a>
+      <a class='btn btn-default' href='list.php?page=<?PHP echo $count+1;?>'><?PHP echo $count+1; ?></a>
     <?PHP endif; endfor; ?>
     </div>
 
