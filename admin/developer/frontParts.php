@@ -8,6 +8,7 @@
 
 <ul class="nav nav-pills">
   <li><a href="#kiso">ページ基礎(メニューも含む)</a></li>
+  <li><a href="#layout">レイアウト</a></li>
   <li><a href="#title">タイトル</a></li>
   <li><a href="#font">フォント</a></li>
   <li><a href="#menu">メニュー</a></li>
@@ -129,6 +130,78 @@ h2は#mainContentの外に書いてください。。
 <div class="panel-body">
   &lt;div class="clear"&gt;&lt;/div&gt;　をフロートを解除したい部分に指定してください。
 <pre>class="clear"</pre>
+</div>
+</div>
+
+
+
+<h3 id="layout">レイアウト</h3>
+<h4>ページレイアウト</h4>
+<p>ページ内を2つから3つのboxに分けたいときに使用してください。</p>
+
+<div class="panel panel-info">
+<div class="panel-heading">
+<h5>2カラム(50%ずつ)</h5>
+</div>
+<div class="panel-body">
+<div class="movieTitle">
+  <div class="boxCol2 clearfix">
+    <div class="boxCol2Left">
+      <div class="reserveTitle">
+        <h3>【例】タイトル</h3>
+      </div>
+    </div>
+    <div class="boxCol2Right">
+      <div class="reserveTitle">
+        <h3>【例】タイトル</h3>
+      </div>
+    </div>
+  </div>
+</div>
+<pre>
+&lt;div class="boxCol2 clearfix"&gt;
+  &lt;div class="boxCol2Left"&gt;
+    &lt;div class="reserveTitle"&gt;
+      &lt;h3&gt;【例】タイトル&lt;/h3&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="boxCol2Right"&gt;
+    &lt;div class="reserveTitle"&gt;
+      &lt;h3&gt;【例】タイトル&lt;/h3&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+</div>
+</div>
+
+<h4>その他のレイアウト</h4>
+<p>テキストの位置などを変更します</p>
+
+<div class="panel panel-success">
+<div class="panel-heading">
+<h5 class="textLeft">文字を左寄せします</h5>
+</div>
+<div class="panel-body">
+<pre>class="textLeft"</pre>
+</div>
+</div>
+
+<div class="panel panel-success">
+<div class="panel-heading">
+<h5 class="textCenter">文字を中央に寄せます</h5>
+</div>
+<div class="panel-body">
+<pre>class="textCenter"</pre>
+</div>
+</div>
+
+<div class="panel panel-success">
+<div class="panel-heading">
+<h5 class="textRight">文字を右寄せします</h5>
+</div>
+<div class="panel-body">
+<pre>class="textRight"</pre>
 </div>
 </div>
 
