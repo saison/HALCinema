@@ -382,14 +382,14 @@
       </tr>
       <tr class="tMargin40">
         <th>G</th>
-        <?php echo reserve("g-18",$arrayRearveList,"G-18S","seat pear1",0);?>
-        <?php echo reserve("g-19",$arrayRearveList,"G-19W","seat pear2",0);?>
-        <?php echo reserve("g-20",$arrayRearveList,"G-20S","seat pear1",0);?>
-        <?php echo reserve("g-21",$arrayRearveList,"G-21W","seat pear2",0);?>
-   		<?php echo reserve("g-22",$arrayRearveList,"G-22S","seat pear1",0);?>
-        <?php echo reserve("g-23",$arrayRearveList,"G-23W","seat pear2",0);?>
-        <?php echo reserve("g-24",$arrayRearveList,"G-24S","seat pear1",0);?>
-        <?php echo reserve("g-25",$arrayRearveList,"G-25W","seat pear2",0);?>
+        <?php echo reserve("g-18",$arrayRearveList,"G-18S","pearSeat pear1",0);?>
+        <?php echo reserve("g-19",$arrayRearveList,"G-19W","pearSeat pear2",0);?>
+        <?php echo reserve("g-20",$arrayRearveList,"G-20S","pearSeat pear1",0);?>
+        <?php echo reserve("g-21",$arrayRearveList,"G-21W","pearSeat pear2",0);?>
+   		<?php echo reserve("g-22",$arrayRearveList,"G-22S","pearSeat pear1",0);?>
+        <?php echo reserve("g-23",$arrayRearveList,"G-23W","pearSeat pear2",0);?>
+        <?php echo reserve("g-24",$arrayRearveList,"G-24S","pearSeat pear1",0);?>
+        <?php echo reserve("g-25",$arrayRearveList,"G-25W","pearSeat pear2",0);?>
         <?php echo reserve("g-26",$arrayRearveList,"G-26","seat",0);?>
         <?php echo reserve("g-27",$arrayRearveList,"G-27","seat",0);?>
         <?php echo reserve("g-28",$arrayRearveList,"G-28","seat",0);?>
