@@ -2,51 +2,54 @@
 	$pageTitle = "お問い合せ";
 	require_once("../module/header.php");
 ?>
-<div class="contentTitle">
-    <h2>お問い合わせ<span class="h2En">inquiry</span></h2>
-  </div>
+
+<div class="movieTitle">
+  <h2>お問い合わせ<small>Inquiry</small></h2>
+</div>
 <!--メインコンテンツが先、ナビ部分は後-->
-<div id="mainContent"><!--メインコンテンツ-->
-  <!-- ここからcontent -->
-  <!-- ここh2タイトル -->
-  <div class="clearfix">
-    <div id="subnav"><!-- w200px -->
-    	<ul>
-        	<li><a href="#aboutHelp">お問い合わせについて</a></li>
-            <li><a href="#mailHelp">メールでのお問い合わせ</a></li>
-            <li><a href="#telHelp">電話でのお問い合わせ</a></li>
-    	</ul>
+<div id="mainContent" class="mtb20"><!--メインコンテンツ-->
+  <div id="menuPB">
+    <div id="menuPBContent">
+      <div id="menuPBMainContent">
+      <!-- MainContent -->
+        <div id="aboutHelp" class="contentBox">
+          <div class="movieTitle">
+            <h3>お問い合わせについて</h3>
+          </div>
+          <p class="smallText mtb10">当サイトや予約の方法でわからないことがあればいかの方法でお問い合わせください。お問い合わせの前にかならずよくあるご質問もご確認ください。</p>
+        </div>
+        
+        <div id="mailHelp" class="contentBox mtb20">
+          <div class="movieTitle">
+            <h3>メールでのお問い合わせ</h3>
+          </div>
+          <p class="smallText mtb10">メールでお問い合わせの場合は、氏名、件名、内容を必ずご記入ください。</p>
+          <p class="bigText mtb10">tokyosupport@halcinema.co.jp</p>
+        </div>
+        
+        <div id="telHelp" class="contentBox mtb20">
+          <div class="movieTitle">
+            <h3>電話でのお問い合わせ</h3>
+          </div>
+          <p class="smallText mtb10">電話でお問い合わせの場合は…</p>
+          <p class="bigText mtb10">03-3344-5551</p>
+        </div>
+      <!-- MainContent End -->
+      </div>
     </div>
-    <div id="rightMeinContent"><!-- w950px m-l30px -->
-      <!-- お問い合わせについて -->
-      	<h3 class="ribbon" id="aboutHelp">お問い合わせについて</h3>
-      <div class="shopContents">
-      	<p>当サイトや予約の方法でわからないことがあれば…</p>
-      	<br />
+    <div id="menuPBSidebar">
+    <!-- Sidebar -->
+      <div id="subnav">
+        <ul>
+          <li><a href="#aboutHelp">お問い合わせについて</a></li>
+          <li><a href="#mailHelp">メールでのお問い合わせ</a></li>
+          <li><a href="#telHelp">電話でのお問い合わせ</a></li>
+        </ul>
       </div>
-
-      <!-- メールでのお問い合わせ -->
-      <div class="shopH3Title">
-      	<h3 class="ribbon" id="mailHelp">メールでのお問い合わせ</h3>
-      </div>
-      <div class="shopContents">
-      	<p>メールでお問い合わせの場合は、氏名、件名…</p>
-      	<br />
-      	<p>tokyosupport@halcinema.co.jp</p>
-      </div>
-
-      <!--電話でのお問い合わせ -->
-      <div class="shopH3Title">
-      	<h3 class="ribbon" id="telHelp">電話でのお問い合わせ</h3>
-      </div>
-      <div class="shopContents">
-      	<p>電話でお問い合わせの場合は…</p>
-      	<br />
-      	<p>03-3344-5551</p>
-      </div>
-      
+      <!-- Sidebar End -->
     </div>
   </div>
+  <div class="clear"></div>
 </div>
 <!-- / #mainContent -->
 <?PHP

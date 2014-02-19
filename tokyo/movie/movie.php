@@ -1,10 +1,11 @@
 <?PHP
-	$pageTitle = "";
+	$pageTitle = "作品案内";
 	require_once("../module/header.php");
 ?>
-<div class="contentTitle">
-	<h2>作品案内<span class="h2En">Work Info.</span></h2>
+<div class="movieTitle">
+  <h2>作品案内<small>公開中作品･公開予定作品　Work Info.</small></h2>
 </div>
+
 <div id="mainContent"><!--メインコンテンツ-->
 <div id="todayTab" class="clearfix">
 <p id="nowMovie"><img src="images/nowShowing.png" alt="公開中の作品"></p>

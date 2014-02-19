@@ -96,6 +96,7 @@ h2は#mainContentの外に書いてください。。
     &lt;!-- Sidebar End --&gt;
   &lt;/div&gt;
 &lt;/div&gt;
+&lt;div class="clear"&gt;&lt;/div&gt;
 </pre>
 </div>
 </div>
