@@ -6,7 +6,6 @@
 		header("Location:../mypage/login.php");
 		return;
 	}
-
 	$showid = $_SESSION["showid"];
 	$con = getConnection();
 
@@ -49,20 +48,61 @@
 	$adultCount = 0;
 	$studentCount = 0;
 	$seniorCount = 0;
+	$pear1Count  =0;
+	$pear2Count =0;
 	while($reserveRow = mysqli_fetch_array($reserveResult)){
-		echo $reserveRow["seat_number"].",";
-		$priceId = $reserveRow["movie_price_id"];
-		switch($priceId){
-			case '0':
-				$adultCount++;
-				break;
-			case '1':
-				$studentCount++;
-				break;
-			case '2':
-				$seniorCount++;
-				break;
+		//このままだと上映idが一致する、すべての仮予約のものがでてしまう。だから$_SESSION['reserveSeat']に積まれている今回仮予約したものと一致しているものだけを表示する。
+		// $reserveRow["seat_number"]　が　配列$_SESSION['reserveSeat']　に 　入っていれば表示する
+		
+		$hitFlag = 0;//入っていたらフラグを変える
+		
+		
+		foreach ($_SESSION['reserveSeat'] as $value){
+			$reserveValue = array();
+			$reserveValue = explode('_',$value);
+			if($reserveValue[0] == $reserveRow["seat_number"]){		
+				$hitFlag = 1;
+			}
 		}
+		
+		
+		if($hitFlag==1){	
+			echo $reserveRow["seat_number"]."　";
+			$priceId = $reserveRow["movie_price_id"];
+			switch($priceId){
+				case 'mp0001':
+					$adultCount++;
+					break;
+				case 'mp0002':
+					$studentCount++;
+					break;
+				case 'mp0005':
+					$seniorCount++;
+					break;
+				case 'mp0003':
+					$pear1Count++;
+					break;
+				case 'mp0004':
+					$pear2Count++;
+					break;
+			}
+		}
+	}
+	$reserveTicket ="";
+	if($adultCount!=0){
+		$reserveTicket .="大人×".$adultCount."　";
+	}
+	if($studentCount!=0){
+		$reserveTicket .="学生×".$studentCount."　";
+	}
+	if($seniorCount!=0){
+		$reserveTicket .="シニア×".$seniorCount."　";
+	}
+	if($pear1Count!=0){
+		$reserveTicket .="ペアシート（1人）×".$pear1Count."　";
+	}
+	if($pear2Count!=0){
+		$reserveTicket .="ペアシート（2人）×".$pear2Count."　";
 	}
 ?>
 </td>
@@ -70,9 +110,7 @@
 <tr>
 <th>購入枚数</th>
 <td>
-<?php
-	echo "大人×{$adultCount},学生×{$studentCount},シニア{$seniorCount}";
-?>
+<?php	 echo $reserveTicket; ?>
 </td>
 </tr>
 </table>
@@ -89,19 +127,25 @@
 <th>金額</th>
 <td>
 <?php
-	$priceSql = "SELECT movie_price_name,movie_price FROM movie_price_master";
+	$priceSql = "SELECT movie_price_id,movie_price FROM movie_price_master";
 	$priceResult = mysqli_query($con,$priceSql);
 	$price = 0;
 	while($priceRow = mysqli_fetch_array($priceResult)){
-		switch($priceRow["movie_price_name"]){
-			case "基本料金":
+		switch($priceRow["movie_price_id"]){
+			case "mp0001":
 				$price += $priceRow["movie_price"] * $adultCount;
 				break;
-			case "子ども":
+			case "mp0002":
 				$price += $priceRow["movie_price"] * $studentCount;
 				break;
-			case "シルバーデー":
+			case "mp0005":
 				$price += $priceRow["movie_price"] * $seniorCount;
+				break;
+			case "mp0003":
+				$price += $priceRow["movie_price"] * $pear1Count;
+				break;
+			case "mp0004":
+				$price += $priceRow["movie_price"] * $pear2Count;
 				break;
 		}
 	}
