@@ -70,7 +70,6 @@
 	$con=getConnection();
 	$selectMovieSql = "SELECT cinema_id,cinema_name,start_day,end_day FROM cinema_master";
 	$selectMovieResult =  mysqli_query($con,$selectMovieSql);
-	$rowMovieSelectResult = mysqli_fetch_array($selectMovieResult);
 	
 
 	while(($rowMovieSelectResult = mysqli_fetch_array($selectMovieResult))!=false){
@@ -87,7 +86,15 @@
 		$movieScheduleResult = mysqli_query($con,$movieScheduleSql);
 		$rowMovieScheduleResult = mysqli_fetch_array($movieScheduleResult);
 		
-		$pdf->cell(15,10,$rowMovieScheduleResult[0],1,0,'C',0);
+		if($rowMovieScheduleResult[0]==NULL){//公開されていなかったら
+			
+			$pdf->cell(15,10,"0",1,0,'C',0);
+				
+		}else{
+			
+			$pdf->cell(15,10,strval($rowMovieScheduleResult[0]),1,0,'C',0);
+		}
+		
 		
 		$seatNumSql ="SELECT screen_master.seat_number FROM show_schedule INNER JOIN screen_master ON screen_master.screen_id = show_schedule.screen_id WHERE show_schedule.screen_id = '{$rowMovieScheduleResult['screen_id']}' GROUP BY show_schedule.screen_id";
 		$seatNumResult = mysqli_query($con,$seatNumSql);
@@ -96,18 +103,76 @@
 		$seatNum = $rowSeatNumResult[0] * $rowMovieScheduleResult[0];
 		
 		//文字列じゃないと表示されない？
-		$seatNum = strval($seatNum);
+	
 		
-		$pdf->cell(15,10,$seatNum,1,0,'C',0);
-		$pdf->cell(15,10,"大人",1,0,'C',0);
+		$pdf->cell(15,10,strval($seatNum),1,0,'C',0);
 		
-		$pdf->cell(15,10,"子供",1,0,'C',0);
-		$pdf->cell(15,10,"ペア1",1,0,'C',0);
-		$pdf->cell(15,10,"ペア2",1,0,'C',0);
+		$reserveCount = 0;//予約数
 		
-		$pdf->cell(15,10,"シニア",1,0,'C',0);
-		$pdf->cell(15,10,"予約数",1,0,'C',0);
-		$pdf->cell(15,10,"予約率",1,1,'C',0);
+		//movie_reserve_contentにshow_scheduleをshow_idで結合しcinema_idを取得する　
+		//このテーブルから特定のcinema_idのかつ　大人のもののみを表示し　数を数える
+		$adultDateSql = "SELECT COUNT(movie_reserve_content.movie_price_id) FROM movie_reserve_content INNER JOIN show_schedule ON movie_reserve_content.show_id = show_schedule.show_id WHERE show_schedule.cinema_id='{$rowMovieSelectResult['cinema_id']}' AND movie_reserve_content.movie_price_id = 'mp0001'";
+		$adultDateResult = mysqli_query($con,$adultDateSql);
+		$rowAdultDateResult = mysqli_fetch_array($adultDateResult);
+		
+		$pdf->cell(15,10,strval($rowAdultDateResult[0]),1,0,'C',0);
+		
+		$reserveCount += $rowAdultDateResult[0];
+		
+		//子供　↑大人と同じ
+		$studentDateSql = "SELECT COUNT(movie_reserve_content.movie_price_id) FROM movie_reserve_content INNER JOIN show_schedule ON movie_reserve_content.show_id = show_schedule.show_id WHERE show_schedule.cinema_id='{$rowMovieSelectResult['cinema_id']}' AND movie_reserve_content.movie_price_id = 'mp0002'";
+		$studentDateResult = mysqli_query($con,$studentDateSql);
+		$rowStudentDateResult = mysqli_fetch_array($studentDateResult);
+		
+		$pdf->cell(15,10,strval($rowStudentDateResult[0]),1,0,'C',0);
+		
+		$reserveCount += $rowStudentDateResult[0];
+		
+		
+		//ペア1　↑大人と同じ
+		$pear1DateSql = "SELECT COUNT(movie_reserve_content.movie_price_id) FROM movie_reserve_content INNER JOIN show_schedule ON movie_reserve_content.show_id = show_schedule.show_id WHERE show_schedule.cinema_id='{$rowMovieSelectResult['cinema_id']}' AND movie_reserve_content.movie_price_id = 'mp0003'";
+		$pear1DateResult = mysqli_query($con,$pear1DateSql);
+		$rowPear1DateResult = mysqli_fetch_array($pear1DateResult);
+		$pdf->cell(15,10,strval($rowPear1DateResult[0]),1,0,'C',0);
+		
+		$reserveCount += $rowPear1DateResult[0];
+		
+		//ペア2　↑大人と同じ
+		$pear2DateSql = "SELECT COUNT(movie_reserve_content.movie_price_id) FROM movie_reserve_content INNER JOIN show_schedule ON movie_reserve_content.show_id = show_schedule.show_id WHERE show_schedule.cinema_id='{$rowMovieSelectResult['cinema_id']}' AND movie_reserve_content.movie_price_id = 'mp0004'";
+		$pear2DateResult = mysqli_query($con,$pear2DateSql);
+		$rowPear2DateResult = mysqli_fetch_array($pear2DateResult);
+		$pdf->cell(15,10,strval($rowPear2DateResult[0]),1,0,'C',0);
+		
+		$reserveCount += $rowPear2DateResult[0];
+		
+		//シニア　↑大人と同じ
+		$seniorDateSql = "SELECT COUNT(movie_reserve_content.movie_price_id) FROM movie_reserve_content INNER JOIN show_schedule ON movie_reserve_content.show_id = show_schedule.show_id WHERE show_schedule.cinema_id='{$rowMovieSelectResult['cinema_id']}' AND movie_reserve_content.movie_price_id = 'mp0004'";
+		$seniorDateResult = mysqli_query($con,$seniorDateSql);
+		$rowSeniorDateResult = mysqli_fetch_array($seniorDateResult);
+		$pdf->cell(15,10,strval($rowSeniorDateResult[0]),1,0,'C',0);
+		
+		$reserveCount += $rowSeniorDateResult[0];
+
+		$pdf->cell(15,10,strval($reserveCount),1,0,'C',0);
+		
+		//予約率
+		
+		if($reserveCount==0){
+			
+			$reserceRateNum = 0;
+			$reserceRate = "0%";
+			
+		}else{
+			
+			$reserceRateNum = $reserveCount/$seatNum;
+			$reserceRateNum = round($reserceRateNum*100,4);
+			$reserceRate = strval($reserceRateNum)."%";
+			
+		}
+		
+		
+		
+		$pdf->cell(15,10,$reserceRate,1,1,'C',0);
 	
 	}
 	
