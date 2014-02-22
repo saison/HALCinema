@@ -16,11 +16,11 @@
       
       <h3>ユーザ一覧</h3>
       <p>全てのユーザを出力します</p>
-      <a href="【アドレス】" class="btn btn-danger btn-lg btn-block"><span class="glyphicon glyphicon-user"></span>ユーザ一覧 PDF作成</a>
+      <a href="userPdf.php" class="btn btn-danger btn-lg btn-block"><span class="glyphicon glyphicon-user"></span>ユーザ一覧 PDF作成</a>
       
       <h3>上映スケジュール一覧</h3>
       <p>全ての上映スケジュールを出力します</p>
-      <a href="【アドレス】" class="btn btn-danger btn-lg btn-block"><span class="glyphicon glyphicon-tasks"></span>上映スケジュール一覧 PDF作成</a>
+      <a href="schedulePdf.php" class="btn btn-danger btn-lg btn-block"><span class="glyphicon glyphicon-tasks"></span>上映スケジュール一覧 PDF作成</a>
       
       <h3>統計</h3>
       <p>HALCinemaの予約に関する統計を出力します</p>
