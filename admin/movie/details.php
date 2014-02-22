@@ -8,10 +8,17 @@
 		$nowPage=$_GET['nowPage'];
 	}
 	$schedulePerPage = 50; //1ページのスケジュールの件数
+
+	//映画情報取得 表示
+	$con = getConnection();
+	$movieSql="SELECT * FROM cinema_master WHERE cinema_id='{$_GET["id"]}'";
+	$movieSelectResult =  mysqli_query($con,$movieSql);
+	$rowMovieSelectResult = mysqli_fetch_array($movieSelectResult);
+	mysqli_close($con);
 ?>
 	
 		<!-- main start -->
-		<h2><?PHP echo "映画タイトル" ?> - 詳細<a href="edit.php?id=<?PHP echo $_GET['id'];?>" id="editButton" class="btn btn-primary"><span class="glyphicon glyphicon-pencil"></span>編集 & 削除</a><a href="【URLを入れてね】" id="editButton" class="btn btn-danger"><span class="glyphicon glyphicon-align-left"></span>PDF作成</a>　
+		<h2><?PHP echo $rowMovieSelectResult['cinema_name']; ?> - 詳細<a href="edit.php?id=<?PHP echo $_GET['id'];?>" id="editButton" class="btn btn-primary"><span class="glyphicon glyphicon-pencil"></span>編集 & 削除</a><a href="movieDetailPdf.php?id=<?PHP echo $_GET['id']; ?>" id="editButton" class="btn btn-danger"><span class="glyphicon glyphicon-align-left"></span>PDF作成</a>　
 </h2>
 		<!-- movie details table -->
 			<table class="table table-striped table-bordered table-condensed listTable">
@@ -30,13 +37,7 @@
 			</thead>
 			
 			<tbody>
-            <?PHP
-				//映画情報取得 表示
-				$con = getConnection();
-				$movieSql="SELECT * FROM cinema_master WHERE cinema_id='{$_GET["id"]}'";
-				$movieSelectResult =  mysqli_query($con,$movieSql);
-				while(($rowMovieSelectResult = mysqli_fetch_array($movieSelectResult))!=false):
-			?>
+         
 			<tr>
 				<td><?PHP echo $rowMovieSelectResult['cinema_id'];//映画id?></td>
 				<td><?PHP echo $rowMovieSelectResult['cinema_name'];?></td>
@@ -49,11 +50,11 @@
 				<td><?PHP echo $rowMovieSelectResult['movie_perfomer'];?></td>
 				<td><a href='edit.php?id=<?PHP echo $rowMovieSelectResult['cinema_id'] ; ?>' class='btn btn-primary'><span class='glyphicon glyphicon-pencil'></span>編集 & 削除</a></td>
 			</tr>
-			<?PHP endwhile; mysqli_close($con);?>
+			
 			</tbody>
 		</table>
 		
-		<h2><?PHP echo "映画タイトル" ?> - スケジュール</h2>
+		<h2><?PHP echo $rowMovieSelectResult['cinema_name']; ?> - スケジュール</h2>
 		<table class="table table-striped table-bordered table-condensed listTable">
 			<thead>
 				<tr>
