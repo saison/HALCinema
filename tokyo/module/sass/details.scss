@@ -1,23 +1,18 @@
 @charset "utf-8";
 /* CSS Document */
+@import "compass";
 
-.movieDetailBox{
-	width:900px;
-	margin:0 auto;
-
-}
 h3{
 	font-weight:600;
-	font-size:150%;	
-	padding:0 0 0 8px;
-	margin:15px 0 10px 0;
-	border-left:7px solid #E9FF97;
+	font-size:250%;
+  padding:0 0 10px 0;
 	border-bottom:2px solid #efefef;
+  margin:0 0 10px 0;
+  text-shadow:0 0 2px #aaa;
 }
 .movieDetailImg{
 	float:left;
-	width:300px;
-	margin:10px;
+	width:40%;
 	box-shadow:0 0 3px #aaa;
 }
 .movieDetailImg img{
@@ -25,78 +20,72 @@ h3{
 }
 .movieDetailAbout{
 	float:left;
-	width:500px;
-	margin:15px;
-	font-size:90%;
-	text-shadow:0 0 1px #eee;
+	width:60%;
+	padding:0 0 0 20px;
+  @include box-sizing(border-box);
 }
-.movieDetailCap{
-	font-size:110%;
-	color:#FF8E00;	
-	font-weight:bold;
+.textCaption{
+  padding:2px 5px;
+  margin:5px;
+  background: rgb(248,80,50);
+  background: -moz-linear-gradient(top,  rgba(248,80,50,1) 0%, rgba(241,111,92,1) 50%, rgba(246,41,12,1) 51%, rgba(240,47,23,1) 71%, rgba(231,56,39,1) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(248,80,50,1)), color-stop(50%,rgba(241,111,92,1)), color-stop(51%,rgba(246,41,12,1)), color-stop(71%,rgba(240,47,23,1)), color-stop(100%,rgba(231,56,39,1)));
+  background: -webkit-linear-gradient(top,  rgba(248,80,50,1) 0%,rgba(241,111,92,1) 50%,rgba(246,41,12,1) 51%,rgba(240,47,23,1) 71%,rgba(231,56,39,1) 100%);
+  background: -o-linear-gradient(top,  rgba(248,80,50,1) 0%,rgba(241,111,92,1) 50%,rgba(246,41,12,1) 51%,rgba(240,47,23,1) 71%,rgba(231,56,39,1) 100%);
+  background: -ms-linear-gradient(top,  rgba(248,80,50,1) 0%,rgba(241,111,92,1) 50%,rgba(246,41,12,1) 51%,rgba(240,47,23,1) 71%,rgba(231,56,39,1) 100%);
+  background: linear-gradient(to bottom,  rgba(248,80,50,1) 0%,rgba(241,111,92,1) 50%,rgba(246,41,12,1) 51%,rgba(240,47,23,1) 71%,rgba(231,56,39,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f85032', endColorstr='#e73827',GradientType=0 );
+  color:#ffffff;
+  font-weight:bold;
+  border-radius:5px;
+  text-shadow:0 0 2px #000;
 }
-.moviePhotogallery{
-	width:900px;
-	margin:0 auto;
+#screen{
+  font-family:Century Gothic,"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  border-bottom:1px solid #eee;
+  padding:0 0 5px 0;
 }
 
-#movieDatailsSchedule{
-	width:900px;
-	margin:15px auto;
+.movieScheduleEachBox{
+  background:#ffffff;
+  padding:10px;
+  box-shadow:0 0 2px #aaa;
 }
-#movieDatailsSchedule table{
-	margin:15px 0;
-}
-
-.tableDate{
-	background-color:#efefef;
+.movieScheduleDayTitle{
+  background:#eeeeee;
+  border-bottom:5px solid #ff0000;
 	color:#555555;
 	font-family:Century Gothic,"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
 	padding:5px;
 	text-align:center;
-	font-size:150%;
-	width:100px;
-	height:100px;
+	font-size:175%;
+	width:150px;
+  height:70px;
+  line-height:70px;
+  float:left;
 }
-.tableScreen{
-	background-color:#efefef;
-	color:#555555;
-	font-family:Century Gothic,"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
-	padding:5px;
-	text-align:center;
-	font-size:125%;
-	width:100px;
-	height:100px;
-}
-
-.tableEachMovie{
-	margin:0 10px;
-	box-shadow:0 0 3px #aaa;
-	font-family:Century Gothic,"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
-	text-align:center;
-}
-.tableEachMovie a{
-	display:block;
-	width:110px;
-	height:50px;
-	padding:30px 0;
-	
+.movieScheduleEach{
+  float:left;
+  box-shadow:0 0 2px #aaa;
+  font-family:Century Gothic,"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  background:#fafafa;
+  display:block;
+	width:140px;
+	height:63px;
+	padding:10px 0;
 	color:#333333;
+  text-align:center;
 	text-decoration:none;
 }
-.tableEachMovie a:hover{
-	background-color:#efefef;
-	box-shadow:0 0 5px #bff;	
+.movieScheduleEach a{
+  color:#333333;
+	text-decoration:none;
+}
+.movieScheduleEachEnd{
+  background:#777777;
 }
 
 .tableEachMovieStart{
 	font-weight:bold;
-	font-size:150%;	
+	font-size:175%;	
 }
-#movieTyui{
-	font-size:70%;
-	text-shadow:0 0 2px #aaa;
-	color:#444444;
-	margin:15px 40px;	
-}
-/*上映スケジュール*/

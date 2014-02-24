@@ -1,75 +1,39 @@
 @charset "utf-8";
 /* CSS Document */
-h3{
-	border-left:4px solid #bff;
-	padding:0 0 0 5px;
-	margin:10px;
-	font-weight:600;
-}
-
+@import "compass";
 .movieBox{
-	width:938px;
 	padding:10px;
-	margin:0 5px 15px 5px;
-	box-shadow:0 0 2px #aaa;
 	color:#222222;
 	text-decoration:none;	
+  border-bottom:1px solid #eee;
 }
 .movieBox:hover{
-	background-color:#efefef;
-	box-shadow:0 0 5px #bff;	
+  opacity:0.7;
 }
 .movieImg{
 	float:left;
-	width:225px;
+	width:30%;
 	margin:0px;
 }
 .movieImg img{
 	width:100%;
-	box-shadow:0 0 2px #aaa;	
+	box-shadow:0 0 3px #F00;	
 }
 .movieAbout{
 	float:left;
-	width:500px;
-	margin:0 0 0 15px;
+	width:70%;
+  padding:0 0 0 15px;
+  @include box-sizing(border-box);
 }
-.movieAbout h3{
-	font-weight:600;
-	font-size:125%;	
-	padding:0 0 0 8px;
-	margin:0 0 10px 0;
-	border-left:7px solid #E9FF97;
+.movieTitle{
+  font-size:125%;
+  text-shadow:0 0 3px #ccc;
+  font-weight:bold;
 }
-#todayTab{
-	width:980px;
-	margin:15px 0 0 -3px;
+.movieSupervision,.moviePerformer{
+  font-size:70%;
 }
-#nowMovie{
-	float:left;
-	padding:15px 0 0 0;
-}
-#comeMovie{
-	float:left;
-	margin-left:20px;
-	padding:15px 0 0 0;
-}
-.comeDate{
-	font-size:110%;
-	color:#FF8E00;	
-	font-weight:bold;
-}
-.movieEachTitle{
-	border:none !important;
-}
-.movieEachTitle:after{
-	background:none !important;
-}
-.movieEachTitle:before{
-	background:none !important;
-}
-#movieTab{
-	width:970px;
-	padding:5px 5px 5px 5px;
-	border:1px solid #aaa;
-	margin:-8px 0 50px 0;
+.movieComeDate{
+  font-size:80%;
+  font-weight:bold;
 }
