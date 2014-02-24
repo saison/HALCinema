@@ -1,23 +1,17 @@
 @charset "UTF-8";
 /* CSS Document */
-.movieDetailBox {
-  width: 900px;
-  margin: 0 auto;
-}
-
 h3 {
   font-weight: 600;
-  font-size: 150%;
-  padding: 0 0 0 8px;
-  margin: 15px 0 10px 0;
-  border-left: 7px solid #E9FF97;
+  font-size: 250%;
+  padding: 0 0 10px 0;
   border-bottom: 2px solid #efefef;
+  margin: 0 0 10px 0;
+  text-shadow: 0 0 2px #aaa;
 }
 
 .movieDetailImg {
   float: left;
-  width: 300px;
-  margin: 10px;
+  width: 40%;
   box-shadow: 0 0 3px #aaa;
 }
 
@@ -27,85 +21,80 @@ h3 {
 
 .movieDetailAbout {
   float: left;
-  width: 500px;
-  margin: 15px;
-  font-size: 90%;
-  text-shadow: 0 0 1px #eee;
+  width: 60%;
+  padding: 0 0 0 20px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-.movieDetailCap {
-  font-size: 110%;
-  color: #FF8E00;
+.textCaption {
+  padding: 2px 5px;
+  margin: 5px;
+  background: #f85032;
+  background: -moz-linear-gradient(top, #f85032 0%, #f16f5c 50%, #f6290c 51%, #f02f17 71%, #e73827 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f85032), color-stop(50%, #f16f5c), color-stop(51%, #f6290c), color-stop(71%, #f02f17), color-stop(100%, #e73827));
+  background: -webkit-linear-gradient(top, #f85032 0%, #f16f5c 50%, #f6290c 51%, #f02f17 71%, #e73827 100%);
+  background: -o-linear-gradient(top, #f85032 0%, #f16f5c 50%, #f6290c 51%, #f02f17 71%, #e73827 100%);
+  background: -ms-linear-gradient(top, #f85032 0%, #f16f5c 50%, #f6290c 51%, #f02f17 71%, #e73827 100%);
+  background: linear-gradient(to bottom, #f85032 0%, #f16f5c 50%, #f6290c 51%, #f02f17 71%, #e73827 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f85032', endColorstr='#e73827',GradientType=0 );
+  color: #ffffff;
   font-weight: bold;
+  border-radius: 5px;
+  text-shadow: 0 0 2px #000;
 }
 
-.moviePhotogallery {
-  width: 900px;
-  margin: 0 auto;
+#screen {
+  font-family: Century Gothic,"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  border-bottom: 1px solid #eee;
+  padding: 0 0 5px 0;
 }
 
-#movieDatailsSchedule {
-  width: 900px;
-  margin: 15px auto;
+.movieScheduleEachBox {
+  background: #ffffff;
+  padding: 10px;
+  box-shadow: 0 0 2px #aaa;
 }
 
-#movieDatailsSchedule table {
-  margin: 15px 0;
-}
-
-.tableDate {
-  background-color: #efefef;
+.movieScheduleDayTitle {
+  background: #eeeeee;
+  border-bottom: 5px solid #ff0000;
   color: #555555;
   font-family: Century Gothic,"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
   padding: 5px;
   text-align: center;
-  font-size: 150%;
-  width: 100px;
-  height: 100px;
+  font-size: 175%;
+  width: 150px;
+  height: 70px;
+  line-height: 70px;
+  float: left;
 }
 
-.tableScreen {
-  background-color: #efefef;
-  color: #555555;
+.movieScheduleEach {
+  float: left;
+  box-shadow: 0 0 2px #aaa;
   font-family: Century Gothic,"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
-  padding: 5px;
-  text-align: center;
-  font-size: 125%;
-  width: 100px;
-  height: 100px;
-}
-
-.tableEachMovie {
-  margin: 0 10px;
-  box-shadow: 0 0 3px #aaa;
-  font-family: Century Gothic,"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
-  text-align: center;
-}
-
-.tableEachMovie a {
+  background: #fafafa;
   display: block;
-  width: 110px;
-  height: 50px;
-  padding: 30px 0;
+  width: 140px;
+  height: 63px;
+  padding: 10px 0;
+  color: #333333;
+  text-align: center;
+  text-decoration: none;
+}
+
+.movieScheduleEach a {
   color: #333333;
   text-decoration: none;
 }
 
-.tableEachMovie a:hover {
-  background-color: #efefef;
-  box-shadow: 0 0 5px #bff;
+.movieScheduleEachEnd {
+  background: #777777;
 }
 
 .tableEachMovieStart {
   font-weight: bold;
-  font-size: 150%;
+  font-size: 175%;
 }
-
-#movieTyui {
-  font-size: 70%;
-  text-shadow: 0 0 2px #aaa;
-  color: #444444;
-  margin: 15px 40px;
-}
-
-/*上映スケジュール*/

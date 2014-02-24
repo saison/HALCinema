@@ -1,36 +1,22 @@
 @charset "utf-8";
 /* CSS Document */
-.login{
-	width:450px;
-	float:left;
-	margin:20px;
-}
-#newUser{
-	width:450px;
-	float:left;
-	margin:20px;
-}
-h4{
-	font-size:110%;
-	font-weight:600;	
-}
 .loginButton{
 	text-align:center;	
 	margin:15px 0;
 }
-.login table{
+.loginTable table{
 	width:100%;
-	margin:15px 0 15px 10px;
 }
-.login table,.login th,.login td,.login tr{
+.loginTable table,.loginTable th,.loginTable td,.loginTable tr{
 	border:1px solid #cccccc;
 }
-.login th{
-	width:300px;	
+.loginTable th{
+	width:100px;	
 	padding:10px;
 	background-color:#efefef;
+  font-weight:bold;
 }
-.login td{
+.loginTable td{
 	padding:10px;
 }
 .error_p{
@@ -42,4 +28,5 @@ h4{
 	text-shadow: 0 0 1px #fff;
 	color:#ff0000;	
 	background-color:#FFBBBC;
+  font-weight:bold;
 }
