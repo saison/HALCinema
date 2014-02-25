@@ -30,7 +30,7 @@
   box-sizing: border-box;
 }
 
-.movieTitle {
+.movieEachTitle {
   font-size: 125%;
   text-shadow: 0 0 3px #ccc;
   font-weight: bold;
