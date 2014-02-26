@@ -13,61 +13,17 @@
 	$selectResult = mysqli_query($con,$selectSql);
 	$movieRow = mysqli_fetch_array($selectResult);
 
-	$reservSql = "SELECT  seat_number, movie_price_id FROM seat_reserve_list WHERE show_id = '".$showid."' AND user_id = '".$_SESSION["userid"]."' AND reserve_flag = '0'";
+	$reservSql = "SELECT seat_number, movie_price_id FROM seat_reserve_list WHERE show_id = '".$showid."' AND user_id = '".$_SESSION["userid"]."' AND reserve_flag = '0'";
 	$reserveResult = mysqli_query($con,$reservSql);
 
-?>
-
-<!-- ここ中身 -->
-<div id="content">
-<!-- 座席予約ナビゲーション --><!-- 横幅980固定 -->
-<div class="reserveTitle">
-  <h3>以下の内容でよろしいですか？</h3>
-</div>
-<div class="confirmTable">
-<h4>映画情報</h4>
-<table>
-<tr>
-<th>劇場</th>
-<td>HALCinema TOKYO</td>
-</tr>
-<tr>
-<th>作品･日時</th>
-<td><?php echo $movieRow["映画名"];?></td>
-</tr>
-</table>
-</div>
-
-<div class="confirmTable">
-<h4>座席</h4>
-<table>
-<tr>
-<th>座席</th>
-<td>
-<?php
 	$adultCount = 0;
 	$studentCount = 0;
 	$seniorCount = 0;
 	$pear1Count  =0;
 	$pear2Count =0;
+  $reserveSeat = "";
 	while($reserveRow = mysqli_fetch_array($reserveResult)){
-		//このままだと上映idが一致する、すべての仮予約のものがでてしまう。だから$_SESSION['reserveSeat']に積まれている今回仮予約したものと一致しているものだけを表示する。
-		// $reserveRow["seat_number"]　が　配列$_SESSION['reserveSeat']　に 　入っていれば表示する
-		
-		$hitFlag = 0;//入っていたらフラグを変える
-		
-		
-		foreach ($_SESSION['reserveSeat'] as $value){
-			$reserveValue = array();
-			$reserveValue = explode('_',$value);
-			if($reserveValue[0] == $reserveRow["seat_number"]){		
-				$hitFlag = 1;
-			}
-		}
-		
-		
-		if($hitFlag==1){	
-			echo $reserveRow["seat_number"]."　";
+			$reserveSeat += $reserveRow["seat_number"]."　";
 			$priceId = $reserveRow["movie_price_id"];
 			switch($priceId){
 				case 'mp0001':
@@ -86,7 +42,6 @@
 					$pear2Count++;
 					break;
 			}
-		}
 	}
 	$reserveTicket ="";
 	if($adultCount!=0){
@@ -104,17 +59,92 @@
 	if($pear2Count!=0){
 		$reserveTicket .="ペアシート（2人）×".$pear2Count."　";
 	}
+
+  //ユーザ情報取得
+	$userSql = "SELECT * FROM user_master WHERE user_id='".$_SESSION["userid"]."'";
+	$userResult = mysqli_query($con,$userSql);
+	$userRow = mysqli_fetch_array($userResult);
 ?>
-</td>
-</tr>
-<tr>
-<th>購入枚数</th>
-<td>
-<?php	 echo $reserveTicket; ?>
-</td>
-</tr>
-</table>
-</div>
+
+<div id="content" class="m15">
+  <div class="reserveTitle">
+    <h2>座席予約を行います。以下の内容でよろしいですか？</h2>
+  </div>
+  
+  <div class="boxCol2 clearfix mtb15">
+    <div class="boxCol2Left">
+      <div class="contentBox">
+        <div class="reserveTitle">
+          <h3>映画情報</h3>
+        </div>
+        <div class="confirmTable">
+          <table>
+            <tr>
+              <th>劇場</th>
+              <td>HALCinema Tokyo</td>
+            </tr>
+            <tr>
+              <th>作品</th>
+              <td><?php echo $movieRow["映画名"];?></td>
+            </tr>
+            <tr>
+              <th>日時</th>
+              <td><?php echo str_replace("-","/",$movieRow["上映日"])." ".substr($movieRow["上映開始時間"],0,5)."~";?></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <div class="contentBox mtb20">
+        <div class="reserveTitle">
+          <h3>スクリーン･座席</h3>
+        </div>
+        <div class="confirmTable">
+          <table>
+            <tr>
+              <th>スクリーン</th>
+              <td>SCREEN<?php echo substr($movieRow["ScreenID"],-1,1); ?></td>
+            </tr>
+            <tr>
+              <th>座席</th>
+              <td><?php echo $reserveSeat; ?></td>
+            </tr>
+            <tr>
+              <th>枚数</th>
+              <td><?php	echo $reserveTicket; ?></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="boxCol2Right">
+      <div class="contentBox">
+        <div class="reserveTitle">
+          <h3>お客様情報</h3>
+        </div>
+        <div class="confirmTable">
+          <table>
+            <tr>
+              <th>名前</th>
+              <td><?php echo $userRow["family_name"].$userRow["first_name"]; ?></td>
+            </tr>
+            <tr>
+              <th>生年月日</th>
+              <td><?php echo $userRow["birthday"]; ?></td>
+            </tr>
+            <tr>
+              <th>電話番号</th>
+              <td><?php echo $userRow["user_tel"]; ?></td>
+            </tr>
+            <tr>
+              <th>メールアドレス</th>
+              <td><?php echo $userRow["user_mail"]; ?></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  
 
 <div class="confirmTable">
 <h4>決済</h4>
@@ -157,32 +187,7 @@
 </tr>
 </table>
 </div>
-<?PHP
-	$userSql = "SELECT * FROM user_master WHERE user_id='".$_SESSION["userid"]."'";
-	$userResult = mysqli_query($con,$userSql);
-	$userRow = mysqli_fetch_array($userResult);
-?>
-<div class="confirmTable">
-<h4>お客様情報</h4>
-<table>
-<tr>
-<th>名前</th>
-<td><?php echo $userRow["family_name"].$userRow["first_name"]; ?></td>
-</tr>
-<tr>
-<th>生年月日</th>
-<td><?php echo $userRow["birthday"]; ?></td>
-</tr>
-<tr>
-<th>電話番号</th>
-<td><?php echo $userRow["user_tel"]; ?></td>
-</tr>
-<tr>
-<th>メールアドレス</th>
-<td><?php echo $userRow["user_mail"]; ?></td>
-</tr>
-</table>
-</div>
+
 
 <div id="yoyakuBack"><form><input type="image" src="images/yoyakuBack.png" alt="送信する"></form></div>
 <div id="yoyakuSelect"><form action="finish.php" method="post"><input type="image" src="images/yoyakuSelect.png" alt="送信する"></form></div>
