@@ -31,11 +31,7 @@
 
       }
       $insertSql = "INSERT INTO `seat_reserve_list`(`show_id`, `user_id`, `seat_number`, `reserve_flag`, `movie_price_id`) VALUES ('{$showId}','".$_SESSION["userid"]."','{$reserveData[0]}',0,'{$priceId}')";
-<<<<<<< HEAD
-      echo $insertSql;
-=======
       //echo $insertSql;
->>>>>>> master
       $insertResult = mysqli_query($con,$insertSql);
       if($insertResult){
         "ok";
