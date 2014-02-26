@@ -5,7 +5,7 @@
     exit();
 }
 ?>
-<?php 
+<?php
 //	if(isset($_SESSION["userID"])){
 //		echo "<br>".$_SESSION["userID"];
 //	}
@@ -51,5 +51,5 @@
 			</ul>
 		</nav>
 	</aside>
-	
+
 	<div id="mainContent">
