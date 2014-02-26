@@ -21,9 +21,8 @@
 	$seniorCount = 0;
 	$pear1Count  =0;
 	$pear2Count =0;
-  $reserveSeat = "";
 	while($reserveRow = mysqli_fetch_array($reserveResult)){
-			$reserveSeat += $reserveRow["seat_number"]."　";
+			$reserveSeat[] = $reserveRow["seat_number"];
 			$priceId = $reserveRow["movie_price_id"];
 			switch($priceId){
 				case 'mp0001':
@@ -94,7 +93,7 @@
           </table>
         </div>
       </div>
-      <div class="contentBox mtb20">
+      <div class="contentBox mtb30">
         <div class="reserveTitle">
           <h3>スクリーン･座席</h3>
         </div>
@@ -106,11 +105,61 @@
             </tr>
             <tr>
               <th>座席</th>
-              <td><?php echo $reserveSeat; ?></td>
+              <td><?php
+                    for($i=0;$i<count($reserveSeat);$i++){
+                      echo $reserveSeat[$i]." ";
+                    }
+                  ?>
+              </td>
             </tr>
             <tr>
               <th>枚数</th>
               <td><?php	echo $reserveTicket; ?></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <div class="contentBox mtb30">
+        <div class="reserveTitle">
+          <h3>決済</h3>
+        </div>
+        <div class="confirmTable">
+          <table>
+            <tr>
+              <th>決済方法</th>
+              <td><?php echo $_POST["sendConfirm"]; ?></td>
+            </tr>
+            <tr>
+              <th>金額</th>
+              <td>
+              <?php
+              $priceSql = "SELECT movie_price_id,movie_price FROM movie_price_master";
+              $priceResult = mysqli_query($con,$priceSql);
+              $price = 0;
+              while($priceRow = mysqli_fetch_array($priceResult)){
+                switch($priceRow["movie_price_id"]){
+                  case "mp0001":
+                    $price += $priceRow["movie_price"] * $adultCount;
+                    break;
+                  case "mp0002":
+                    $price += $priceRow["movie_price"] * $studentCount;
+                    break;
+                  case "mp0005":
+                    $price += $priceRow["movie_price"] * $seniorCount;
+                    break;
+                  case "mp0003":
+                    $price += $priceRow["movie_price"] * $pear1Count;
+                    break;
+                  case "mp0004":
+                    $price += $priceRow["movie_price"] * $pear2Count;
+                    break;
+                }
+              }
+              
+              echo("¥".$price);
+              
+              ?>
+              </td>
             </tr>
           </table>
         </div>
@@ -144,54 +193,14 @@
       </div>
     </div>
   </div>
-  
-
-<div class="confirmTable">
-<h4>決済</h4>
-<table>
-<tr>
-<th>決済方法</th>
-<td><?php echo $_POST["sendConfirm"]; ?></td>
-</tr>
-<tr>
-<th>金額</th>
-<td>
-<?php
-	$priceSql = "SELECT movie_price_id,movie_price FROM movie_price_master";
-	$priceResult = mysqli_query($con,$priceSql);
-	$price = 0;
-	while($priceRow = mysqli_fetch_array($priceResult)){
-		switch($priceRow["movie_price_id"]){
-			case "mp0001":
-				$price += $priceRow["movie_price"] * $adultCount;
-				break;
-			case "mp0002":
-				$price += $priceRow["movie_price"] * $studentCount;
-				break;
-			case "mp0005":
-				$price += $priceRow["movie_price"] * $seniorCount;
-				break;
-			case "mp0003":
-				$price += $priceRow["movie_price"] * $pear1Count;
-				break;
-			case "mp0004":
-				$price += $priceRow["movie_price"] * $pear2Count;
-				break;
-		}
-	}
-
-	echo("¥".$price);
-
-?>
-</td>
-</tr>
-</table>
-</div>
-
-
-<div id="yoyakuBack"><form><input type="image" src="images/yoyakuBack.png" alt="送信する"></form></div>
-<div id="yoyakuSelect"><form action="finish.php" method="post"><input type="image" src="images/yoyakuSelect.png" alt="送信する"></form></div>
-<div class="clear"></div>
+  <div id="yoyakuBtBox" class="clearfix">
+    <div id="yoyakuBackBt">
+      <form><input type="image" src="images/yoyakuBack.png" alt="送信する"></form>
+    </div>
+    <div id="yoyakuOkBt">
+      <form action="finish.php" method="post"><input type="image" src="images/yoyakuSelect.png" alt="送信する"></form>
+    </div>
+  </div>
 
 </div>
 
