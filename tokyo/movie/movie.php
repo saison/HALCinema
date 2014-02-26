@@ -57,7 +57,7 @@
         <div class='movieAbout'>
           <p class='movieComeDate'><?php echo date("m月d日",strtotime($row["start_day"])); ?>公開予定</p>
           <p class="movieEachTitle"><?php echo $row["cinema_name"]; ?></h3>
-          <p class="movieSupervision">監督：<?php echo $row["movie_directr"]; ?></p>
+          <p class="movieSupervision">監督：<?php echo $row["movie_director"]; ?></p>
           <p class="moviePerformer">出演者：<?php echo $row["movie_perfomer"]; ?></p>
         </div>
       </div>
