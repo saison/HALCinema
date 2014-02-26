@@ -6261,6 +6261,11 @@ html {
   font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
 }
 
+#wrapper {
+  min-width: 980px;
+  max-width: 1980px;
+}
+
 /* clear */
 .clear {
   clear: both;

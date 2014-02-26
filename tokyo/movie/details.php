@@ -30,7 +30,7 @@ $row = mysqli_fetch_array($result);
     </div>
     <p class="smallText mtb5"><?php echo $row["cinema_description"]; ?></p>
     <p class="smallText mtb5"><span class="textCaption">監督</span><?php echo $row["movie_director"]; ?></p>
-    <p class="smallText mtb5"><span class="textCaption">出演者</span><?php echo $row["movie_performer"]; ?></p>
+    <p class="smallText mtb5"><span class="textCaption">出演者</span><?php echo $row["movie_perfomer"]; ?></p>
     <p class="smallText mtb5"><span class="textCaption">上映時間</span><?php echo $row["running_time"]; ?>分</p>
   </div>
 </div>
