@@ -17,6 +17,8 @@
 	$_SESSION["showid"] = $showID;
 
 	$con = getConnection();
+  $reserveDeleteSql = "DELETE FROM seat_reserve_list WHERE user_id='{$_SESSION['userid']}' and reserve_flag=0";
+	$reserveDeleteResult = mysqli_query($con,$reserveDeleteSql);
 	$reserveSelectSql = "SELECT show_schedule.show_id AS showID , show_schedule.screen_id AS SID , show_schedule.show_day AS showDay , show_schedule.start_time AS startTime , cinema_master.cinema_name AS movieName FROM show_schedule INNER JOIN cinema_master ON show_schedule.cinema_id=cinema_master.cinema_id WHERE show_schedule.show_id='".$showID."'";
 	$reserveSelectResult = mysqli_query($con,$reserveSelectSql);
 	$reserveSelectRow = mysqli_fetch_array($reserveSelectResult);
@@ -29,9 +31,7 @@
 	mysqli_close($con);	
 ?>
 
-<div id="nav"></div>
-<div id="content100">
-	<div class="m10">
+	<div class="content m10">
 		<div class="reserveTitle">
       <h2>座席を選択してください</h2>
     </div>
@@ -130,3 +130,5 @@
 <?php
 	require_once("../module/reserveFooter.php");
 ?>
+
+<?php;

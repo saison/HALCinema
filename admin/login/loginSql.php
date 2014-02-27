@@ -15,7 +15,6 @@ if(empty($_POST["userPass"])){
   break;
 }
 
-mysqli_select_db($link,"halcinema");
 $user=mysqli_real_escape_string($con,$_POST["userID"]);
 $pass=mysqli_real_escape_string($con,$_POST["userPass"]);
 $sql="SELECT * FROM admin_user_master WHERE user_id='".$user."' AND user_pass='".$pass."'";

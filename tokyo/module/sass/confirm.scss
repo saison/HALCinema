@@ -8,18 +8,19 @@ h4{
 }
 .confirmTable table{
 	width:100%;
-	margin:15px 0 15px 10px;
+	margin:15px 0 0 0;
 }
 .confirmTable table,.confirmTable th,.confirmTable td,.confirmTable tr{
 	border:1px solid #cccccc;
 }
 .confirmTable th{
-	width:300px;
+	width:200px;
 	padding:10px;
 	background-color:#efefef;
 }
 .confirmTable td{
 	padding:10px;
+  font-size:85%;
 }
 #yoyakuBack{
 	width:400px;
