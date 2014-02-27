@@ -24,16 +24,24 @@ h4 {
 .confirmTable td {
   padding: 10px;
   font-size: 85%;
+<<<<<<< HEAD
+=======
 }
 
-#yoyakuBack {
-  width: 400px;
-  float: left;
-  margin: 15px 45px;
+#yoyakuBtBox {
+  width: 600px;
+  margin: 0 auto;
+>>>>>>> master
 }
 
-#yoyakuSelect {
-  width: 400px;
+#yoyakuBackBt {
+  width: 300px;
+  text-align: center;
   float: left;
-  margin: 15px 45px;
+}
+
+#yoyakuOkBt {
+  width: 300px;
+  text-align: center;
+  float: left;
 }
