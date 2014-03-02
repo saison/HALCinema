@@ -20,7 +20,7 @@
   </div>
   
   <!-- この先開発用 -->
-  <div id="adminLink"><p><a href="./admin/top/">管理側(BE)ページはこちら</a></p></div>
+  <!--<div id="adminLink"><p><a href="./admin/top/">管理側(BE)ページはこちら</a></p></div>
   <div id="lastUpdate"><p>
   <?php
   $path = 'tokyo/';

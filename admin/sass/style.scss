@@ -190,3 +190,63 @@ footer{
   text-align: center;
   margin-top:-5px;
 }
+
+
+/*  index todayMovie*/
+.todayScheduleEachBox{
+  background:#ffffff;
+  box-shadow:0 0 3px #aaa;
+  @include box-sizing(border-box);
+  margin:0 15px 15px 0px;
+  padding:5px;
+  float:left;
+  width:48%;
+}
+.comingsoonEachBox{
+  background:#ffffff;
+  box-shadow:0 0 3px #a00;
+  @include box-sizing(border-box);
+  margin:10px;
+  padding:5px;
+}
+.todayScheduleEachImage{
+  float:left;
+  width:20%;
+}
+.todayScheduleEachImage img{
+  width:100%;
+}
+.todayScheduleEachInfo{
+  float:left;
+  width:80%;
+  @include box-sizing(border-box);
+  padding:0 0 0 10px;
+  line-height:1;
+}
+.todayScheduleEachScreen{
+  color:#333;
+  font-size:90%;
+  font-family:Century Gothic,"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic";
+}
+.todayScheduleEachCinemaName{
+  color:#333;
+  font-size:100%;
+  font-weight:bold;
+  text-shadow:0 0 2px #aaa;
+}
+.todayScheduleEachScheduleTime{
+  display:table;
+  width:100%;
+}
+.todayScheduleEachScheduleTime li{
+  display:table-cell;
+  background:#eee;
+  color:#333;
+  font-size:100%;
+  padding:2px;
+  text-align:center;
+  font-family:Century Gothic,"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic";
+}
+.todayScheduleEachScheduleTimeEnd{
+  background:#555 !important;
+}
