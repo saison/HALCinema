@@ -24,12 +24,16 @@
 	require_once("../module/reserveHeader.php");
 
 ?>
-<div id="content">
-<h2>入力内容確認</h2>
-<p id="comfirmUser">入力内容の確認を行って下さい。</p>
+<div id="content" class="m10">
+<div class="reserveTitle">
+  <h2>入力内容確認</h2>
+</div>
+<div class="contentBox mtb15">
+  <p class="smallText">入力内容の確認を行って下さい。</p>
+</div>
 <!--  エラー表示時は#newErrorをpタグなどに指定するとCSSが適応されます-->
 <form action="addUser.php" method="post">
-<div class="confirmTable">
+<div class="confirmTable w750 m0at mtb20">
 <table>
 <tr>
 <th>ユーザID:</th>
