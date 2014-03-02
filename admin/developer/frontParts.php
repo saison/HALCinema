@@ -494,6 +494,20 @@ BootStrapの関係上見た目が異なる場合があります。</p>
 </div>
 </div>
 
+<div class="panel panel-info">
+<div class="panel-heading">
+<h5>contentAgreementBox</h5>
+</div>
+<div class="panel-body">
+<div class="contentAgreementBox">
+  <p>規約用のコンテンツボックスです。高さが200pxに指定されているため、オーバする部分はスクロールされます。<br>基本的な使い方は通常のBOXと変わりません</p>
+</div>
+<pre>&lt;div class="contentProhibitionBox"&gt;
+  &lt;p&gt;規約内容の中身です&lt;/p&gt;
+&lt;/div&gt;</pre>
+</div>
+</div>
+
 <h3 id="size">サイズ</h3>
 <p>横幅などを指定するときに使用してください。なお、同時に複数のクラスを指定した場合、余白やボーダーによってサイズが変わる場合があります。</p></p>
 <h4>固定値</h4>

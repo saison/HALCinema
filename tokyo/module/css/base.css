@@ -6396,6 +6396,16 @@ html {
   border-radius: 5px;
 }
 
+.contentAgreementBox {
+  border: 2px solid #eeeeee;
+  box-shadow: 0 0 5px #aaa;
+  padding: 15px;
+  background: #ffffff;
+  border-radius: 5px;
+  height: 200px;
+  overflow: auto;
+}
+
 /* BOXflor t*/
 .boxCol2Left {
   width: 50%;

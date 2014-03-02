@@ -4,7 +4,7 @@
   $con = getConnection();
   $showId = $_SESSION["showid"];
 
-  if(isset($_POST["send"]) && isset($_POST["seat"])){
+  if(isset($_POST["seat"])){
 
     foreach ($_POST["seat"] as $value){
       $reserveData = array();
@@ -31,20 +31,11 @@
 
       }
       $insertSql = "INSERT INTO `seat_reserve_list`(`show_id`, `user_id`, `seat_number`, `reserve_flag`, `movie_price_id`) VALUES ('{$showId}','".$_SESSION["userid"]."','{$reserveData[0]}',0,'{$priceId}')";
-      //echo $insertSql;
       $insertResult = mysqli_query($con,$insertSql);
-      if($insertResult){
-        "ok";
-      }
-      /*$row = mysqli_fetch_array($insertResult);*/
     }
-
-    //予約した座席情報をいったんセッションに積む（confirm.php で　仮予約のものすべてを表示してしまうため。）
     $_SESSION['reserveSeat'] = $_POST['seat'];
-
     header("Location:pay.php");
-
   }else{
-    header("Location:seat.php?id=".$showId);
+    header("Location:seat.php?id=".$showId."&error=notSelect");
   }
 ?>

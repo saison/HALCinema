@@ -297,17 +297,6 @@ td.reserveSeat {
   background: #e1e1e1;
 }
 
-#kiyaku {
-  width: 800px;
-  margin: 0 auto;
-  height: 200px;
-  border: 3px solid #aaaaaa;
-}
-
-.m10 {
-  margin: 10px;
-}
-
 .arrow_box {
   position: relative;
   background: #eff;
