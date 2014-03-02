@@ -1,5 +1,6 @@
 @charset "utf-8";
 /* CSS Document */
+@import "compass";
 h2{
 	border-left:7px solid #dbffb7;
 	padding:2px 0 2px 10px;
@@ -78,14 +79,17 @@ button.css3button {
 	margin:20px 0;
 }
 #mypageMein{
-	width:640px;
-	margin-right:40px;
+	width:70%;
 	float:left;
 }
 #mypageNav{
 	float:left;
-	width:300px;
-	margin-top:15px;
+	width:30%;
+  padding:0 0 0 15px;
+  @include box-sizing(border-box);
+}
+#mypageNav li img{
+  width:100%;
 }
 input{
 	border:1px solid #ccc;

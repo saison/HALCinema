@@ -8,7 +8,7 @@
 
 <div id="finishBox">
 <h2>編集完了</h2><p>会員情報編集を完了しました。<br />
-<p id="finishBoxLink"><a href="../index.php">MyPage TOPページに戻る</a></p>
+<p id="finishBoxLink"><a href="mypage.php">MyPage TOPページに戻る</a></p>
 </div>
 </div>
 

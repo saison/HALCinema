@@ -7,7 +7,7 @@
 	
 	$con=getConnection();
 	
-	$userid = 111;//あとで消す
+	$userid = $_SESSION["userid"];//あとで消す
 	
 	
 	//エラー
@@ -56,15 +56,20 @@
 ?>
 
 <form action="edit.php" method="post">
-<div id="content" class="clearfix">
+<div id="content" class="clearfix m10">
+  <div class="reserveTitle">
+    <h2>MyPage</h2>
+  </div>
 	<div id="mypageMein">
-<h2>アカウント情報</h2>
+    <div class="reserveTitle mtb10">
+      <h3>アカウント情報</h3>
+    </div>
 <?PHP
 	if($errWord!=""){
 		echo "<p id='newError'>".$errWord."</p>";
 	}
 ?>
-<div class="showTable">
+<div class="showTable w750 m0at">
 <table>
 <tr>
 <th>ユーザID</th>
@@ -168,7 +173,7 @@
 <p id="sendButton"><input type="submit" value="アカウント情報編集" name="send" id="submitBt" /></p>
 </form>
 </div>
-<div id="mypageNav">
+<div id="mypageNav" class="mtb10">
 <nav>
 <ul>
 <li><a href="mypage.php"><img src="images/mypagetop.png" alt="MypageTOP"></a></li>
