@@ -138,17 +138,26 @@ header{
     }
     td{
       text-align: center;
-      &:nth-child(2),&:nth-child(6),&:nth-child(8){
+      &:nth-child(2),&:nth-child(8),&:nth-child(9){
+        width:250px;
+        word-break: break-all;
+      }
+      &:nth-child(6){
         white-space: nowrap;
       }
       img{
         width:100px;
       }
     }
+    .description{
+      width:600px;
+    }
     .label{
       margin-left:10px;
     }
-
+  }
+  .userTable{
+    margin-bottom:60px;
   }
   .current{
     background:#ccc;
@@ -168,7 +177,6 @@ header{
     }
   }
   /* end edit style */
-
 
 
   .flr{
