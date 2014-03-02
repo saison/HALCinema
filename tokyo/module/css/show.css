@@ -69,15 +69,21 @@ button.css3button {
 }
 
 #mypageMein {
-  width: 640px;
-  margin-right: 40px;
+  width: 70%;
   float: left;
 }
 
 #mypageNav {
   float: left;
-  width: 300px;
-  margin-top: 15px;
+  width: 30%;
+  padding: 0 0 0 15px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+#mypageNav li img {
+  width: 100%;
 }
 
 input {
