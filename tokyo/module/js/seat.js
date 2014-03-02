@@ -28,7 +28,7 @@ $(function(){
   });
 
   $(".seat").droppable({
-    accept : "#adult, #student",
+    accept : "#adult, #student, #senior",
   });
 
 
