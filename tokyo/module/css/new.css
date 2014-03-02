@@ -27,11 +27,6 @@ h2 {
   background-color: #FFBBBC;
 }
 
-.newTable table {
-  width: 800px;
-  margin: 15px 90px 15px 90px;
-}
-
 .newTable table, .newTable th, .newTable td, .newTable tr {
   border: 1px solid #cccccc;
 }
