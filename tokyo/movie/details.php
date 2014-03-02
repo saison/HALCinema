@@ -65,9 +65,13 @@ $row = mysqli_fetch_array($result);
   $result =mysqli_query($con,"SELECT screen_id FROM show_schedule WHERE cinema_id='$cinema_id' GROUP BY cinema_id");
   $screen = mysqli_fetch_array($result);	
   ?>
-  <p id="screen" class="largeText mtb10">SCREEN
+  <p id="screen" class="largeText mtb10">
     <?php
-      echo mb_substr($screen["screen_id"],5,1);
+      if($screen["screen_id"]==""){
+        echo "スクリーン未定";
+      }else{
+        echo "SCREEN".mb_substr($screen["screen_id"],5,1);
+      }
     ?>
   </p>
   
@@ -75,6 +79,7 @@ $row = mysqli_fetch_array($result);
   <?php
   $dayCount=0;
   while($dayCount<7){
+    $scheduleFlag = false;
     $Date = date('Y-m-d', strtotime("+ $dayCount days"));//日付
     echo "<div class='movieScheduleEachBox mtb15 clearfix'>";
     echo "<p class='movieScheduleDayTitle'>".date("m/d",strtotime($Date))."</p>";
@@ -82,6 +87,7 @@ $row = mysqli_fetch_array($result);
     $showTime=ceil($row[4]/10)*10;
     $resultSchedule =mysqli_query($con,"SELECT * FROM show_schedule  WHERE show_day='$Date' AND cinema_id = '$row[0]' ORDER BY  start_time ASC");
     while(($rowSchedule = mysqli_fetch_array($resultSchedule)) != false){
+      $scheduleFlag = true;
       $showTimeJp=$showTime." minute";//上映終了時間計算
       $endTime=date("H:i",strtotime($showTimeJp,strtotime($rowSchedule[3])));//上映終了時間
       if($dayCount==0 and date("H:i")>=date("H:i",strtotime($rowSchedule[3]))){
@@ -94,6 +100,9 @@ $row = mysqli_fetch_array($result);
       echo $endTime;
       echo "</a>";
       echo "</p>";
+    }
+    if($scheduleFlag == false){
+     echo "<p class='smallText plr10'>上映予定はありません</p>"; 
     }
     echo "</div>";		
     $dayCount++;
