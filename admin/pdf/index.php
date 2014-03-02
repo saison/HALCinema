@@ -24,7 +24,7 @@
       
       <h3>統計</h3>
       <p>HALCinemaの予約に関する統計を出力します</p>
-      <a href="【アドレス】" class="btn btn-danger btn-lg btn-block"><span class="glyphicon glyphicon-align-left"></span>予約統計 PDF作成</a>
+      <a href="statisticsPdf.php" class="btn btn-danger btn-lg btn-block"><span class="glyphicon glyphicon-align-left"></span>予約統計 PDF作成</a>
     </div>
     
     <div class="col-md-6">

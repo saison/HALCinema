@@ -1,11 +1,10 @@
 <div class="sertArrange">
   <div class="Ablock"><!-- Aブロック始まり -->
     <div class="sertScreenTitle clearfix">
-      <p class="sertTitleCenter"><?php echo "HALCinemaTOKYO Screen<span class='captionBig'>".substr($rowScheduleSqlResult['screen_id'],-1,1)."</span>"; ?><span class="captionBig">A</span>(Left)Block</p>
+      <p class="sertTitleCenter"><?php echo "HALCinemaTOKYO Screen<span class='captionBig'>".substr($screen,-1,1)."</span>"; ?><span class="captionBig">A</span>(Left)Block</p>
       <p class="sertChangeRight"><span class='captionBig'>B</span>(Right)Block ▶</p>
     </div>
     <?php
-		
 		$con = getConnection();
 		$reserveListSql = "SELECT  seat_number FROM seat_reserve_list WHERE show_id = '{$showId}'" ;
 		$reserveListResult = mysqli_query($con,$reserveListSql);
@@ -166,10 +165,10 @@
 		<td class="notSeat"></td>
 		<td class="notSeat"></td>
 		<td class="notSeat"></td>
-        <?php echo reserve("g-13",$arrayRearveList,"G-13S","seat",0);?>
-        <?php echo reserve("g-14",$arrayRearveList,"G-14W","seat",0);?>
-   		<?php echo reserve("g-15",$arrayRearveList,"G-15S","seat",0);?>
-        <?php echo reserve("g-16",$arrayRearveList,"G-16W","seat",0);?>
+        <?php echo reserve("g-13",$arrayRearveList,"G-13S","pearSeat pear1",0);?>
+        <?php echo reserve("g-14",$arrayRearveList,"G-14W","pearSeat pear2",0);?>
+   		<?php echo reserve("g-15",$arrayRearveList,"G-15S","pearSeat pear1",0);?>
+        <?php echo reserve("g-16",$arrayRearveList,"G-16W","pearSeat pear2",0);?>
        </tr>
     </table>
     </div><!-- ABlock 終わり-->
@@ -177,7 +176,7 @@
     <div class="Bblock"><!-- Bブロック始まり -->
     <div class="sertScreenTitle clearfix">
     <p class="sertChangeLeft">◀ <span class='captionBig'>A</span>(Left)Block</p>
-      <p class="sertTitleCenter"><?php echo "HALCinemaTOKYO Screen<span class='captionBig'>".substr($rowScheduleSqlResult['screen_id'],-1,1)."</span>"; ?><span class="captionBig">B</span>(Right)Block</p>
+      <p class="sertTitleCenter"><?php echo "HALCinemaTOKYO Screen<span class='captionBig'>".substr($screen,-1,1)."</span>"; ?><span class="captionBig">B</span>(Right)Block</p>
       
     </div>
     <table id="ABlockSeat">
@@ -207,7 +206,7 @@
         <?php echo reserve("a-18",$arrayRearveList,"A-18","seat",0);?>
         <?php echo reserve("a-19",$arrayRearveList,"A-19","seat",0);?>
         <?php echo reserve("a-20",$arrayRearveList,"A-20","seat",0);?>
-   		<?php echo reserve("a-21",$arrayRearveList,"A-21","seat lMargin30",1);?>
+   		<?php echo reserve("a-21",$arrayRearveList,"A-21","seat",0);?>
         <?php echo reserve("a-22",$arrayRearveList,"A-22","seat",0);?>
         <?php echo reserve("a-23",$arrayRearveList,"A-23","seat",0);?>
         <?php echo reserve("a-24",$arrayRearveList,"A-24","seat",0);?>
@@ -323,12 +322,12 @@
       </tr>
 	  <tr>
         <th>G</th>
-        <?php echo reserve("g-17",$arrayRearveList,"G-17S","seat",0);?>
-        <?php echo reserve("g-18",$arrayRearveList,"G-18W","seat",0);?>
-        <?php echo reserve("g-19",$arrayRearveList,"G-19S","seat",0);?>
-        <?php echo reserve("g-20",$arrayRearveList,"G-20W","seat",0);?>
-   		<?php echo reserve("g-21",$arrayRearveList,"G-21S","seat",0);?>
-        <?php echo reserve("g-22",$arrayRearveList,"G-22W","seat",0);?>
+        <?php echo reserve("g-17",$arrayRearveList,"G-17S","pearSeat pear1",0);?>
+        <?php echo reserve("g-18",$arrayRearveList,"G-18W","pearSeat pear2",0);?>
+        <?php echo reserve("g-19",$arrayRearveList,"G-19S","pearSeat pear1",0);?>
+        <?php echo reserve("g-20",$arrayRearveList,"G-20W","pearSeat pear2",0);?>
+   		<?php echo reserve("g-21",$arrayRearveList,"G-21S","pearSeat pear1",0);?>
+        <?php echo reserve("g-22",$arrayRearveList,"G-22W","pearSeat pear2",0);?>
 		<td class="notSeat"></td>
         <td class="notSeat"></td>
 		<td class="notSeat"></td>
