@@ -6441,6 +6441,49 @@ html {
   text-align: right;
 }
 
+/* boxCenter */
+.m0at {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* width */
+.w250 {
+  width: 250px;
+}
+
+.w500 {
+  width: 500px;
+}
+
+.w750 {
+  width: 750px;
+}
+
+.w980 {
+  width: 980px;
+}
+
+.w1200 {
+  width: 1200px;
+}
+
+.w25p {
+  width: 25%;
+}
+
+.w50p {
+  width: 50%;
+}
+
+.w75p {
+  width: 75%;
+}
+
+.w100p {
+  width: 100%;
+}
+
 /* margin,padding */
 .m5 {
   margin: 5px;

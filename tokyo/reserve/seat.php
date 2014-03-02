@@ -95,7 +95,7 @@
 
   <div class="clear"></div>
 
-  <div class="reserveTitle">
+  <div class="reserveTitle m10">
     <h3>利用規約</h3>
   </div>
   <div id="kiyaku"> ここに利用規約 </div>

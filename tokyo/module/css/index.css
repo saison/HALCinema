@@ -1,10 +1,19 @@
 @charset "UTF-8";
 /* CSS Document */
-.titleBar {
-  position: relative;
-  width: 100%;
-  height: 5px;
-  background-image: url(../../top/images/titleBer.png);
+.topTitle {
+  border-bottom: 3px solid #cc0000;
+}
+
+.topTitle h2 {
+  font-size: 125%;
+  color: #333;
+  text-shadow: 0 0 2px #aaa;
+}
+
+.topTitle h2 small {
+  color: #aaa;
+  font-size: 70%;
+  padding: 0 0 0 5px;
 }
 
 #nowScheduleScroll {
@@ -36,10 +45,97 @@
 
 #todaySchedule {
   /*今日の上映スケジュール*/
-  margin: 20px 40px;
+}
+
+#todayScheduleTitle {
+  float: left;
+  width: 25%;
+}
+
+#todayScheduleTitle p {
+  font-size: 200%;
+  font-weight: bold;
+  font-family: Century Gothic,"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic";
+  color: #aaa;
+  width: 100%;
+  line-height: 1em;
+}
+
+#todayScheduleBox {
+  float: left;
+  width: 75%;
+}
+
+.todayScheduleEachBox {
+  width: 48%;
+  float: left;
+  background: #ffffff;
+  box-shadow: 0 0 3px #a00;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0 0 10px 10px;
   padding: 5px;
-  background-color: #ffffff;
-  box-shadow: 0px 0px 10px #dddddd;
+}
+
+.comingsoonEachBox {
+  background: #ffffff;
+  box-shadow: 0 0 3px #a00;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 10px;
+  padding: 5px;
+}
+
+.todayScheduleEachImage {
+  float: left;
+  width: 20%;
+}
+
+.todayScheduleEachImage img {
+  width: 100%;
+}
+
+.todayScheduleEachInfo {
+  float: left;
+  width: 80%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0 0 0 10px;
+}
+
+.todayScheduleEachScreen {
+  color: #333;
+  font-size: 80%;
+  font-family: Century Gothic,"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic";
+}
+
+.todayScheduleEachCinemaName {
+  color: #333;
+  font-size: 90%;
+  font-weight: bold;
+  text-shadow: 0 0 2px #aaa;
+}
+
+.todayScheduleEachScheduleTime {
+  display: table;
+  width: 100%;
+}
+
+.todayScheduleEachScheduleTime li {
+  display: table-cell;
+  background: #eee;
+  color: #333;
+  font-size: 80%;
+  padding: 2px;
+  text-align: center;
+  font-family: Century Gothic,"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic";
+}
+
+.todayScheduleEachScheduleTimeEnd {
+  background: #555 !important;
 }
 
 #meinContentLeft {
@@ -47,54 +143,15 @@
   float: left;
 }
 
-#todaySchedule table {
-  width: 100%;
-  border-collapse: separate;
-}
-
-#todaySchedule td {
-  padding: 10px 5px;
-  font-size: 85%;
-  font-family: Century Gothic,"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic";
-  margin: 5px;
-  background: #fafafa;
-  color: #333333;
-  text-align: center;
-}
-
-#todaySchedule th {
-  margin: 5px;
-  background: #f5f5f5;
-}
-
-.screenName {
-  font-family: Century Gothic,"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic";
-  text-align: center;
-  font-size: 100%;
-  color: #555555;
-  text-shadow: 0 0 2px #aaa;
-}
-
-.movieName {
-  width: 200px;
-}
-
-.movieName a {
-  color: #333333;
-  text-decoration: none;
-  display: block;
-}
-
 #comingsoonMovie {
-  margin: 20px 20px 40px 40px;
+  margin: 20px 10px 20px 0px;
   padding: 5px;
-  height: 300px;
   background-color: #ffffff;
   box-shadow: 0px 0px 10px #dddddd;
 }
 
 #whatsnew {
-  margin: 20px 20px 40px 40px;
+  margin: 20px 10px 20px 0px;
   padding: 5px;
   background-color: #ffffff;
   box-shadow: 0px 0px 10px #dddddd;
@@ -116,11 +173,14 @@
 }
 
 #rankingMovie {
-  margin: 20px 40px 40px 20px;
+  margin: 20px 0px 20px 10px;
   padding: 5px;
-  height: 600px;
   background-color: #ffffff;
   box-shadow: 0px 0px 10px #dddddd;
+}
+
+#twitterBox {
+  margin: 5px;
 }
 
 #sliderBox {
@@ -136,20 +196,20 @@
 }
 
 #sliderBox > div {
+  width: 100%;
   max-width: 980px;
   margin: 0 auto;
 }
 
 #topSlider {
-  max-width: 980px;
+  width: 100%;
   margin: 0 auto;
 }
 #topSlider li {
-  max-width: 980px;
+  width: 100%;
   margin: 0 auto;
 }
 #topSlider li img {
   width: 100%;
-  max-width: 980px;
   margin: 0 auto;
 }
