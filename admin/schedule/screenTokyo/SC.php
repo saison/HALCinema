@@ -1,11 +1,10 @@
 <div class="sertArrange">
   <div class="Ablock"><!-- Aブロック始まり -->
     <div class="sertScreenTitle clearfix">
-      <p class="sertTitleCenter"><?php echo "HALCinemaTOKYO Screen<span class='captionBig'>".substr($rowScheduleSqlResult['screen_id'],-1,1)."</span>"; ?><span class="captionBig">A</span>(Left)Block</p>
+      <p class="sertTitleCenter"><?php echo "HALCinemaTOKYO Screen<span class='captionBig'>".substr($screen,-1,1)."</span>"; ?><span class="captionBig">A</span>(Left)Block</p>
       <p class="sertChangeRight"><span class='captionBig'>B</span>(Right)Block ▶</p>
     </div>
     <?php
-		
 		$con = getConnection();
 		$reserveListSql = "SELECT  seat_number FROM seat_reserve_list WHERE show_id = '{$showId}'" ;
 		$reserveListResult = mysqli_query($con,$reserveListSql);
@@ -100,7 +99,7 @@
     <div class="Bblock"><!-- Bブロック始まり -->
     <div class="sertScreenTitle clearfix">
     <p class="sertChangeLeft">◀ <span class='captionBig'>B</span>(Left)Block</p>
-      <p class="sertTitleCenter"><?php echo "HALCinemaTOKYO Screen<span class='captionBig'>".substr($rowScheduleSqlResult['screen_id'],-1,1)."</span>"; ?><span class="captionBig">A</span>(Right)Block</p>
+      <p class="sertTitleCenter"><?php echo "HALCinemaTOKYO Screen<span class='captionBig'>".substr($screen,-1,1)."</span>"; ?><span class="captionBig">A</span>(Right)Block</p>
     </div>
     <table id="ABlockSeat">
       <tr>

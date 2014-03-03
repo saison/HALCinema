@@ -64,7 +64,9 @@
 	$pdf->cell(15,10,"ペア2",1,0,'C',1);
 	
 	$pdf->cell(15,10,"シニア",1,0,'C',1);
-	$pdf->cell(15,10,"予約数",1,0,'C',1);
+	$pdf->setFont(GOTHIC,'',8);//フォント設定
+	$pdf->cell(15,10,"予約座席数",1,0,'C',1);
+	$pdf->setFont(GOTHIC,'',10);//フォント設定
 	$pdf->cell(15,10,"予約率",1,1,'C',1);
 	
 	
@@ -137,7 +139,7 @@
 		$rowPear1DateResult = mysqli_fetch_array($pear1DateResult);
 		$pdf->cell(15,10,strval($rowPear1DateResult[0]),1,0,'R',0);
 		
-		$reserveCount += $rowPear1DateResult[0];
+		$reserveCount += $rowPear1DateResult[0]*2;
 		
 		//ペア2　↑大人と同じ
 		$pear2DateSql = "SELECT COUNT(movie_reserve_content.movie_price_id) FROM movie_reserve_content INNER JOIN show_schedule ON movie_reserve_content.show_id = show_schedule.show_id WHERE show_schedule.cinema_id='{$rowMovieSelectResult['cinema_id']}' AND movie_reserve_content.movie_price_id = 'mp0004'";
@@ -145,7 +147,7 @@
 		$rowPear2DateResult = mysqli_fetch_array($pear2DateResult);
 		$pdf->cell(15,10,strval($rowPear2DateResult[0]),1,0,'R',0);
 		
-		$reserveCount += $rowPear2DateResult[0];
+		$reserveCount += $rowPear2DateResult[0]*2;
 		
 		//シニア　↑大人と同じ
 		$seniorDateSql = "SELECT COUNT(movie_reserve_content.movie_price_id) FROM movie_reserve_content INNER JOIN show_schedule ON movie_reserve_content.show_id = show_schedule.show_id WHERE show_schedule.cinema_id='{$rowMovieSelectResult['cinema_id']}' AND movie_reserve_content.movie_price_id = 'mp0005'";

@@ -148,41 +148,46 @@
     </tbody>
     </table>
     <h3>画像アップロード</h3>
-    <p>画像を選んで登録して下さい。名前は　<b>cinema_id + "画像の種類".jpg</b>　で勝手に登録されます。もし以前に登録してあれば <b>上書き</b> されます。ご注意ください。</p>	
+    <p>画像を選んで登録して下さい。名前は　<b>cinema_id + "画像の種類".jpg</b>　で勝手に登録されます。もし以前に登録してあれば <b>上書き</b> されます。ご注意ください。</p><br />
     
-    <h5>mainPhoto<h5>
+    <h4 class="mb30">mainPhoto<h4>
     <form enctype="multipart/form-data" method="post" action="editImageUpload.php">
-	<input type="file" name="fileMain" required>
-    <input type="hidden" name="cinemaId" value="<?PHP echo $cinemaId;?>">
-	<input type="submit" name="sendMain" value="アップロード">
+    	<h5 class="mb30">アップロードするファイルを選択してください</h5>
+	    <p class="mb30"><input type="file" name="fileMain" required></p>
+    	<input type="hidden" name="cinemaId" value="<?PHP echo $cinemaId;?>">
+   		<p><input type="submit" name="sendMain" class="btn btn-primary " value="アップロード" /></p>
 	</form>
     <br />
-    <h5>subPhoto1<h5>
+    <h4 class="mb30">subPhoto1<h4>
      <form enctype="multipart/form-data" method="post" action="editImageUpload.php">
-	<input type="file" name="fileSub1" required>
-    <input type="hidden" name="cinemaId" value="<?PHP echo $cinemaId;?>">
-	<input type="submit" name="sendSub1" value="アップロード">
+     	<h5 class="mb30">アップロードするファイルを選択してください</h5>
+        <p class="mb30"><input type="file" name="fileSub1" required></p>
+        <input type="hidden" name="cinemaId" value="<?PHP echo $cinemaId;?>">
+        <p><input type="submit" name="sendSub1" class="btn btn-primary " value="アップロード" /></p>
 	</form>
     <br />  
-    <h5>subPhoto2<h5>
+    <h4 class="mb30">subPhoto2<h4>
     <form enctype="multipart/form-data" method="post" action="editImageUpload.php">
-	<input type="file" name="fileSub2" required>
-    <input type="hidden" name="cinemaId" value="<?PHP echo $cinemaId;?>">
-	<input type="submit" name="sendSub2" value="アップロード">
+        <h5 class="mb30">アップロードするファイルを選択してください</h5>
+        <p class="mb30"><input type="file" name="fileSub2" required></p>
+        <input type="hidden" name="cinemaId" value="<?PHP echo $cinemaId;?>">
+        <p><input type="submit" name="sendSub2" class="btn btn-primary " value="アップロード" /></p>
 	</form>
     <br />  
-    <h5>subPhoto3<h5>
+    <h4 class="mb30">subPhoto3<h4>
     <form enctype="multipart/form-data" method="post" action="editImageUpload.php">
-	<input type="file" name="fileSub3" required>
-    <input type="hidden" name="cinemaId" value="<?PHP echo $cinemaId;?>">
-	<input type="submit" name="sendSub3" value="アップロード">
+        <h5 class="mb30">アップロードするファイルを選択してください</h5>
+        <p class="mb30"><input type="file" name="fileSub3" required></p>
+        <input type="hidden" name="cinemaId" value="<?PHP echo $cinemaId;?>">
+        <p><input type="submit" name="sendSub3" class="btn btn-primary " value="アップロード" /></p>
 	</form>
-   <br />    
-    <h5>subPhoto4<h5>
+    <br />
+    <h4 class="mb30">subPhoto4<h4>   
      <form enctype="multipart/form-data" method="post" action="editImageUpload.php">
-	<input type="file" name="fileSub4" required>
-    <input type="hidden" name="cinemaId" value="<?PHP echo $cinemaId;?>">
-	<input type="submit" name="sendSub4" value="アップロード">
+         <h5 class="mb30">アップロードするファイルを選択してください</h5>
+        <p class="mb30"><input type="file" name="fileSub4" required></p>
+        <input type="hidden" name="cinemaId" value="<?PHP echo $cinemaId;?>">
+        <p><input type="submit" name="sendSub4" class="btn btn-primary " value="アップロード" /></p>
 	</form>
 	<!-- main end -->
 <?PHP
