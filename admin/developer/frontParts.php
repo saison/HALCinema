@@ -13,7 +13,7 @@
   <li><a href="#font">フォント</a></li>
   <li><a href="#menu">メニュー</a></li>
   <li><a href="#box">ボックス</a></li>
-  <li><a href="#font">フォント</a></li>
+  <li><a href="#size">サイズ</a></li>
   <li><a href="#yohaku">余白</a></li>
 </ul>
 
@@ -172,6 +172,19 @@ h2は#mainContentの外に書いてください。。
   &lt;/div&gt;
 &lt;/div&gt;
 </pre>
+</div>
+</div>
+
+<h4>位置指定</h4>
+<p>ボックス位置を指定したいときに使用してください。なお、サイズ指定と同時併用すると便利です。<strong>マージン指定と
+同時に使用する場合は、margin-left,margin-rightを変更しないでください</strong>。</p>
+
+<div class="panel panel-success">
+<div class="panel-heading">
+<h5>margin-left:auto<br>margin-right:auto</h5>
+</div>
+<div class="panel-body">
+<pre>class="m0at"</pre>
 </div>
 </div>
 
@@ -480,6 +493,111 @@ BootStrapの関係上見た目が異なる場合があります。</p>
 &lt;/div&gt;</pre>
 </div>
 </div>
+
+<div class="panel panel-info">
+<div class="panel-heading">
+<h5>contentAgreementBox</h5>
+</div>
+<div class="panel-body">
+<div class="contentAgreementBox">
+  <p>規約用のコンテンツボックスです。高さが200pxに指定されているため、オーバする部分はスクロールされます。<br>基本的な使い方は通常のBOXと変わりません</p>
+</div>
+<pre>&lt;div class="contentProhibitionBox"&gt;
+  &lt;p&gt;規約内容の中身です&lt;/p&gt;
+&lt;/div&gt;</pre>
+</div>
+</div>
+
+<h3 id="size">サイズ</h3>
+<p>横幅などを指定するときに使用してください。なお、同時に複数のクラスを指定した場合、余白やボーダーによってサイズが変わる場合があります。</p></p>
+<h4>固定値</h4>
+<p>固定値で横幅を使用したいときに選択してください。なお、m0atクラスを使用すると中央寄せにすることが出来ます。</p>
+
+<div class="panel panel-info">
+<div class="panel-heading">
+<h5>width:250px</h5>
+</div>
+<div class="panel-body">
+<pre>class="w250"</pre>
+</div>
+</div>
+
+<div class="panel panel-info">
+<div class="panel-heading">
+<h5>width:500px</h5>
+</div>
+<div class="panel-body">
+<pre>class="w500"</pre>
+</div>
+</div>
+
+<div class="panel panel-info">
+<div class="panel-heading">
+<h5>width:750px</h5>
+</div>
+<div class="panel-body">
+<pre>class="w750"</pre>
+</div>
+</div>
+
+<div class="panel panel-info">
+<div class="panel-heading">
+<h5>width:980px</h5>
+</div>
+<div class="panel-body">
+<pre>class="w980"</pre>
+</div>
+</div>
+
+<div class="panel panel-info">
+<div class="panel-heading">
+<h5>width:1200px</h5>
+</div>
+<div class="panel-body">
+<pre>class="w1200"</pre>
+</div>
+</div>
+
+
+<h4>可変値</h4>
+<p>可変値で横幅を使用したいときに選択してください。なお、m0atクラスを使用すると中央寄せにすることが出来ます。</p>
+
+<div class="panel panel-success">
+<div class="panel-heading">
+<h5>width:25%</h5>
+</div>
+<div class="panel-body">
+<pre>class="w25p"</pre>
+</div>
+</div>
+
+<div class="panel panel-success">
+<div class="panel-heading">
+<h5>width:50%</h5>
+</div>
+<div class="panel-body">
+<pre>class="w50p"</pre>
+</div>
+</div>
+
+<div class="panel panel-success">
+<div class="panel-heading">
+<h5>width:75%</h5>
+</div>
+<div class="panel-body">
+<pre>class="w75p"</pre>
+</div>
+</div>
+
+<div class="panel panel-success">
+<div class="panel-heading">
+<h5>width:100%</h5>
+</div>
+<div class="panel-body">
+<pre>class="w100p"</pre>
+</div>
+</div>
+
 
 <h3 id="yohaku">余白</h3>
 <h4>マージン(margin)</h4>

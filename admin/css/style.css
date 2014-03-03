@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* line 17, ../../../../../../Users/tak723sio/rvm/gems/ruby-1.9.3-p448/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -234,45 +235,58 @@ header #headerWrap h1 {
   text-align: center;
 }
 /* line 141, ../sass/style.scss */
-#mainWrapper .listTable td:nth-child(2), #mainWrapper .listTable td:nth-child(6), #mainWrapper .listTable td:nth-child(8) {
+#mainWrapper .listTable td:nth-child(2), #mainWrapper .listTable td:nth-child(8), #mainWrapper .listTable td:nth-child(9) {
+  width: 250px;
+  word-break: break-all;
+}
+/* line 145, ../sass/style.scss */
+#mainWrapper .listTable td:nth-child(6) {
   white-space: nowrap;
 }
-/* line 144, ../sass/style.scss */
+/* line 148, ../sass/style.scss */
 #mainWrapper .listTable td img {
   width: 100px;
 }
-/* line 148, ../sass/style.scss */
+/* line 152, ../sass/style.scss */
+#mainWrapper .listTable .description {
+  width: 600px;
+}
+/* line 155, ../sass/style.scss */
 #mainWrapper .listTable .label {
   margin-left: 10px;
 }
-/* line 153, ../sass/style.scss */
+/* line 159, ../sass/style.scss */
+#mainWrapper .userTable {
+  margin-bottom: 60px;
+}
+/* line 162, ../sass/style.scss */
 #mainWrapper .current {
   background: #ccc;
 }
-/* line 156, ../sass/style.scss */
+/* line 165, ../sass/style.scss */
 #mainWrapper .deleted, #mainWrapper .deleted th, #mainWrapper .deleted td {
   background: #6c6c6c !important;
 }
-/* line 162, ../sass/style.scss */
+/* line 171, ../sass/style.scss */
 #mainWrapper #editSend {
   width: 70%;
   margin: 30px auto;
   text-align: right;
 }
-/* line 166, ../sass/style.scss */
+/* line 175, ../sass/style.scss */
 #mainWrapper #editSend input {
   margin-left: 20px;
 }
-/* line 174, ../sass/style.scss */
+/* line 182, ../sass/style.scss */
 #mainWrapper .flr {
   float: right;
 }
-/* line 177, ../sass/style.scss */
+/* line 185, ../sass/style.scss */
 #mainWrapper .mb30 {
   margin-bottom: 30px;
 }
 
-/* line 182, ../sass/style.scss */
+/* line 190, ../sass/style.scss */
 footer {
   background: #3c3c3c;
   font-size: 12px;
@@ -283,4 +297,88 @@ footer {
   clear: both;
   text-align: center;
   margin-top: -5px;
+}
+
+/*  index todayMovie*/
+/* line 204, ../sass/style.scss */
+.todayScheduleEachBox {
+  background: #ffffff;
+  box-shadow: 0 0 3px #aaa;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0 15px 15px 0px;
+  padding: 5px;
+  float: left;
+  width: 48%;
+}
+
+/* line 213, ../sass/style.scss */
+.comingsoonEachBox {
+  background: #ffffff;
+  box-shadow: 0 0 3px #a00;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 10px;
+  padding: 5px;
+}
+
+/* line 220, ../sass/style.scss */
+.todayScheduleEachImage {
+  float: left;
+  width: 20%;
+}
+
+/* line 224, ../sass/style.scss */
+.todayScheduleEachImage img {
+  width: 100%;
+}
+
+/* line 227, ../sass/style.scss */
+.todayScheduleEachInfo {
+  float: left;
+  width: 80%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0 0 0 10px;
+  line-height: 1;
+}
+
+/* line 234, ../sass/style.scss */
+.todayScheduleEachScreen {
+  color: #333;
+  font-size: 90%;
+  font-family: Century Gothic,"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic";
+}
+
+/* line 239, ../sass/style.scss */
+.todayScheduleEachCinemaName {
+  color: #333;
+  font-size: 100%;
+  font-weight: bold;
+  text-shadow: 0 0 2px #aaa;
+}
+
+/* line 245, ../sass/style.scss */
+.todayScheduleEachScheduleTime {
+  display: table;
+  width: 100%;
+}
+
+/* line 249, ../sass/style.scss */
+.todayScheduleEachScheduleTime li {
+  display: table-cell;
+  background: #eee;
+  color: #333;
+  font-size: 100%;
+  padding: 2px;
+  text-align: center;
+  font-family: Century Gothic,"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic";
+}
+
+/* line 258, ../sass/style.scss */
+.todayScheduleEachScheduleTimeEnd {
+  background: #555 !important;
 }

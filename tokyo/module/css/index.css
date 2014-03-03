@@ -1,41 +1,19 @@
 @charset "UTF-8";
 /* CSS Document */
+.topTitle {
+  border-bottom: 3px solid #cc0000;
+}
+
 .topTitle h2 {
   font-size: 125%;
-  font-weight: 600;
-  line-height: 1;
+  color: #333;
+  text-shadow: 0 0 2px #aaa;
 }
 
-.topTitleSmall {
-  font-size: 80%;
-}
-
-.titleBar {
-  position: relative;
-  width: 100%;
-  height: 5px;
-  background-image: url(../../top/images/titleBer.png);
-}
-
-#meinMenu {
-  width: 250px;
-  border-top: 3px solid #eeeeee;
-}
-
-#meinMenu li {
-  border-bottom: 3px solid #eeeeee;
-}
-
-#meinMenu li a {
-  display: block;
-  padding: 15px 20px;
-  color: #333333;
-  text-decoration: none;
-}
-
-#meinMenu li a:hover {
-  background-color: rgba(0, 200, 255, 0.2);
-  color: #555555;
+.topTitle h2 small {
+  color: #aaa;
+  font-size: 70%;
+  padding: 0 0 0 5px;
 }
 
 #nowScheduleScroll {
@@ -43,8 +21,8 @@
   padding: 5px;
   background-image: url(../../top/images/scrollBack.png);
   color: #ffffff;
-  font-family: Century Gothic,"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic";
-  text-shadow: 0 0 2px #aaa;
+  font-family: "Century Gothic","ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic";
+  text-shadow: 0 0 3px #000,0 0 3px #fff;
 }
 
 #nowScheduleScrollTitle {
@@ -57,21 +35,107 @@
 }
 
 .screenStrong {
-  color: #55ffaa;
-  font-weight: bold;
+  color: #ff5555;
 }
 
 .scrollStrong {
-  color: #33ccff;
+  color: #5555ff;
   font-weight: bold;
 }
 
 #todaySchedule {
   /*今日の上映スケジュール*/
-  margin: 20px 40px;
+}
+
+#todayScheduleTitle {
+  float: left;
+  width: 25%;
+}
+
+#todayScheduleTitle p {
+  font-size: 200%;
+  font-weight: bold;
+  font-family: Century Gothic,"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic";
+  color: #aaa;
+  width: 100%;
+  line-height: 1em;
+}
+
+#todayScheduleBox {
+  float: left;
+  width: 75%;
+}
+
+.todayScheduleEachBox {
+  width: 48%;
+  float: left;
+  background: #ffffff;
+  box-shadow: 0 0 3px #a00;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0 0 10px 10px;
   padding: 5px;
-  background-color: #ffffff;
-  box-shadow: 0px 0px 10px #dddddd;
+}
+
+.comingsoonEachBox {
+  background: #ffffff;
+  box-shadow: 0 0 3px #a00;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 10px;
+  padding: 5px;
+}
+
+.todayScheduleEachImage {
+  float: left;
+  width: 20%;
+}
+
+.todayScheduleEachImage img {
+  width: 100%;
+}
+
+.todayScheduleEachInfo {
+  float: left;
+  width: 80%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0 0 0 10px;
+}
+
+.todayScheduleEachScreen {
+  color: #333;
+  font-size: 80%;
+  font-family: Century Gothic,"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic";
+}
+
+.todayScheduleEachCinemaName {
+  color: #333;
+  font-size: 90%;
+  font-weight: bold;
+  text-shadow: 0 0 2px #aaa;
+}
+
+.todayScheduleEachScheduleTime {
+  display: table;
+  width: 100%;
+}
+
+.todayScheduleEachScheduleTime li {
+  display: table-cell;
+  background: #eee;
+  color: #333;
+  font-size: 80%;
+  padding: 2px;
+  text-align: center;
+  font-family: Century Gothic,"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic";
+}
+
+.todayScheduleEachScheduleTimeEnd {
+  background: #555 !important;
 }
 
 #meinContentLeft {
@@ -79,54 +143,15 @@
   float: left;
 }
 
-#todaySchedule table {
-  width: 100%;
-  border-collapse: separate;
-}
-
-#todaySchedule td {
-  padding: 10px 5px;
-  font-size: 85%;
-  font-family: Century Gothic,"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic";
-  margin: 5px;
-  background: #fafafa;
-  color: #333333;
-  text-align: center;
-}
-
-#todaySchedule th {
-  margin: 5px;
-  background: #f5f5f5;
-}
-
-.screenName {
-  font-family: Century Gothic,"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic";
-  text-align: center;
-  font-size: 100%;
-  color: #555555;
-  text-shadow: 0 0 2px #aaa;
-}
-
-.movieName {
-  width: 200px;
-}
-
-.movieName a {
-  color: #333333;
-  text-decoration: none;
-  display: block;
-}
-
 #comingsoonMovie {
-  margin: 20px 20px 40px 40px;
+  margin: 20px 10px 20px 0px;
   padding: 5px;
-  height: 300px;
   background-color: #ffffff;
   box-shadow: 0px 0px 10px #dddddd;
 }
 
 #whatsnew {
-  margin: 20px 20px 40px 40px;
+  margin: 20px 10px 20px 0px;
   padding: 5px;
   background-color: #ffffff;
   box-shadow: 0px 0px 10px #dddddd;
@@ -148,42 +173,43 @@
 }
 
 #rankingMovie {
-  margin: 20px 40px 40px 20px;
+  margin: 20px 0px 20px 10px;
   padding: 5px;
-  height: 600px;
   background-color: #ffffff;
   box-shadow: 0px 0px 10px #dddddd;
 }
 
+#twitterBox {
+  margin: 5px;
+}
+
 #sliderBox {
-  background: #7d7e7d;
-  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzdkN2U3ZCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjIwJSIgc3RvcC1jb2xvcj0iIzBlMGUwZSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjgwJSIgc3RvcC1jb2xvcj0iIzBlMGUwZSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM3ZDdlN2QiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
-  background: -moz-linear-gradient(left, #7d7e7d 0%, #0e0e0e 20%, #0e0e0e 80%, #7d7e7d 100%);
-  background: -webkit-gradient(linear, left top, right top, color-stop(0%, #7d7e7d), color-stop(20%, #0e0e0e), color-stop(80%, #0e0e0e), color-stop(100%, #7d7e7d));
-  background: -webkit-linear-gradient(left, #7d7e7d 0%, #0e0e0e 20%, #0e0e0e 80%, #7d7e7d 100%);
-  background: -o-linear-gradient(left, #7d7e7d 0%, #0e0e0e 20%, #0e0e0e 80%, #7d7e7d 100%);
-  background: -ms-linear-gradient(left, #7d7e7d 0%, #0e0e0e 20%, #0e0e0e 80%, #7d7e7d 100%);
-  background: linear-gradient(to right, #7d7e7d 0%, #0e0e0e 20%, #0e0e0e 80%, #7d7e7d 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#7d7e7d', endColorstr='#7d7e7d',GradientType=1 );
+  background: black;
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iI2NjMDAwMCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwMDAwMDAiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+  background: -moz-linear-gradient(left, black 0%, #cc0000 50%, black 100%);
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%, black), color-stop(50%, #cc0000), color-stop(100%, black));
+  background: -webkit-linear-gradient(left, black 0%, #cc0000 50%, black 100%);
+  background: -o-linear-gradient(left, black 0%, #cc0000 50%, black 100%);
+  background: -ms-linear-gradient(left, black 0%, #cc0000 50%, black 100%);
+  background: linear-gradient(to right, #000000 0%, #cc0000 50%, #000000 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#000000', endColorstr='#000000',GradientType=1 );
 }
 
 #sliderBox > div {
-  width: 980px;
+  width: 100%;
+  max-width: 980px;
   margin: 0 auto;
 }
 
 #topSlider {
-  width: 980px;
-  height: 300px;
+  width: 100%;
   margin: 0 auto;
 }
 #topSlider li {
-  width: 980px;
-  height: 300px;
+  width: 100%;
   margin: 0 auto;
 }
 #topSlider li img {
-  width: 980px;
-  height: 300px;
+  width: 100%;
   margin: 0 auto;
 }

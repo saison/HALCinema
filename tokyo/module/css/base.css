@@ -6261,6 +6261,11 @@ html {
   font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
 }
 
+#wrapper {
+  min-width: 980px;
+  max-width: 1980px;
+}
+
 /* clear */
 .clear {
   clear: both;
@@ -6391,6 +6396,16 @@ html {
   border-radius: 5px;
 }
 
+.contentAgreementBox {
+  border: 2px solid #eeeeee;
+  box-shadow: 0 0 5px #aaa;
+  padding: 15px;
+  background: #ffffff;
+  border-radius: 5px;
+  height: 200px;
+  overflow: auto;
+}
+
 /* BOXflor t*/
 .boxCol2Left {
   width: 50%;
@@ -6434,6 +6449,49 @@ html {
 
 .textRight {
   text-align: right;
+}
+
+/* boxCenter */
+.m0at {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* width */
+.w250 {
+  width: 250px;
+}
+
+.w500 {
+  width: 500px;
+}
+
+.w750 {
+  width: 750px;
+}
+
+.w980 {
+  width: 980px;
+}
+
+.w1200 {
+  width: 1200px;
+}
+
+.w25p {
+  width: 25%;
+}
+
+.w50p {
+  width: 50%;
+}
+
+.w75p {
+  width: 75%;
+}
+
+.w100p {
+  width: 100%;
 }
 
 /* margin,padding */

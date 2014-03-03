@@ -4,9 +4,9 @@
 ?>
 	<h2>PDF出力</h2>
 
-	<blockquote>
+	<!--<blockquote>
 	 <p>PDFの作成については<a href="https://docs.google.com/spreadsheet/ccc?key=0AgvRmkGL_iUQdFl3ZndTVWVzSG0yLVZ3dVhycTYxUVE&usp=drive_web#gid=2" target="_blank" >PDF作成ページの仕様</a>を見てください。</p>
-  </blockquote>
+  </blockquote>-->
 
   <div class="row">
     <div class="col-md-6">
@@ -24,7 +24,11 @@
       
       <h3>統計</h3>
       <p>HALCinemaの予約に関する統計を出力します</p>
+<<<<<<< HEAD
       <a href="statisticsPdf.php" class="btn btn-danger btn-lg btn-block"><span class="glyphicon glyphicon-align-left"></span>予約統計 PDF作成</a>
+=======
+      <a href="【アドレス】" class="btn btn-danger btn-lg btn-block"><span class="glyphicon glyphicon-align-left"></span>統計 PDF作成</a>
+>>>>>>> master
     </div>
     
     <div class="col-md-6">

@@ -26,7 +26,7 @@ h3{
 }
 .textCaption{
   padding:2px 5px;
-  margin:5px;
+  margin:5px 5px 5px 0;
   background: rgb(248,80,50);
   background: -moz-linear-gradient(top,  rgba(248,80,50,1) 0%, rgba(241,111,92,1) 50%, rgba(246,41,12,1) 51%, rgba(240,47,23,1) 71%, rgba(231,56,39,1) 100%);
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(248,80,50,1)), color-stop(50%,rgba(241,111,92,1)), color-stop(51%,rgba(246,41,12,1)), color-stop(71%,rgba(240,47,23,1)), color-stop(100%,rgba(231,56,39,1)));
@@ -70,7 +70,7 @@ h3{
   font-family:Century Gothic,"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
   background:#fafafa;
   display:block;
-	width:140px;
+	width:120px;
 	height:63px;
 	padding:10px 0;
 	color:#333333;
@@ -80,6 +80,7 @@ h3{
 .movieScheduleEach a{
   color:#333333;
 	text-decoration:none;
+  display:block;
 }
 .movieScheduleEachEnd{
   background:#777777;

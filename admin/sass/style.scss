@@ -4,189 +4,257 @@
 @import "compass";
 
 .clearfix{
-	@include clearfix;
+  @include clearfix;
 }
 
 header{
-	background:#dddddd;
-	height:60px;
-	line-height:60px;
-	#headerWrap{
-		width:96%;
-		height:60px;
-		margin:0 auto;
-		color:#ffffff;
-		h1{
-			margin:0;
-		}
-	}
+  background:#dddddd;
+  height:60px;
+  line-height:60px;
+  #headerWrap{
+    width:96%;
+    height:60px;
+    margin:0 auto;
+    color:#ffffff;
+    h1{
+      margin:0;
+    }
+  }
 }
 
 #mainWrapper{
-	width:100%;
-	display: inline-block;
-	background:#3c3c3c;
-	margin:0 auto;
-	#sidemenu{
-		width:15%;
-		float: left;
-		nav{
-			width:100%;
-			ul{
-				width:100%;
-				li{
-					line-height:40px;
-					width:100%;
-					&.current{
-						color:#ffffff;
-						font-weight:bold;
-						width:100%;
-						padding-left:5%;
-						line-height:40px;
-						background:#C0392B;
-					}
-					a{
-						display: inline-block;
-						color:#ffffff;
-						width:100%;
-						padding-left:5%;
-						line-height:40px;
-						&:hover{
-							background:#C0392B;
-						}
-					}
-				}
-			}
-		}
-	}
-	#mainContent{
-		background:#ffffff;
-		height: auto;
-		min-height:800px;
-		width:85%;
-		padding-left:2%;
-		padding-right:2%;
-		float: left;
-		padding-top:20px;
-		padding-bottom:20px;
-	}
-	
-	h2{
-		font-size:30px;
-		font-weight:bold;
-		margin-top:0;
-		margin-bottom:40px;
-	}
-	#editButton{
-		float: right;
-		margin-bottom:10px;
-	}
-	#newButton{
-		margin-left:10px;
-	}
-	.glyphicon{
-		margin-right:10px;
-	}
-	/* login style */
-	#loginArea{
-		width:360px;
-		padding-top:20px;
-		padding-bottom:20px;
-		padding-left:20px;
-		padding-right:20px;
-		margin:0 auto;
-		@include box-shadow(0 0 2px #000000);
-		@include border-radius(5px);
-		h2{
-			font-size:20px;
-			text-align: center;
-		}
-	}
+  width:100%;
+  display: inline-block;
+  background:#3c3c3c;
+  margin:0 auto;
+  #sidemenu{
+    width:15%;
+    float: left;
+    nav{
+      width:100%;
+      ul{
+        width:100%;
+        li{
+          line-height:40px;
+          width:100%;
+          &.current{
+            color:#ffffff;
+            font-weight:bold;
+            width:100%;
+            padding-left:5%;
+            line-height:40px;
+            background:#C0392B;
+          }
+          a{
+            display: inline-block;
+            color:#ffffff;
+            width:100%;
+            padding-left:5%;
+            line-height:40px;
+            &:hover{
+              background:#C0392B;
+            }
+          }
+        }
+      }
+    }
+  }
+  #mainContent{
+    background:#ffffff;
+    height: auto;
+    min-height:800px;
+    width:85%;
+    padding-left:2%;
+    padding-right:2%;
+    float: left;
+    padding-top:20px;
+    padding-bottom:20px;
+  }
 
-	#loginForm{
-		p{
-			margin-top:20px;
-			margin-bottom:20px;
-			line-height:1.5em;
-			input{
-				width:100%;
-				height:40px;
-				line-height:40px;
-			}
-		}
-		#loginButton{	
-			text-align: right;
-		}
-	}
-	/* end login style */
+  h2{
+    font-size:30px;
+    font-weight:bold;
+    margin-top:0;
+    margin-bottom:40px;
+  }
+  #editButton{
+    float: right;
+    margin-bottom:10px;
+  }
+  #newButton{
+    margin-left:10px;
+  }
+  .glyphicon{
+    margin-right:10px;
+  }
+  /* login style */
+  #loginArea{
+    width:360px;
+    padding-top:20px;
+    padding-bottom:20px;
+    padding-left:20px;
+    padding-right:20px;
+    margin:0 auto;
+    @include box-shadow(0 0 2px #000000);
+    @include border-radius(5px);
+    h2{
+      font-size:20px;
+      text-align: center;
+    }
+  }
 
-	/* list table style */
-	#editTable{
-		width:70%;
-		margin:0 auto;
-	}
-	.listTable{
-		margin-bottom:60px;	
-		.description{
-			width:400px;
-			word-break: break-all;	
-			text-align: left;
-		}
-		th{
-			font-weight: bold;
-			text-align: center !important;
-		}
-		td{
-			text-align: center;
-			&:nth-child(2),&:nth-child(6),&:nth-child(8){
-				white-space: nowrap;
-			}
-			img{
-				width:100px;
-			}
-		}
-		.label{
-			margin-left:10px;
-		}
-		
-	}
-	.current{
-		background:#ccc;
-	}
-	.deleted, .deleted th, .deleted td{
-		background: #6c6c6c !important;
-	}
-	/* end list table style */
+  #loginForm{
+    p{
+      margin-top:20px;
+      margin-bottom:20px;
+      line-height:1.5em;
+      input{
+        width:100%;
+        height:40px;
+        line-height:40px;
+      }
+    }
+    #loginButton{
+      text-align: right;
+    }
+  }
+  /* end login style */
 
-	/* edit style */
-	#editSend{
-		width: 70%;
-		margin:30px auto;
-		text-align: right;
-		input{
-			margin-left:20px;
-		}
-	}
-	/* end edit style */
-	
+  /* list table style */
+  #editTable{
+    width:70%;
+    margin:0 auto;
+  }
+  .listTable{
+    margin-bottom:60px;
+    .description{
+      width:400px;
+      word-break: break-all;
+      text-align: left;
+    }
+    th{
+      font-weight: bold;
+      text-align: center !important;
+    }
+    td{
+      text-align: center;
+      &:nth-child(2),&:nth-child(8),&:nth-child(9){
+        width:250px;
+        word-break: break-all;
+      }
+      &:nth-child(6){
+        white-space: nowrap;
+      }
+      img{
+        width:100px;
+      }
+    }
+    .description{
+      width:600px;
+    }
+    .label{
+      margin-left:10px;
+    }
+  }
+  .userTable{
+    margin-bottom:60px;
+  }
+  .current{
+    background:#ccc;
+  }
+  .deleted, .deleted th, .deleted td{
+    background: #6c6c6c !important;
+  }
+  /* end list table style */
+
+  /* edit style */
+  #editSend{
+    width: 70%;
+    margin:30px auto;
+    text-align: right;
+    input{
+      margin-left:20px;
+    }
+  }
+  /* end edit style */
 
 
-	.flr{
-		float: right;
-	}
-	.mb30{
-		margin-bottom:30px;
-	}
+  .flr{
+    float: right;
+  }
+  .mb30{
+    margin-bottom:30px;
+  }
 }
 
 footer{
-	background:#3c3c3c;
-	font-size:12px;
-	color:#ffffff;
-	height:40px;
-	line-height:40px;
-	width:100%;
-	clear: both;
-	text-align: center;
-	margin-top:-5px;
+  background:#3c3c3c;
+  font-size:12px;
+  color:#ffffff;
+  height:40px;
+  line-height:40px;
+  width:100%;
+  clear: both;
+  text-align: center;
+  margin-top:-5px;
+}
+
+
+/*  index todayMovie*/
+.todayScheduleEachBox{
+  background:#ffffff;
+  box-shadow:0 0 3px #aaa;
+  @include box-sizing(border-box);
+  margin:0 15px 15px 0px;
+  padding:5px;
+  float:left;
+  width:48%;
+}
+.comingsoonEachBox{
+  background:#ffffff;
+  box-shadow:0 0 3px #a00;
+  @include box-sizing(border-box);
+  margin:10px;
+  padding:5px;
+}
+.todayScheduleEachImage{
+  float:left;
+  width:20%;
+}
+.todayScheduleEachImage img{
+  width:100%;
+}
+.todayScheduleEachInfo{
+  float:left;
+  width:80%;
+  @include box-sizing(border-box);
+  padding:0 0 0 10px;
+  line-height:1;
+}
+.todayScheduleEachScreen{
+  color:#333;
+  font-size:90%;
+  font-family:Century Gothic,"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic";
+}
+.todayScheduleEachCinemaName{
+  color:#333;
+  font-size:100%;
+  font-weight:bold;
+  text-shadow:0 0 2px #aaa;
+}
+.todayScheduleEachScheduleTime{
+  display:table;
+  width:100%;
+}
+.todayScheduleEachScheduleTime li{
+  display:table-cell;
+  background:#eee;
+  color:#333;
+  font-size:100%;
+  padding:2px;
+  text-align:center;
+  font-family:Century Gothic,"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic";
+}
+.todayScheduleEachScheduleTimeEnd{
+  background:#555 !important;
 }

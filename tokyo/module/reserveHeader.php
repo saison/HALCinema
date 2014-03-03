@@ -34,6 +34,7 @@
 	<title><?PHP if($pageTitle != ""){ echo $pageTitle." | "; } ?>HALCinema</title>
 </head>
 <body>
+<div id="wrapper">
 <header>
 <h1><a href="../top/index.php"><img src="../module/images/logo.png" alt="HALCinema"></a></h1>
 <div id="progressBar"><!--ここにBar--></div>

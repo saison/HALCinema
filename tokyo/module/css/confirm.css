@@ -8,7 +8,7 @@ h4 {
 
 .confirmTable table {
   width: 100%;
-  margin: 15px 0 15px 10px;
+  margin: 15px 0 0 0;
 }
 
 .confirmTable table, .confirmTable th, .confirmTable td, .confirmTable tr {
@@ -16,23 +16,32 @@ h4 {
 }
 
 .confirmTable th {
-  width: 300px;
+  width: 200px;
   padding: 10px;
   background-color: #efefef;
 }
 
 .confirmTable td {
   padding: 10px;
+  font-size: 85%;
+<<<<<<< HEAD
+=======
 }
 
-#yoyakuBack {
-  width: 400px;
-  float: left;
-  margin: 15px 45px;
+#yoyakuBtBox {
+  width: 600px;
+  margin: 0 auto;
+>>>>>>> master
 }
 
-#yoyakuSelect {
-  width: 400px;
+#yoyakuBackBt {
+  width: 300px;
+  text-align: center;
   float: left;
-  margin: 15px 45px;
+}
+
+#yoyakuOkBt {
+  width: 300px;
+  text-align: center;
+  float: left;
 }

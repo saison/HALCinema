@@ -1,39 +1,92 @@
 @charset "utf-8";
 /* CSS Document */
+@import "compass";
+
 .reserveEachBox{
-	box-shadow:0 0 5px #aaa;
 	margin:20px 0;
-	padding:10px;	
 }
-.reserveDate{
-	padding:5px 0;	
-	font-size:90%;
-}
-
-.reserveNumber{
-	padding:5px 0;
-	font-size:105%;
-	font-weight:600;
-}
-
 .reserveBoxLeft{
 	width:10%;
 	float:left;
-	font-size:200%;
+}
+.reserveBoxLeft p{
+  font-size:200%;
 	font-weight:600;
+  padding:0px 10px;
+  text-align:right;
+  font-family:Century Gothic,"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic";
+  color:#555;
 }
 
 .reserveBoxRight{
 	width:90%;
 	float:left;
+  box-shadow:0 0 5px #aaa;
+  border-radius:5px;
+}
+.reserveTitle{
+  background:#eee;
+  color:#333;
+  font-weight:bold;
+  padding:5px;
+}
+.reserveInfoBoxLeft{
+  width:50%;
+  float:left;
+  @include box-sizing(border-box);
+  padding:5px;
+}
+.reserveDate{
+	padding:5px 0 15px 0;	
+	font-size:90%;
+}
+
+.reserveNumber{
+	padding:5px 0;
+	font-size:125%;
+	font-weight:bold;
+  font-family:Century Gothic,"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic";
+}
+.reserveInfoBoxRight{
+  width:50%;
+  float:left;
+  @include box-sizing(border-box);
+  padding:5px;
+}
+.reserveMovie{
+  margin:0 0 15px 0;
+}
+.reserveMovieName{
+  padding:5px 0;
+	font-size:125%;
+	font-weight:bold;
+}
+.reserveMovieTime{
+  padding:5px 0;
+	font-size:115%;
+  font-family:Century Gothic,"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic";
+}
+.reserveScreen{
+  padding:5px 0 15px 0;
+	font-size:100%;
+  font-family:Century Gothic,"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic";
+}
+.reserveEachSeat{
+  padding:5px 0;
+  font-size:115%;
+  font-weight:bold;
+  font-family:Century Gothic,"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic"; 
 }
 #mypageMein{
-	width:640px;
-	margin-right:40px;
+	width:70%;
 	float:left;
 }
 #mypageNav{
 	float:left;
-	width:300px;
-	margin-top:15px;
+	width:30%;
+  padding:0 0 0 15px;
+  @include box-sizing(border-box);
+}
+#mypageNav li img{
+  width:100%;
 }

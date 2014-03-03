@@ -16,7 +16,8 @@
       <div class="reserveTitle mtb20">
         <h3>登録されている決済方法</h3>
       </div>
-      
+      <p class="smallText mtb20">登録されている決済方法はありません</p>
+      <!--
       <div class="contentAttentionBox mtb20">
         <div class="reserveTitle">
           <h4>クレジットカード決済</h4>
@@ -31,6 +32,7 @@
           </p>
         </form>
       </div>
+      -->
     </div>
     <div class="boxCol2Right">
       <div class="reserveTitle mtb20">
