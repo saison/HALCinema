@@ -1,33 +1,30 @@
 <?PHP
 	$pageTitle="上映スケジュール登録";
 	require_once("../header.php");
-	if(isset($_SESSION['registerCheckYear'])){
+	if(isset($_GET['error'])){//form registerDetailCheck.php
 	
-		$year = $_SESSION['registerCheckYear'];
-		$month = $_SESSION['registerCheckMonth'];
-		if(strlen($month)==1){
-			$month="0".$month;
-		}
-		$day = $_SESSION['registerCheckDay'];
-		if(strlen($day)==1){
-			$day="0".$day;
-		}
-		$startHour = $_SESSION['registerCheckStartHour'];
-		if(strlen($startHour)==1){
-			$startHour="0".$startHour;
-		}
-		$startMin = $_SESSION['registerCheckStartMin'];
-		if(strlen($startMin)==1){
-			$startMin="0".$startMin;
-		}
+		$_SESSION['registerCinemaId'] = $_SESSION['registerCheckCinemaId'];
+		$_SESSION['registerShowId'] = $_SESSION['registerCheckShowId'];
+		$_SESSION['registerShowDay'] = $_SESSION['registerCheckShowDay'];
+	    $_SESSION['registerStartTime'] = $_SESSION['registerCheckStartTime'] .":00";
+		$_SESSION['registerScreen'] = "sc000".$_SESSION['registerCheckScNum'];
 		
-		$screen = $_SESSION['registerCheckScNum'];
 		
-		$_SESSION['registerShowDay'] = $year."-".$month."-".$day;
-		$_SESSION['registerStartTime'] = $startHour.":".$startMin.":00";
-		$_SESSION['registerScreen'] = "sc000".$screen;
+		//映画名の取得
+		$con = getConnection();
+		$movieSql = "SELECT cinema_name FROM cinema_master WHERE cinema_id = '{$_SESSION['registerCheckCinemaId']}'";
+		$movieSqlResult = mysqli_query($con,$movieSql);
+		$rowMovieSqlResult = mysqli_fetch_array($movieSqlResult);
+		
+		$cinemaName = $rowMovieSqlResult['cinema_name'];
+		$_SESSION['registerCinemaName'] = $cinemaName;
+		
+		mysqli_close($con);
 				
+	}else{
+		header("Location:list.php");
 	}
+	
 ?>
 	
 	<!-- main start -->
@@ -45,15 +42,15 @@
 				</tr>
 				<tr>
 					<th>上映日</th>
-					<td><?PHP echo $year;?>/<?PHP echo $month;?>/<?PHP echo $day;?></td>
+					<td><?PHP echo $_SESSION['registerShowDay'];?></td>
 				</tr>
 				<tr>
 					<th>上映開始時間</th>
-					<td><?PHP echo $startHour;?>:<?PHP echo $startMin;?></td>
+					<td><?PHP echo $_SESSION['registerCheckStartTime'];?></td>
 				</tr>
 				<tr>
 					<th>スクリーン</th>
-					<td><?PHP echo $screen;?></td>
+					<td><?PHP echo $_SESSION['registerCheckScNum'];?></td>
 				</tr>
 		</table>
 		<div id="editSend">

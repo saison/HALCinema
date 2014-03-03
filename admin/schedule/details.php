@@ -44,12 +44,13 @@
 
   mysqli_close($con);
 
+/*
   $_SESSION['showId'] = $showId;//上映ＩＤ
   $_SESSION['cinemaName'] = $cinemaName;//映画名
   $_SESSION['showDay'] = $showDay;//上映日
   $_SESSION['startTime'] = $startTime;//上映開始時間
   $_SESSION['endTime'] = $endTime;//上映終了時間
-  $_SESSION['screen'] = $screen;//スクリーン
+  $_SESSION['screen'] = $screen;//スクリーン*/
 
 
 ?>
