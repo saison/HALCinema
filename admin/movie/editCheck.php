@@ -141,7 +141,7 @@
 					
 			}			
 		}else{
-			if($checkEndday[2]>30||$checkEndday[2]<1){//31日まで
+			if($checkEndday[2]>31||$checkEndday[2]<1){//31日まで
 					
 				$errorArray += array('endDay'=>'1');
 				$startEndErrorFlag =1;	
