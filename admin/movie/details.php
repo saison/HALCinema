@@ -18,7 +18,7 @@
 ?>
 	
 		<!-- main start -->
-		<h2><?PHP echo $rowMovieSelectResult['cinema_name']; ?> - 詳細<a href="edit.php?id=<?PHP echo $_GET['id'];?>" id="editButton" class="btn btn-primary"><span class="glyphicon glyphicon-pencil"></span>編集 & 削除</a><a href="movieDetailPdf.php?id=<?PHP echo $_GET['id']; ?>" id="editButton" class="btn btn-danger"><span class="glyphicon glyphicon-align-left"></span>PDF作成</a>　
+		<h2><?PHP echo $rowMovieSelectResult['cinema_name']; ?> - 詳細　<a href="edit.php?id=<?PHP echo $_GET['id'];?>" id="editButton" class="btn btn-primary"><span class="glyphicon glyphicon-pencil"></span>編集 & 削除</a><a href="movieDetailPdf.php?id=<?PHP echo $_GET['id']; ?>" id="editButton" class="btn btn-danger"><span class="glyphicon glyphicon-align-left"></span>PDF作成</a>　　　
 </h2>
 		<!-- movie details table -->
 			<table class="table table-striped table-bordered table-condensed listTable">

@@ -1,19 +1,26 @@
 <?PHP
 	$pageTitle="上映スケジュール一覧";
 	require_once("../header.php");
+	$con = getConnection();
 		
 	if(isset($_GET['id'])){	//from details.php
-	
-		//上映スケジュールID
-		$showId = $_SESSION['showId'];
-		//映画名
-		$cinemaName = $_SESSION['cinemaName'];
-		//上映日
-		$showDay = str_replace('/','-',$_SESSION['showDay']);
-		//上映開始時間
-		$startTime = $_SESSION['startTime'];
-		//スクリーン番号
-		$screen = $_SESSION['screen'];
+		
+		//上映ID
+		$showId = $_GET['id'];
+		
+		$scheduleSql = "SELECT * FROM show_schedule WHERE show_id = '{$showId}'";
+		$scheduleSqlResult = mysqli_query($con,$scheduleSql);
+		$rowscheduleSqlResult = mysqli_fetch_array($scheduleSqlResult);
+		
+		$showDay = $rowscheduleSqlResult['show_day'];
+		$startTime = $rowscheduleSqlResult['start_time'];
+		$screen = substr($rowscheduleSqlResult['screen_id'],5,1);
+		$cinemaId = $rowscheduleSqlResult['cinema_id'];
+		$movieSql = "SELECT cinema_name FROM cinema_master WHERE cinema_id = '{$cinemaId}'";
+		$movieSqlResult = mysqli_query($con,$movieSql);
+		$rowMovieSqlResult = mysqli_fetch_array($movieSqlResult);
+		
+		$cinemaName = $rowMovieSqlResult['cinema_name'];
 		
 	}else if(isset($_GET['error'])){//from editCheck.php
 	
@@ -23,7 +30,7 @@
 		$screen = $_SESSION['editCheckScNum'];
 		$cinemaId = $_SESSION['editCheckCinemaId'];
 		
-		$con = getConnection();
+		
 		$movieSql = "SELECT cinema_name FROM cinema_master WHERE cinema_id = '{$cinemaId}'";
 		$movieSqlResult = mysqli_query($con,$movieSql);
 		$rowMovieSqlResult = mysqli_fetch_array($movieSqlResult);
@@ -49,7 +56,7 @@
 		<table id="editTable" class="table table-striped table-bordered table-condensed listTable">
        			 <tr>
 					<th>上映ID</th>
-					<td><?PHP echo $_SESSION['showId'];?></td>
+					<td><?PHP echo $showId;?></td>
 				</tr>
 				<tr>
 					<th>映画名</th>
@@ -123,11 +130,11 @@
 				</tr>
 		</table>
 		<div id="editSend">
-			<a href="deleteSql.php?id=<?PHP echo $_SESSION['showId']; ?>" class="btn btn-danger btn-lg"><span class="glyphicon glyphicon-remove"></span>削除する</a>
+			<a href="deleteSql.php?id=<?PHP echo $showId; ?>" class="btn btn-danger btn-lg"><span class="glyphicon glyphicon-remove"></span>削除する</a>
             <input type="hidden" name="showId" value="<?PHP echo $showId;?>">
 			<input type="submit" class="btn btn-primary btn-lg" value="確認画面へ" name="send"></div>
         </form>
-        <a href="edit.php?id=<?PHP echo $_SESSION['showId']; ?>" class="btn btn-primary"><span class="glyphicon glyphicon-pencil"></span>デフォルト</a>
+        <a href="edit.php?id=<?PHP echo $showId; ?>" class="btn btn-primary"><span class="glyphicon glyphicon-pencil"></span>デフォルト</a>
 		<!-- /movie list table -->
 	<!-- main end -->
 
