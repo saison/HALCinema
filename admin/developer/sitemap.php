@@ -4,15 +4,17 @@
 ?>
 	<h2>【開発者】サイトマップ(FE/BE)</h2>
 	
-	<h3>フロントエンド、バックエンドのサイトマップです。コーディング進捗管理表に書かれていない部分も出来る限り網羅しています。ただし、各ページに関して詳しくはコーディング進捗管理表をご覧ください。</h3>
+	<h3>フロントエンド、バックエンドのサイトマップです。コーディング進捗管理表に書かれていない部分も出来る限り網羅しています。ただし、各ページの詳細はコーディング進捗管理表をご覧ください。</h3>
   <h4>仕様書･進捗管理表 <small>Googleのログインが必要です</small></h4>
   <dl class="dl-horizontal">
     <dt><a href='https://docs.google.com/spreadsheet/ccc?key=0AgvRmkGL_iUQdE0yb25GZzUtSGhjQTNzWEYyWU1xaFE&usp=drive_web#gid=0'>進捗管理表</a></dt><dd>フロントエンドとバックエンドの進捗管理･画面一覧です https://docs.google.com/spreadsheet/ccc?key=0AgvRmkGL_iUQdE0yb25GZzUtSGhjQTNzWEYyWU1xaFE&usp=drive_web#gid=0</dd>
     <dt><a href='https://docs.google.com/spreadsheet/ccc?key=0AgvRmkGL_iUQdFota3I3MmFfUFdpdmU4Y3NFbTR2VUE&usp=drive_web#gid=3'>テーブル仕様書</a></dt><dd>HALシネマのテーブル仕様書です https://docs.google.com/spreadsheet/ccc?key=0AgvRmkGL_iUQdFota3I3MmFfUFdpdmU4Y3NFbTR2VUE&usp=drive_web#gid=3</dd>
 </dl>
-<h4>開発者設定 <small>XAMPPの設定など</small></h4>
+<h4>開発者 <small>XAMPPの設定など</small></h4>
   <dl class="dl-horizontal">
     <dt><a href='../../tokyo/top/developer.php'>開発者設定</a></dt><dd>開発者の環境設定を変更するページです。 tokyo/top/developer.php</dd>
+    <dt><a href='../developer/sitemap.php'>サイトマップ（現在のページ）</a></dt><dd>FE、BEのサイトマップです。 admin/developer/sitemap.php</dd>
+    <dt><a href='../developer/frontParts.php'>パーツ一覧</a></dt><dd>FE、BEで使用しているパーツの一覧です。　admin/developer/frontParts.php</dd>
   </dl>
 <div class="row">
   <div class="col-xs-6">
