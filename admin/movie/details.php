@@ -103,7 +103,7 @@
 				?>
 				<tr>	
 					<td><?PHP echo $rowScheduleList [0]; ?></td>
-					<td><a href="details.php?id=<?PHP echo $rowScheduleList[1];?>"><?PHP echo $rowMovieTitleResult[0];?></a></td>
+					<td><a href="../schedule/details.php?id=<?PHP echo $rowScheduleList[0];?>"><?PHP echo $rowMovieTitleResult[0];?></a></td>
 					<td><?PHP echo str_replace('-','/',$rowScheduleList[4]); ?></td>
 					<td><?PHP echo substr($rowScheduleList[3],0,5); ?></td>
 					<td><?PHP echo date("H:i",strtotime($showTimeJp,strtotime($rowScheduleList [3])));?></td>
